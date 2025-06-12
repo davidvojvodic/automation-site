@@ -18,7 +18,12 @@ interface PricingListProps {
 
 function PricingList({ className }: PricingListProps) {
   return (
-    <div className={cn("flex gap-[1rem] max-lg:flex-wrap", className)}>
+    <div
+      className={cn(
+        "flex gap-[1rem] max-lg:flex-wrap justify-center",
+        className
+      )}
+    >
       {pricing.map((item: PricingItem) => (
         <div
           key={item.id}

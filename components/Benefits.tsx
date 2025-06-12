@@ -31,7 +31,7 @@ function Benefits({ className }: BenefitsProps) {
           title="Automate Smarter, Scale Faster with WebFlowAI"
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex flex-wrap justify-center gap-10 mb-10">
           {benefits.map((item: BenefitItem) => (
             <div
               className={cn(
