@@ -12,6 +12,7 @@ import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import {useTranslations} from 'next-intl';
 
 export interface HeroProps {
   className?: string;
@@ -19,6 +20,7 @@ export interface HeroProps {
 
 function Hero(props: HeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('HomePage.hero');
 
   return (
     <Section
@@ -31,9 +33,9 @@ function Hero(props: HeroProps) {
       <div className="container relative mt-20" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            Transform Your Business with&nbsp;AI&nbsp;Automation using{" "}
+            {t('title')}{" "}
             <span className="inline-block relative">
-              WebFlowAI{" "}
+              {t('subtitle')}
               <Image
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -44,12 +46,10 @@ function Hero(props: HeroProps) {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            Empower your business to streamline operations and fuel growth with
-            intelligent workflow automation. Reclaim 15+ hours per week for
-            strategic initiatives.
+            {t('description')}
           </p>
           <Button href="#contact" white>
-            Start Automating
+            {t('cta')}
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">

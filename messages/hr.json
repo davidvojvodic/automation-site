@@ -1,0 +1,99 @@
+{
+  "HomePage": {
+    "hero": {
+      "title": "Automatizirajte Vaše Poslovanje",
+      "subtitle": "s Inteligentnim Procesima",
+      "description": "Uštedite 15+ sati svaki tjedan automatizacijom ponavljajućih zadataka. Pustite AI da obradi rutinski posao dok se vi fokusirate na rast vašeg poslovanja.",
+      "cta": "Zakažite Besplatnu Procjenu",
+      "generating": "Izgradnja automatiziranog procesa..."
+    },
+    "navigation": {
+      "features": "Značajke",
+      "services": "Usluge",
+      "pricing": "Cjenik",
+      "process": "Proces",
+      "getStarted": "Započnite",
+      "contact": "Kontakt",
+      "newAccount": "Novi račun",
+      "signIn": "Prijava"
+    },
+    "services": {
+      "title": "Prestanite Gubiti Sate na Ručnom Radu",
+      "subtitle": "Flowko automatizira vremenski zahtjevne zadatke koji iscrpljuju vašu produktivnost",
+      "service1": {
+        "title": "Automatizacija Upravljanja Klijentima",
+        "description": "Pretvorite kaotičan prijem klijenata u glatko, profesionalno iskustvo koje pretvara potencijalne klijente 70% brže.",
+        "features": [
+          "Automatizirani obrasci i nastavci",
+          "Trenutni procesi uvoza klijenata", 
+          "Pametno kvalificiranje i usmjeravanje potencijalnih klijenata"
+        ]
+      },
+      "service2": {
+        "title": "Automatizacija Dokumenata i Naplate",
+        "description": "Generirajte profesionalne dokumente odmah i naplatite 50% brže s automatiziranim izdavanjem računa i podsjetnicima za plaćanje.",
+        "problem": "Prestanite trošiti sate na papirologija i pracenja plaćanja"
+      },
+      "service3": {
+        "title": "Komunikacija i Praćenje",
+        "description": "Nikad više ne propustite nastavak. Automatsko planiranje, podsjetnici i komunikacija s klijentima koja radi dok spavate.",
+        "benefit": "Smanjite neopravdane izostanke za 40% i ojačajte odnose s klijentima"
+      }
+    },
+    "benefits": {
+      "title": "Automatizirajte Pametnije, Rastite Brže s Flowko",
+      "benefit1": {
+        "title": "Uštedite Vrijeme",
+        "description": "Povratite 15+ sati tjedno automatizacijom ponavljajućih zadataka i ručnih procesa koji usporavaju vaš tim."
+      },
+      "benefit2": {
+        "title": "Efikasno Skaliranje",
+        "description": "Poveyćajte svoj posao bez proporcionalno poveyćavanja broja zaposlenih kroz inteligentnu automatizaciju radnih tokova."
+      },
+      "benefit3": {
+        "title": "Smanjite Greške",
+        "description": "Uklonite ljudske greške s automatiziranim prijenosima podataka i dosljednim izvršavanjem procesa kroz cijelu organizaciju."
+      },
+      "benefit4": {
+        "title": "Brza Implementacija",
+        "description": "Pokrenite svoje automatizacije za 1-2 tjedna s našim sprint-style pristupom isporuke."
+      },
+      "benefit5": {
+        "title": "Usredotočenost na ROI",
+        "description": "Svaka automatizacija je dizajnirana s mjerljivim uštedama vremena i troškova, osiguravajući jasan povrat investicije."
+      },
+      "benefit6": {
+        "title": "24/7 Nadzor",
+        "description": "Automatizirane provjere zdravlja i upozorenja u stvarnom vremenu osiguravaju da vaši radni tokovi rade glatko tijekom cijelog dana."
+      }
+    },
+    "implementation": {
+      "title": "Vaš put do automatizacije",
+      "subtitle": "Od kaosa do automatizirane efikasnosti u 4 jednostavna koraka",
+      "step1": {
+        "title": "Analiza potreba",
+        "description": "Pregledavamo vaše poslovne procese i određujemo gdje automatizacija može donijeti najveću korist za vašu tvrtku.",
+        "duration": "30 minuta",
+        "status": "1. tjedan"
+      },
+      "step2": {
+        "title": "Strategija i plan",
+        "description": "Pripremamo precizni plan automatizacije s konkretnim ciljevima, rasporedom i predviđenim uštedama.",
+        "duration": "2-3 dana",
+        "status": "1. tjedan"
+      },
+      "step3": {
+        "title": "Razvoj i testiranje",
+        "description": "Gradimo vaše automatizacije s kontinuiranim izvještavanjem o napretku i temeljitim testiranjem prije upotrebe.",
+        "duration": "1-2 tjedna",
+        "status": "2.-3. tjedan"
+      },
+      "step4": {
+        "title": "Pokretanje i podrška",
+        "description": "Finalna predaja s kompletnom dokumentacijom, obukom vašeg tima i stalnom tehničkom podrškom.",
+        "duration": "2-3 dana",
+        "status": "3. tjedan"
+      }
+    }
+  }
+}

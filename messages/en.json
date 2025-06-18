@@ -1,0 +1,99 @@
+{
+  "HomePage": {
+    "hero": {
+      "title": "Automate Your Business",
+      "subtitle": "with Intelligent Workflows",
+      "description": "Save 15+ hours every week by automating repetitive tasks. Let AI handle the routine work while you focus on growing your business.",
+      "cta": "Schedule Free Assessment",
+      "generating": "Building automated workflow..."
+    },
+    "navigation": {
+      "features": "Features",
+      "services": "Services",
+      "pricing": "Pricing",
+      "process": "Process",
+      "getStarted": "Get Started",
+      "contact": "Contact",
+      "newAccount": "New account",
+      "signIn": "Sign in"
+    },
+    "services": {
+      "title": "Stop Losing Hours on Manual Work",
+      "subtitle": "Flowko automates the time-consuming tasks that drain your productivity",
+      "service1": {
+        "title": "Client Management Automation",
+        "description": "Transform chaotic client intake into a smooth, professional experience that converts prospects 70% faster.",
+        "features": [
+          "Automated intake forms and follow-ups",
+          "Instant client onboarding workflows", 
+          "Smart lead qualification and routing"
+        ]
+      },
+      "service2": {
+        "title": "Document & Billing Automation",
+        "description": "Generate professional documents instantly and get paid 50% faster with automated invoicing and payment reminders.",
+        "problem": "Stop spending hours on paperwork and chasing payments"
+      },
+      "service3": {
+        "title": "Communication & Follow-up",
+        "description": "Never miss a follow-up again. Automated scheduling, reminders, and client communication that runs while you sleep.",
+        "benefit": "Reduce no-shows by 40% and strengthen client relationships"
+      }
+    },
+    "benefits": {
+      "title": "Automate Smarter, Scale Faster with Flowko",
+      "benefit1": {
+        "title": "Save Time",
+        "description": "Reclaim 15+ hours per week by automating repetitive tasks and manual processes that slow down your team."
+      },
+      "benefit2": {
+        "title": "Scale Efficiently",
+        "description": "Grow your business without proportionally increasing headcount through intelligent workflow automation."
+      },
+      "benefit3": {
+        "title": "Reduce Errors",
+        "description": "Eliminate human error with automated data transfers and consistent process execution across your organization."
+      },
+      "benefit4": {
+        "title": "Fast Implementation",
+        "description": "Get your automations up and running in 1-2 weeks with our sprint-style delivery approach."
+      },
+      "benefit5": {
+        "title": "ROI Focused",
+        "description": "Every automation is designed with measurable time and cost savings, ensuring clear return on investment."
+      },
+      "benefit6": {
+        "title": "24/7 Monitoring",
+        "description": "Automated health checks and real-time alerts ensure your workflows run smoothly around the clock."
+      }
+    },
+    "implementation": {
+      "title": "Your Automation Journey",
+      "subtitle": "From chaos to automated efficiency in 4 simple steps",
+      "step1": {
+        "title": "Discovery Call",
+        "description": "We analyze your current processes and identify automation opportunities with the biggest impact on your business.",
+        "duration": "30 minutes",
+        "status": "Week 1"
+      },
+      "step2": {
+        "title": "Custom Blueprint",
+        "description": "Receive a detailed automation plan with clear timelines, expected results, and ROI projections tailored to your needs.",
+        "duration": "2-3 days",
+        "status": "Week 1"
+      },
+      "step3": {
+        "title": "Build & Deploy",
+        "description": "We create and implement your automations with regular progress updates and testing to ensure everything works perfectly.",
+        "duration": "1-2 weeks",
+        "status": "Week 2-3"
+      },
+      "step4": {
+        "title": "Training & Launch",
+        "description": "Complete handover with documentation, training, and ongoing support to ensure your team gets maximum value.",
+        "duration": "2-3 days",
+        "status": "Week 3"
+      }
+    }
+  }
+}

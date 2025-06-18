@@ -1,7 +1,9 @@
+"use client";
+
 import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "@/public/assets";
-import { webflowaiServices, brainwaveServicesIcons } from "@/lib/constants";
+import { flowkoServices } from "@/lib/constants";
 import {
   PhotoChatMessage,
   Gradient,
@@ -11,21 +13,25 @@ import {
 import Generating from "./Generating";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import {useTranslations} from 'next-intl';
 
 interface ServicesProps {
   className?: string;
 }
 
 function Services({ className }: ServicesProps) {
+  const t = useTranslations('HomePage.services');
+  
   return (
     <Section id="services" className={className}>
       <div className="container">
         <Heading
-          title="AI Automation Solutions for Modern Businesses"
-          text="WebFlowAI delivers enterprise-grade automation with a customer-first approach"
+          title={t('title')}
+          text={t('subtitle')}
         />
 
         <div className="relative">
+          {/* Service 1: Client Management Automation */}
           <div
             className={cn(
               "relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]"
@@ -36,19 +42,18 @@ function Services({ className }: ServicesProps) {
                 className="w-full h-full object-cover md:object-right"
                 width={800}
                 height={730}
-                alt="Smartest AI"
+                alt="Client Management Automation"
                 src={service1}
               />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smart Automation</h4>
+              <h4 className="h4 mb-4">{t('service1.title')}</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                WebFlowAI transforms your business processes with intelligent
-                automation
+                {t('service1.description')}
               </p>
               <ul className="body-2">
-                {webflowaiServices.map((item, index) => (
+                {t.raw('service1.features').map((item: string, index: number) => (
                   <li
                     key={index}
                     className="flex items-start py-4 border-t border-n-6"
@@ -64,6 +69,7 @@ function Services({ className }: ServicesProps) {
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
+            {/* Service 2: Document & Billing Automation */}
             <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
                 <Image
@@ -71,48 +77,44 @@ function Services({ className }: ServicesProps) {
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
-                  alt="robot"
+                  alt="Document and Billing Automation"
                 />
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Process Optimization</h4>
+                <h4 className="h4 mb-4">{t('service2.title')}</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically optimize your business processes with our
-                  AI-powered workflow analysis. Experience the transformation!
+                  {t('service2.description')}
                 </p>
+                <div className="body-2 text-color-1 font-semibold">
+                  {t('service2.problem')}
+                </div>
               </div>
 
               <PhotoChatMessage />
             </div>
 
+            {/* Service 3: Communication & Follow-up */}
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Custom Integration</h4>
+                <h4 className="h4 mb-4">{t('service3.title')}</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world&apos;s most powerful AI photo and video art
-                  generation engine. What will you create?
+                  {t('service3.description')}
                 </p>
+                <div className="body-2 text-color-1 font-semibold mb-8">
+                  {t('service3.benefit')}
+                </div>
 
                 <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((item, index) => (
+                  {flowkoServices.map((item, index) => (
                     <li
                       key={index}
-                      className={cn(
-                        "rounded-2xl flex items-center justify-center",
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      )}
+                      className="text-center max-w-[4rem]"
                     >
-                      <div
-                        className={cn(
-                          index === 2 &&
-                            "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                        )}
-                      >
-                        <Image src={item} width={24} height={24} alt={item} />
+                      <div className="w-12 h-12 bg-n-6 rounded-xl flex items-center justify-center mb-2 mx-auto">
+                        <Image width={24} height={24} src={check} alt="check" />
                       </div>
+                      <p className="text-xs text-n-3">{item.split(' ')[0]}</p>
                     </li>
                   ))}
                 </ul>
@@ -124,7 +126,7 @@ function Services({ className }: ServicesProps) {
                   className="w-full h-full object-cover"
                   width={520}
                   height={400}
-                  alt="Scary robot"
+                  alt="Communication Automation"
                 />
 
                 <VideoChatMessage />

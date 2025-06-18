@@ -5,6 +5,7 @@ import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "./design/Pricing";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface PricingProps {
   className?: string;
@@ -36,7 +37,7 @@ function Pricing({ className }: PricingProps) {
         </div>
 
         <Heading
-          tag="Get started with WebFlowAI"
+          tag="Get started with Flowko"
           title="Flexible Pricing for Every Business"
         />
 
@@ -47,14 +48,14 @@ function Pricing({ className }: PricingProps) {
         </div>
 
         <div className="flex justify-center mt-10">
-          <a
+          <Link
             className={cn(
               "text-xs font-code font-bold tracking-wider uppercase border-b"
             )}
             href="/pricing"
           >
             See the full details
-          </a>
+          </Link>
         </div>
       </div>
     </Section>

@@ -8,17 +8,22 @@ import MenuSvg from "@/public/assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import {useTranslations} from 'next-intl';
+// import {Link} from '@/i18n/routing'; // Uncomment when needed
+import LanguageSwitcher from './LanguageSwitcher';
 
 export interface HeaderProps {
   className?: string;
+  locale?: string;
 }
 
-export function Header({ className }: HeaderProps) {
+export function Header({ className, locale = 'en' }: HeaderProps) {
   const pathname = usePathname();
   // For hash navigation, fallback to window.location.hash if available
   const hash = typeof window !== "undefined" ? window.location.hash : "";
 
   const [openNavigation, setOpenNavigation] = useState(false);
+  const t = useTranslations('HomePage.navigation');
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -52,7 +57,7 @@ export function Header({ className }: HeaderProps) {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <Image src={brainwave} width={190} height={40} alt="WebFlowAI" />
+          <Image src={brainwave} width={190} height={40} alt="Flowko" />
         </a>
 
         <nav
@@ -78,7 +83,7 @@ export function Header({ className }: HeaderProps) {
                   "lg:leading-5 lg:hover:text-n-1 xl:px-12"
                 )}
               >
-                {item.title}
+                {t(item.id === "0" ? "features" : item.id === "1" ? "services" : item.id === "2" ? "process" : item.id === "3" ? "getStarted" : "contact")}
               </a>
             ))}
           </div>
@@ -86,14 +91,18 @@ export function Header({ className }: HeaderProps) {
           <HamburgerMenu />
         </nav>
 
+        {/* Language Switcher for Mobile */}
+        <LanguageSwitcher locale={locale} className="lg:hidden mr-4" />
+
+        <LanguageSwitcher locale={locale} className="hidden lg:block mr-8" />
         <a
           href="#signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          New account
+          {t('newAccount')}
         </a>
         <Button className="hidden lg:flex" href="#login">
-          Sign in
+          {t('signIn')}
         </Button>
 
         <Button

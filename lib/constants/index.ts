@@ -49,22 +49,17 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Process",
+    url: "#implementation",
   },
   {
     id: "3",
-    title: "About",
-    url: "#about",
-  },
-  {
-    id: "4",
     title: "Get Started",
     url: "#contact",
     onlyMobile: true,
   },
   {
-    id: "5",
+    id: "4",
     title: "Contact",
     url: "#contact",
     onlyMobile: true,
@@ -77,10 +72,10 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const webflowaiServices = [
-  "Workflow Automation",
-  "AI Integration",
-  "Process Optimization",
+export const flowkoServices = [
+  "Automated client intake and follow-ups",
+  "Smart document generation and billing",
+  "Intelligent scheduling and communication",
 ];
 
 export const brainwaveServicesIcons = [
@@ -128,7 +123,7 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With intelligent automation and enterprise-grade security, WebFlowAI is the perfect solution for businesses looking to scale efficiently.";
+  "With intelligent automation and enterprise-grade security, Flowko is the perfect solution for businesses looking to scale efficiently.";
 
 export const collabContent = [
   {
