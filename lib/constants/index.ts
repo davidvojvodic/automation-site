@@ -123,21 +123,23 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With intelligent automation and enterprise-grade security, Flowko is the perfect solution for businesses looking to scale efficiently.";
+  "Connect your favorite business tools and create powerful automations that save 20+ hours per week. We handle all the technical complexity for you."
 
 export const collabContent = [
   {
     id: "0",
-    title: "Seamless Integration",
-    text: collabText,
+    title: "Connect 1000+ Business Apps",
+    text: "From Slack to Google Sheets, Discord to Notion - automate workflows across all your tools.",
   },
   {
     id: "1",
-    title: "Smart Automation",
+    title: "Enterprise-Grade Automation",
+    text: "We design and implement custom workflows tailored to your business processes and requirements.",
   },
   {
     id: "2",
-    title: "Top-notch Security",
+    title: "Real-Time Data Sync",
+    text: "Keep all your apps synchronized automatically. No more manual data entry or copy-paste.",
   },
 ];
 

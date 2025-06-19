@@ -94,6 +94,66 @@
         "duration": "2-3 dni",
         "status": "3. teden"
       }
+    },
+    "collaboration": {
+      "title": "Povežite poslovne aplikacije in avtomatizirajte procese",
+      "description": "Povežite vaše najljubše poslovne aplikacije in ustvarite zmogljive avtomatizacije, ki prihranijo več kot 20 ur tedensko. Vso tehnično zahtevnost uredimo mi.",
+      "buttonText": "Poglejte, kako deluje",
+      "features": {
+        "feature1": {
+          "title": "Povezava več kot 1000 poslovnih aplikacij",
+          "text": "Od Slacka do Google Sheets, od Discorda do Notiona - avtomatizirajte delovne procese med vsemi vašimi orodji."
+        },
+        "feature2": {
+          "title": "Avtomatizacija na poslovni ravni",
+          "text": "Oblikujemo in implementiramo delovne procese po meri, prilagojene vašim poslovnim procesom in zahtevam."
+        },
+        "feature3": {
+          "title": "Sinhronizacija podatkov v realnem času",
+          "text": "Vse vaše aplikacije ostanejo samodejno sinhronizirane. Konec ročnega vnašanja podatkov in kopiranja."
+        }
+      }
+    },
+    "contact": {
+      "title": "Začnite svojo avtomatizacijsko pot",
+      "subtitle": "Pridobite brezplačno revizijo avtomatizacije in odkrijte, kako prihraniti več kot 20 ur tedensko",
+      "form": {
+        "firstName": "Ime",
+        "lastName": "Priimek",
+        "email": "E-mail",
+        "company": "Ime podjetja",
+        "website": "Spletna stran podjetja",
+        "industry": "Panoga",
+        "message": "Kako vam lahko pomagamo avtomatizirati vaše poslovanje?",
+        "firstNamePlaceholder": "Vaše ime",
+        "lastNamePlaceholder": "Vaš priimek",
+        "emailPlaceholder": "vas.email@podjetje.si",
+        "companyPlaceholder": "Ime vašega podjetja",
+        "websitePlaceholder": "https://vasepodjetje.si",
+        "industryPlaceholder": "npr. Spletna trgovina, Proizvodnja,...",
+        "messagePlaceholder": "Povejte nam o vaših najbolj zamudnih opravilih ali procesih, ki bi jih radi avtomatizirali...",
+        "submitButton": "Pridobite brezplačno revizijo avtomatizacije",
+        "responseTime": "Odgovorili vam bomo v 2 urah s prilagojeno strategijo avtomatizacije",
+        "required": "*"
+      },
+      "trustIndicators": {
+        "freeConsultation": "Brezplačno svetovanje",
+        "noObligation": "Brez obveznosti",
+        "gdprCompliant": "Skladno z GDPR"
+      },
+      "validation": {
+        "firstNameMin": "Ime mora imeti vsaj 2 znaka",
+        "lastNameMin": "Priimek mora imeti vsaj 2 znaka",
+        "emailInvalid": "Vnesite veljaven e-poštni naslov",
+        "companyRequired": "Ime podjetja je obvezno",
+        "websiteInvalid": "Vnesite veljaven URL spletne strani",
+        "industryRequired": "Navedite vašo panogo",
+        "messageMin": "Opišite vaše potrebe po avtomatizaciji ali izzive"
+      },
+      "messages": {
+        "success": "Hvala! Kontaktirali vas bomo v 2 urah.",
+        "error": "Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte direktno po e-pošti."
+      }
     }
   }
 }
