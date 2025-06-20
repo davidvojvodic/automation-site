@@ -75,6 +75,15 @@ import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 
+import gmailLogo from "./Gmail.svg";
+import driveLogo from "./drive.svg";
+import hubspotLogo from "./hubspot-icon.svg";
+import trelloLogo from "./trello-icon.svg";
+import sheetsLogo from "./sheets.svg";
+import whatsappLogo from "./WhatsApp.svg";
+import telegramLogo from "./Telegram.svg";
+import airtableLogo from "./airtable.png";
+
 export {
   brainwave,
   check,
@@ -144,4 +153,12 @@ export {
   instagram,
   telegram,
   twitter,
+  gmailLogo,
+  driveLogo,
+  hubspotLogo,
+  trelloLogo,
+  sheetsLogo,
+  whatsappLogo,
+  telegramLogo,
+  airtableLogo,
 };

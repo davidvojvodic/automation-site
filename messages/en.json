@@ -114,6 +114,9 @@
         }
       }
     },
+    "companyLogos": {
+      "tagline": "Automate workflows across your favorite business apps"
+    },
     "contact": {
       "title": "Start Your Automation Journey",
       "subtitle": "Get a free automation audit and discover how to save 20+ hours per week",
@@ -133,8 +136,8 @@
         "industryPlaceholder": "e.g. E-commerce, Manufacturing,...",
         "messagePlaceholder": "Tell us about your biggest time-consuming tasks or processes you'd like to automate...",
         "submitButton": "Get Your Free Automation Audit",
-        "responseTime": "We'll respond within 2 hours with a custom automation strategy",
-        "required": "*"
+        "required": "*",
+        "privacyNote": "We respect your privacy. Your information is secure and will never be shared."
       },
       "trustIndicators": {
         "freeConsultation": "Free consultation",
@@ -153,6 +156,72 @@
       "messages": {
         "success": "Thank you! We'll be in touch within 2 hours.",
         "error": "Something went wrong. Please try again or email us directly."
+      }
+    },
+    "cookieBanner": {
+      "title": "We value your privacy",
+      "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies. You can manage your preferences or learn more in our",
+      "cookiePolicy": "Cookie Policy",
+      "buttons": {
+        "customize": "Customize",
+        "essentialOnly": "Essential Only",
+        "acceptAll": "Accept All",
+        "savePreferences": "Save Preferences"
+      },
+      "preferences": {
+        "title": "Cookie Preferences",
+        "essential": {
+          "title": "Essential Cookies",
+          "description": "These cookies are necessary for the website to function and cannot be disabled. They include session management, security, and basic functionality.",
+          "status": "Always Active"
+        },
+        "analytics": {
+          "title": "Analytics Cookies", 
+          "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+          "details": "Google Analytics, performance monitoring"
+        },
+        "marketing": {
+          "title": "Marketing Cookies",
+          "description": "These cookies track your activity across websites to show you relevant advertisements and measure campaign effectiveness.",
+          "details": "Facebook Pixel, LinkedIn Insight, Google Ads"
+        },
+        "functional": {
+          "title": "Functional Cookies",
+          "description": "These cookies enable enhanced functionality and personalization, like remembering your preferences and settings.",
+          "details": "Language settings, theme preferences, form progress"
+        }
+      },
+      "switchLabels": {
+        "alwaysOn": "Always On",
+        "optional": "Optional"
+      }
+    },
+    "footer": {
+      "copyright": "© {year} Flowko. All rights reserved.",
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service", 
+        "cookies": "Cookie Policy",
+        "legal": "Legal Notice",
+        "cookieSettings": "Cookie Settings"
+      }
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated:"
+      },
+      "terms": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last updated:"
+      },
+      "cookies": {
+        "title": "Cookie Policy",
+        "lastUpdated": "Last updated:"
+      },
+      "legalNotice": {
+        "title": "Legal Notice / Imprint",
+        "subtitle": "Information according to EU requirements"
       }
     }
   }

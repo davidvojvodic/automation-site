@@ -33,7 +33,14 @@ import {
   sliders04,
   telegram,
   twitter,
-  yourlogo,
+  driveLogo,
+  gmailLogo,
+  hubspotLogo,
+  trelloLogo,
+  sheetsLogo,
+  whatsappLogo,
+  telegramLogo,
+  airtableLogo,
 } from "@/public/assets";
 
 export const navigation = [
@@ -70,7 +77,22 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos = [
+  gmailLogo,
+  driveLogo,
+  hubspotLogo,
+  trelloLogo,
+  sheetsLogo,
+  discord,
+  figma,
+  slack,
+  notion,
+  raindrop,
+  protopie,
+  whatsappLogo,
+  telegramLogo,
+  airtableLogo,
+];
 
 export const flowkoServices = [
   "Automated client intake and follow-ups",
@@ -123,7 +145,7 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "Connect your favorite business tools and create powerful automations that save 20+ hours per week. We handle all the technical complexity for you."
+  "Connect your favorite business tools and create powerful automations that save 20+ hours per week. We handle all the technical complexity for you.";
 
 export const collabContent = [
   {

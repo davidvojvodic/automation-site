@@ -2,27 +2,43 @@ import React, { HTMLAttributes } from "react";
 import { companyLogos } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import { useTranslations } from "next-intl";
 
 interface CompanyLogosProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
 function CompanyLogos({ className, ...props }: CompanyLogosProps) {
+  const t = useTranslations("HomePage.companyLogos");
+  
   return (
     <div className={cn("", className)} {...props}>
       <h5 className="tagline mb-6 text-center text-n-1/50">
-        Helping people create beautiful content at
+        {t("tagline")}
       </h5>
-      <ul className="flex">
+      <Marquee
+        speed={30}
+        gradient={true}
+        gradientColor="#0E0C15"
+        gradientWidth={120}
+        pauseOnHover={false}
+      >
         {companyLogos.map((logo: string, index: number) => (
-          <li
-            className="flex items-center justify-center flex-1 h-[8.5rem]"
+          <div
+            className="flex items-center justify-center mx-8 h-[5rem]"
             key={index}
           >
-            <Image src={logo} width={134} height={28} alt={logo} />
-          </li>
+            <Image 
+              src={logo} 
+              width={120} 
+              height={40} 
+              alt={`Integration logo ${index}`} 
+              className="object-contain h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+          </div>
         ))}
-      </ul>
+      </Marquee>
     </div>
   );
 }

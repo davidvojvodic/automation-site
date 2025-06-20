@@ -114,6 +114,9 @@
         }
       }
     },
+    "companyLogos": {
+      "tagline": "Automatizirajte radne procese u vašim omiljenim poslovnim aplikacijama"
+    },
     "contact": {
       "title": "Pokrenite svoj put automatizacije",
       "subtitle": "Dobijte besplatnu reviziju automatizacije i otkrijte kako uštedijeliti više od 20 sati tjedno",
@@ -133,8 +136,8 @@
         "industryPlaceholder": "npr. E-trgovina, Proizvodnja,...",
         "messagePlaceholder": "Recite nam o vašim najvremenski zahtjevnijim zadacima ili procesima koje biste željeli automatizirati...",
         "submitButton": "Dobijte besplatnu reviziju automatizacije",
-        "responseTime": "Odgovorit ćemo vam u roku od 2 sata s prilagođenom strategijom automatizacije",
-        "required": "*"
+        "required": "*",
+        "privacyNote": "Poštujemo vašu privatnost. Vaši podaci su sigurni i nikada ih nećemo dijeliti."
       },
       "trustIndicators": {
         "freeConsultation": "Besplatno savjetovanje",
@@ -153,6 +156,54 @@
       "messages": {
         "success": "Hvala! Kontaktirat ćemo vas u roku od 2 sata.",
         "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nas kontaktirajte direktno putem e-pošte."
+      }
+    },
+    "cookieBanner": {
+      "title": "Cijenimo vašu privatnost",
+      "description": "Koristimo kolačiće za poboljanje vašeg iskustva pregledavanja, personalizirani sadržaj i analizu prometa. Klikom na \"Prihvati sve\" pristajete na našu upotrebu kolačića. Možete upravljati svojimi postavkama ili saznati više u našim",
+      "cookiePolicy": "Pravilima o kolačićima",
+      "buttons": {
+        "customize": "Prilagodi",
+        "essentialOnly": "Samo nužni",
+        "acceptAll": "Prihvati sve",
+        "savePreferences": "Spremi postavke"
+      },
+      "preferences": {
+        "title": "Postavke kolačića",
+        "essential": {
+          "title": "Nužni kolačići",
+          "description": "Ovi kolačići su potrebni za funkcioniranje web stranice i ne mogu se onemogućiti. Uključuju upravljanje sesijama, sigurnost i osnovnu funkcionalnost.",
+          "status": "Uvijek aktivni"
+        },
+        "analytics": {
+          "title": "Analitički kolačići", 
+          "description": "Ovi kolačići nam pomažu razumjeti kako posjetitelji koriste našu web stranicu prikupljanjem i izvještavanjem informacija anonimno.",
+          "details": "Google Analytics, pracenje performansi"
+        },
+        "marketing": {
+          "title": "Marketing kolačići",
+          "description": "Ovi kolačići prate vašu aktivnost preko web stranica kako bi vam prikazali relevantne oglase i izmjerili učinkovitost kampanja.",
+          "details": "Facebook Pixel, LinkedIn Insight, Google Ads"
+        },
+        "functional": {
+          "title": "Funkcionalni kolačići",
+          "description": "Ovi kolačići omogućavaju poboljšanu funkcionalnost i personalizaciju, poput pamcenja vaših postavki i preferencija.",
+          "details": "Jezicne postavke, postavke teme, napredak obrazaca"
+        }
+      },
+      "switchLabels": {
+        "alwaysOn": "Uvijek uključeno",
+        "optional": "Opcionalno"
+      }
+    },
+    "footer": {
+      "copyright": "© {year} Flowko. Sva prava pridržana.",
+      "legal": {
+        "privacy": "Pravila privatnosti",
+        "terms": "Uvjeti korištenja",
+        "cookies": "Pravila o kolačićima",
+        "legal": "Pravna obavijest",
+        "cookieSettings": "Postavke kolačića"
       }
     }
   }

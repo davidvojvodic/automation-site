@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { brainwave } from "@/public/assets";
 import { navigation } from "@/lib/constants";
@@ -19,11 +19,26 @@ export interface HeaderProps {
 
 export function Header({ className, locale = 'en' }: HeaderProps) {
   const pathname = usePathname();
-  // For hash navigation, fallback to window.location.hash if available
-  const hash = typeof window !== "undefined" ? window.location.hash : "";
-
+  const [hash, setHash] = useState("");
   const [openNavigation, setOpenNavigation] = useState(false);
   const t = useTranslations('HomePage.navigation');
+
+  // Handle hash changes after hydration
+  useEffect(() => {
+    const updateHash = () => {
+      setHash(window.location.hash);
+    };
+    
+    // Set initial hash
+    updateHash();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', updateHash);
+    
+    return () => {
+      window.removeEventListener('hashchange', updateHash);
+    };
+  }, []);
 
   const toggleNavigation = () => {
     if (openNavigation) {

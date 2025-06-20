@@ -114,6 +114,9 @@
         }
       }
     },
+    "companyLogos": {
+      "tagline": "Avtomatizirajte delovne procese v vaših priljubljenih poslovnih aplikacijah"
+    },
     "contact": {
       "title": "Začnite svojo avtomatizacijsko pot",
       "subtitle": "Pridobite brezplačno revizijo avtomatizacije in odkrijte, kako prihraniti več kot 20 ur tedensko",
@@ -133,8 +136,8 @@
         "industryPlaceholder": "npr. Spletna trgovina, Proizvodnja,...",
         "messagePlaceholder": "Povejte nam o vaših najbolj zamudnih opravilih ali procesih, ki bi jih radi avtomatizirali...",
         "submitButton": "Pridobite brezplačno revizijo avtomatizacije",
-        "responseTime": "Odgovorili vam bomo v 2 urah s prilagojeno strategijo avtomatizacije",
-        "required": "*"
+        "required": "*",
+        "privacyNote": "Spoštujemo vašo zasebnost. Vaše podatki so varni in jih ne bomo nikoli delili."
       },
       "trustIndicators": {
         "freeConsultation": "Brezplačno svetovanje",
@@ -153,6 +156,54 @@
       "messages": {
         "success": "Hvala! Kontaktirali vas bomo v 2 urah.",
         "error": "Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte direktno po e-pošti."
+      }
+    },
+    "cookieBanner": {
+      "title": "Cenimo vašo zasebnost",
+      "description": "Uporabljamo piškotke za izboljšanje vaše izkušnje brskanja, prilagojeno vsebino in analizo prometa. S klikom na \"Sprejmi vse\" se strinjate z uporabo piškotkov. Svoje nastavitve lahko upravljate ali izveste več v naših",
+      "cookiePolicy": "Pravilih o piškotkih",
+      "buttons": {
+        "customize": "Prilagodi",
+        "essentialOnly": "Samo bistveni",
+        "acceptAll": "Sprejmi vse",
+        "savePreferences": "Shrani nastavitve"
+      },
+      "preferences": {
+        "title": "Nastavitve piškotkov",
+        "essential": {
+          "title": "Bistveni piškotki",
+          "description": "Ti piškotki so potrebni za delovanje spletne strani in jih ni mogoče onemogočiti. Vključujejo upravljanje sej, varnost in osnovno funkcionalnost.",
+          "status": "Vedno aktivni"
+        },
+        "analytics": {
+          "title": "Analitični piškotki", 
+          "description": "Ti piškotki nam pomagajo razumeti, kako obiskovalci uporabljajo našo spletno stran, z zbiranjem in poročanjem informacij anonimno.",
+          "details": "Google Analytics, spremljanje uspešnosti"
+        },
+        "marketing": {
+          "title": "Trženjski piškotki",
+          "description": "Ti piškotki sledijo vaši dejavnosti preko spletnih strani, da vam pokažejo relevantne oglase in izmerijo učinkovitost kampanj.",
+          "details": "Facebook Pixel, LinkedIn Insight, Google Ads"
+        },
+        "functional": {
+          "title": "Funkcionalni piškotki",
+          "description": "Ti piškotki omogočajo izboljšano funkcionalnost in personalizacijo, kot je pomnjenje vaših nastavitev in preferenc.",
+          "details": "Jezikovne nastavitve, nastavitve teme, napredek obrazcev"
+        }
+      },
+      "switchLabels": {
+        "alwaysOn": "Vedno vklopljeno",
+        "optional": "Neobvezno"
+      }
+    },
+    "footer": {
+      "copyright": "© {year} Flowko. Vse pravice pridržane.",
+      "legal": {
+        "privacy": "Pravilnik o zasebnosti",
+        "terms": "Pogoji uporabe",
+        "cookies": "Pravilnik o piškotkih",
+        "legal": "Pravno obvestilo",
+        "cookieSettings": "Nastavitve piškotkov"
       }
     }
   }

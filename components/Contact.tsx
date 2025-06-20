@@ -4,7 +4,7 @@ import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
+import CustomButton from "./Button";
 import {
   Form,
   FormControl,
@@ -18,6 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { MessageCircle, Shield, CheckCircle } from "lucide-react";
 
 // Create validation schema with translations
 const createContactFormSchema = (t: (key: string) => string) =>
@@ -92,27 +93,158 @@ export function Contact({ className }: ContactProps) {
           </div>
 
           {/* Form */}
-          <div className="bg-n-8 border border-n-6 rounded-3xl p-8 md:p-12">
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6"
-              >
-                {/* Basic Contact Info */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative bg-n-8 border border-n-6 rounded-3xl p-8 md:p-12 overflow-hidden">
+            {/* Subtle gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-color-1/5 to-transparent pointer-events-none" />
+
+            <div className="relative z-10">
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-8"
+                >
+                  {/* Basic Contact Info */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.firstName")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={t("form.firstNamePlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.lastName")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={t("form.lastNamePlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.email")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              type="email"
+                              placeholder={t("form.emailPlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="company"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.company")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={t("form.companyPlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <FormField
+                      control={form.control}
+                      name="industry"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.industry")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder={t("form.industryPlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="website"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.website")}
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              type="url"
+                              placeholder={t("form.websitePlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  {/* Message */}
                   <FormField
                     control={form.control}
-                    name="firstName"
+                    name="message"
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-n-1">
-                          {t("form.firstName")} {t("form.required")}
+                          {t("form.message")} {t("form.required")}
                         </FormLabel>
                         <FormControl>
-                          <Input
-                            placeholder={t("form.firstNamePlaceholder")}
+                          <Textarea
+                            placeholder={t("form.messagePlaceholder")}
                             {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
+                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4 min-h-[120px]"
                           />
                         </FormControl>
                         <FormMessage />
@@ -120,164 +252,48 @@ export function Contact({ className }: ContactProps) {
                     )}
                   />
 
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.lastName")} {t("form.required")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={t("form.lastNamePlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  {/* Submit Button */}
+                  <div className="text-center pt-8">
+                    <div className="flex flex-col items-center gap-4">
+                      <CustomButton
+                        onClick={(e) => {
+                          e.preventDefault();
+                          form.handleSubmit(onSubmit)();
+                        }}
+                        className="w-full sm:w-auto min-w-[280px] hover:scale-105 transition-transform duration-200"
+                      >
+                        {t("form.submitButton")}
+                      </CustomButton>
+                      <p className="text-xs text-n-5 max-w-md">
+                        {t("form.privacyNote")}
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </Form>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="text-center mt-10 relative z-10">
+              <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-n-4 text-sm">
+                <div className="flex items-center gap-2 bg-n-7/50 px-4 py-2 rounded-full border border-n-6/50">
+                  <MessageCircle className="w-4 h-4 text-color-1 flex-shrink-0" />
+                  <span className="whitespace-nowrap">
+                    {t("trustIndicators.freeConsultation")}
+                  </span>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.email")} {t("form.required")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder={t("form.emailPlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.company")} {t("form.required")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={t("form.companyPlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <div className="flex items-center gap-2 bg-n-7/50 px-4 py-2 rounded-full border border-n-6/50">
+                  <CheckCircle className="w-4 h-4 text-color-1 flex-shrink-0" />
+                  <span className="whitespace-nowrap">
+                    {t("trustIndicators.noObligation")}
+                  </span>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="industry"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.industry")} {t("form.required")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={t("form.industryPlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="website"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.website")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            type="url"
-                            placeholder={t("form.websitePlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                <div className="flex items-center gap-2 bg-n-7/50 px-4 py-2 rounded-full border border-n-6/50">
+                  <Shield className="w-4 h-4 text-color-1 flex-shrink-0" />
+                  <span className="whitespace-nowrap">
+                    {t("trustIndicators.gdprCompliant")}
+                  </span>
                 </div>
-
-                {/* Message */}
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-n-1">
-                        {t("form.message")} {t("form.required")}
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder={t("form.messagePlaceholder")}
-                          {...field}
-                          className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4 min-h-[120px]"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                {/* Submit Button */}
-                <div className="text-center pt-6">
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full md:w-auto px-8"
-                  >
-                    {t("form.submitButton")}
-                  </Button>
-                  <p className="text-n-4 text-sm mt-3">
-                    {t("form.responseTime")}
-                  </p>
-                </div>
-              </form>
-            </Form>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="text-center mt-8">
-            <div className="flex flex-wrap justify-center gap-8 text-n-4 text-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-color-1 rounded-full"></div>
-                <span>{t("trustIndicators.freeConsultation")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-color-1 rounded-full"></div>
-                <span>{t("trustIndicators.noObligation")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-color-1 rounded-full"></div>
-                <span>{t("trustIndicators.gdprCompliant")}</span>
               </div>
             </div>
           </div>
