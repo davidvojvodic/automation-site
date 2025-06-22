@@ -1,5 +1,5 @@
 import React from "react";
-import { brainwaveSymbol, check } from "@/public/assets";
+import { check, flowkoSymbol } from "@/public/assets";
 import { collabApps } from "@/lib/constants";
 import Button from "./Button";
 import Section from "./Section";
@@ -27,34 +27,34 @@ export interface CollaborationProps {
 }
 
 export function Collaboration({ className }: CollaborationProps) {
-  const t = useTranslations('HomePage.collaboration');
-  
+  const t = useTranslations("HomePage.collaboration");
+
   return (
     <Section crosses className={cn(className)}>
       <div className={cn("container lg:flex")}>
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">
-            {t('title')}
-          </h2>
+          <h2 className="h2 mb-4 md:mb-8">{t("title")}</h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
-            {['feature1', 'feature2', 'feature3'].map((key) => (
+            {["feature1", "feature2", "feature3"].map((key) => (
               <li className="mb-3 py-3" key={key}>
                 <div className="flex items-center">
                   <Image src={check} width={24} height={24} alt="check" />
                   <h6 className="body-2 ml-5">{t(`features.${key}.title`)}</h6>
                 </div>
-                <p className="body-2 mt-3 text-n-4">{t(`features.${key}.text`)}</p>
+                <p className="body-2 mt-3 text-n-4">
+                  {t(`features.${key}.text`)}
+                </p>
               </li>
             ))}
           </ul>
 
-          <Button>{t('buttonText')}</Button>
+          <Button>{t("buttonText")}</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {t('description')}
+            {t("description")}
           </p>
 
           <div
@@ -66,10 +66,10 @@ export function Collaboration({ className }: CollaborationProps) {
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                   <Image
-                    src={brainwaveSymbol}
+                    src={flowkoSymbol}
                     width={48}
                     height={48}
-                    alt="brainwave"
+                    alt="flowko"
                   />
                 </div>
               </div>

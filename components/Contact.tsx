@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
@@ -33,6 +34,7 @@ const createContactFormSchema = (t: (key: string) => string) =>
       .optional()
       .or(z.literal("")),
     industry: z.string().min(2, t("validation.industryRequired")),
+    bundleInterest: z.boolean().optional(),
     message: z.string().min(10, t("validation.messageMin")),
   });
 
@@ -43,6 +45,7 @@ type ContactFormValues = {
   company: string;
   website?: string;
   industry: string;
+  bundleInterest?: boolean;
   message: string;
 };
 
@@ -64,6 +67,7 @@ export function Contact({ className }: ContactProps) {
       company: "",
       website: "",
       industry: "",
+      bundleInterest: false,
       message: "",
     },
   });
@@ -230,6 +234,31 @@ export function Contact({ className }: ContactProps) {
                       )}
                     />
                   </div>
+
+                  {/* Bundle Interest Checkbox */}
+                  <FormField
+                    control={form.control}
+                    name="bundleInterest"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="border-n-6 data-[state=checked]:bg-color-1 data-[state=checked]:border-color-1"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-none">
+                          <FormLabel className="text-n-1 font-medium cursor-pointer">
+                            {t("form.bundleInterest")}
+                          </FormLabel>
+                          <p className="text-sm text-n-4">
+                            {t("form.bundleInterestDescription")}
+                          </p>
+                        </div>
+                      </FormItem>
+                    )}
+                  />
 
                   {/* Message */}
                   <FormField

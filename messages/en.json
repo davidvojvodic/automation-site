@@ -10,12 +10,11 @@
     "navigation": {
       "features": "Features",
       "services": "Services",
+      "benefits": "Benefits",
       "pricing": "Pricing",
       "process": "Process",
       "getStarted": "Get Started",
-      "contact": "Contact",
-      "newAccount": "New account",
-      "signIn": "Sign in"
+      "contact": "Contact"
     },
     "services": {
       "title": "Stop Losing Hours on Manual Work",
@@ -128,6 +127,8 @@
         "website": "Company Website",
         "industry": "Industry",
         "message": "How can we help you automate your business?",
+        "bundleInterest": "I'm interested in Website + Automation Bundles",
+        "bundleInterestDescription": "Get a complete digital solution with professional website + automation workflows",
         "firstNamePlaceholder": "Your first name",
         "lastNamePlaceholder": "Your last name",
         "emailPlaceholder": "your.email@company.com",
@@ -196,8 +197,74 @@
         "optional": "Optional"
       }
     },
+    "bundles": {
+        "tag": "Complete Digital Solutions",
+        "title": "Website + Automation Bundles",
+        "subtitle": "Get a professional website and powerful automation workflows in one comprehensive package. Launch faster, automate smarter, grow bigger.",
+        "benefits": [
+          "Professional website + automation",
+          "Faster time to market",
+          "Integrated solution approach"
+        ],
+        "popular": "Most Popular",
+        "included": "What's Included",
+        "startingAt": "Starting at",
+        "pricingNote": "Final price depends on complexity and requirements",
+        "cta": "Get Your Bundle",
+        "bottomText": "Need a custom solution? We create tailored website and automation packages for any business.",
+        "bottomCta": "Discuss Your Project",
+        "ecommerce": {
+          "title": "E-commerce + Sales Automation",
+          "description": "Complete online store solution for multi-channel sellers. Perfect for dropshipping, subscription boxes, and product retailers.",
+          "roi": "Save 25+ hours/week on order management",
+          "features": [
+            "Multi-platform inventory sync (Shopify + Amazon + WooCommerce)",
+            "Automated order routing to suppliers/fulfillment centers",
+            "Abandoned cart recovery with personalized discount offers",
+            "Customer lifecycle emails (welcome, reviews, win-back campaigns)"
+          ]
+        },
+        "business": {
+          "title": "Business Website + Lead Generation",
+          "description": "Professional corporate website for B2B services, consultants, and agencies. Converts visitors into qualified leads automatically.",
+          "roi": "3x faster lead qualification",
+          "features": [
+            "Lead scoring with HubSpot/Pipedrive auto-routing",
+            "Automated proposal generation from contact forms",
+            "Meeting scheduling with calendar sync (Calendly/Cal.com)",
+            "Follow-up sequences for warm leads and prospects"
+          ]
+        },
+        "service": {
+          "title": "Service Business + Booking Automation",
+          "description": "Complete booking solution for salons, clinics, fitness trainers, and consultants. Eliminates no-shows and manual scheduling.",
+          "roi": "90% reduction in no-shows",
+          "features": [
+            "Online booking with automatic payment collection",
+            "SMS/email reminders (24h, 2h before appointments)",
+            "No-show fee processing and rescheduling automation",
+            "Client intake forms with service customization"
+          ]
+        },
+        "portfolio": {
+          "title": "Portfolio + Client Management",
+          "description": "Professional portfolio for designers, developers, photographers, and agencies. Streamlines client work from inquiry to payment.",
+          "roi": "50% faster project delivery",
+          "features": [
+            "Project intake forms with automatic file/folder creation",
+            "Client approval workflows with revision tracking",
+            "Milestone-based invoicing automation",
+            "Portfolio showcase with inquiry routing to CRM"
+          ]
+        }
+      },
     "footer": {
       "copyright": "© {year} Flowko. All rights reserved.",
+      "contact": {
+        "email": "info@flowko.io",
+        "location": "Murska Sobota, Slovenia",
+        "description": "AI automation solutions for European SMBs"
+      },
       "legal": {
         "privacy": "Privacy Policy",
         "terms": "Terms of Service", 

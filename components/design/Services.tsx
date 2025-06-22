@@ -1,4 +1,4 @@
-import { brainwaveWhiteSymbol, gradient, play } from "@/public/assets";
+import { flowko, gradient, play } from "@/public/assets";
 import ChatBubbleWing from "@/public/assets/svg/ChatBubbleWing";
 import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
@@ -37,7 +37,7 @@ function PhotoChatMessage({ className, ...props }: ComponentProps) {
       )}
       {...props}
     >
-      Hey Brainwave, enhance this photo
+      Hey Flowko, enhance this workflow
       <ChatBubbleWing
         className="absolute left-full bottom-0"
         pathClassName="fill-black"
@@ -57,12 +57,7 @@ function VideoChatMessage({ className, ...props }: ComponentProps) {
     >
       Video generated!
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-1 rounded-[0.75rem]">
-        <Image
-          src={brainwaveWhiteSymbol}
-          width={26}
-          height={26}
-          alt="Brainwave"
-        />
+        <Image src={flowko} width={26} height={26} alt="Flowko" />
       </div>
       <p className="tagline absolute right-2.5 bottom-1 text-[0.625rem] text-n-3 uppercase">
         just now

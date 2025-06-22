@@ -10,12 +10,11 @@
     "navigation": {
       "features": "Funkcionalnosti",
       "services": "Storitve",
+      "benefits": "Prednosti",
       "pricing": "Ceniki",
       "process": "Proces",
       "getStarted": "Začnite",
-      "contact": "Kontakt",
-      "newAccount": "Nov račun",
-      "signIn": "Prijava"
+      "contact": "Kontakt"
     },
     "services": {
       "title": "Prenehajte Izgubljati Ure z Ročnim Delom",
@@ -128,6 +127,8 @@
         "website": "Spletna stran podjetja",
         "industry": "Panoga",
         "message": "Kako vam lahko pomagamo avtomatizirati vaše poslovanje?",
+        "bundleInterest": "Zanima me za pakete Spletna stran + Avtomatizacija",
+        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatizacijski delovni procesi",
         "firstNamePlaceholder": "Vaše ime",
         "lastNamePlaceholder": "Vaš priimek",
         "emailPlaceholder": "vas.email@podjetje.si",
@@ -196,8 +197,74 @@
         "optional": "Neobvezno"
       }
     },
+    "bundles": {
+        "tag": "Celovite digitalne rešitve",
+        "title": "Paketi spletna stran + avtomatizacija",
+        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem celovitem paketu. Lansirajo se hitreje, avtomatizirajte pametneje, rastite večje.",
+        "benefits": [
+          "Profesionalna spletna stran + avtomatizacija",
+          "Hitrejši čas prihoda na trg",
+          "Integriran pristop k rešitvam"
+        ],
+        "popular": "Najbolj priljubljen",
+        "included": "Kaj je vključeno",
+        "startingAt": "Začenši pri",
+        "pricingNote": "Končna cena je odvisna od kompleksnosti in zahtev",
+        "cta": "Pridobite svoj paket",
+        "bottomText": "Potrebujete rešitev po meri? Ustvarjamo prilagojene pakete spletnih strani in avtomatizacije za katero koli podjetje.",
+        "bottomCta": "Razpravljajte o svojem projektu",
+        "ecommerce": {
+          "title": "Spletna trgovina + avtomatizacija prodaje",
+          "description": "Celovita spletna trgovina z avtomatiziranim procesiranjem naročil, upravljanjem zalog in delovnimi procesi za angažiranje strank.",
+          "roi": "Prihranite 25+ ur tedensko pri upravljanju naročil",
+          "features": [
+            "Profesionalna spletna trgovina z integrirano obdelavo plačil in varnostnimi standardi",
+            "Samodejno potrjevanje naročil, posodabljanje zalog in obveščanje o dostavi",
+            "Integracija z dostavnimi službami za sledenje pošiljkam v realnem času",
+            "AI-podprte personalizirane priporočitve izdelkov in kampanje obnovitve zapuščenih košaric"
+          ]
+        },
+        "business": {
+          "title": "Poslovna spletna stran + generiranje potencialnih strank",
+          "description": "Profesionalna korporativna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalificiranjem in avtomatizacijo nege.",
+          "roi": "3x hitrejše kvalificiranje potencialnih strank",
+          "features": [
+            "SEO-optimizirana spletna stran z modernim oblikovanjem, prilagojenim vaši industriji",
+            "Inteligentno ocenjevanje potencialnih strank na podlagi vedenja in demografije",
+            "Samodejna distribucija potencialnih strank prodajni ekipi s prioriteto",
+            "Personalizirane sekvence negovanja, ki temeljijo na interesih in fazah nakupnega cikla"
+          ]
+        },
+        "service": {
+          "title": "Storitev + avtomatizacija rezervacij",
+          "description": "Spletna stran, osredotočena na storitve, z enostavnim rezerviranjem terminov, upravljanjem strank in avtomatizacijo plačil.",
+          "roi": "90% zmanjšanje neopravičenih odsotnosti",
+          "features": [
+            "Koledar rezervacij s pravili razpoložljivosti in pametnim upravljanjem konfliktov",
+            "Samodejni SMS in e-poštni opomniki 24-48 ur pred terminom",
+            "Digitalni vnosni obrazci, ki zmanjšajo administrativni čas za 75%",
+            "Integracija z računovodskimi sistemi za samodejno fakturiranje po storitvi"
+          ]
+        },
+        "portfolio": {
+          "title": "Portfolio + upravljanje strank",
+          "description": "Kreativna portfolio spletna stran z racionaliziranim upravljanjem projektov in avtomatizacijo komunikacije s strankami.",
+          "roi": "50% hitrejša dostava projektov",
+          "features": [
+            "Interaktivna galerija projektov s filtri kategorij in dinamičnimi študijami primerov",
+            "Avtomatiziran proces odobritve z digitalnimi podpisi in verzioniranjem",
+            "Portal za stranke za pregled napredka projekta, deljenje datotek in komunikacijo",
+            "Integracija projektnega časa s samodejnim generiranjem računov na podlagi ur"
+          ]
+        }
+    },
     "footer": {
       "copyright": "© {year} Flowko. Vse pravice pridržane.",
+      "contact": {
+        "email": "info@flowko.io",
+        "location": "Murska Sobota, Slovenija",
+        "description": "AI avtomatizacijske rešitve za evropska mala in srednja podjetja"
+      },
       "legal": {
         "privacy": "Pravilnik o zasebnosti",
         "terms": "Pogoji uporabe",

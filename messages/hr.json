@@ -10,12 +10,11 @@
     "navigation": {
       "features": "Značajke",
       "services": "Usluge",
+      "benefits": "Prednosti",
       "pricing": "Cjenik",
       "process": "Proces",
       "getStarted": "Započnite",
-      "contact": "Kontakt",
-      "newAccount": "Novi račun",
-      "signIn": "Prijava"
+      "contact": "Kontakt"
     },
     "services": {
       "title": "Prestanite Gubiti Sate na Ručnom Radu",
@@ -128,6 +127,8 @@
         "website": "Web stranica tvrtke",
         "industry": "Industrija",
         "message": "Kako vam možemo pomoći automatizirati vaš biznis?",
+        "bundleInterest": "Zainteresiran sam za pakete Web stranica + Automatizacija",
+        "bundleInterestDescription": "Dobijte cjelovito digitalno rješenje s profesionalnom web stranicom + automatizacijski radni procesi",
         "firstNamePlaceholder": "Vaše ime",
         "lastNamePlaceholder": "Vaše prezime",
         "emailPlaceholder": "vas.email@tvrtka.hr",
@@ -196,8 +197,74 @@
         "optional": "Opcionalno"
       }
     },
+    "bundles": {
+        "tag": "Cjelovita digitalna rješenja",
+        "title": "Paketi web stranica + automatizacija",
+        "subtitle": "Dobijte profesionalnu web stranicu i moćne automatizacijske procese u jednom cjelovitom paketu. Pokrenite se brže, automatizirajte pametnije, rastite veće.",
+        "benefits": [
+          "Profesionalna web stranica + automatizacija",
+          "Brže vrijeme dolaska na tržište",
+          "Integriran pristup rješenjima"
+        ],
+        "popular": "Najpopularniji",
+        "included": "Što uključuje",
+        "startingAt": "Počevši od",
+        "pricingNote": "Konačna cijena ovisi o složenosti i zahtjevima",
+        "cta": "Nabavite svoj paket",
+        "bottomText": "Trebate prilagođeno rješenje? Stvaramo web stranice i automatizacijske pakete po mjeri za bilo koji posao.",
+        "bottomCta": "Razgovarajte o vašem projektu",
+        "ecommerce": {
+          "title": "E-trgovina + automatizacija prodaje",
+          "description": "Cjelovita online trgovina s automatiziranim procesiranjem narudžbi, upravljanjem inventara i radnim procesima angažiranja kupaca.",
+          "roi": "Uštedite 25+ sati tjedno na upravljanju narudžbama",
+          "features": [
+            "Profesionalna e-trgovina web stranica s integriranom obradom plaćanja i sigurnosnim standardima",
+            "Automatsko potvrđivanje narudžbi, ažuriranje inventara i obavještavanje o dostavi",
+            "Integracija sa dostavnim službama za praćenje pošiljki u stvarnom vremenu",
+            "AI-pokretane personalizirane preporuke proizvoda i kampanje oporavka napuštenih košarica"
+          ]
+        },
+        "business": {
+          "title": "Poslovna web stranica + generiranje potencijalnih kupaca",
+          "description": "Profesionalna korporativna web stranica s inteligentnim hvatanjem potencijalnih kupaca, kvalificiranjem i automatizacijom njege.",
+          "roi": "3x brže kvalificiranje potencijalnih kupaca",
+          "features": [
+            "SEO-optimizirana web stranica s modernim dizajnom prilagođenim vašoj industriji",
+            "Inteligentno ocjenjivanje potencijalnih kupaca na temelju ponašanja i demografije",
+            "Automatska distribucija potencijalnih kupaca prodajnom timu s prioritetom",
+            "Personalizirane sekvence njegovanja temeljene na interesima i fazama kupovnog ciklusa"
+          ]
+        },
+        "service": {
+          "title": "Servisni posao + automatizacija rezervacija",
+          "description": "Web stranica usmjerena na usluge s jednostavnim rezerviranjem termina, upravljanjem klijenata i automatizacijom plaćanja.",
+          "roi": "90% smanjenje neopravdanih izostanaka",
+          "features": [
+            "Kalendar rezervacija s pravilima dostupnosti i pametnim konfliktnim upravljanjem",
+            "Automatski SMS i email podsjetnici 24-48 sati prije termina",
+            "Digitalni obrasci za unos koji smanjuju administrativno vrijeme za 75%",
+            "Integracija s računovodstvenim sustavima za automatsko fakturiranje nakon usluge"
+          ]
+        },
+        "portfolio": {
+          "title": "Portfolio + upravljanje klijentima",
+          "description": "Kreativna portfolio web stranica s racionaliziranim upravljanjem projekata i automatizacijom komunikacije s klijentima.",
+          "roi": "50% brža dostava projekata",
+          "features": [
+            "Interaktivna galerija projekata s filterima kategorija i dinamičkim studijama slučaja",
+            "Automatiziran proces odobravanja s digitalnim potpisima i verzioniranjem",
+            "Portal za klijente za pregled napretka projekta, dijeljenje datoteka i komunikaciju",
+            "Integracija projektnog vremena s automatskim generiranjem faktura na temelju sati"
+          ]
+        }
+    },
     "footer": {
       "copyright": "© {year} Flowko. Sva prava pridržana.",
+      "contact": {
+        "email": "info@flowko.io",
+        "location": "Murska Sobota, Slovenija",
+        "description": "AI automatizacijske rješenja za europska mala i srednja poduzeća"
+      },
       "legal": {
         "privacy": "Pravila privatnosti",
         "terms": "Uvjeti korištenja",

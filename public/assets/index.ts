@@ -1,7 +1,6 @@
-import brainwave from "./brainwave.svg";
+import flowko from "./flowko-logo-full.svg";
 import check from "./check.svg";
-import brainwaveSymbol from "./brainwave-symbol.svg";
-import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
+import flowkoSymbol from "./flowko-logo-icon.svg";
 import play from "./play.svg";
 import gradient from "./gradient.png";
 import smallSphere from "./4-small.png";
@@ -83,14 +82,17 @@ import sheetsLogo from "./sheets.svg";
 import whatsappLogo from "./WhatsApp.svg";
 import telegramLogo from "./Telegram.svg";
 import airtableLogo from "./airtable.png";
+import ecommerceIcon from "./bundles/ecommerce-icon.svg";
+import businessIcon from "./bundles/business-icon.svg";
+import serviceIcon from "./bundles/service-icon.svg";
+import portfolioIcon from "./bundles/portfolio-icon.svg";
 
 export {
-  brainwave,
+  flowko,
   check,
   check2,
   loading1,
-  brainwaveSymbol,
-  brainwaveWhiteSymbol,
+  flowkoSymbol,
   play,
   gradient,
   smallSphere,
@@ -161,4 +163,8 @@ export {
   whatsappLogo,
   telegramLogo,
   airtableLogo,
+  ecommerceIcon,
+  businessIcon,
+  serviceIcon,
+  portfolioIcon,
 };

@@ -1,18 +1,15 @@
 "use client";
 
-import { curve, heroBackground, robot } from "@/public/assets";
+import { curve } from "@/public/assets";
 import Button from "./Button";
 import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { heroIcons } from "@/lib/constants";
-import { ScrollParallax } from "react-just-parallax";
+import { BackgroundCircles, BottomLine } from "./design/Hero";
+
 import { useRef } from "react";
-import Generating from "./Generating";
-import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export interface HeroProps {
   className?: string;
@@ -20,7 +17,7 @@ export interface HeroProps {
 
 function Hero(props: HeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
-  const t = useTranslations('HomePage.hero');
+  const t = useTranslations("HomePage.hero");
 
   return (
     <Section
@@ -30,12 +27,12 @@ function Hero(props: HeroProps) {
       customPaddings="py-10 lg:py-16 xl:py-20"
       id="hero"
     >
-      <div className="container relative mt-20" ref={parallaxRef}>
+      <div className="container relative mt-1 lg:mt-36" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-            {t('title')}{" "}
+            {t("title")}{" "}
             <span className="inline-block relative">
-              {t('subtitle')}
+              {t("subtitle")}
               <Image
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -45,18 +42,20 @@ function Hero(props: HeroProps) {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-            {t('description')}
+          <p className="body-1 max-w-3xl mx-auto mt-12 mb-6 text-n-2 lg:mb-8">
+            {t("description")}
           </p>
-          <Button href="#contact" white>
-            {t('cta')}
+          <Button className="mt-6" href="#contact" white>
+            {t("cta")}
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+          {/*
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
+              
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <Image
                   src={robot}
@@ -85,24 +84,14 @@ function Hero(props: HeroProps) {
                   />
                 </ScrollParallax>
               </div>
+           
             </div>
-
-            <Gradient />
-          </div>
-          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
-            <Image
-              src={heroBackground}
-              className="w-full"
-              width={1440}
-              height={1800}
-              alt="hero"
-            />
-          </div>
+            </div> */}
 
           <BackgroundCircles parallaxRef={parallaxRef} />
         </div>
 
-        <CompanyLogos className="relative z-10 mt-10 md:mt-20" />
+        <CompanyLogos className="relative z-10 mt-10 md:mt-40" />
       </div>
 
       <BottomLine />

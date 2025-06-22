@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { background } from "@/public/assets";
 import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
@@ -62,16 +60,6 @@ function HamburgerMenu({ className, ...props }: HamburgerMenuProps) {
       )}
       {...props}
     >
-      <div className="absolute inset-0 opacity-[.03]">
-        <Image
-          className="w-full h-full object-cover"
-          src={background}
-          width={688}
-          height={953}
-          alt="Background"
-        />
-      </div>
-
       <Rings />
       <SideLines />
       <BackgroundCircles />

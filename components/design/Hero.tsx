@@ -5,19 +5,6 @@ import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 import PlusSvg from "@/public/assets/svg/PlusSvg";
 
-interface GradientProps extends HTMLAttributes<HTMLDivElement> {
-  className?: string;
-}
-
-function Gradient({ className, ...props }: GradientProps) {
-  return (
-    <div className={cn("", className)} {...props}>
-      <div className="relative z-1 h-6 mx-2.5 bg-n-11 shadow-xl rounded-b-[1.25rem] lg:h-6 lg:mx-8" />
-      <div className="relative z-1 h-6 mx-6 bg-n-11/70 shadow-xl rounded-b-[1.25rem] lg:h-6 lg:mx-20" />
-    </div>
-  );
-}
-
 interface BottomLineProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
@@ -132,4 +119,4 @@ function BackgroundCircles({
   );
 }
 
-export { Gradient, BottomLine, BackgroundCircles };
+export { BottomLine, BackgroundCircles };

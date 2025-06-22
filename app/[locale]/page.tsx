@@ -7,10 +7,11 @@ import Hero from "@/components/Hero";
 // import Pricing from "@/components/Pricing";
 import Implementation from "@/components/Implementation";
 import Services from "@/components/Services";
+import WebsiteBundles from "@/components/WebsiteBundles";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 
 export default async function Home({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
@@ -20,8 +21,9 @@ export default async function Home({
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header locale={locale} />
         <Hero />
-        <Benefits />
         <Services />
+        <WebsiteBundles />
+        <Benefits />
         <Collaboration />
         {/* <Pricing /> */}
         <Implementation />

@@ -4,16 +4,11 @@ import {
   benefitIcon3,
   benefitIcon4,
   benefitImage2,
-  chromecast,
-  disc02,
   discord,
-  discordBlack,
-  facebook,
   figma,
   file02,
   framer,
   homeSmile,
-  instagram,
   notification2,
   notification3,
   notification4,
@@ -22,16 +17,12 @@ import {
   plusSquare,
   protopie,
   raindrop,
-  recording01,
-  recording03,
   roadmap1,
   roadmap2,
   roadmap3,
   roadmap4,
   searchMd,
   slack,
-  sliders04,
-  telegram,
   twitter,
   driveLogo,
   gmailLogo,
@@ -46,30 +37,18 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Services",
+    url: "#services",
   },
   {
     id: "1",
-    title: "Services",
-    url: "#services",
+    title: "Benefits",
+    url: "#features",
   },
   {
     id: "2",
     title: "Process",
     url: "#implementation",
-  },
-  {
-    id: "3",
-    title: "Get Started",
-    url: "#contact",
-    onlyMobile: true,
-  },
-  {
-    id: "4",
-    title: "Contact",
-    url: "#contact",
-    onlyMobile: true,
   },
 ];
 
@@ -98,14 +77,6 @@ export const flowkoServices = [
   "Automated client intake and follow-ups",
   "Smart document generation and billing",
   "Intelligent scheduling and communication",
-];
-
-export const brainwaveServicesIcons = [
-  recording03,
-  recording01,
-  disc02,
-  chromecast,
-  sliders04,
 ];
 
 export const roadmap = [
@@ -319,32 +290,8 @@ export const benefits = [
 export const socials = [
   {
     id: "0",
-    title: "Discord",
-    iconUrl: discordBlack,
-    url: "#",
-  },
-  {
-    id: "1",
-    title: "Twitter",
+    title: "X",
     iconUrl: twitter,
-    url: "#",
-  },
-  {
-    id: "2",
-    title: "Instagram",
-    iconUrl: instagram,
-    url: "#",
-  },
-  {
-    id: "3",
-    title: "Telegram",
-    iconUrl: telegram,
-    url: "#",
-  },
-  {
-    id: "4",
-    title: "Facebook",
-    iconUrl: facebook,
-    url: "#",
+    url: "https://x.com/flowko_io",
   },
 ];

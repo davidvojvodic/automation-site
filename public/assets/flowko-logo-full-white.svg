@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" width="220" height="80">
+  <!-- Logo Icon -->
+  <g transform="scale(0.25) translate(20, 20)">
+    <polygon fill="#FFFFFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+    <polygon fill="#FFFFFF" points="0,95.1 0,163 163,67.8 163,0"/>
+  </g>
+  
+  <!-- FLOWKO Text -->
+  <text x="65" y="40" font-family="Sora, sans-serif" font-size="32" font-weight="600" fill="#FFFFFF" dominant-baseline="middle" text-anchor="start">FLOWKO</text>
+</svg>
