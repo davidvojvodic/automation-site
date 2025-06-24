@@ -19,68 +19,82 @@
       "contact": "Contact"
     },
     "solutions": {
-      "title": "AI-Powered Automation Solutions",
-      "subtitle": "Transform your business with intelligent automation that learns, adapts, and delivers results",
-      "bottomText": "Powered by advanced AI and machine learning",
+      "title": "AI Workflow Automation Solutions",
+      "subtitle": "Transform your business operations with intelligent n8n workflows that deliver measurable ROI",
+      "bottomText": "Built on n8n's enterprise-grade automation platform",
+      "ctaText": "Ready to transform your business?",
+      "ctaButton": "Start Your Automation Journey",
       "solution1": {
-        "title": "AI-Powered Customer Automation",
-        "description": "Intelligent customer journey from first contact to loyal advocate",
+        "title": "Intelligent Document Processing",
+        "description": "AI-powered document workflows that eliminate manual data entry and approval bottlenecks",
         "features": [
-          "AI chatbots that qualify leads and book meetings automatically",
-          "Smart email sequences that adapt based on customer behavior",
-          "Predictive support that solves problems before customers complain"
+          "OCR + AI extraction from invoices, contracts, and forms with 99% accuracy",
+          "Automated approval workflows with smart routing based on amount and type",
+          "Digital signatures and GDPR-compliant audit trails"
         ],
-        "roi": "Convert 3x more leads while reducing support costs by 70%"
+        "roi": "Process documents 10x faster with 80% cost reduction",
+        "timeMetric": "10x faster processing",
+        "costMetric": "80% cost reduction"
       },
       "solution2": {
-        "title": "Intelligent Document Processing",
-        "description": "AI that reads, understands, and processes any business document",
+        "title": "Manufacturing Process Automation", 
+        "description": "Smart production workflows that optimize efficiency and reduce downtime",
         "features": [
-          "OCR + AI extraction from invoices, contracts, and forms",
-          "Automated approval workflows with smart routing",
-          "Digital signatures and compliance tracking"
+          "Real-time production monitoring with automated quality alerts",
+          "Inventory forecasting with automated purchase order generation",
+          "Predictive maintenance scheduling based on equipment data"
         ],
-        "roi": "Process paperwork 10x faster with 99% accuracy"
+        "roi": "Reduce operational costs by 30-40% with real-time optimization",
+        "timeMetric": "30-40% cost reduction",
+        "costMetric": "€3M saved annually"
       },
       "solution3": {
-        "title": "Smart Business Operations",
-        "description": "AI-driven automation that runs your business while you sleep",
+        "title": "Professional Services Automation",
+        "description": "Streamlined client workflows from intake to invoice with minimal manual work",
         "features": [
-          "Inventory forecasting with automated purchasing decisions",
-          "Dynamic pricing optimization based on market conditions",
-          "Intelligent task routing and resource allocation"
+          "Automated client onboarding with document collection and CRM sync",
+          "Project milestone tracking with automated billing and invoicing",
+          "Contract generation and e-signature workflows with approval routing"
         ],
-        "roi": "Reduce operational costs by 40% with AI decision-making"
+        "roi": "Save 2+ hours per client with 70% faster project delivery",
+        "timeMetric": "2+ hrs saved per client",
+        "costMetric": "70% faster delivery"
       },
       "solution4": {
-        "title": "AI Marketing & Sales Engine",
-        "description": "Generative AI that creates and optimizes your entire sales funnel",
+        "title": "E-commerce Order Fulfillment",
+        "description": "Multi-channel automation that handles orders from click to delivery seamlessly",
         "features": [
-          "AI-generated content that matches your brand voice perfectly",
-          "Automated A/B testing and campaign optimization",
-          "Personalized outreach sequences for each prospect type"
+          "Real-time inventory sync across all sales channels and marketplaces",
+          "Automated order routing to suppliers and fulfillment centers",
+          "Customer communication workflows with shipping updates and tracking"
         ],
-        "roi": "Scale your marketing 5x without hiring additional staff"
+        "roi": "Handle 300% more orders with same team size",
+        "timeMetric": "300% order capacity",
+        "costMetric": "15:1 ROI first year"
       },
       "solution5": {
-        "title": "Predictive Business Intelligence",
-        "description": "AI analytics that predict the future and automate strategic decisions",
+        "title": "Compliance & Reporting Automation",
+        "description": "GDPR-compliant workflows that automate regulatory requirements and audit preparation",
         "features": [
-          "Machine learning models that forecast revenue and trends",
-          "Automated alerts when metrics hit critical thresholds",
-          "AI-generated insights and actionable recommendations"
+          "Automated GDPR data processing workflows with consent management",
+          "Real-time regulatory reporting with audit trail generation",
+          "Risk monitoring alerts with automated escalation procedures"
         ],
-        "roi": "Make data-driven decisions with 90% prediction accuracy"
+        "roi": "Reduce compliance costs by 60% with automated audit readiness",
+        "timeMetric": "60% compliance cost cut",
+        "costMetric": "Audit-ready always"
       },
       "solution6": {
-        "title": "Complete Workflow Automation",
-        "description": "Connect every tool and automate every process with intelligent triggers",
+        "title": "Hyperautomation Platform Integration",
+        "description": "Connect every business tool with intelligent workflows using n8n's low-code platform",
         "features": [
-          "1000+ app integrations with smart data synchronization",
-          "AI-powered workflow optimization and error detection",
-          "Multi-step automation that adapts to changing conditions"
+          "1000+ pre-built app integrations with custom API connections",
+          "Low-code workflow builder enabling citizen developers across teams",
+          "AI-powered error detection with automatic retry and escalation logic"
         ],
-        "roi": "Eliminate 25+ hours of manual work every week"
+        "roi": "Eliminate 200+ hours of manual work per employee annually",
+        "timeMetric": "200+ hrs/employee/year",
+        "costMetric": "30-200% ROI year 1"
       }
     },
     "benefits": {
@@ -111,31 +125,34 @@
       }
     },
     "implementation": {
-      "title": "Your Automation Journey",
-      "subtitle": "From chaos to automated efficiency in 4 simple steps",
+      "title": "Your Path to Business Automation",
+      "subtitle": "Transform chaos into streamlined efficiency in just 4 proven steps",
+      "tag": "Start saving time today",
+      "ctaTitle": "Ready to Reclaim 20+ Hours Weekly?",
+      "ctaButton": "Get Your Free ROI Analysis",
       "step1": {
-        "title": "Discovery Call",
-        "description": "We analyze your current processes and identify automation opportunities with the biggest impact on your business.",
+        "title": "Free Discovery Call",
+        "description": "We analyze your current workflows and identify the biggest automation opportunities for immediate time and cost savings.",
         "duration": "30 minutes",
         "status": "Week 1"
       },
       "step2": {
-        "title": "Custom Blueprint",
-        "description": "Receive a detailed automation plan with clear timelines, expected results, and ROI projections tailored to your needs.",
-        "duration": "2-3 days",
-        "status": "Week 1"
+        "title": "Custom ROI Blueprint",
+        "description": "Get your personalized automation roadmap with guaranteed time savings, cost reductions, and exact ROI projections.",
+        "duration": "3-5 days",
+        "status": "Week 1-2"
       },
       "step3": {
-        "title": "Build & Deploy",
-        "description": "We create and implement your automations with regular progress updates and testing to ensure everything works perfectly.",
-        "duration": "1-2 weeks",
-        "status": "Week 2-3"
+        "title": "Build & Go Live",
+        "description": "Watch your automations come to life with weekly demos and real-time progress tracking until everything runs flawlessly.",
+        "duration": "2-4 weeks",
+        "status": "Week 2-5"
       },
       "step4": {
-        "title": "Training & Launch",
-        "description": "Complete handover with documentation, training, and ongoing support to ensure your team gets maximum value.",
-        "duration": "2-3 days",
-        "status": "Week 3"
+        "title": "Launch & Scale",
+        "description": "Your team becomes automation-ready with complete training, documentation, and ongoing support for maximum impact.",
+        "duration": "3-5 days",
+        "status": "Week 5-6"
       }
     },
     "collaboration": {

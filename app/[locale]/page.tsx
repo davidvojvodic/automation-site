@@ -21,11 +21,11 @@ export default async function Home({
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header locale={locale} />
         <Hero />
-        <Services />
-        <WebsiteBundles />
         <Benefits />
         <Collaboration />
+        <WebsiteBundles />
         {/* <Pricing /> */}
+        <Services />
         <Implementation />
         <Contact />
         <Footer />

@@ -19,79 +19,93 @@
       "contact": "Kontakt"
     },
     "solutions": {
-      "title": "AI Rešitve za Avtomatizacijo",
-      "subtitle": "Preobrazite svoje podjetje z inteligentno avtomatizacijo, ki se uči, prilagaja in prinaša rezultate",
-      "bottomText": "Poganja napredna AI in strojno učenje",
+      "title": "AI Rešitve za Avtomatizacijo Delovnih Procesov",
+      "subtitle": "Preobrazite svoje poslovne procese z inteligentnimi n8n delovnimi tokovi, ki prinašajo merljiv ROI",
+      "bottomText": "Zgrajeno na n8n platformi za avtomatizacijo podjetniške ravni",
+      "ctaText": "Pripravljeni preobraziti vaše podjetje?",
+      "ctaButton": "Začnite Svojo Pot Avtomatizacije",
       "solution1": {
-        "title": "AI Avtomatizacija Strank",
-        "description": "Inteligentno potovanje stranke od prvega stika do zvestega zagovornika",
+        "title": "Inteligentno Procesiranje Dokumentov",
+        "description": "AI-podprti delovni tokovi dokumentov, ki odpravijo ročni vnos podatkov in ozka grla odobritev",
         "features": [
-          "AI klepalni roboti, ki kvalificirajo potencialne stranke in samodejno rezervirajo sestanke",
-          "Pametne email zaporedja, ki se prilagajajo obnašanju strank",
-          "Napovedna podpora, ki reši probleme, preden se stranke pritožijo"
+          "OCR + AI ekstrakcija iz računov, pogodb in obrazcev z 99% natančnostjo",
+          "Avtomatizirani delovni tokovi odobritev s pametnim usmerjanjem na podlagi zneska in tipa",
+          "Digitalni podpisi in GDPR skladne revizijske sledi"
         ],
-        "roi": "Konvertirajte 3x več potencialnih strank z zmanjšanjem stroškov podpore za 70%"
+        "roi": "Obdelajte dokumente 10x hitreje z 80% zmanjšanjem stroškov",
+        "timeMetric": "10x hitrejša obdelava",
+        "costMetric": "80% zmanjšanje stroškov"
       },
       "solution2": {
-        "title": "Inteligentno Procesiranje Dokumentov",
-        "description": "AI, ki bere, razume in obdeluje kateri koli poslovni dokument",
+        "title": "Avtomatizacija Proizvodnih Procesov",
+        "description": "Pametni proizvodni delovni tokovi, ki optimizirajo učinkovitost in zmanjšajo izpade",
         "features": [
-          "OCR + AI ekstrakcija iz računov, pogodb in obrazcev",
-          "Avtomatizirani tokovi odobritve s pametnim usmerjanjem",
-          "Digitalni podpisi in sledenje skladnosti"
+          "Spremljanje proizvodnje v realnem času z avtomatiziranimi opozoril o kakovosti",
+          "Napovedovanje zalog z avtomatskim generiranjem naročilnic za nakup",
+          "Napovedovalno planiranje vzdrževanja na podlagi podatkov opreme"
         ],
-        "roi": "Obdelajte papirologijo 10x hitreje z 99% natančnostjo"
+        "roi": "Zmanjšajte operacijske stroške za 30-40% z optimizacijo v realnem času",
+        "timeMetric": "30-40% zmanjšanje stroškov",
+        "costMetric": "€3M prihranjeno letno"
       },
       "solution3": {
-        "title": "Pametne Poslovne Operacije",
-        "description": "AI avtomatizacija, ki vodi vaše podjetje, medtem ko spite",
+        "title": "Avtomatizacija Strokovnih Storitev",
+        "description": "Poenostavljeni delovni tokovi strank od sprejema do računa z minimalnim ročnim delom",
         "features": [
-          "Napovedovanje zalog z avtomatiziranimi odločitvami o nakupu",
-          "Dinamična optimizacija cen na podlagi tržnih razmer",
-          "Inteligentno usmerjanje nalog in dodeljevanje virov"
+          "Avtomatizirano sprejemanje strank z zbiranjem dokumentov in sinhronizacijo CRM",
+          "Sledenje mejnikov projekta z avtomatskim obračunavanjem in izdajanjem računov",
+          "Generiranje pogodb in delovni tokovi e-podpisov z usmerjanjem odobritev"
         ],
-        "roi": "Zmanjšajte operacijske stroške za 40% z AI odločanjem"
+        "roi": "Prihranite 2+ uri na stranko s 70% hitrejšo dostavo projektov",
+        "timeMetric": "2+ uri prihranjeno na stranko",
+        "costMetric": "70% hitrejša dostava"
       },
       "solution4": {
-        "title": "AI Marketing in Prodajni Sistem",
-        "description": "Generativna AI, ki ustvarja in optimizira vaš celoten prodajni lijak",
+        "title": "Izvršitev Naročil E-trgovine",
+        "description": "Večkanalna avtomatizacija, ki obravnava naročila od klika do dostave brezhibno",
         "features": [
-          "AI ustvarjena vsebina, ki popolnoma ustreza glasu vaše blagovne znamke",
-          "Avtomatizirano A/B testiranje in optimizacija kampanj",
-          "Personalizirana zaporedja pristopa za vsak tip potencialne stranke"
+          "Sinhronizacija zalog v realnem času preko vseh prodajnih kanalov in tržnic",
+          "Avtomatizirano usmerjanje naročil k dobaviteljem in centrom za izpolnjevanje",
+          "Delovni tokovi komunikacije s strankami z posodobitvami pošiljanja in sledenjem"
         ],
-        "roi": "Povečajte marketing 5x brez zaposlovanja dodatnega osebja"
+        "roi": "Obvladajte 300% več naročil z isto velikostjo ekipe",
+        "timeMetric": "300% večja kapaciteta naročil",
+        "costMetric": "15:1 ROI prvo leto"
       },
       "solution5": {
-        "title": "Napovedna Poslovna Inteligenca",
-        "description": "AI analitika, ki napoveduje prihodnost in avtomatizira strateške odločitve",
+        "title": "Avtomatizacija Skladnosti in Poročanja",
+        "description": "GDPR skladni delovni tokovi, ki avtomatizirajo regulatorne zahteve in pripravo revizij",
         "features": [
-          "Modeli strojnega učenja, ki napovedujejo prihodke in trende",
-          "Avtomatizirana opozorila, ko metrike dosežejo kritične pragove",
-          "AI ustvarjeni vpogledi in priporočila za ukrepanje"
+          "Avtomatizirani GDPR delovni tokovi obdelave podatkov z upravljanjem soglasij",
+          "Regulativno poročanje v realnem času z generiranjem revizijskih sledi",
+          "Opozorila o spremljanju tveganj z avtomatiziranimi postopki eskalacije"
         ],
-        "roi": "Sprejemajte odločitve na podlagi podatkov z 90% natančnostjo napovedovanja"
+        "roi": "Zmanjšajte stroške skladnosti za 60% z avtomatsko pripravljenostjo za revizijo",
+        "timeMetric": "60% zmanjšanje stroškov skladnosti",
+        "costMetric": "Vedno pripravljeni za revizijo"
       },
       "solution6": {
-        "title": "Popolna Avtomatizacija Delovnih Tokov",
-        "description": "Povežite vsako orodje in avtomatizirajte vsak proces z inteligentnimi sprožilci",
+        "title": "Integracija Hiperavtomatizacijske Platforme",
+        "description": "Povežite vsako poslovno orodje z inteligentnimi delovnimi tokovi z uporabo n8n low-code platforme",
         "features": [
-          "1000+ integracija aplikacij s pametno sinhronizacijo podatkov",
-          "AI optimizacija delovnih tokov in zaznavanje napak",
-          "Večstopenjska avtomatizacija, ki se prilagaja spreminjajočim se razmeram"
+          "1000+ vnaprej zgrajenih integracij aplikacij s povezavami API po meri",
+          "Low-code gradnik delovnih tokov, ki omogoča razvijalce državljane v ekipah",
+          "AI-podprto zaznavanje napak z avtomatsko logiko ponovnih poskusov in eskalacije"
         ],
-        "roi": "Odpravite 25+ ur ročnega dela vsak teden"
+        "roi": "Odpravite 200+ ur ročnega dela na zaposlenega letno",
+        "timeMetric": "200+ ur/zaposleni/leto",
+        "costMetric": "30-200% ROI prvo leto"
       }
     },
     "benefits": {
       "title": "Avtomatizirajte Pametneje, Rastite Hitreje s Flowko",
       "benefit1": {
         "title": "Prihranite Čas",
-        "description": "Povrnite 15+ ur na teden z avtomatizacijo ponavljajočih se nalog in ročnih procesov, ki uppočasnjujejo vašo ekipo."
+        "description": "Povrnite 15+ ur na teden z avtomatizacijo ponavljajočih se nalog in ročnih procesov, ki upočasnjujejo vašo ekipo."
       },
       "benefit2": {
         "title": "Učinkovita Rast",
-        "description": "Poveyčajte svoje poslovanje brez sorazmernega povečevanja števila zaposlenih z inteligentno avtomatizacijo delovnih tokov."
+        "description": "Povečajte svoje poslovanje brez sorazmernega povečevanja števila zaposlenih z inteligentno avtomatizacijo delovnih tokov."
       },
       "benefit3": {
         "title": "Zmanjšajte Napake",
@@ -111,31 +125,34 @@
       }
     },
     "implementation": {
-      "title": "Vaša pot do avtomatizacije",
-      "subtitle": "Od kaosa do avtomatizirane učinkovitosti v 4 enostavnih korakih",
+      "title": "Vaša pot do poslovne avtomatizacije",
+      "subtitle": "Preobrazite kaos v učinkovite procese v le 4 preizkušenih korakih",
+      "tag": "Začnite prihranjevati čas že danes",
+      "ctaTitle": "Pripravljeni povrniti 20+ ur tedensko?",
+      "ctaButton": "Pridobite Brezplačno ROI Analizo",
       "step1": {
-        "title": "Analiza potreb",
-        "description": "Pregledamo vaše poslovne procese in opredelimo, kje avtomatizacija lahko prinese največjo korist za vaše podjetje.",
+        "title": "Brezplačen Odkrivni Klic",
+        "description": "Analiziramo vaše trenutne delovne procese in identificiramo največje priložnosti za avtomatizacijo za takojnje prihranke časa in stroškov.",
         "duration": "30 minut",
         "status": "1. teden"
       },
       "step2": {
-        "title": "Strategija in načrt",
-        "description": "Pripravimo natančen načrt avtomatizacije s konkretnimi cilji, časovnico in predvidenimi prihranki.",
-        "duration": "2-3 dni",
-        "status": "1. teden"
+        "title": "Načrt ROI po Meri",
+        "description": "Prejemite personalizirano pot avtomatizacije z zagotovljenimi prihranki časa, zmanjšanjem stroškov in natančnimi ROI projekcijami.",
+        "duration": "3-5 dni",
+        "status": "1.-2. teden"
       },
       "step3": {
-        "title": "Razvoj in testiranje",
-        "description": "Zgradimo vaše avtomatizacije s sprotnim poročanjem o napredku in temeljitim testiranjem pred uporabo.",
-        "duration": "1-2 tedna",
-        "status": "2.-3. teden"
+        "title": "Izgradnja in Zagon",
+        "description": "Spremljajte, kako vaše avtomatizacije oživijo s tedenskimi demonstracijami in sledenjem napredka v realnem času do popolnega delovanja.",
+        "duration": "2-4 tedne",
+        "status": "2.-5. teden"
       },
       "step4": {
-        "title": "Zagon in podpora",
-        "description": "Končna predaja s celotno dokumentacijo, usposabljanjem vaše ekipe in stalno tehnično podporo.",
-        "duration": "2-3 dni",
-        "status": "3. teden"
+        "title": "Lansiranje in Skaliranje",
+        "description": "Vaša ekipa postane pripravljena na avtomatizacijo s celotnim usposabljanjem, dokumentacijo in stalno podporo za maksimalen učinek.",
+        "duration": "3-5 dni",
+        "status": "5.-6. teden"
       }
     },
     "collaboration": {
@@ -182,7 +199,7 @@
         "messagePlaceholder": "Povejte nam o vaših najbolj zamudnih opravilih ali procesih, ki bi jih radi avtomatizirali...",
         "submitButton": "Pridobite brezplačno revizijo avtomatizacije",
         "required": "*",
-        "privacyNote": "Spoštujemo vašo zasebnost. Vaše podatki so varni in jih ne bomo nikoli delili."
+        "privacyNote": "Spoštujemo vašo zasebnost. Vaši podatki so varni in jih ne bomo nikoli delili."
       },
       "trustIndicators": {
         "freeConsultation": "Brezplačno svetovanje",
@@ -244,7 +261,7 @@
     "bundles": {
         "tag": "Celovite digitalne rešitve",
         "title": "Paketi spletna stran + avtomatizacija",
-        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem celovitem paketu. Lansirajo se hitreje, avtomatizirajte pametneje, rastite večje.",
+        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem celovitem paketu. Lansirajte se hitreje, avtomatizirajte pametneje, rastite večje.",
         "benefits": [
           "Profesionalna spletna stran + avtomatizacija",
           "Hitrejši čas prihoda na trg",

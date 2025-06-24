@@ -50,7 +50,7 @@ function Implementation({ className }: ImplementationProps) {
       <div className="container">
         <div className="animate-process-heading">
           <Heading
-            tag="Ready to get started"
+            tag={t("tag")}
             title={t("title")}
             text={t("subtitle")}
           />
@@ -169,8 +169,8 @@ function Implementation({ className }: ImplementationProps) {
         {/* Call to Action */}
         <div className="flex justify-center mt-16 animate-process-cta" style={{ animationDelay: '1300ms' }}>
           <div className="text-center">
-            <div className="tagline mb-4">Start Your Automation Journey</div>
-            <button className="button hover:scale-105 transition-transform duration-300">Schedule Free Assessment</button>
+            <div className="tagline mb-4">{t("ctaTitle")}</div>
+            <button className="button hover:scale-105 transition-transform duration-300">{t("ctaButton")}</button>
           </div>
         </div>
       </div>
