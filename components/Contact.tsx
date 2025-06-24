@@ -91,13 +91,16 @@ export function Contact({ className }: ContactProps) {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-contact-header">
             <h2 className="h2 mb-4">{t("title")}</h2>
             <p className="body-1 text-n-4">{t("subtitle")}</p>
           </div>
 
           {/* Form */}
-          <div className="relative bg-n-8 border border-n-6 rounded-3xl p-8 md:p-12 overflow-hidden">
+          <div
+            className="relative bg-n-8 border border-n-6 rounded-3xl p-8 md:p-12 overflow-hidden animate-contact-form"
+            style={{ animationDelay: "200ms" }}
+          >
             {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-color-1/5 to-transparent pointer-events-none" />
 
@@ -108,7 +111,10 @@ export function Contact({ className }: ContactProps) {
                   className="space-y-8"
                 >
                   {/* Basic Contact Info */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-contact-fields"
+                    style={{ animationDelay: "400ms" }}
+                  >
                     <FormField
                       control={form.control}
                       name="firstName"
@@ -150,7 +156,10 @@ export function Contact({ className }: ContactProps) {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-contact-fields"
+                    style={{ animationDelay: "600ms" }}
+                  >
                     <FormField
                       control={form.control}
                       name="email"
@@ -193,7 +202,10 @@ export function Contact({ className }: ContactProps) {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-contact-fields"
+                    style={{ animationDelay: "800ms" }}
+                  >
                     <FormField
                       control={form.control}
                       name="industry"
@@ -236,53 +248,63 @@ export function Contact({ className }: ContactProps) {
                   </div>
 
                   {/* Bundle Interest Checkbox */}
-                  <FormField
-                    control={form.control}
-                    name="bundleInterest"
-                    render={({ field }) => (
-                      <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                            className="border-n-6 data-[state=checked]:bg-color-1 data-[state=checked]:border-color-1"
-                          />
-                        </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel className="text-n-1 font-medium cursor-pointer">
-                            {t("form.bundleInterest")}
-                          </FormLabel>
-                          <p className="text-sm text-n-4">
-                            {t("form.bundleInterestDescription")}
-                          </p>
-                        </div>
-                      </FormItem>
-                    )}
-                  />
+                  <div
+                    className="animate-contact-fields"
+                    style={{ animationDelay: "1000ms" }}
+                  >
+                    <FormField
+                      control={form.control}
+                      name="bundleInterest"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                              className="border-n-6 data-[state=checked]:bg-color-1 data-[state=checked]:border-color-1"
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="text-n-1 font-medium cursor-pointer">
+                              {t("form.bundleInterest")}
+                            </FormLabel>
+                            <p className="text-sm text-n-4">
+                              {t("form.bundleInterestDescription")}
+                            </p>
+                          </div>
+                        </FormItem>
+                      )}
+                    />
+                  </div>
 
                   {/* Message */}
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-n-1">
-                          {t("form.message")} {t("form.required")}
-                        </FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder={t("form.messagePlaceholder")}
-                            {...field}
-                            className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4 min-h-[120px]"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
+                  <div
+                    className="animate-contact-fields"
+                    style={{ animationDelay: "1200ms" }}
+                  >
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-n-1">
+                            {t("form.message")} {t("form.required")}
+                          </FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder={t("form.messagePlaceholder")}
+                              {...field}
+                              className="bg-n-7 border-n-6 text-n-1 placeholder:text-n-4 min-h-[120px]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
 
                   {/* Submit Button */}
-                  <div className="text-center pt-8">
+                  <div className="text-center pt-8 animate-contact-submit" style={{ animationDelay: "1400ms" }}>
                     <div className="flex flex-col items-center gap-4">
                       <CustomButton
                         onClick={(e) => {
@@ -303,7 +325,10 @@ export function Contact({ className }: ContactProps) {
             </div>
 
             {/* Trust Indicators */}
-            <div className="text-center mt-10 relative z-10">
+            <div
+              className="text-center mt-10 relative z-10 animate-contact-trust"
+              style={{ animationDelay: "1600ms" }}
+            >
               <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-n-4 text-sm">
                 <div className="flex items-center gap-2 bg-n-7/50 px-4 py-2 rounded-full border border-n-6/50">
                   <MessageCircle className="w-4 h-4 text-color-1 flex-shrink-0" />

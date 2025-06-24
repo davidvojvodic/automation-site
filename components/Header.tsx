@@ -71,7 +71,7 @@ export function Header({ className, locale = "en" }: HeaderProps) {
       )}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 py-4 lg:py-5">
-        <a className="block" href="#hero">
+        <a className="block" href={`/${locale}`}>
           <Image
             src={flowko}
             width={140}
@@ -118,15 +118,7 @@ export function Header({ className, locale = "en" }: HeaderProps) {
                       : "lg:after:scale-x-0 lg:hover:after:scale-x-100"
                   )}
                 >
-                  {t(
-                    item.id === "0"
-                      ? "services"
-                      : item.id === "1"
-                      ? "benefits"
-                      : item.id === "2"
-                      ? "process"
-                      : "contact"
-                  )}
+                  {t(item.title)}
                 </a>
               ))}
 

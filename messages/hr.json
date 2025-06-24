@@ -10,33 +10,77 @@
     "navigation": {
       "features": "Značajke",
       "services": "Usluge",
+      "solutions": "Rješenja",
+      "WebsiteBundles": "Web Paketi",
       "benefits": "Prednosti",
       "pricing": "Cjenik",
       "process": "Proces",
       "getStarted": "Započnite",
       "contact": "Kontakt"
     },
-    "services": {
-      "title": "Prestanite Gubiti Sate na Ručnom Radu",
-      "subtitle": "Flowko automatizira vremenski zahtjevne zadatke koji iscrpljuju vašu produktivnost",
-      "service1": {
-        "title": "Automatizacija Upravljanja Klijentima",
-        "description": "Pretvorite kaotičan prijem klijenata u glatko, profesionalno iskustvo koje pretvara potencijalne klijente 70% brže.",
+    "solutions": {
+      "title": "AI Rješenja za Automatizaciju",
+      "subtitle": "Transformirajte svoj posao s inteligentnom automatizacijom koja uči, prilagođava se i donosi rezultate",
+      "bottomText": "Napunjeno naprednom AI i strojnim učenjem",
+      "solution1": {
+        "title": "AI Automatizacija Kupaca",
+        "description": "Inteligentno putovanje kupca od prvog kontakta do lojalnog zagovornika",
         "features": [
-          "Automatizirani obrasci i nastavci",
-          "Trenutni procesi uvoza klijenata", 
-          "Pametno kvalificiranje i usmjeravanje potencijalnih klijenata"
-        ]
+          "AI chatbotovi koji kvalificiraju potencijalne klijente i automatski rezerviraju sastanke",
+          "Pametne email sekvence koje se prilagođavaju ponašanju kupaca",
+          "Prediktivna podrška koja rješava probleme prije nego što se kupci potuže"
+        ],
+        "roi": "Konvertirajte 3x više potencijalnih klijenata uz smanjenje troškova podrške za 70%"
       },
-      "service2": {
-        "title": "Automatizacija Dokumenata i Naplate",
-        "description": "Generirajte profesionalne dokumente odmah i naplatite 50% brže s automatiziranim izdavanjem računa i podsjetnicima za plaćanje.",
-        "problem": "Prestanite trošiti sate na papirologija i pracenja plaćanja"
+      "solution2": {
+        "title": "Inteligentno Procesiranje Dokumenata",
+        "description": "AI koji čita, razumije i obrađuje bilo koji poslovni dokument",
+        "features": [
+          "OCR + AI ekstrakcija iz računa, ugovora i obrazaca",
+          "Automatizirani tijekovi odobrenja s pametnim usmjeravanjem",
+          "Digitalni potpisi i praćenje usklađenosti"
+        ],
+        "roi": "Obrađujte papirologiju 10x brže s 99% točnošću"
       },
-      "service3": {
-        "title": "Komunikacija i Praćenje",
-        "description": "Nikad više ne propustite nastavak. Automatsko planiranje, podsjetnici i komunikacija s klijentima koja radi dok spavate.",
-        "benefit": "Smanjite neopravdane izostanke za 40% i ojačajte odnose s klijentima"
+      "solution3": {
+        "title": "Pametne Poslovne Operacije",
+        "description": "AI automatizacija koja vodi vaš posao dok spavate",
+        "features": [
+          "Predviđanje zaliha s automatiziranim odlukama o nabavi",
+          "Dinamička optimizacija cijena na temelju tržišnih uvjeta",
+          "Inteligentno usmjeravanje zadataka i alokacija resursa"
+        ],
+        "roi": "Smanjite operacijske troškove za 40% s AI odlučivanjem"
+      },
+      "solution4": {
+        "title": "AI Marketing i Prodajni Sustav",
+        "description": "Generativni AI koji stvara i optimizira vaš cijeli prodajni lijevak",
+        "features": [
+          "AI generirani sadržaj koji savršeno odgovara vašem glasovu brenda",
+          "Automatizirano A/B testiranje i optimizacija kampanja",
+          "Personalizirane sekvence pristupa za svaki tip potencijalnog klijenta"
+        ],
+        "roi": "Povećajte marketing 5x bez zapošljavanja dodatnog osoblja"
+      },
+      "solution5": {
+        "title": "Prediktivna Poslovna Inteligencija",
+        "description": "AI analitika koja predviđa budućnost i automatizira strateške odluke",
+        "features": [
+          "Modeli strojnog učenja koji predviđaju prihode i trendove",
+          "Automatizirani upozorenja kada metrije dosegnu kritične pragove",
+          "AI generirani uvidi i preporuke za djelovanje"
+        ],
+        "roi": "Donosite odluke na temelju podataka s 90% točnošću predviđanja"
+      },
+      "solution6": {
+        "title": "Kompletna Automatizacija Tijeka Rada",
+        "description": "Povežite svaki alat i automatizirajte svaki proces s inteligentnim okidačima",
+        "features": [
+          "1000+ integracija aplikacija s pametnom sinkronizacijom podataka",
+          "AI optimizacija tijeka rada i otkrivanje grešaka",
+          "Višekoračna automatizacija koja se prilagođava promjenjivim uvjetima"
+        ],
+        "roi": "Eliminirajte 25+ sati ručnog rada svaki tjedan"
       }
     },
     "benefits": {
@@ -218,10 +262,10 @@
           "description": "Cjelovita online trgovina s automatiziranim procesiranjem narudžbi, upravljanjem inventara i radnim procesima angažiranja kupaca.",
           "roi": "Uštedite 25+ sati tjedno na upravljanju narudžbama",
           "features": [
-            "Profesionalna e-trgovina web stranica s integriranom obradom plaćanja i sigurnosnim standardima",
-            "Automatsko potvrđivanje narudžbi, ažuriranje inventara i obavještavanje o dostavi",
-            "Integracija sa dostavnim službama za praćenje pošiljki u stvarnom vremenu",
-            "AI-pokretane personalizirane preporuke proizvoda i kampanje oporavka napuštenih košarica"
+            "Sinkronizacija inventara na više platformi kroz sve prodajne kanale",
+            "Automatsko usmjeravanje narudžbi dobavljačima i centrima za ispunjavanje",
+            "AI-pokretani oporavak napuštenih košarica s dinamičkim ponudama popusta",
+            "Potpuna automatizacija životnog ciklusa kupaca (dobrodošlica, recenzije, kampanje povrata)"
           ]
         },
         "business": {
@@ -229,10 +273,10 @@
           "description": "Profesionalna korporativna web stranica s inteligentnim hvatanjem potencijalnih kupaca, kvalificiranjem i automatizacijom njege.",
           "roi": "3x brže kvalificiranje potencijalnih kupaca",
           "features": [
-            "SEO-optimizirana web stranica s modernim dizajnom prilagođenim vašoj industriji",
-            "Inteligentno ocjenjivanje potencijalnih kupaca na temelju ponašanja i demografije",
-            "Automatska distribucija potencijalnih kupaca prodajnom timu s prioritetom",
-            "Personalizirane sekvence njegovanja temeljene na interesima i fazama kupovnog ciklusa"
+            "Inteligentno ocjenjivanje potencijalnih kupaca s automatskom CRM integracijom",
+            "Automatska generacija prijedloga iz odgovora kontakt formulara",
+            "Pametno zakazivanje sastanaka s sinkronizacijom kalendara",
+            "Višestupanjske sekvence njegovanja bazirane na ponašanju potencijalnih kupaca"
           ]
         },
         "service": {
@@ -240,10 +284,10 @@
           "description": "Web stranica usmjerena na usluge s jednostavnim rezerviranjem termina, upravljanjem klijenata i automatizacijom plaćanja.",
           "roi": "90% smanjenje neopravdanih izostanaka",
           "features": [
-            "Kalendar rezervacija s pravilima dostupnosti i pametnim konfliktnim upravljanjem",
-            "Automatski SMS i email podsjetnici 24-48 sati prije termina",
-            "Digitalni obrasci za unos koji smanjuju administrativno vrijeme za 75%",
-            "Integracija s računovodstvenim sustavima za automatsko fakturiranje nakon usluge"
+            "Pametni sustav rezervacije s prethodnim prikupljanjem plaćanja",
+            "Višekanalni podsjetnici za termine (SMS + Email + obavještenja aplikacije)",
+            "Automatska obrada naknada za neopravdane izostanke i radni tokovi preusmjeravanja",
+            "Integracija računovodstvenog sustava za automatsko fakturiranje nakon usluge"
           ]
         },
         "portfolio": {
@@ -251,10 +295,10 @@
           "description": "Kreativna portfolio web stranica s racionaliziranim upravljanjem projekata i automatizacijom komunikacije s klijentima.",
           "roi": "50% brža dostava projekata",
           "features": [
-            "Interaktivna galerija projekata s filterima kategorija i dinamičkim studijama slučaja",
-            "Automatiziran proces odobravanja s digitalnim potpisima i verzioniranjem",
-            "Portal za klijente za pregled napretka projekta, dijeljenje datoteka i komunikaciju",
-            "Integracija projektnog vremena s automatskim generiranjem faktura na temelju sati"
+            "Automatski prijem projekata s organizacijom datoteka/mapa",
+            "Radni tokovi odobrenja klijenata s praćenjem revizija i digitalnim potpisima",
+            "Fakturiranje na temelju prekretnica s integracijom praćenja vremena",
+            "Automatska ažuriranja projekata i obavještenja o podsjetniku roka"
           ]
         }
     },

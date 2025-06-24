@@ -37,18 +37,23 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Services",
+    title: "solutions",
     url: "#services",
   },
   {
     id: "1",
-    title: "Benefits",
-    url: "#features",
+    title: "WebsiteBundles",
+    url: "#bundles",
   },
   {
     id: "2",
-    title: "Process",
-    url: "#implementation",
+    title: "benefits",
+    url: "#features",
+  },
+  {
+    id: "3",
+    title: "process",
+    url: "#process",
   },
 ];
 

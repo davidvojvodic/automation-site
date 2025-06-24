@@ -9,7 +9,7 @@ import ClipPath from "@/public/assets/svg/ClipPath";
 import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import GradientLight from "./design/Benefits";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 interface BenefitItem {
   id: string | number;
@@ -26,15 +26,12 @@ interface BenefitsProps {
 }
 
 function Benefits({ className }: BenefitsProps) {
-  const t = useTranslations('HomePage.benefits');
-  
+  const t = useTranslations("HomePage.benefits");
+
   return (
     <Section id="features" className={cn(className)}>
       <div className="container relative z-2">
-        <Heading
-          className="md:max-w-md lg:max-w-2xl"
-          title={t('title')}
-        />
+        <Heading className="md:max-w-md lg:max-w-2xl" title={t("title")} />
 
         <div className="flex flex-wrap justify-center gap-10 mb-10">
           {benefits.map((item: BenefitItem) => (
@@ -48,8 +45,12 @@ function Benefits({ className }: BenefitsProps) {
               key={item.id}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5">{t(`benefit${Number(item.id) + 1}.title`)}</h5>
-                <p className="body-2 mb-6 text-n-3">{t(`benefit${Number(item.id) + 1}.description`)}</p>
+                <h5 className="h5 mb-5">
+                  {t(`benefit${Number(item.id) + 1}.title`)}
+                </h5>
+                <p className="body-2 mb-6 text-n-3">
+                  {t(`benefit${Number(item.id) + 1}.description`)}
+                </p>
                 <div className="flex items-center mt-auto">
                   <Image
                     src={item.iconUrl}

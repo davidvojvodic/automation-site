@@ -10,33 +10,77 @@
     "navigation": {
       "features": "Features",
       "services": "Services",
+      "solutions": "Solutions",
+      "WebsiteBundles": "Website Bundles",
       "benefits": "Benefits",
       "pricing": "Pricing",
       "process": "Process",
       "getStarted": "Get Started",
       "contact": "Contact"
     },
-    "services": {
-      "title": "Stop Losing Hours on Manual Work",
-      "subtitle": "Flowko automates the time-consuming tasks that drain your productivity",
-      "service1": {
-        "title": "Client Management Automation",
-        "description": "Transform chaotic client intake into a smooth, professional experience that converts prospects 70% faster.",
+    "solutions": {
+      "title": "AI-Powered Automation Solutions",
+      "subtitle": "Transform your business with intelligent automation that learns, adapts, and delivers results",
+      "bottomText": "Powered by advanced AI and machine learning",
+      "solution1": {
+        "title": "AI-Powered Customer Automation",
+        "description": "Intelligent customer journey from first contact to loyal advocate",
         "features": [
-          "Automated intake forms and follow-ups",
-          "Instant client onboarding workflows", 
-          "Smart lead qualification and routing"
-        ]
+          "AI chatbots that qualify leads and book meetings automatically",
+          "Smart email sequences that adapt based on customer behavior",
+          "Predictive support that solves problems before customers complain"
+        ],
+        "roi": "Convert 3x more leads while reducing support costs by 70%"
       },
-      "service2": {
-        "title": "Document & Billing Automation",
-        "description": "Generate professional documents instantly and get paid 50% faster with automated invoicing and payment reminders.",
-        "problem": "Stop spending hours on paperwork and chasing payments"
+      "solution2": {
+        "title": "Intelligent Document Processing",
+        "description": "AI that reads, understands, and processes any business document",
+        "features": [
+          "OCR + AI extraction from invoices, contracts, and forms",
+          "Automated approval workflows with smart routing",
+          "Digital signatures and compliance tracking"
+        ],
+        "roi": "Process paperwork 10x faster with 99% accuracy"
       },
-      "service3": {
-        "title": "Communication & Follow-up",
-        "description": "Never miss a follow-up again. Automated scheduling, reminders, and client communication that runs while you sleep.",
-        "benefit": "Reduce no-shows by 40% and strengthen client relationships"
+      "solution3": {
+        "title": "Smart Business Operations",
+        "description": "AI-driven automation that runs your business while you sleep",
+        "features": [
+          "Inventory forecasting with automated purchasing decisions",
+          "Dynamic pricing optimization based on market conditions",
+          "Intelligent task routing and resource allocation"
+        ],
+        "roi": "Reduce operational costs by 40% with AI decision-making"
+      },
+      "solution4": {
+        "title": "AI Marketing & Sales Engine",
+        "description": "Generative AI that creates and optimizes your entire sales funnel",
+        "features": [
+          "AI-generated content that matches your brand voice perfectly",
+          "Automated A/B testing and campaign optimization",
+          "Personalized outreach sequences for each prospect type"
+        ],
+        "roi": "Scale your marketing 5x without hiring additional staff"
+      },
+      "solution5": {
+        "title": "Predictive Business Intelligence",
+        "description": "AI analytics that predict the future and automate strategic decisions",
+        "features": [
+          "Machine learning models that forecast revenue and trends",
+          "Automated alerts when metrics hit critical thresholds",
+          "AI-generated insights and actionable recommendations"
+        ],
+        "roi": "Make data-driven decisions with 90% prediction accuracy"
+      },
+      "solution6": {
+        "title": "Complete Workflow Automation",
+        "description": "Connect every tool and automate every process with intelligent triggers",
+        "features": [
+          "1000+ app integrations with smart data synchronization",
+          "AI-powered workflow optimization and error detection",
+          "Multi-step automation that adapts to changing conditions"
+        ],
+        "roi": "Eliminate 25+ hours of manual work every week"
       }
     },
     "benefits": {
@@ -218,10 +262,10 @@
           "description": "Complete online store solution for multi-channel sellers. Perfect for dropshipping, subscription boxes, and product retailers.",
           "roi": "Save 25+ hours/week on order management",
           "features": [
-            "Multi-platform inventory sync (Shopify + Amazon + WooCommerce)",
-            "Automated order routing to suppliers/fulfillment centers",
-            "Abandoned cart recovery with personalized discount offers",
-            "Customer lifecycle emails (welcome, reviews, win-back campaigns)"
+            "Multi-platform inventory sync across all sales channels",
+            "Automated order routing to suppliers and fulfillment centers",
+            "AI-powered abandoned cart recovery with dynamic discount offers",
+            "Complete customer lifecycle automation (welcome, reviews, win-back campaigns)"
           ]
         },
         "business": {
@@ -229,10 +273,10 @@
           "description": "Professional corporate website for B2B services, consultants, and agencies. Converts visitors into qualified leads automatically.",
           "roi": "3x faster lead qualification",
           "features": [
-            "Lead scoring with HubSpot/Pipedrive auto-routing",
-            "Automated proposal generation from contact forms",
-            "Meeting scheduling with calendar sync (Calendly/Cal.com)",
-            "Follow-up sequences for warm leads and prospects"
+            "Intelligent lead scoring with automatic CRM integration",
+            "Automated proposal generation from contact form responses",
+            "Smart meeting scheduling with calendar synchronization",
+            "Multi-stage nurture sequences based on prospect behavior"
           ]
         },
         "service": {
@@ -240,10 +284,10 @@
           "description": "Complete booking solution for salons, clinics, fitness trainers, and consultants. Eliminates no-shows and manual scheduling.",
           "roi": "90% reduction in no-shows",
           "features": [
-            "Online booking with automatic payment collection",
-            "SMS/email reminders (24h, 2h before appointments)",
-            "No-show fee processing and rescheduling automation",
-            "Client intake forms with service customization"
+            "Smart booking system with upfront payment collection",
+            "Multi-channel appointment reminders (SMS + Email + App notifications)",
+            "Automated no-show fee processing and rescheduling workflows",
+            "Accounting system integration for automatic post-service invoicing"
           ]
         },
         "portfolio": {
@@ -251,10 +295,10 @@
           "description": "Professional portfolio for designers, developers, photographers, and agencies. Streamlines client work from inquiry to payment.",
           "roi": "50% faster project delivery",
           "features": [
-            "Project intake forms with automatic file/folder creation",
-            "Client approval workflows with revision tracking",
-            "Milestone-based invoicing automation",
-            "Portfolio showcase with inquiry routing to CRM"
+            "Automated project intake with file/folder organization",
+            "Client approval workflows with revision tracking and digital signatures",
+            "Milestone-based invoicing with time tracking integration",
+            "Automated project updates and deadline reminder notifications"
           ]
         }
       },

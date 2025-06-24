@@ -1,5 +1,349 @@
 @import "tailwindcss";
 
+/* Custom animations for Solutions section */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Hero Section Animations */
+@keyframes hero-title {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-subtitle {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotateX(20deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes hero-curve {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hero-description {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-cta {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-logos {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-title {
+  animation: hero-title 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-hero-subtitle {
+  animation: hero-subtitle 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-hero-curve {
+  animation: hero-curve 0.6s ease-out forwards;
+  opacity: 0;
+  transform-origin: left center;
+}
+
+.animate-hero-description {
+  animation: hero-description 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-hero-cta {
+  animation: hero-cta 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-hero-logos {
+  animation: hero-logos 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Website Bundles Section Animations */
+@keyframes bundle-heading {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bundle-benefits {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bundle-pill {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bundle-card {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bundle-bottom-cta {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.animate-bundle-heading {
+  animation: bundle-heading 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bundle-benefits {
+  animation: bundle-benefits 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bundle-pill {
+  animation: bundle-pill 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bundle-card {
+  animation: bundle-card 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-bundle-bottom-cta {
+  animation: bundle-bottom-cta 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+
+/* Process/Implementation Section Animations */
+@keyframes process-heading {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes process-line {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes process-step {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes process-cta {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-process-heading {
+  animation: process-heading 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-process-line {
+  animation: process-line 0.8s ease-out forwards;
+  opacity: 0;
+  transform-origin: left center;
+}
+
+.animate-process-step {
+  animation: process-step 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-process-cta {
+  animation: process-cta 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Contact Section Animations */
+@keyframes contact-header {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-form {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contact-fields {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-submit {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes contact-trust {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-contact-header {
+  animation: contact-header 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-contact-form {
+  animation: contact-form 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-contact-fields {
+  animation: contact-fields 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-contact-submit {
+  animation: contact-submit 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-contact-trust {
+  animation: contact-trust 0.6s ease-out forwards;
+  opacity: 0;
+}
 
 @custom-variant dark (&:is(.dark *));
 
