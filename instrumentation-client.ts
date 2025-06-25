@@ -4,10 +4,7 @@ Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
   integrations: [
-    Sentry.replayIntegration({
-      sessionSampleRate: 0.1,
-      errorSampleRate: 1.0,
-    }),
+    Sentry.replayIntegration(),
   ],
 
   tracesSampleRate: 1.0,
@@ -15,3 +12,6 @@ Sentry.init({
   replaysOnErrorSampleRate: 1.0,
   debug: false,
 });
+
+// Navigation instrumentation for App Router
+export const onRouterTransitionStart = Sentry.captureRouterTransitionStart;

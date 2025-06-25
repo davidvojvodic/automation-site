@@ -28,7 +28,7 @@ export async function GET() {
           percentage: Math.round((process.memoryUsage().heapUsed / process.memoryUsage().heapTotal) * 100),
         },
         cpu: {
-          loadAverage: process.platform !== 'win32' ? require('os').loadavg() : [0, 0, 0],
+          loadAverage: process.platform !== 'win32' ? await import('os').then(os => os.loadavg()) : [0, 0, 0],
         }
       },
       environment: {

@@ -24,12 +24,20 @@ export async function onRequestError(
   err: unknown,
   request: {
     path: string;
+    method?: string;
+    headers?: Record<string, string>;
   },
   context: {
     routerKind: string;
     routePath: string;
   },
 ) {
-  const { captureRequestError } = await import('@sentry/nextjs');
-  captureRequestError(err, request, context);
+  const { captureException } = await import('@sentry/nextjs');
+  captureException(err, {
+    tags: {
+      path: request.path,
+      routerKind: context.routerKind,
+      routePath: context.routePath,
+    },
+  });
 }

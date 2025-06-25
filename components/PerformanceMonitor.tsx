@@ -28,7 +28,7 @@ export default function PerformanceMonitor() {
       // Observe navigation and resource timing
       try {
         observer.observe({ entryTypes: ['navigation', 'resource', 'measure'] });
-      } catch (e) {
+      } catch {
         // Fallback for older browsers
         console.warn('Performance Observer not supported');
       }

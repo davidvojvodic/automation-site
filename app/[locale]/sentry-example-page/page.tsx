@@ -34,7 +34,7 @@ export default function SentryExamplePage() {
             cursor: 'pointer'
           }}
           onClick={() => {
-            // @ts-ignore
+            // @ts-expect-error - Intentionally calling undefined function for Sentry testing
             myUndefinedFunction();
           }}
         >
