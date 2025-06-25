@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
   
   // Experimental features
   experimental: {
-    // Performance optimizations are now default in Next.js 15
+    // instrumentationHook is enabled by default in Next.js 15
   },
   
   // Security headers
