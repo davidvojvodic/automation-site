@@ -5,10 +5,39 @@ import Footer from "@/components/Footer";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Flowko",
-  description: "Terms of Service for Flowko automation and website development services."
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{locale: string}>
+}): Promise<Metadata> {
+  const {locale} = await params;
+  
+  const titles = {
+    en: "Terms of Service | Flowko - Business Automation Service Agreement",
+    sl: "Pogoji Storitev | Flowko - Sporazum o Storitvah Poslovne Avtomatizacije"
+  };
+
+  const descriptions = {
+    en: "Terms of Service for Flowko's AI business automation and website development services. Clear service agreements for European businesses.",
+    sl: "Pogoji storitev za Flowko-jeve storitve AI poslovne avtomatizacije in razvoja spletnih strani. Jasni sporazumi o storitvah za evropska podjetja."
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://flowko.io/${locale}/terms`,
+      languages: {
+        'en': 'https://flowko.io/en/terms',
+        'sl': 'https://flowko.io/sl/terms',
+      },
+    },
+  };
+}
 
 // Multilingual content
 const getContent = (locale: string) => {

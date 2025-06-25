@@ -5,10 +5,39 @@ import Footer from "@/components/Footer";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Flowko",
-  description: "Privacy Policy and data protection information for Flowko automation services."
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{locale: string}>
+}): Promise<Metadata> {
+  const {locale} = await params;
+  
+  const titles = {
+    en: "Privacy Policy | Flowko - Data Protection & GDPR Compliance",
+    sl: "Pravilnik o Zasebnosti | Flowko - Varstvo Podatkov in GDPR Skladnost"
+  };
+
+  const descriptions = {
+    en: "Learn how Flowko protects your data and ensures GDPR compliance in our business automation services. Transparent privacy practices for EU businesses.",
+    sl: "Spoznajte, kako Flowko varuje vaše podatke in zagotavlja skladnost z GDPR pri naših storitvah poslovne avtomatizacije. Transparentne prakse zasebnosti za EU podjetja."
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://flowko.io/${locale}/privacy`,
+      languages: {
+        'en': 'https://flowko.io/en/privacy',
+        'sl': 'https://flowko.io/sl/privacy',
+      },
+    },
+  };
+}
 
 interface PrivacyPolicyProps {
   params: Promise<{ locale: string }>;

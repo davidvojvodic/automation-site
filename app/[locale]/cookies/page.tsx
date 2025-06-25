@@ -5,10 +5,39 @@ import Footer from "@/components/Footer";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy | Flowko",
-  description: "Cookie Policy and tracking information for Flowko website and services."
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{locale: string}>
+}): Promise<Metadata> {
+  const {locale} = await params;
+  
+  const titles = {
+    en: "Cookie Policy | Flowko - Website Tracking & Data Collection",
+    sl: "Pravilnik o Piškotkih | Flowko - Sledenje Spletni Strani in Zbiranje Podatkov"
+  };
+
+  const descriptions = {
+    en: "Cookie Policy and tracking information for Flowko website and automation services. Learn how we use cookies to improve your experience.",
+    sl: "Pravilnik o piškotkih in informacije o sledenju za Flowko spletno stran in storitve avtomatizacije. Spoznajte, kako uporabljamo piškotke za izboljšanje vaše izkušnje."
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://flowko.io/${locale}/cookies`,
+      languages: {
+        'en': 'https://flowko.io/en/cookies',
+        'sl': 'https://flowko.io/sl/cookies',
+      },
+    },
+  };
+}
 
 // Multilingual content
 const getContent = (locale: string) => {

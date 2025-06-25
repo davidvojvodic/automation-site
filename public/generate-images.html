@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OG Image and Favicon - Flowko</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: white;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .preview-section {
+            margin-bottom: 40px;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            color: #AC6AFF;
+        }
+        
+        .instructions {
+            background: #252525;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* OG Image Preview */
+        #og-image {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #AC6AFF;
+            box-sizing: border-box;
+        }
+        
+        #og-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 40%, rgba(172, 106, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 60%, rgba(172, 106, 255, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, -20px) rotate(180deg); }
+        }
+        
+        #og-image .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 60px;
+        }
+        
+        #og-image .logo {
+            height: 120px;
+            margin-bottom: 40px;
+        }
+        
+        #og-image h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin: 0 0 20px;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+        
+        #og-image h1 .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #AC6AFF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        #og-image p {
+            font-size: 28px;
+            font-weight: 400;
+            color: #e0e0e0;
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        #og-image .highlight {
+            color: #AC6AFF;
+            font-weight: 600;
+        }
+        
+        /* Favicon Previews */
+        .favicon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .favicon-item {
+            background: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .favicon-preview {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .favicon-label {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+        }
+        
+        .download-btn {
+            background: #AC6AFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        
+        .download-btn:hover {
+            background: #9050e0;
+        }
+        
+        .download-all-btn {
+            background: #AC6AFF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        
+        #favicon-16, #favicon-32, #favicon-48, #favicon-192, #favicon-512 {
+            background: #0a0a0a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20%;
+        }
+        
+        #favicon-16 { width: 16px; height: 16px; }
+        #favicon-32 { width: 32px; height: 32px; }
+        #favicon-48 { width: 48px; height: 48px; }
+        #favicon-192 { width: 192px; height: 192px; }
+        #favicon-512 { width: 512px; height: 512px; }
+        
+        .favicon-icon {
+            width: 70%;
+            height: 70%;
+        }
+        
+        .code-block {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+        
+        .code-block pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #AC6AFF; margin-bottom: 30px;">Flowko - Image Generation Tool</h1>
+        
+        <!-- OG Image Section -->
+        <div class="preview-section">
+            <h2>Open Graph Image (1200x630)</h2>
+            <div class="instructions">
+                <strong>Instructions:</strong><br>
+                1. Click the "Download OG Image" button below<br>
+                2. Save it as <code>og-image.jpg</code> in <code>/public/assets/</code><br>
+                3. Alternative: Use browser developer tools (F12) → Screenshot node
+            </div>
+            <button id="download-og" style="background: #AC6AFF; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 20px;">Download OG Image</button>
+            <div id="og-image">
+                <div class="content">
+                    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 40px;">
+                        <svg style="height: 120px; margin-right: 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2" width="163" height="285.2">
+                            <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                            <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                        </svg>
+                        <span style="font-size: 72px; font-weight: 700; color: #ffffff;">Flowko</span>
+                    </div>
+                    <h1>AI Business Automation</h1>
+                    <p>Save <span class="highlight">15+ hours</span> every week with intelligent workflows</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Favicon Section -->
+        <div class="preview-section">
+            <h2>Favicon Previews</h2>
+            <div class="instructions">
+                <strong>Instructions:</strong><br>
+                1. Click "Download All Favicons" to get all sizes at once<br>
+                2. Or download individual sizes using the buttons below each preview<br>
+                3. Save all files in the <code>/public/</code> directory (root level, not in assets)<br>
+                4. For favicon.ico, you'll need to use an online converter after downloading the PNGs
+            </div>
+            <button id="download-all-favicons" class="download-all-btn">Download All Favicons</button>
+            
+            <div class="favicon-grid">
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-16" data-filename="favicon-16x16.png">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">favicon-16x16.png</div>
+                    <button class="download-btn" data-size="16">Download</button>
+                </div>
+                
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-32" data-filename="favicon-32x32.png">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">favicon-32x32.png</div>
+                    <button class="download-btn" data-size="32">Download</button>
+                </div>
+                
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-48" data-filename="favicon-48x48.png">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">favicon-48x48.png</div>
+                    <button class="download-btn" data-size="48">Download</button>
+                </div>
+                
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-192" data-filename="favicon-192x192.png">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">favicon-192x192.png</div>
+                    <button class="download-btn" data-size="192">Download</button>
+                </div>
+                
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-180" data-filename="apple-touch-icon.png" style="width: 180px; height: 180px; background: #0a0a0a; display: flex; align-items: center; justify-content: center; border-radius: 20%;">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">apple-touch-icon.png (180x180)</div>
+                    <button class="download-btn" data-size="180">Download</button>
+                </div>
+                
+                <div class="favicon-item">
+                    <div class="favicon-preview">
+                        <div id="favicon-512" data-filename="favicon-512x512.png">
+                            <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
+                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="favicon-label">favicon-512x512.png</div>
+                    <button class="download-btn" data-size="512">Download</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Metadata Code Section -->
+        <div class="preview-section">
+            <h2>Metadata Configuration</h2>
+            <div class="instructions">
+                After generating the images, I'll add this metadata configuration to your app.
+            </div>
+            <div class="code-block">
+                <pre>// Add to app/[locale]/layout.tsx in the metadata object:
+
+icons: {
+  icon: [
+    { url: '/favicon.ico' },
+    { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+  ],
+  apple: [
+    { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+  ],
+  other: [
+    { rel: 'icon', url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    { rel: 'icon', url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+    { rel: 'icon', url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+  ],
+},</pre>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Download OG Image functionality
+        document.getElementById('download-og').addEventListener('click', function() {
+            const ogImage = document.getElementById('og-image');
+            
+            // Temporarily remove the border for clean export
+            const originalBorder = ogImage.style.border;
+            ogImage.style.border = 'none';
+            
+            html2canvas(ogImage, {
+                width: 1200,
+                height: 630,
+                scale: 1,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                // Restore the border
+                ogImage.style.border = originalBorder;
+                
+                // Convert to JPEG and download
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'og-image.jpg';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 'image/jpeg', 0.95);
+            });
+        });
+        
+        // Download individual favicon functionality
+        function downloadFavicon(size, filename) {
+            const faviconElement = document.getElementById(`favicon-${size}`);
+            
+            html2canvas(faviconElement, {
+                width: parseInt(size),
+                height: parseInt(size),
+                scale: 1,
+                backgroundColor: null,
+                logging: false
+            }).then(canvas => {
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename || `favicon-${size}x${size}.png`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            });
+        }
+        
+        // Add event listeners to download buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const size = this.getAttribute('data-size');
+                    const faviconElement = document.getElementById(`favicon-${size}`);
+                    const filename = faviconElement.getAttribute('data-filename');
+                    downloadFavicon(size, filename);
+                });
+            });
+            
+            // Download all favicons
+            document.getElementById('download-all-favicons').addEventListener('click', function() {
+                const sizes = [16, 32, 48, 180, 192, 512];
+                const filenames = [
+                    'favicon-16x16.png',
+                    'favicon-32x32.png', 
+                    'favicon-48x48.png',
+                    'apple-touch-icon.png',
+                    'favicon-192x192.png',
+                    'favicon-512x512.png'
+                ];
+                
+                sizes.forEach((size, index) => {
+                    setTimeout(() => {
+                        downloadFavicon(size, filenames[index]);
+                    }, index * 500); // Stagger downloads by 500ms
+                });
+            });
+        });
+    </script>
+</body>
+</html>

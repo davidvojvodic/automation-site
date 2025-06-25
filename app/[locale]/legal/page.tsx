@@ -5,10 +5,39 @@ import Footer from "@/components/Footer";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Legal Notice | Flowko",
-  description: "Legal notice and business registration information for Flowko."
-};
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{locale: string}>
+}): Promise<Metadata> {
+  const {locale} = await params;
+  
+  const titles = {
+    en: "Legal Notice | Flowko - Business Registration & Company Information",
+    sl: "Pravno Obvestilo | Flowko - Registracija Podjetja in Informacije o Družbi"
+  };
+
+  const descriptions = {
+    en: "Legal notice and business registration information for Flowko. Official company details and regulatory compliance information.",
+    sl: "Pravno obvestilo in informacije o registraciji podjetja za Flowko. Uradne podrobnosti podjetja in informacije o skladnosti s predpisi."
+  };
+
+  return {
+    title: titles[locale as keyof typeof titles] || titles.en,
+    description: descriptions[locale as keyof typeof descriptions] || descriptions.en,
+    robots: {
+      index: true,
+      follow: true,
+    },
+    alternates: {
+      canonical: `https://flowko.io/${locale}/legal`,
+      languages: {
+        'en': 'https://flowko.io/en/legal',
+        'sl': 'https://flowko.io/sl/legal',
+      },
+    },
+  };
+}
 
 // Multilingual content
 const getContent = (locale: string) => {
