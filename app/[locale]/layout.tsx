@@ -6,6 +6,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import CookieBanner from '@/components/CookieBanner';
+import PerformanceMonitor from '@/components/PerformanceMonitor';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export async function generateMetadata({
   const description = descriptions[locale as keyof typeof descriptions] || descriptions.en;
 
   return {
+    metadataBase: new URL('https://flowko.io'),
     title,
     description,
     keywords: [
@@ -198,6 +200,7 @@ export default async function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
+          <PerformanceMonitor />
           {children}
           <CookieBanner />
         </NextIntlClientProvider>
