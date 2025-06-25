@@ -13,20 +13,19 @@
       "solutions": "Rješenja",
       "WebsiteBundles": "Web Paketi",
       "benefits": "Prednosti",
-      "pricing": "Cjenik",
       "process": "Proces",
       "getStarted": "Započnite",
       "contact": "Kontakt"
     },
     "solutions": {
       "title": "AI Rješenja za Automatizaciju Radnih Procesa",
-      "subtitle": "Transformirajte svoje poslovne procese s inteligentnim n8n radnim tokovima koji donose mjerljiv ROI",
-      "bottomText": "Izgrađeno na n8n platformi za automatizaciju enterprise razine",
+      "subtitle": "Transformirajte svoje poslovne procese s inteligentnim radnim tokovima koji donose mjerljiv ROI",
+      "bottomText": "Izgrađeno na platformi za automatizaciju enterprise razine",
       "ctaText": "Spremni transformirati svoj posao?",
       "ctaButton": "Započnite Svoju Automatizaciju",
       "solution1": {
         "title": "Inteligentno Procesiranje Dokumenata",
-        "description": "AI-podržani radni tokovi dokumenata koji eliminiraju ručni unos podataka i uska grla odobrenja",
+        "description": "AI-podržani radni tokovi dokumenata koji eliminiraju ručni unos podataka i zastoje u procesu odobrenja",
         "features": [
           "OCR + AI ekstrakcija iz računa, ugovora i obrazaca s 99% točnošću",
           "Automatizirani radni tokovi odobrenja s pametnim usmjeravanjem na temelju iznosa i tipa",
@@ -41,12 +40,12 @@
         "description": "Pametni proizvodni radni tokovi koji optimiziraju učinkovitost i smanjuju prekide rada",
         "features": [
           "Praćenje proizvodnje u stvarnom vremenu s automatiziranim upozorenjima o kvaliteti",
-          "Predviđanje zaliha s automatskim generiranjem narudžbenica za kupnju",
+          "Predviđanje zaliha s automatskim stvaranjem narudžbenica",
           "Prediktivno planiranje održavanja na temelju podataka o opremi"
         ],
         "roi": "Smanjite operacijske troškove za 30-40% s optimizacijom u stvarnom vremenu",
         "timeMetric": "30-40% smanjenje troškova",
-        "costMetric": "€3M ušteđeno godišnje"
+        "costMetric": "99% manje grešaka u proizvodnji"
       },
       "solution3": {
         "title": "Automatizacija Stručnih Usluga",
@@ -61,8 +60,8 @@
         "costMetric": "70% brža isporuka"
       },
       "solution4": {
-        "title": "Izvršavanje Narudžbi E-trgovine",
-        "description": "Multikanalna automatizacija koja rukuje narudžbama od klika do isporuke besprijekorno",
+        "title": "E-trgovina i Marketinška Automatizacija",
+        "description": "Pametni radni tokovi od narudžbe do isporuke s automatskim marketingom za veću prodaju",
         "features": [
           "Sinkronizacija zaliha u stvarnom vremenu preko svih prodajnih kanala i tržišta",
           "Automatizirano usmjeravanje narudžbi dobavljačima i centrima za ispunjavanje",
@@ -86,11 +85,11 @@
       },
       "solution6": {
         "title": "Integracija Hiperavtomatizacijske Platforme",
-        "description": "Povezuju svaki poslovni alat s inteligentnim radnim tokovima koristeći n8n low-code platformu",
+        "description": "Povezuje svaki poslovni alat s inteligentnim radnim tokovima koristeći naprednu low-code platformu",
         "features": [
           "1000+ unaprijed izgrađenih integracija aplikacija s prilagođenim API vezama",
-          "Low-code graditelj radnih tokova koji omogućava citizen developere u timovima",
-          "AI-podržano otkrivanje grešaka s automatskom logikom ponovnog pokušaja i eskalacije"
+          "Low-code graditelj radnih tokova koji omogućava razvoj i netehničkim članovima tima",
+          "AI-podržano otkrivanje grešaka s automatskim ponovnim pokušajima i eskalacijom"
         ],
         "roi": "Eliminirajte 200+ sati ručnog rada po zaposleniku godišnje",
         "timeMetric": "200+ sati/zaposlenik/godina",
@@ -98,30 +97,60 @@
       }
     },
     "benefits": {
-      "title": "Automatizirajte Pametnije, Rastite Brže s Flowko",
+      "title": "Transformirajte Svoje Poslovanje",
       "benefit1": {
         "title": "Uštedite Vrijeme",
-        "description": "Povratite 15+ sati tjedno automatizacijom ponavljajućih zadataka i ručnih procesa koji usporavaju vaš tim."
+        "description": "Automatizirajte rutinske zadatke i fokusirajte se na ono što je stvarno važno.",
+        "points": [
+          "Automatska komunikacija s klijentima",
+          "Pametno procesiranje dokumenata",
+          "Više vremena za strateško planiranje"
+        ]
       },
       "benefit2": {
-        "title": "Efikasno Skaliranje",
-        "description": "Povećajte svoj posao bez proporcionalno povećavanja broja zaposlenih kroz inteligentnu automatizaciju radnih tokova."
+        "title": "Jednostavan Rast Poslovanja",
+        "description": "Automatski povećajte kapacitete kako raste potražnja.",
+        "points": [
+          "AI asistenti za podršku klijenata",
+          "Automatizacija na više kanala",
+          "Prilagodljivo skaliranje kapaciteta"
+        ]
       },
       "benefit3": {
-        "title": "Smanjite Greške",
-        "description": "Uklonite ljudske greške s automatiziranim prijenosima podataka i dosljednim izvršavanjem procesa kroz cijelu organizaciju."
+        "title": "Eliminirajte Greške",
+        "description": "Savršena točnost i dosljednost u svakom procesu.",
+        "points": [
+          "Bez gre\u0161aka u narud\u017ebama ili ra\u010dunima",
+          "Automatska provjera prije slanja",
+          "Potpun zapis svih poslovnih aktivnosti"
+        ]
       },
       "benefit4": {
-        "title": "Brza Implementacija",
-        "description": "Pokrenite svoje automatizacije za 1-2 tjedna s našim sprint-style pristupom isporuke."
+        "title": "Brzi Odzivi 24/7",
+        "description": "Odgovorite klijentima odmah, u bilo koje vrijeme.",
+        "points": [
+          "Trenutno stvaranje ponuda",
+          "24/7 automatska podrška",
+          "Trenutne obavijesti"
+        ]
       },
       "benefit5": {
-        "title": "Usredotočenost na ROI",
-        "description": "Svaka automatizacija je dizajnirana s mjerljivim uštedama vremena i troškova, osiguravajući jasan povrat investicije."
+        "title": "Povećajte Prihode",
+        "description": "Iskoristite svaku priliku za prodaju s automatskim praćenjem.",
+        "points": [
+          "Automatsko praćenje potencijalnih klijenata",
+          "Pametne ponude za dodatnu prodaju",
+          "Nijedna prilika se ne gubi"
+        ]
       },
       "benefit6": {
-        "title": "24/7 Nadzor",
-        "description": "Automatizirane provjere zdravlja i upozorenja u stvarnom vremenu osiguravaju da vaši radni tokovi rade glatko tijekom cijelog dana."
+        "title": "Ostanite Ispred Konkurencije",
+        "description": "Koristite AI uvide za nadmašivanje konkurenata.",
+        "points": [
+          "Prediktivna analitika",
+          "Automatska tržišna inteligencija",
+          "Optimizacija vođena podacima"
+        ]
       }
     },
     "implementation": {

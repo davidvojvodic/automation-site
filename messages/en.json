@@ -13,15 +13,14 @@
       "solutions": "Solutions",
       "WebsiteBundles": "Website Bundles",
       "benefits": "Benefits",
-      "pricing": "Pricing",
       "process": "Process",
       "getStarted": "Get Started",
       "contact": "Contact"
     },
     "solutions": {
       "title": "AI Workflow Automation Solutions",
-      "subtitle": "Transform your business operations with intelligent n8n workflows that deliver measurable ROI",
-      "bottomText": "Built on n8n's enterprise-grade automation platform",
+      "subtitle": "Transform your business operations with intelligent workflows that deliver measurable ROI",
+      "bottomText": "Built on enterprise-grade automation platform",
       "ctaText": "Ready to transform your business?",
       "ctaButton": "Start Your Automation Journey",
       "solution1": {
@@ -46,7 +45,7 @@
         ],
         "roi": "Reduce operational costs by 30-40% with real-time optimization",
         "timeMetric": "30-40% cost reduction",
-        "costMetric": "€3M saved annually"
+        "costMetric": "99% fewer production errors"
       },
       "solution3": {
         "title": "Professional Services Automation",
@@ -61,8 +60,8 @@
         "costMetric": "70% faster delivery"
       },
       "solution4": {
-        "title": "E-commerce Order Fulfillment",
-        "description": "Multi-channel automation that handles orders from click to delivery seamlessly",
+        "title": "E-commerce & Marketing Automation",
+        "description": "Smart workflows from order to delivery with automated marketing for increased sales",
         "features": [
           "Real-time inventory sync across all sales channels and marketplaces",
           "Automated order routing to suppliers and fulfillment centers",
@@ -86,7 +85,7 @@
       },
       "solution6": {
         "title": "Hyperautomation Platform Integration",
-        "description": "Connect every business tool with intelligent workflows using n8n's low-code platform",
+        "description": "Connect every business tool with intelligent workflows using advanced low-code platform",
         "features": [
           "1000+ pre-built app integrations with custom API connections",
           "Low-code workflow builder enabling citizen developers across teams",
@@ -98,30 +97,60 @@
       }
     },
     "benefits": {
-      "title": "Automate Smarter, Scale Faster with Flowko",
+      "title": "Transform Your Business Operations",
       "benefit1": {
-        "title": "Save Time",
-        "description": "Reclaim 15+ hours per week by automating repetitive tasks and manual processes that slow down your team."
+        "title": "Save Time Weekly",
+        "description": "Automate routine tasks and focus on what matters most.",
+        "points": [
+          "Automated customer communication",
+          "Intelligent document processing",
+          "Focus on strategic growth activities"
+        ]
       },
       "benefit2": {
-        "title": "Scale Efficiently",
-        "description": "Grow your business without proportionally increasing headcount through intelligent workflow automation."
+        "title": "Effortless Business Growth",
+        "description": "Scale operations automatically as demand increases.",
+        "points": [
+          "AI chatbots handle customer inquiries",
+          "Multi-channel automation",
+          "Automatic capacity scaling"
+        ]
       },
       "benefit3": {
-        "title": "Reduce Errors",
-        "description": "Eliminate human error with automated data transfers and consistent process execution across your organization."
+        "title": "Eliminate Errors",
+        "description": "Perfect consistency in every process, every time.",
+        "points": [
+          "No mistakes in customer orders or invoices",
+          "Automatic checks before sending anything",
+          "Complete record of all business activities"
+        ]
       },
       "benefit4": {
-        "title": "Fast Implementation",
-        "description": "Get your automations up and running in 1-2 weeks with our sprint-style delivery approach."
+        "title": "Lightning-Fast Responses",
+        "description": "Respond to customers instantly, 24/7.",
+        "points": [
+          "Instant quote generation",
+          "24/7 automated support",
+          "Real-time notifications"
+        ]
       },
       "benefit5": {
-        "title": "ROI Focused",
-        "description": "Every automation is designed with measurable time and cost savings, ensuring clear return on investment."
+        "title": "Maximize Revenue",
+        "description": "Capture every sale with automated follow-ups.",
+        "points": [
+          "Automated lead nurturing",
+          "Smart upselling workflows",
+          "Never miss a sales opportunity"
+        ]
       },
       "benefit6": {
-        "title": "24/7 Monitoring",
-        "description": "Automated health checks and real-time alerts ensure your workflows run smoothly around the clock."
+        "title": "Stay Ahead of Competition",
+        "description": "Use AI insights to outperform competitors.",
+        "points": [
+          "Predictive analytics",
+          "Automated market intelligence",
+          "Data-driven optimization"
+        ]
       }
     },
     "implementation": {
@@ -275,47 +304,51 @@
         "bottomText": "Need a custom solution? We create tailored website and automation packages for any business.",
         "bottomCta": "Discuss Your Project",
         "ecommerce": {
-          "title": "E-commerce + Sales Automation",
-          "description": "Complete online store solution for multi-channel sellers. Perfect for dropshipping, subscription boxes, and product retailers.",
+          "title": "E-commerce + Automation",
+          "description": "Professional online store with advanced AI-powered workflows that automate your entire sales process from order to delivery.",
           "roi": "Save 25+ hours/week on order management",
           "features": [
-            "Multi-platform inventory sync across all sales channels",
-            "Automated order routing to suppliers and fulfillment centers",
-            "AI-powered abandoned cart recovery with dynamic discount offers",
-            "Complete customer lifecycle automation (welcome, reviews, win-back campaigns)"
+            "Professional e-commerce website with responsive design and payment systems",
+            "Automated order processing from confirmation to fulfillment",
+            "Real-time inventory sync across 3+ sales platforms",
+            "AI-powered abandoned cart recovery with dynamic discounts",
+            "Automated customer lifecycle workflows (welcome, reviews, win-back campaigns)"
           ]
         },
         "business": {
           "title": "Business Website + Lead Generation",
-          "description": "Professional corporate website for B2B services, consultants, and agencies. Converts visitors into qualified leads automatically.",
+          "description": "Professional corporate website with intelligent lead capture, qualification, and automated nurturing workflows.",
           "roi": "3x faster lead qualification",
           "features": [
-            "Intelligent lead scoring with automatic CRM integration",
-            "Automated proposal generation from contact form responses",
-            "Smart meeting scheduling with calendar synchronization",
-            "Multi-stage nurture sequences based on prospect behavior"
+            "Professional business website with responsive design and contact forms",
+            "Smart lead capture system with forms and automatic CRM integration",
+            "Automated meeting scheduling with calendar sync and reminders",
+            "Multi-stage email nurturing sequences with behavior triggers",
+            "Automated proposal generation with dynamic pricing calculations"
           ]
         },
         "service": {
           "title": "Service Business + Booking Automation",
-          "description": "Complete booking solution for salons, clinics, fitness trainers, and consultants. Eliminates no-shows and manual scheduling.",
+          "description": "Service-focused website with seamless appointment booking, client management, and automated payment processing.",
           "roi": "90% reduction in no-shows",
           "features": [
-            "Smart booking system with upfront payment collection",
+            "Service-focused website with pricing showcase and testimonials",
+            "Smart booking system with deposit collection and availability management",
             "Multi-channel appointment reminders (SMS + Email + App notifications)",
-            "Automated no-show fee processing and rescheduling workflows",
-            "Accounting system integration for automatic post-service invoicing"
+            "Automated invoicing and payment processing post-service",
+            "Automated no-show fee processing and rescheduling workflows"
           ]
         },
-        "portfolio": {
-          "title": "Portfolio + Client Management",
-          "description": "Professional portfolio for designers, developers, photographers, and agencies. Streamlines client work from inquiry to payment.",
-          "roi": "50% faster project delivery",
+        "professional": {
+          "title": "Professional Services + Client Automation",
+          "description": "Professional services website with automated client management, secure document handling, and streamlined billing workflows.",
+          "roi": "Save 15+ hours per week on admin tasks",
           "features": [
-            "Automated project intake with file/folder organization",
-            "Client approval workflows with revision tracking and digital signatures",
-            "Milestone-based invoicing with time tracking integration",
-            "Automated project updates and deadline reminder notifications"
+            "Professional services website with client portal access and online intake",
+            "Automated document management with secure file organization and digital signatures",
+            "Client communication hub with centralized messaging and status updates",
+            "Automated billing and payment processing with multiple billing methods",
+            "Compliance-ready workflows with audit trails and data security"
           ]
         }
       },
@@ -332,24 +365,6 @@
         "cookies": "Cookie Policy",
         "legal": "Legal Notice",
         "cookieSettings": "Cookie Settings"
-      }
-    },
-    "legal": {
-      "privacy": {
-        "title": "Privacy Policy",
-        "lastUpdated": "Last updated:"
-      },
-      "terms": {
-        "title": "Terms of Service",
-        "lastUpdated": "Last updated:"
-      },
-      "cookies": {
-        "title": "Cookie Policy",
-        "lastUpdated": "Last updated:"
-      },
-      "legalNotice": {
-        "title": "Legal Notice / Imprint",
-        "subtitle": "Information according to EU requirements"
       }
     }
   }

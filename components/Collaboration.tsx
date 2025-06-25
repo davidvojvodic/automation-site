@@ -30,7 +30,7 @@ export function Collaboration({ className }: CollaborationProps) {
   const t = useTranslations("HomePage.collaboration");
 
   return (
-    <Section crosses className={cn(className)}>
+    <Section className={cn(className)}>
       <div className={cn("container lg:flex")}>
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">{t("title")}</h2>
@@ -49,7 +49,7 @@ export function Collaboration({ className }: CollaborationProps) {
             ))}
           </ul>
 
-          <Button>{t("buttonText")}</Button>
+          <Button href="#process">{t("buttonText")}</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">

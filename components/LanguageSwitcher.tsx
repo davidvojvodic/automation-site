@@ -13,13 +13,13 @@ interface LanguageSwitcherProps {
 const languageNames: Record<string, string> = {
   en: "EN",
   sl: "SL",
-  hr: "HR",
+  // hr: "HR", // Temporarily disabled
 };
 
 const languageFullNames: Record<string, string> = {
   en: "English",
   sl: "Slovenščina",
-  hr: "Hrvatski",
+  // hr: "Hrvatski", // Temporarily disabled
 };
 
 export function LanguageSwitcher({ className, locale }: LanguageSwitcherProps) {

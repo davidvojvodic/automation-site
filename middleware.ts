@@ -4,5 +4,6 @@ import {routing} from './i18n/routing';
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ['/', '/(sl|hr|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  matcher: ['/', '/(sl|en)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
+  // Temporarily disabled Croatian (hr) locale: '/(sl|hr|en)/:path*'
 };

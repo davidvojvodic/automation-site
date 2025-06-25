@@ -13,20 +13,19 @@
       "solutions": "Rešitve",
       "WebsiteBundles": "Spletni Paketi",
       "benefits": "Prednosti",
-      "pricing": "Ceniki",
       "process": "Proces",
       "getStarted": "Začnite",
       "contact": "Kontakt"
     },
     "solutions": {
       "title": "AI Rešitve za Avtomatizacijo Delovnih Procesov",
-      "subtitle": "Preobrazite svoje poslovne procese z inteligentnimi n8n delovnimi tokovi, ki prinašajo merljiv ROI",
-      "bottomText": "Zgrajeno na n8n platformi za avtomatizacijo podjetniške ravni",
+      "subtitle": "Preobrazite svoje poslovne procese z inteligentnimi delovnimi tokovi, ki prinašajo merljiv ROI",
+      "bottomText": "Zgrajeno na platformi za avtomatizacijo podjetniške ravni",
       "ctaText": "Pripravljeni preobraziti vaše podjetje?",
       "ctaButton": "Začnite Svojo Pot Avtomatizacije",
       "solution1": {
         "title": "Inteligentno Procesiranje Dokumentov",
-        "description": "AI-podprti delovni tokovi dokumentov, ki odpravijo ročni vnos podatkov in ozka grla odobritev",
+        "description": "AI-podprti delovni tokovi dokumentov, ki odpravijo ročni vnos podatkov in zastoje v procesu odobritev",
         "features": [
           "OCR + AI ekstrakcija iz računov, pogodb in obrazcev z 99% natančnostjo",
           "Avtomatizirani delovni tokovi odobritev s pametnim usmerjanjem na podlagi zneska in tipa",
@@ -41,12 +40,12 @@
         "description": "Pametni proizvodni delovni tokovi, ki optimizirajo učinkovitost in zmanjšajo izpade",
         "features": [
           "Spremljanje proizvodnje v realnem času z avtomatiziranimi opozoril o kakovosti",
-          "Napovedovanje zalog z avtomatskim generiranjem naročilnic za nakup",
+          "Napoved zalog z avtomatskim ustvarjanjem naročilnic",
           "Napovedovalno planiranje vzdrževanja na podlagi podatkov opreme"
         ],
         "roi": "Zmanjšajte operacijske stroške za 30-40% z optimizacijo v realnem času",
         "timeMetric": "30-40% zmanjšanje stroškov",
-        "costMetric": "€3M prihranjeno letno"
+        "costMetric": "99% manj napak v proizvodnji"
       },
       "solution3": {
         "title": "Avtomatizacija Strokovnih Storitev",
@@ -61,8 +60,8 @@
         "costMetric": "70% hitrejša dostava"
       },
       "solution4": {
-        "title": "Izvršitev Naročil E-trgovine",
-        "description": "Večkanalna avtomatizacija, ki obravnava naročila od klika do dostave brezhibno",
+        "title": "E-trgovina in Marketinška Avtomatizacija",
+        "description": "Pametni delovni tokovi od naročila do dostave z avtomatskim marketingom za večje prodaje",
         "features": [
           "Sinhronizacija zalog v realnem času preko vseh prodajnih kanalov in tržnic",
           "Avtomatizirano usmerjanje naročil k dobaviteljem in centrom za izpolnjevanje",
@@ -86,11 +85,11 @@
       },
       "solution6": {
         "title": "Integracija Hiperavtomatizacijske Platforme",
-        "description": "Povežite vsako poslovno orodje z inteligentnimi delovnimi tokovi z uporabo n8n low-code platforme",
+        "description": "Povežite vsako poslovno orodje z inteligentnimi delovnimi tokovi z uporabo napredne low-code platforme",
         "features": [
           "1000+ vnaprej zgrajenih integracij aplikacij s povezavami API po meri",
-          "Low-code gradnik delovnih tokov, ki omogoča razvijalce državljane v ekipah",
-          "AI-podprto zaznavanje napak z avtomatsko logiko ponovnih poskusov in eskalacije"
+          "Low-code gradnik delovnih tokov, ki omogoča razvoj tudi netehničnim članom ekipe",
+          "AI-podprto zaznavanje napak z avtomatskim ponovnim poskušanjem in eskalacijo"
         ],
         "roi": "Odpravite 200+ ur ročnega dela na zaposlenega letno",
         "timeMetric": "200+ ur/zaposleni/leto",
@@ -98,30 +97,60 @@
       }
     },
     "benefits": {
-      "title": "Avtomatizirajte Pametneje, Rastite Hitreje s Flowko",
+      "title": "Preobrazite Svoje Poslovanje",
       "benefit1": {
-        "title": "Prihranite Čas",
-        "description": "Povrnite 15+ ur na teden z avtomatizacijo ponavljajočih se nalog in ročnih procesov, ki upočasnjujejo vašo ekipo."
+        "title": "Prihranite čas",
+        "description": "Avtomatizirajte rutinska opravila in se osredotočite na tisto, kar je res pomembno.",
+        "points": [
+          "Avtomatska komunikacija s strankami",
+          "Pametno procesiranje dokumentov",
+          "Več časa za strateško načrtovanje"
+        ]
       },
       "benefit2": {
-        "title": "Učinkovita Rast",
-        "description": "Povečajte svoje poslovanje brez sorazmernega povečevanja števila zaposlenih z inteligentno avtomatizacijo delovnih tokov."
+        "title": "Enostavna Rast Poslovanja",
+        "description": "Samodejno povečajte zmogljivosti, ko raste povpraševanje.",
+        "points": [
+          "AI asistenti za podporo strankam",
+          "Avtomatizacija na več kanalih",
+          "Prilagodljivo povečevanje zmogljivosti"
+        ]
       },
       "benefit3": {
-        "title": "Zmanjšajte Napake",
-        "description": "Odpravite človeške napake z avtomatiziranimi prenosi podatkov in doslednim izvajanjem procesov po celotni organizaciji."
+        "title": "Odpravite Napake",
+        "description": "Popolna natančnost in doslednost v vsakem procesu.",
+        "points": [
+          "Brez napak v naro\u010dilih ali ra\u010dunih",
+          "Avtomatsko preverjanje pred po\u0161iljanjem",
+          "Popoln zapis vseh poslovnih aktivnosti"
+        ]
       },
       "benefit4": {
-        "title": "Hitra Implementacija",
-        "description": "Zaženite svoje avtomatizacije v 1-2 tednih z našim pristopom dostave v sprint slogu."
+        "title": "Hitra Odzivnost 24/7",
+        "description": "Odgovorite strankam takoj, kadarkoli.",
+        "points": [
+          "Takojšnje ustvarjanje ponudb",
+          "24/7 avtomatska podpora",
+          "Takojšnja obvestila"
+        ]
       },
       "benefit5": {
-        "title": "Osredotočenost na ROI",
-        "description": "Vsaka avtomatizacija je zasnovana z merljivimi prihranki časa in stroškov, kar zagotavlja jasen donos naložbe."
+        "title": "Povečajte Prihodke",
+        "description": "Izkoristite vsako priložnost za prodajo z avtomatskim sledenjem.",
+        "points": [
+          "Avtomatsko sledenje potencialnim strankam",
+          "Pametne ponudbe za dodatno prodajo",
+          "Nobena priložnost se ne izgubi"
+        ]
       },
       "benefit6": {
-        "title": "24/7 Nadzor",
-        "description": "Avtomatizirane preverjanje zdravja in opozorila v realnem času zagotavljajo, da vaši delovni tokovi tečejo gladko ves dan."
+        "title": "Ostanite Pred Konkurenco",
+        "description": "Uporabite AI vpoglede za premagovanje konkurentov.",
+        "points": [
+          "Prediktivne analitike",
+          "Avtomatska tržna inteligenca",
+          "Podatkovno vodena optimizacija"
+        ]
       }
     },
     "implementation": {
@@ -132,7 +161,7 @@
       "ctaButton": "Pridobite Brezplačno ROI Analizo",
       "step1": {
         "title": "Brezplačen Odkrivni Klic",
-        "description": "Analiziramo vaše trenutne delovne procese in identificiramo največje priložnosti za avtomatizacijo za takojnje prihranke časa in stroškov.",
+        "description": "Analiziramo vaše trenutne delovne procese in identificiramo največje priložnosti za avtomatizacijo za takojšnje prihranke časa in stroškov.",
         "duration": "30 minut",
         "status": "1. teden"
       },
@@ -150,7 +179,7 @@
       },
       "step4": {
         "title": "Lansiranje in Skaliranje",
-        "description": "Vaša ekipa postane pripravljena na avtomatizacijo s celotnim usposabljanjem, dokumentacijo in stalno podporo za maksimalen učinek.",
+        "description": "Vaša ekipa postane pripravljena na avtomatizacijo s celotnim usposabljanjem, dokumentacijo in podporo za maksimalen učinek.",
         "duration": "3-5 dni",
         "status": "5.-6. teden"
       }
@@ -188,8 +217,8 @@
         "website": "Spletna stran podjetja",
         "industry": "Panoga",
         "message": "Kako vam lahko pomagamo avtomatizirati vaše poslovanje?",
-        "bundleInterest": "Zanima me za pakete Spletna stran + Avtomatizacija",
-        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatizacijski delovni procesi",
+        "bundleInterest": "Zanimajo me paketi Spletna stran + Avtomatizacija",
+        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatizacijskimi delovnimi procesi",
         "firstNamePlaceholder": "Vaše ime",
         "lastNamePlaceholder": "Vaš priimek",
         "emailPlaceholder": "vas.email@podjetje.si",
@@ -261,61 +290,65 @@
     "bundles": {
         "tag": "Celovite digitalne rešitve",
         "title": "Paketi spletna stran + avtomatizacija",
-        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem celovitem paketu. Lansirajte se hitreje, avtomatizirajte pametneje, rastite večje.",
+        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem paketu.",
         "benefits": [
           "Profesionalna spletna stran + avtomatizacija",
-          "Hitrejši čas prihoda na trg",
-          "Integriran pristop k rešitvam"
+          "Hitrejši vstop na trg",
+          "Celovit pristop k rešitvam"
         ],
         "popular": "Najbolj priljubljen",
         "included": "Kaj je vključeno",
-        "startingAt": "Začenši pri",
+        "startingAt": "Od",
         "pricingNote": "Končna cena je odvisna od kompleksnosti in zahtev",
         "cta": "Pridobite svoj paket",
         "bottomText": "Potrebujete rešitev po meri? Ustvarjamo prilagojene pakete spletnih strani in avtomatizacije za katero koli podjetje.",
         "bottomCta": "Razpravljajte o svojem projektu",
         "ecommerce": {
-          "title": "Spletna trgovina + avtomatizacija prodaje",
-          "description": "Celovita spletna trgovina z avtomatiziranim procesiranjem naročil, upravljanjem zalog in delovnimi procesi za angažiranje strank.",
+          "title": "E-trgovina + avtomatizacija",
+          "description": "Profesionalna spletna trgovina z naprednimi AI-podprtimi delovnimi tokovi, ki avtomatizirajo celoten prodajni proces od naročila do dostave.",
           "roi": "Prihranite 25+ ur tedensko pri upravljanju naročil",
           "features": [
-            "Sinhronizacija inventarja na več platformah prek vseh prodajnih kanalov",
-            "Samodejno usmerjanje naročil dobaviteljem in centrom za izpolnjevanje",
-            "AI-podprta obnovitev zapuščenih košaric z dinamičnimi popustnimi ponudbami",
-            "Popolna avtomatizacija življenjskega cikla strank (dobrodošlica, ocene, kampanje vrnitve)"
+            "Profesionalna spletna trgovina z odzivnim dizajnom in plačilnimi sistemi",
+            "Avtomatizirano procesiranje naročil od potrditve do dostave",
+            "Sinhronizacija zalog v realnem času preko 3+ prodajnih platform",
+            "AI-podprta obnovitev zapuščenih košaric z dinamičnimi popusti",
+            "Avtomatiziran življenjski cikel strank (dobrodošlica, ocene, povratne kampanje)"
           ]
         },
         "business": {
-          "title": "Poslovna spletna stran + generiranje potencialnih strank",
-          "description": "Profesionalna korporativna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalificiranjem in avtomatizacijo nege.",
-          "roi": "3x hitrejše kvalificiranje potencialnih strank",
+          "title": "Poslovanje + avtomatizacija strank",
+          "description": "Profesionalna poslovna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalificiranjem in avtomatskim sledenjem.",
+          "roi": "3x hitrejše pridobivanje kvalificiranih strank",
           "features": [
-            "Inteligentno ocenjevanje potencialnih strank s samodejno CRM integracijo",
-            "Samodejna generacija predlogov iz odzivov kontaktnega obrazca",
-            "Pametno načrtovanje sestankov s sinhronizacijo koledarja",
-            "Večstopenjske sekvence nege, ki temeljijo na vedenju potencialnih strank"
+            "Profesionalna poslovna spletna stran z odzivnim dizajnom in kontaktnimi obrazci",
+            "Pametni sistem zajemanja strank z obrazci in samodejno CRM integracijo",
+            "Samodejno dogovarjanje sestankov s sinhronizacijo koledarja in opomniki",
+            "Večstopenjske e-poštne kampanje za nego strank glede na njihovo vedenje",
+            "Samodejna generacija predlogov z dinamičnimi cenovnimi izračuni"
           ]
         },
         "service": {
-          "title": "Storitev + avtomatizacija rezervacij",
-          "description": "Spletna stran, osredotočena na storitve, z enostavnim rezerviranjem terminov, upravljanjem strank in avtomatizacijo plačil.",
-          "roi": "90% zmanjšanje neopravičenih odsotnosti",
+          "title": "Storitve + avtomatizacija rezervacij",
+          "description": "Spletna stran osredotočena na storitve z enostavnim rezerviranjem terminov, upravljanjem strank in avtomatizacijo plačil.",
+          "roi": "90% manj izostankov",
           "features": [
-            "Pametni sistem rezervacij s predhodnim zbiranjem plačil",
+            "Spletna stran osredotočena na storitve s predstavitvijo cen in pričevanji",
+            "Pametni sistem rezervacij s pologom in avtomatskim razporejanjem terminov",
             "Večkanalni opomniki za termine (SMS + E-pošta + Obvestila aplikacije)",
-            "Samodejna obdelava pristojbin za neopraviljene odsotnosti in delovni tokovi prerazporeditve",
-            "Integracija računovodskega sistema za samodejno fakturiranje po storitvi"
+            "Samodejno fakturiranje in procesiranje plačil po opravljeni storitvi",
+            "Samodejna obdelava pristojbin za izostanke in prerazporeditve terminov"
           ]
         },
-        "portfolio": {
-          "title": "Portfolio + upravljanje strank",
-          "description": "Kreativna portfolio spletna stran z racionaliziranim upravljanjem projektov in avtomatizacijo komunikacije s strankami.",
-          "roi": "50% hitrejša dostava projektov",
+        "professional": {
+          "title": "Strokovne storitve + avtomatizacija",
+          "description": "Spletna stran za strokovne storitve s samodejnim upravljanjem strank, varnim ravnanjem z dokumenti in poenostavljenimi delovnimi procesi za računovodstvo.",
+          "roi": "Prihranite 15+ ur tedensko pri administrativnih opravilih",
           "features": [
-            "Samodejni sprejem projektov z organizacijo datotek/map",
-            "Delovni tokovi odobritve strank s sledenjem revizij in digitalnimi podpisi",
-            "Fakturiranje na podlagi mejnikov z integracijo sledenja časa",
-            "Samodejne posodobitve projektov in obvestila o opomniku rokov"
+            "Profesionalna spletna stran s portalom za stranke in spletnim sprejemom",
+            "Samodejno upravljanje dokumentov z varno organizacijo datotek in digitalnimi podpisi",
+            "Komunikacijski center za stranke s centralizirano komunikacijo in posodobitvami stanja",
+            "Samodejno fakturiranje in procesiranje plačil z več načini obračunavanja",
+            "Delovni procesi skladni s predpisi z revizijskimi sledmi in varnostjo podatkov"
           ]
         }
     },

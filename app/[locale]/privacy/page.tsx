@@ -184,7 +184,9 @@ const getContent = (locale: string) => {
         }
       }
     };
-  } else if (locale === 'hr') {
+  } 
+  // Temporarily disabled Croatian locale
+  /* else if (locale === 'hr') {
     return {
       title: "Pravila privatnosti",
       lastUpdated: "Zadnje ažuriranje:",
@@ -352,7 +354,8 @@ const getContent = (locale: string) => {
         }
       }
     };
-  } else {
+  */ 
+  else {
     // English (default)
     return {
       title: "Privacy Policy",

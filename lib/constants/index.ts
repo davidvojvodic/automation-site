@@ -42,13 +42,13 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "WebsiteBundles",
-    url: "#bundles",
+    title: "benefits",
+    url: "#features",
   },
   {
     id: "2",
-    title: "benefits",
-    url: "#features",
+    title: "WebsiteBundles",
+    url: "#bundles",
   },
   {
     id: "3",

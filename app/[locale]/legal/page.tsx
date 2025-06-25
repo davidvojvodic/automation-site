@@ -101,7 +101,9 @@ const getContent = (locale: string) => {
         }
       }
     };
-  } else if (locale === 'hr') {
+  } 
+  // Temporarily disabled Croatian locale
+  /* else if (locale === 'hr') {
     return {
       title: "Pravna obavijest",
       subtitle: "Informacije u skladu s EU zahtjevima",
@@ -190,7 +192,8 @@ const getContent = (locale: string) => {
         }
       }
     };
-  } else {
+  */ 
+  else {
     // English (default)
     return {
       title: "Legal Notice / Imprint",

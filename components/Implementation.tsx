@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -46,27 +45,31 @@ function Implementation({ className }: ImplementationProps) {
   ];
 
   return (
-    <Section className={cn(className)} id="process">
+    <Section crosses className={cn(className)} id="process">
       <div className="container">
         <div className="animate-process-heading">
-          <Heading
-            tag={t("tag")}
-            title={t("title")}
-            text={t("subtitle")}
-          />
+          <Heading tag={t("tag")} title={t("title")} text={t("subtitle")} />
         </div>
 
         {/* Desktop Timeline */}
         <div className="hidden lg:block max-w-6xl mx-auto relative">
           {/* Simple gradient connecting line */}
-          <div className="absolute top-36 left-0 right-0 h-1 bg-gradient-to-r from-color-1 via-color-2 to-color-3 rounded-full z-0 animate-process-line" style={{ animationDelay: '300ms' }} />
+          <div
+            className="absolute top-36 left-0 right-0 h-1 bg-gradient-to-r from-color-1 via-color-2 to-color-3 rounded-full z-0 animate-process-line"
+            style={{ animationDelay: "300ms" }}
+          />
 
           {/* Steps Grid */}
           <div className="grid grid-cols-4 gap-8 relative">
             {steps.map((step, index) => (
-              <div key={step.id} className="relative animate-process-step" style={{ animationDelay: `${500 + (index * 200)}ms` }}>
+              <div
+                key={step.id}
+                className="relative animate-process-step"
+                style={{ animationDelay: `${500 + index * 200}ms` }}
+              >
                 {/* Step Card */}
-                <Card className="border-n-6 bg-n-8 hover:bg-n-7 hover:border-color-1/30 hover:scale-105 transition-all duration-500 group relative pt-10">{/* Enhanced hover */}
+                <Card className="border-n-6 bg-n-8 hover:bg-n-7 hover:border-color-1/30 hover:scale-105 transition-all duration-500 group relative pt-10">
+                  {/* Enhanced hover */}
                   {/* Step Number Circle */}
                   <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
                     <div className="w-12 h-12 bg-gradient-to-br from-color-1 to-color-2 rounded-full flex items-center justify-center border-4 border-n-8 shadow-lg group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-color-1/20 transition-all duration-300">
@@ -167,10 +170,15 @@ function Implementation({ className }: ImplementationProps) {
         </div>
 
         {/* Call to Action */}
-        <div className="flex justify-center mt-16 animate-process-cta" style={{ animationDelay: '1300ms' }}>
+        <div
+          className="flex justify-center mt-16 animate-process-cta"
+          style={{ animationDelay: "1300ms" }}
+        >
           <div className="text-center">
             <div className="tagline mb-4">{t("ctaTitle")}</div>
-            <button className="button hover:scale-105 transition-transform duration-300">{t("ctaButton")}</button>
+            <button className="button hover:scale-105 transition-transform duration-300">
+              {t("ctaButton")}
+            </button>
           </div>
         </div>
       </div>

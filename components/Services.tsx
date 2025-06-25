@@ -2,6 +2,7 @@
 
 import Section from "./Section";
 import Heading from "./Heading";
+import Button from "./Button";
 import {
   FileText,
   Factory,
@@ -68,7 +69,7 @@ function Services({ className }: ServicesProps) {
   ];
 
   return (
-    <Section id="services" className={className}>
+    <Section crosses id="services" className={className}>
       <div className="container">
         <Heading title={t("title")} text={t("subtitle")} />
 
@@ -87,36 +88,44 @@ function Services({ className }: ServicesProps) {
                 }}
               >
                 {/* Gradient border effect */}
-                <div className={cn(
-                  "absolute inset-0 rounded-2xl bg-gradient-to-r p-[1px]",
-                  solution.borderGradient,
-                  "opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                )} />
-                
+                <div
+                  className={cn(
+                    "absolute inset-0 rounded-2xl bg-gradient-to-r p-[1px]",
+                    solution.borderGradient,
+                    "opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  )}
+                />
+
                 {/* Card content */}
-                <div className={cn(
-                  "relative h-full rounded-2xl p-8",
-                  "bg-n-8 border border-n-6",
-                  "group-hover:border-transparent",
-                  "transition-all duration-500"
-                )}>
+                <div
+                  className={cn(
+                    "relative h-full rounded-2xl p-8",
+                    "bg-n-8 border border-n-6",
+                    "group-hover:border-transparent",
+                    "transition-all duration-500"
+                  )}
+                >
                   {/* Background gradient */}
-                  <div className={cn(
-                    "absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0",
-                    solution.gradient,
-                    "group-hover:opacity-100 transition-opacity duration-500"
-                  )} />
-                  
+                  <div
+                    className={cn(
+                      "absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0",
+                      solution.gradient,
+                      "group-hover:opacity-100 transition-opacity duration-500"
+                    )}
+                  />
+
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon */}
                     <div className="mb-6">
-                      <div className={cn(
-                        "w-14 h-14 rounded-xl flex items-center justify-center",
-                        "bg-gradient-to-br",
-                        solution.gradient,
-                        "group-hover:scale-110 transition-transform duration-300"
-                      )}>
+                      <div
+                        className={cn(
+                          "w-14 h-14 rounded-xl flex items-center justify-center",
+                          "bg-gradient-to-br",
+                          solution.gradient,
+                          "group-hover:scale-110 transition-transform duration-300"
+                        )}
+                      >
                         <solution.icon className="w-7 h-7 text-n-1" />
                       </div>
                     </div>
@@ -125,7 +134,7 @@ function Services({ className }: ServicesProps) {
                     <h4 className="h5 mb-3 text-n-1">
                       {t(`${solution.key}.title`)}
                     </h4>
-                    <p className="body-2 mb-6 text-n-3 line-clamp-2">
+                    <p className="body-2 mb-6 text-n-3">
                       {t(`${solution.key}.description`)}
                     </p>
 
@@ -134,13 +143,17 @@ function Services({ className }: ServicesProps) {
                       <div className="flex items-center gap-3">
                         <Clock className="w-4 h-4 text-color-1" />
                         <span className="text-sm text-n-2">
-                          <span className="font-semibold text-n-1">{t(`${solution.key}.timeMetric`)}</span>
+                          <span className="font-semibold text-n-1">
+                            {t(`${solution.key}.timeMetric`)}
+                          </span>
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
                         <Euro className="w-4 h-4 text-color-1" />
                         <span className="text-sm text-n-2">
-                          <span className="font-semibold text-n-1">{t(`${solution.key}.costMetric`)}</span>
+                          <span className="font-semibold text-n-1">
+                            {t(`${solution.key}.costMetric`)}
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -151,7 +164,6 @@ function Services({ className }: ServicesProps) {
                         {t(`${solution.key}.roi`)}
                       </p>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -161,12 +173,9 @@ function Services({ className }: ServicesProps) {
           {/* Bottom CTA Section */}
           <div className="mt-16 text-center">
             <p className="text-n-3 mb-6">{t("ctaText")}</p>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-color-1 hover:bg-color-1/90 text-n-8 rounded-xl font-semibold transition-colors duration-300"
-            >
+            <Button href="#contact" white>
               {t("ctaButton")}
-            </a>
+            </Button>
           </div>
         </div>
       </div>
