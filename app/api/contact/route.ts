@@ -22,8 +22,18 @@ export async function POST(request: NextRequest) {
       throw new Error(`n8n webhook failed: ${response.status} - ${errorText}`);
     }
     
-    const result = await response.json();
-    console.log('n8n response:', result);
+    const responseText = await response.text();
+    console.log('n8n raw response:', responseText);
+    
+    let result;
+    try {
+      result = responseText ? JSON.parse(responseText) : { success: true };
+    } catch (jsonError) {
+      console.error('Failed to parse n8n response as JSON:', jsonError);
+      result = { success: true, message: 'Webhook executed but returned invalid JSON' };
+    }
+    
+    console.log('n8n parsed response:', result);
     
     return NextResponse.json({ 
       success: true, 
