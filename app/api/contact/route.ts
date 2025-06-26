@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     console.log('Form data received:', formData);
     
     // Forward to n8n webhook
-    const response = await fetch('https://davidvojvodic.app.n8n.cloud/webhook/contact-form', {
+    const response = await fetch('https://davidvojvodic.app.n8n.cloud/webhook-test/contact-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
