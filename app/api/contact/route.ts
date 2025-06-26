@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     console.error('Contact form error:', error);
     return NextResponse.json({ 
       success: false, 
-      message: `Error processing form: ${error.message}` 
+      message: `Error processing form: ${error instanceof Error ? error.message : 'Unknown error'}` 
     }, { status: 500 });
   }
 }
