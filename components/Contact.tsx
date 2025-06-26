@@ -18,7 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle, Shield, CheckCircle } from "lucide-react";
 
 // Create validation schema with translations
@@ -55,6 +55,7 @@ export interface ContactProps {
 
 export function Contact({ className }: ContactProps) {
   const t = useTranslations("HomePage.contact");
+  const locale = useLocale();
 
   const contactFormSchema = createContactFormSchema(t);
 
@@ -74,12 +75,28 @@ export function Contact({ className }: ContactProps) {
 
   async function onSubmit(values: ContactFormValues) {
     try {
-      // Webhook submission will go here
-      console.log("Form submission:", values);
-
-      // For now, just log and show success
-      alert(t("messages.success"));
-      form.reset();
+      const formDataWithLocale = {
+        ...values,
+        language: locale
+      };
+      
+      console.log("Form submission:", formDataWithLocale);
+      
+      // Send to API route which forwards to n8n
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataWithLocale)
+      });
+      
+      if (response.ok) {
+        alert(t("messages.success"));
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       alert(t("messages.error"));
