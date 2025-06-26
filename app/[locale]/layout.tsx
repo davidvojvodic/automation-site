@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
-import CookieBanner from '@/components/CookieBanner';
-import PerformanceMonitor from '@/components/PerformanceMonitor';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import CookieBanner from "@/components/CookieBanner";
+import PerformanceMonitor from "@/components/PerformanceMonitor";
+import { Toaster } from "@/components/ui/sonner";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,39 +22,39 @@ const geistMono = Geist_Mono({
 
 // Dynamic metadata generation based on locale
 export async function generateMetadata({
-  params
+  params,
 }: {
-  params: Promise<{locale: string}>
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const {locale} = await params;
-  
+  const { locale } = await params;
+
   // Validate locale
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
-  
   const titles = {
     en: "Flowko - AI Business Process Automation | Save 15+ Hours Weekly",
-    sl: "Flowko - AI Avtomatizacija Poslovnih Procesov | Prihranite 15+ Ur Tedensko"
+    sl: "Flowko - AI Avtomatizacija Poslovnih Procesov | Prihranite 15+ Ur Tedensko",
   };
 
   const descriptions = {
     en: "Transform your business with intelligent workflow automation. Save 15+ hours weekly with AI-powered solutions. Expert n8n automation partner serving Slovenia, Austria & Croatia.",
-    sl: "Preobrazite svoje podjetje z inteligentno avtomatizacijo delovnih procesov. Prihranite 15+ ur tedensko z AI rešitvami. Strokovni n8n avtomatizacijski partner za Slovenijo, Avstrijo in Hrvaško."
+    sl: "Preobrazite svoje podjetje z inteligentno avtomatizacijo delovnih procesov. Prihranite 15+ ur tedensko z AI rešitvami. Strokovni n8n avtomatizacijski partner za Slovenijo, Avstrijo in Hrvaško.",
   };
 
   const title = titles[locale as keyof typeof titles] || titles.en;
-  const description = descriptions[locale as keyof typeof descriptions] || descriptions.en;
+  const description =
+    descriptions[locale as keyof typeof descriptions] || descriptions.en;
 
   return {
-    metadataBase: new URL('https://flowko.io'),
+    metadataBase: new URL("https://flowko.io"),
     title,
     description,
     keywords: [
-      locale === 'sl' 
-        ? "avtomatizacija procesov, AI, n8n, poslovna avtomatizacija, Slovenija, delovni procesi" 
-        : "business automation, AI workflows, n8n, process automation, Slovenia, workflow automation"
+      locale === "sl"
+        ? "avtomatizacija procesov, AI, n8n, poslovna avtomatizacija, Slovenija, delovni procesi"
+        : "business automation, AI workflows, n8n, process automation, Slovenia, workflow automation",
     ],
     authors: [{ name: "Flowko" }],
     creator: "Flowko",
@@ -63,59 +65,77 @@ export async function generateMetadata({
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
     openGraph: {
-      type: 'website',
-      locale: locale === 'sl' ? 'sl_SI' : 'en_US',
+      type: "website",
+      locale: locale === "sl" ? "sl_SI" : "en_US",
       url: `https://flowko.io/${locale}`,
-      siteName: 'Flowko',
+      siteName: "Flowko",
       title,
       description,
       images: [
         {
-          url: '/assets/og-image.jpg',
+          url: "/assets/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: locale === 'sl' ? 'Flowko - AI Avtomatizacija Procesov' : 'Flowko - AI Business Automation',
+          alt:
+            locale === "sl"
+              ? "Flowko - AI Avtomatizacija Procesov"
+              : "Flowko - AI Business Automation",
         },
       ],
     },
     twitter: {
-      card: 'summary_large_image',
-      site: '@flowko_io',
-      creator: '@flowko_io',
+      card: "summary_large_image",
+      site: "@flowko_io",
+      creator: "@flowko_io",
       title,
       description,
-      images: ['/assets/og-image.jpg'],
+      images: ["/assets/og-image.jpg"],
     },
     alternates: {
       canonical: `https://flowko.io/${locale}`,
       languages: {
-        'en': 'https://flowko.io/en',
-        'sl': 'https://flowko.io/sl',
+        en: "https://flowko.io/en",
+        sl: "https://flowko.io/sl",
       },
     },
     verification: {
-      google: '96ITbG23XR1L0CAls79sEL4fAcQPQ4lHSWEuyK49O-A',
+      google: "96ITbG23XR1L0CAls79sEL4fAcQPQ4lHSWEuyK49O-A",
     },
-    category: 'Business Automation',
+    category: "Business Automation",
     icons: {
       icon: [
-        { url: '/favicon.ico' },
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: "/favicon.ico" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       ],
       apple: [
-        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
       ],
       other: [
-        { rel: 'icon', url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-        { rel: 'icon', url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
-        { rel: 'icon', url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+        {
+          rel: "icon",
+          url: "/favicon-48x48.png",
+          sizes: "48x48",
+          type: "image/png",
+        },
+        {
+          rel: "icon",
+          url: "/favicon-192x192.png",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          rel: "icon",
+          url: "/favicon-512x512.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
       ],
     },
   };
@@ -123,12 +143,12 @@ export async function generateMetadata({
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }) {
-  const {locale} = await params;
+  const { locale } = await params;
   // Ensure that the incoming locale is valid
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
@@ -140,48 +160,61 @@ export default async function LocaleLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Flowko",
-    "url": "https://flowko.io",
-    "logo": "https://flowko.io/assets/logo.svg",
-    "description": locale === 'sl' 
-      ? "Strokovni partner za AI avtomatizacijo poslovnih procesov z n8n platformo. Služimo podjetjem v Sloveniji, Avstriji in na Hrvaškem."
-      : "Expert AI business process automation partner using n8n platform. Serving businesses in Slovenia, Austria, and Croatia.",
-    "foundingDate": "2025",
-    "contactPoint": {
+    name: "Flowko",
+    url: "https://flowko.io",
+    logo: "https://flowko.io/assets/logo.svg",
+    description:
+      locale === "sl"
+        ? "Strokovni partner za AI avtomatizacijo poslovnih procesov z n8n platformo. Služimo podjetjem v Sloveniji, Avstriji in na Hrvaškem."
+        : "Expert AI business process automation partner using n8n platform. Serving businesses in Slovenia, Austria, and Croatia.",
+    foundingDate: "2025",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+386-XX-XXX-XXX",
-      "contactType": "customer service",
-      "areaServed": ["SI", "AT", "HR"],
-      "availableLanguage": ["en", "sl", "de", "hr"]
+      telephone: "+386-XX-XXX-XXX",
+      contactType: "customer service",
+      areaServed: ["SI", "AT", "HR"],
+      availableLanguage: ["en", "sl", "de", "hr"],
     },
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Murska Sobota",
-      "addressCountry": "SI"
+      addressLocality: "Murska Sobota",
+      addressCountry: "SI",
     },
-    "sameAs": [
+    sameAs: [
       "https://linkedin.com/company/flowko",
-      "https://twitter.com/flowko_io"
+      "https://twitter.com/flowko_io",
     ],
-    "serviceArea": {
+    serviceArea: {
       "@type": "Place",
-      "name": locale === 'sl' ? "Slovenija, Avstrija, Hrvaška" : "Slovenia, Austria, Croatia"
+      name:
+        locale === "sl"
+          ? "Slovenija, Avstrija, Hrvaška"
+          : "Slovenia, Austria, Croatia",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "name": locale === 'sl' ? "AI Avtomatizacija Poslovnih Procesov" : "AI Business Process Automation",
-      "description": locale === 'sl' 
-        ? "Celovite rešitve za avtomatizacijo delovnih procesov z AI tehnologijo"
-        : "Comprehensive workflow automation solutions powered by AI technology"
-    }
+      name:
+        locale === "sl"
+          ? "AI Avtomatizacija Poslovnih Procesov"
+          : "AI Business Process Automation",
+      description:
+        locale === "sl"
+          ? "Celovite rešitve za avtomatizacijo delovnih procesov z AI tehnologijo"
+          : "Comprehensive workflow automation solutions powered by AI technology",
+    },
   };
 
   return (
     <html lang={locale}>
       <head>
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN"></script>
-        <script
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -203,6 +236,7 @@ export default async function LocaleLayout({
           <PerformanceMonitor />
           {children}
           <CookieBanner />
+          <Toaster position="bottom-right" />
         </NextIntlClientProvider>
       </body>
     </html>

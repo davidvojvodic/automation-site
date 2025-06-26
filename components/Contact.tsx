@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -20,6 +20,7 @@ import Section from "./Section";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle, Shield, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 // Create validation schema with translations
 const createContactFormSchema = (t: (key: string) => string) =>
@@ -56,6 +57,7 @@ export interface ContactProps {
 export function Contact({ className }: ContactProps) {
   const t = useTranslations("HomePage.contact");
   const locale = useLocale();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactFormSchema = createContactFormSchema(t);
 
@@ -74,6 +76,7 @@ export function Contact({ className }: ContactProps) {
   });
 
   async function onSubmit(values: ContactFormValues) {
+    setIsSubmitting(true);
     try {
       const formDataWithLocale = {
         ...values,
@@ -92,14 +95,22 @@ export function Contact({ className }: ContactProps) {
       });
       
       if (response.ok) {
-        alert(t("messages.success"));
+        toast.success(t("messages.success"), {
+          description: locale === 'sl' ? "Odzvali se vam bomo v najkrajšem možnem času." : "We'll get back to you as soon as possible.",
+          duration: 5000,
+        });
         form.reset();
       } else {
         throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert(t("messages.error"));
+      toast.error(t("messages.error"), {
+        description: locale === 'sl' ? "Prosimo, poskusite znova ali nas kontaktirajte direktno." : "Please try again or contact us directly.",
+        duration: 5000,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -329,8 +340,19 @@ export function Contact({ className }: ContactProps) {
                           form.handleSubmit(onSubmit)();
                         }}
                         className="w-full sm:w-auto min-w-[280px] hover:scale-105 transition-transform duration-200"
+                        disabled={isSubmitting}
                       >
-                        {t("form.submitButton")}
+                        {isSubmitting ? (
+                          <span className="flex items-center gap-2">
+                            <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            {locale === 'sl' ? 'Pošiljanje...' : 'Sending...'}
+                          </span>
+                        ) : (
+                          t("form.submitButton")
+                        )}
                       </CustomButton>
                       <p className="text-xs text-n-5 max-w-md">
                         {t("form.privacyNote")}

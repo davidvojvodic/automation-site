@@ -9,6 +9,7 @@ export interface ButtonProps {
   children: ReactNode;
   px?: string;
   white?: boolean;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -18,11 +19,13 @@ export function Button({
   children,
   px,
   white,
+  disabled,
 }: ButtonProps) {
   const classes = cn(
     "button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1",
     px ? px : "px-7",
     white ? "text-n-8" : "text-n-1",
+    disabled && "opacity-50 cursor-not-allowed hover:text-current",
     className
   );
   const spanClasses = "relative z-10";
@@ -37,7 +40,7 @@ export function Button({
   }
 
   return (
-    <button className={classes} onClick={onClick}>
+    <button className={classes} onClick={onClick} disabled={disabled}>
       <span className={spanClasses}>{children}</span>
       {ButtonSvg(white)}
     </button>
