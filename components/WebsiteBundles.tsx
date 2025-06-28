@@ -1,16 +1,10 @@
+import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import { Check } from "lucide-react";
+import { Check, ShoppingCart, Building2, Wrench, Briefcase } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import {
-  ecommerceIcon,
-  businessIcon,
-  serviceIcon,
-  portfolioIcon,
-} from "@/public/assets";
 
 interface BundleProps {
   className?: string;
@@ -22,7 +16,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
   const bundles = [
     {
       id: "ecommerce",
-      icon: ecommerceIcon,
+      icon: ShoppingCart,
       title: t("ecommerce.title"),
       description: t("ecommerce.description"),
       price: "€7,000",
@@ -37,7 +31,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
     },
     {
       id: "business",
-      icon: businessIcon,
+      icon: Building2,
       title: t("business.title"),
       description: t("business.description"),
       price: "€5,500",
@@ -51,7 +45,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
     },
     {
       id: "service",
-      icon: serviceIcon,
+      icon: Wrench,
       title: t("service.title"),
       description: t("service.description"),
       price: "€4,500",
@@ -65,7 +59,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
     },
     {
       id: "professional",
-      icon: portfolioIcon,
+      icon: Briefcase,
       title: t("professional.title"),
       description: t("professional.description"),
       price: "€4,000",
@@ -129,13 +123,11 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 {/* Icon & Title */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className="flex-shrink-0 group-hover:rotate-3 transition-all duration-300">
-                    <Image
-                      src={bundle.icon}
-                      width={64}
-                      height={64}
-                      alt={`${bundle.title} icon`}
-                      className="w-16 h-16"
-                    />
+                    <div className="w-16 h-16 rounded-2xl bg-color-1/10 flex items-center justify-center group-hover:bg-color-1/20 transition-colors duration-300">
+                      {React.createElement(bundle.icon, {
+                        className: "w-8 h-8 text-color-1"
+                      })}
+                    </div>
                   </div>
                   <div className="flex-1">
                     <div className="relative mb-3">
