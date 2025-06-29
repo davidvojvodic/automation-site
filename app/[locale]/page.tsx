@@ -23,10 +23,10 @@ export default async function Home({
         <Hero />
         <Collaboration />
         <Services />
-        <Benefits />
-        <WebsiteBundles />
-        {/* <Pricing /> */}
         <Implementation />
+        <WebsiteBundles />
+        <Benefits />
+        {/* <Pricing /> */}
         <Contact />
         <Footer />
       </div>

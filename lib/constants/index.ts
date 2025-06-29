@@ -42,8 +42,8 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "benefits",
-    url: "#features",
+    title: "process",
+    url: "#process",
   },
   {
     id: "2",
@@ -52,8 +52,8 @@ export const navigation = [
   },
   {
     id: "3",
-    title: "process",
-    url: "#process",
+    title: "benefits",
+    url: "#features",
   },
 ];
 
