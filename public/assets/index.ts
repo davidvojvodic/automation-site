@@ -1,4 +1,5 @@
 import flowko from "./flowko-logo-full.svg";
+import clickup from "./clickup.png";
 import check from "./check.svg";
 import flowkoSymbol from "./flowko-logo-icon.svg";
 import play from "./play.svg";
@@ -167,4 +168,5 @@ export {
   businessIcon,
   serviceIcon,
   portfolioIcon,
+  clickup,
 };

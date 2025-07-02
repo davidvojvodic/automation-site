@@ -3,9 +3,9 @@
     "hero": {
       "title": "Avtomatizirajte Vaše Poslovanje",
       "subtitle": "z Inteligentnimi Procesi",
-      "description": "Prihranite 15+ ur vsak teden z avtomatizacijo ponavljajočih se opravil. Pustite AI, da opravi rutinsko delo, medtem ko se vi osredotočite na rast vašega podjetja.",
+      "description": "Prihranite 15+ ur vsak teden z avtomatizacijo ponavljajočih se opravil. Pustite umetni inteligenci, da opravi rutinsko delo, medtem ko se vi osredotočite na rast vašega podjetja.",
       "cta": "Rezervirajte Brezplačno Oceno",
-      "generating": "Gradnja avtomatiziranega procesa..."
+      "generating": "Ustvarjanje avtomatiziranega delovnega toka..."
     },
     "navigation": {
       "features": "Funkcionalnosti",
@@ -18,14 +18,14 @@
       "contact": "Kontakt"
     },
     "solutions": {
-      "title": "AI Rešitve za Avtomatizacijo Delovnih Procesov",
-      "subtitle": "Preobrazite svoje poslovne procese z inteligentnimi delovnimi tokovi, ki prinašajo merljiv ROI",
-      "bottomText": "Zgrajeno na platformi za avtomatizacijo podjetniške ravni",
+      "title": "AI Rešitve za Avtomatizacijo Delovnih Tokov",
+      "subtitle": "Preobrazite svoje poslovne procese z inteligentnimi delovnimi tokovi, ki prinašajo merljiv donos naložbe",
+      "bottomText": "Zgrajeno na n8n platformi za avtomatizacijo podjetniške ravni",
       "ctaText": "Pripravljeni preobraziti vaše podjetje?",
       "ctaButton": "Začnite Svojo Pot Avtomatizacije",
       "solution1": {
         "title": "Inteligentno Procesiranje Dokumentov",
-        "description": "AI-podprti delovni tokovi dokumentov, ki odpravijo ročni vnos podatkov in zastoje v procesu odobritev",
+        "description": "AI-podprti delovni tokovi dokumentov, ki odpravijo ročni vnos podatkov in ozka grla pri odobritvah",
         "features": [
           "OCR + AI ekstrakcija iz računov, pogodb in obrazcev z 99% natančnostjo",
           "Avtomatizirani delovni tokovi odobritev s pametnim usmerjanjem na podlagi zneska in tipa",
@@ -52,8 +52,8 @@
         "description": "Poenostavljeni delovni tokovi strank od sprejema do računa z minimalnim ročnim delom",
         "features": [
           "Avtomatizirano sprejemanje strank z zbiranjem dokumentov in sinhronizacijo CRM",
-          "Sledenje mejnikov projekta z avtomatskim obračunavanjem in izdajanjem računov",
-          "Generiranje pogodb in delovni tokovi e-podpisov z usmerjanjem odobritev"
+          "Sledenje mejnikom projekta z avtomatskim fakturiranjem in izdajanjem računov",
+          "Generiranje pogodb in delovni tokovi elektronskih podpisov s pametnim usmerjanjem odobritev"
         ],
         "roi": "Prihranite 2+ uri na stranko s 70% hitrejšo dostavo projektov",
         "timeMetric": "2+ uri prihranjeno na stranko",
@@ -89,7 +89,7 @@
         "features": [
           "1000+ vnaprej zgrajenih integracij aplikacij s povezavami API po meri",
           "Low-code gradnik delovnih tokov, ki omogoča razvoj tudi netehničnim članom ekipe",
-          "AI-podprto zaznavanje napak z avtomatskim ponovnim poskušanjem in eskalacijo"
+          "AI-podprto zaznavanje napak z avtomatsko logiko ponovnih poskusov in eskalacij"
         ],
         "roi": "Odpravite 200+ ur ročnega dela na zaposlenega letno",
         "timeMetric": "200+ ur/zaposleni/leto",
@@ -103,15 +103,15 @@
         "description": "Avtomatizirajte rutinska opravila in se osredotočite na tisto, kar je res pomembno.",
         "points": [
           "Avtomatska komunikacija s strankami",
-          "Pametno procesiranje dokumentov",
-          "Več časa za strateško načrtovanje"
+          "Inteligentno procesiranje dokumentov",
+          "Osredotočenost na strateške aktivnosti rasti"
         ]
       },
       "benefit2": {
         "title": "Enostavna Rast Poslovanja",
         "description": "Samodejno povečajte zmogljivosti, ko raste povpraševanje.",
         "points": [
-          "AI asistenti za podporo strankam",
+          "AI klepetalni roboti za podporo strankam",
           "Avtomatizacija na več kanalih",
           "Prilagodljivo povečevanje zmogljivosti"
         ]
@@ -138,8 +138,8 @@
         "title": "Povečajte Prihodke",
         "description": "Izkoristite vsako priložnost za prodajo z avtomatskim sledenjem.",
         "points": [
-          "Avtomatsko sledenje potencialnim strankam",
-          "Pametne ponudbe za dodatno prodajo",
+          "Avtomatsko negovanje potencialnih strank",
+          "Inteligentni delovni tokovi za navzkrižno prodajo",
           "Nobena priložnost se ne izgubi"
         ]
       },
@@ -156,7 +156,7 @@
     "implementation": {
       "title": "Vaša pot do poslovne avtomatizacije",
       "subtitle": "Preobrazite kaos v učinkovite procese v le 4 preizkušenih korakih",
-      "tag": "Začnite prihranjevati čas že danes",
+      "tag": "Začnite prihranjevati čas danes",
       "ctaTitle": "Pripravljeni povrniti 20+ ur tedensko?",
       "ctaButton": "Pridobite Brezplačno ROI Analizo",
       "step1": {
@@ -191,11 +191,11 @@
       "features": {
         "feature1": {
           "title": "Povezava več kot 1000 poslovnih aplikacij",
-          "text": "Od Slacka do Google Sheets, od Discorda do Notiona - avtomatizirajte delovne procese med vsemi vašimi orodji."
+          "text": "Od Slacka do Google Sheets, od Discorda do Notiona - avtomatizirajte delovne tokove med vsemi vašimi orodji."
         },
         "feature2": {
           "title": "Avtomatizacija na poslovni ravni",
-          "text": "Oblikujemo in implementiramo delovne procese po meri, prilagojene vašim poslovnim procesom in zahtevam."
+          "text": "Oblikujemo in implementiramo delovne tokove po meri, prilagojene vašim poslovnim procesom in zahtevam."
         },
         "feature3": {
           "title": "Sinhronizacija podatkov v realnem času",
@@ -204,7 +204,7 @@
       }
     },
     "companyLogos": {
-      "tagline": "Avtomatizirajte delovne procese v vaših priljubljenih poslovnih aplikacijah"
+      "tagline": "Avtomatizirajte delovne tokove v vaših priljubljenih poslovnih aplikacijah"
     },
     "contact": {
       "title": "Začnite svojo avtomatizacijsko pot",
@@ -218,7 +218,7 @@
         "industry": "Panoga",
         "message": "Kako vam lahko pomagamo avtomatizirati vaše poslovanje?",
         "bundleInterest": "Zanimajo me paketi Spletna stran + Avtomatizacija",
-        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatizacijskimi delovnimi procesi",
+        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatiziranimi delovnimi tokovi",
         "firstNamePlaceholder": "Vaše ime",
         "lastNamePlaceholder": "Vaš priimek",
         "emailPlaceholder": "vas.email@podjetje.si",
@@ -289,8 +289,8 @@
     },
     "bundles": {
         "tag": "Celovite digitalne rešitve",
-        "title": "Paketi spletna stran + avtomatizacija",
-        "subtitle": "Pridobite profesionalno spletno stran in močne avtomatizacijske procese v enem paketu.",
+        "title": "Spletna stran + avtomatizacija",
+        "subtitle": "Dobite profesionalno spletno stran in močne avtomatizacije delovnih tokov v enem paketu. Hitreje na trg, pametnejše avtomatizacije, večja rast.",
         "benefits": [
           "Profesionalna spletna stran + avtomatizacija",
           "Hitrejši vstop na trg",
@@ -298,57 +298,119 @@
         ],
         "popular": "Najbolj priljubljen",
         "included": "Kaj je vključeno",
-        "startingAt": "Od",
-        "pricingNote": "Končna cena je odvisna od kompleksnosti in zahtev",
-        "cta": "Pridobite svoj paket",
-        "bottomText": "Potrebujete rešitev po meri? Ustvarjamo prilagojene pakete spletnih strani in avtomatizacije za katero koli podjetje.",
-        "bottomCta": "Razpravljajte o svojem projektu",
+        "whatWeImplement": "Kaj lahko dodamo",
+        "startingFrom": "Od",
+        "deliveryTime": "Dostava",
+        "metrics": {
+          "timeSaved": "Prihranjen čas",
+          "errorReduction": "Manj napak",
+          "cartRecovery": "Obnovljene košarice",
+          "leadSpeed": "Kvalifikacija leadov",
+          "followUp": "Ročno delo",
+          "showRate": "Sestanki",
+          "noShows": "Manj izostankov",
+          "scheduling": "Hitrejše termine",
+          "payments": "Hitrejša plačila",
+          "projectSpeed": "Hitrejša dostava",
+          "revisions": "Manj popravkov",
+          "adminTime": "Manj admin dela"
+        },
+        "metricValues": {
+          "timeSaved": "25+ ur/teden",
+          "errorReduction": "90% redukcija napak",
+          "cartRecovery": "30% obnovitev košaric",
+          "leadSpeed": "3x hitrejša kvalifikacija",
+          "followUp": "50% manj ročnega dela",
+          "showRate": "25% več sestankov",
+          "noShows": "90% manj",
+          "scheduling": "50% hitreje",
+          "payments": "30% hitreje",
+          "projectSpeed": "50% hitreje",
+          "revisions": "30% manj",
+          "adminTime": "40% manj"
+        },
+        "pricingNote": "Končna cena je odvisna od prilagojenih AI avtomatizacij in kompleksnosti projekta",
+        "cta": "Izberite paket",
+        "bottomText": "Potrebujete rešitev po meri? Ustvarjamo prilagojene pakete za vsako podjetje.",
+        "bottomCta": "Pogovorite se z nami",
         "ecommerce": {
-          "title": "E-trgovina + avtomatizacija",
-          "description": "Profesionalna spletna trgovina z naprednimi AI-podprtimi delovnimi tokovi, ki avtomatizirajo celoten prodajni proces od naročila do dostave.",
+          "title": "E-trgovina + AI avtomatizacija",
+          "description": "Profesionalna spletna trgovina z naprednimi AI-avtomatizacijami, ki poenostavijo celoten prodajni proces od naročila do dostave.",
           "roi": "Prihranite 25+ ur tedensko pri upravljanju naročil",
-          "features": [
-            "Profesionalna spletna trgovina z odzivnim dizajnom in plačilnimi sistemi",
-            "Avtomatizirano procesiranje naročil od potrditve do dostave",
-            "Sinhronizacija zalog v realnem času preko 3+ prodajnih platform",
+          "basicFeatures": [
+            "Profesionalna spletna trgovina z integracijo plačil",
+            "Avtomatska e-poštna obvestila za potrditev in sledenje naročil",
+            "Osnovna sinhronizacija zalog preko 2-3 platform",
+            "Avtomatska dobrodošlica za nove stranke",
+            "Obvestila o stanju naročil"
+          ],
+          "advancedFeatures": [
             "AI-podprta obnovitev zapuščenih košaric z dinamičnimi popusti",
-            "Avtomatiziran življenjski cikel strank (dobrodošlica, ocene, povratne kampanje)"
+            "Sinhronizacija zalog preko več platform (5+ kanalov)",
+            "Napredna analitika za predvidevanje povpraševanja",
+            "Napredna segmentacija strank in personalizacija",
+            "Inteligentni sistem za zaznavanje prevar",
+            "Pametna optimizacija cen na podlagi tržnih podatkov"
           ]
         },
         "business": {
-          "title": "Poslovanje + avtomatizacija strank",
-          "description": "Profesionalna poslovna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalificiranjem in avtomatskim sledenjem.",
-          "roi": "3x hitrejše pridobivanje kvalificiranih strank",
-          "features": [
-            "Profesionalna poslovna spletna stran z odzivnim dizajnom in kontaktnimi obrazci",
-            "Pametni sistem zajemanja strank z obrazci in samodejno CRM integracijo",
-            "Samodejno dogovarjanje sestankov s sinhronizacijo koledarja in opomniki",
-            "Večstopenjske e-poštne kampanje za nego strank glede na njihovo vedenje",
-            "Samodejna generacija predlogov z dinamičnimi cenovnimi izračuni"
+          "title": "Poslovna spletna stran + avtomatizacija strank",
+          "description": "Profesionalna poslovna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalifikacijo in avtomatskim negovanjem.",
+          "roi": "3x hitrejša kvalifikacija potencialnih strank",
+          "basicFeatures": [
+            "Profesionalna poslovna spletna stran s kontaktnimi obrazci",
+            "Obrazci za zajemanje strank z integracijo CRM",
+            "Avtomatsko razporejanje sestankov",
+            "Osnovne sekvence za negovanje potencialnih strank",
+            "Upravljanje in organizacija kontaktov"
+          ],
+          "advancedFeatures": [
+            "AI-podprto ocenjevanje in kvalifikacija potencialnih strank",
+            "Dinamična generacija ponudb s pametnim oblikovanjem cen",
+            "Kampanje za negovanje potencialnih strank na podlagi vedenja",
+            "Napovedna analitika za verjetnost konverzije",
+            "Obogatitev podatkov o leadih iz več virov",
+            "Napredna avtomatizacija prodajnega lijaka"
           ]
         },
         "service": {
           "title": "Storitve + avtomatizacija rezervacij",
           "description": "Spletna stran osredotočena na storitve z enostavnim rezerviranjem terminov, upravljanjem strank in avtomatizacijo plačil.",
           "roi": "90% manj izostankov",
-          "features": [
-            "Spletna stran osredotočena na storitve s predstavitvijo cen in pričevanji",
-            "Pametni sistem rezervacij s pologom in avtomatskim razporejanjem terminov",
-            "Večkanalni opomniki za termine (SMS + E-pošta + Obvestila aplikacije)",
-            "Samodejno fakturiranje in procesiranje plačil po opravljeni storitvi",
-            "Samodejna obdelava pristojbin za izostanke in prerazporeditve terminov"
+          "basicFeatures": [
+            "Spletna stran osredotočena na storitve s sistemom rezervacij",
+            "Spletno razporejanje terminov",
+            "E-poštni in SMS opomniki za termine",
+            "Pobiranje plačila ob rezervaciji",
+            "Osnovna generacija računov"
+          ],
+          "advancedFeatures": [
+            "AI-optimizirano časovanje opomnikov za zmanjšanje izostankov",
+            "Večkanalni opomniki (SMS, E-pošta, WhatsApp, ...)",
+            "Napovedna analiza in preprečevanje izostankov",
+            "Avtomatizirani delovni tokovi za prerazporeditve in odpovedi",
+            "Pametne priporočila za razporejanje",
+            "Napredna finančna poročila in analitika"
           ]
         },
         "professional": {
-          "title": "Strokovne storitve + avtomatizacija",
-          "description": "Spletna stran za strokovne storitve s samodejnim upravljanjem strank, varnim ravnanjem z dokumenti in poenostavljenimi delovnimi procesi za računovodstvo.",
-          "roi": "Prihranite 15+ ur tedensko pri administrativnih opravilih",
-          "features": [
-            "Profesionalna spletna stran s portalom za stranke in spletnim sprejemom",
-            "Samodejno upravljanje dokumentov z varno organizacijo datotek in digitalnimi podpisi",
-            "Komunikacijski center za stranke s centralizirano komunikacijo in posodobitvami stanja",
-            "Samodejno fakturiranje in procesiranje plačil z več načini obračunavanja",
-            "Delovni procesi skladni s predpisi z revizijskimi sledmi in varnostjo podatkov"
+          "title": "Upravljanje projektov + sodelovanje s strankami",
+          "description": "Poenostavljena platforma za upravljanje projektov z avtomatskim sodelovanjem s strankami, sledenjem časa in delovnimi tokovi dostave za svetovalce in agencije.",
+          "roi": "50% hitrejša dostava projektov",
+          "basicFeatures": [
+            "Profesionalna spletna stran s portfeljem in studijami primerov",
+            "Nadzorna plošča za upravljanje projektov z dostopom za stranke",
+            "Sledenje časa in avtomatski časovni listi",
+            "Orodja za sodelovanje s strankami in deljenje datotek",
+            "Fakturiranje na podlagi mejnikov in plačila"
+          ],
+          "advancedFeatures": [
+            "AI-podprta optimizacija časovnic projektov",
+            "Avtomatska dodelitev virov med projekti",
+            "Pametno upravljanje rokov in opozorila",
+            "Napredno sledenje dobičkonosnosti po projektih",
+            "Avtomatizacija zadovoljstva strank in povratnih informacij",
+            "Inteligentno razporejanje obremenitve za ekipe"
           ]
         }
     },

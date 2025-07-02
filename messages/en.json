@@ -298,8 +298,38 @@
         ],
         "popular": "Most Popular",
         "included": "What's Included",
-        "startingAt": "Starting at",
-        "pricingNote": "Final price depends on complexity and requirements",
+        "whatWeImplement": "What We Can Implement",
+        "startingFrom": "Starting from",
+        "deliveryTime": "Delivery",
+        "metrics": {
+          "timeSaved": "Time Saved",
+          "errorReduction": "Fewer Errors",
+          "cartRecovery": "Cart Recovery",
+          "leadSpeed": "Qualification",
+          "followUp": "Manual Work",
+          "showRate": "Show Rate",
+          "noShows": "Fewer No-shows",
+          "scheduling": "Faster Scheduling",
+          "payments": "Faster Payments",
+          "projectSpeed": "Faster Delivery",
+          "revisions": "Fewer Revisions",
+          "adminTime": "Less Admin Work"
+        },
+        "metricValues": {
+          "timeSaved": "25+ hours/week",
+          "errorReduction": "90% fewer errors",
+          "cartRecovery": "30% recovery rate",
+          "leadSpeed": "3x faster qualification",
+          "followUp": "50% less manual work",
+          "showRate": "25% more meetings",
+          "noShows": "90% reduction",
+          "scheduling": "50% time saved",
+          "payments": "30% faster collection",
+          "projectSpeed": "50% faster delivery",
+          "revisions": "30% fewer cycles",
+          "adminTime": "40% reduction"
+        },
+        "pricingNote": "Final price depends on custom AI automations and project complexity",
         "cta": "Get Your Bundle",
         "bottomText": "Need a custom solution? We create tailored website and automation packages for any business.",
         "bottomCta": "Discuss Your Project",
@@ -307,48 +337,80 @@
           "title": "E-commerce + Automation",
           "description": "Professional online store with advanced AI-powered workflows that automate your entire sales process from order to delivery.",
           "roi": "Save 25+ hours/week on order management",
-          "features": [
-            "Professional e-commerce website with responsive design and payment systems",
-            "Automated order processing from confirmation to fulfillment",
-            "Real-time inventory sync across 3+ sales platforms",
+          "basicFeatures": [
+            "Professional e-commerce website with payment integration",
+            "Automated order confirmation and tracking emails",
+            "Basic inventory sync across 2-3 platforms",
+            "Customer welcome email sequence",
+            "Order status notifications"
+          ],
+          "advancedFeatures": [
             "AI-powered abandoned cart recovery with dynamic discounts",
-            "Automated customer lifecycle workflows (welcome, reviews, win-back campaigns)"
+            "Multi-platform inventory sync (5+ channels)",
+            "Predictive analytics for demand forecasting",
+            "Advanced customer segmentation and personalization",
+            "Intelligent fraud detection system",
+            "Smart pricing optimization based on market data"
           ]
         },
         "business": {
           "title": "Business Website + Lead Generation",
           "description": "Professional corporate website with intelligent lead capture, qualification, and automated nurturing workflows.",
           "roi": "3x faster lead qualification",
-          "features": [
-            "Professional business website with responsive design and contact forms",
-            "Smart lead capture system with forms and automatic CRM integration",
-            "Automated meeting scheduling with calendar sync and reminders",
-            "Multi-stage email nurturing sequences with behavior triggers",
-            "Automated proposal generation with dynamic pricing calculations"
+          "basicFeatures": [
+            "Professional business website with contact forms",
+            "Lead capture forms with CRM integration",
+            "Automated meeting scheduling",
+            "Basic email follow-up sequences",
+            "Contact management and organization"
+          ],
+          "advancedFeatures": [
+            "AI-powered lead scoring and qualification",
+            "Dynamic proposal generation with smart pricing",
+            "Behavior-triggered nurture campaigns",
+            "Predictive analytics for conversion likelihood",
+            "Multi-source lead enrichment",
+            "Advanced sales pipeline automation"
           ]
         },
         "service": {
           "title": "Service Business + Booking Automation",
           "description": "Service-focused website with seamless appointment booking, client management, and automated payment processing.",
           "roi": "90% reduction in no-shows",
-          "features": [
-            "Service-focused website with pricing showcase and testimonials",
-            "Smart booking system with deposit collection and availability management",
-            "Multi-channel appointment reminders (SMS + Email + App notifications)",
-            "Automated invoicing and payment processing post-service",
-            "Automated no-show fee processing and rescheduling workflows"
+          "basicFeatures": [
+            "Service-focused website with booking system",
+            "Online appointment scheduling",
+            "Email and SMS appointment reminders",
+            "Payment collection at booking",
+            "Basic invoice generation"
+          ],
+          "advancedFeatures": [
+            "AI-optimized reminder timing to reduce no-shows",
+            "Multi-channel reminders (SMS, Email, WhatsApp, ...)",
+            "Predictive no-show analysis and prevention",
+            "Automated rescheduling and cancellation workflows",
+            "Smart scheduling recommendations",
+            "Advanced financial reporting and analytics"
           ]
         },
         "professional": {
-          "title": "Professional Services + Client Automation",
-          "description": "Professional services website with automated client management, secure document handling, and streamlined billing workflows.",
-          "roi": "Save 15+ hours per week on admin tasks",
-          "features": [
-            "Professional services website with client portal access and online intake",
-            "Automated document management with secure file organization and digital signatures",
-            "Client communication hub with centralized messaging and status updates",
-            "Automated billing and payment processing with multiple billing methods",
-            "Compliance-ready workflows with audit trails and data security"
+          "title": "Project Management + Client Collaboration",
+          "description": "Streamlined project management platform with automated client collaboration, time tracking, and delivery workflows for consultants and agencies.",
+          "roi": "50% faster project delivery",
+          "basicFeatures": [
+            "Professional portfolio website with case studies",
+            "Project management dashboard with client access",
+            "Time tracking and automated timesheets",
+            "Client collaboration tools and file sharing",
+            "Milestone-based invoicing and payments"
+          ],
+          "advancedFeatures": [
+            "AI-powered project timeline optimization",
+            "Automated resource allocation across projects",
+            "Smart deadline management and alerts",
+            "Advanced profitability tracking per project",
+            "Client satisfaction automation and feedback loops",
+            "Intelligent workload balancing for teams"
           ]
         }
       },

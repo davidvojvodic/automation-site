@@ -32,6 +32,7 @@ import {
   whatsappLogo,
   telegramLogo,
   airtableLogo,
+  clickup,
 } from "@/public/assets";
 
 export const navigation = [
@@ -76,6 +77,7 @@ export const companyLogos = [
   whatsappLogo,
   telegramLogo,
   airtableLogo,
+  clickup,
 ];
 
 export const flowkoServices = [

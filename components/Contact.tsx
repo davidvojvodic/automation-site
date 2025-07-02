@@ -19,7 +19,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
-import { MessageCircle, Shield, CheckCircle } from "lucide-react";
+import { MessageCircle, Shield, CheckCircle, Lightbulb } from "lucide-react";
 import { toast } from "sonner";
 
 // Create validation schema with translations
@@ -303,6 +303,51 @@ export function Contact({ className }: ContactProps) {
                         </FormItem>
                       )}
                     />
+                  </div>
+
+                  {/* Guidance Notice */}
+                  <div
+                    className="animate-contact-fields"
+                    style={{ animationDelay: "1100ms" }}
+                  >
+                    <div className="bg-color-1/5 border border-color-1/20 rounded-xl p-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <div className="w-5 h-5 bg-color-1 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle className="w-3 h-3 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-semibold text-n-1 mb-2">
+                            {locale === 'sl' ? '💡 Nasveti za boljšo ponudbo:' : '💡 Tips for a better offer:'}
+                          </h4>
+                          <ul className="text-xs text-n-3 space-y-1">
+                            <li className="flex items-start gap-2">
+                              <span className="text-color-1">•</span>
+                              <span>
+                                {locale === 'sl' 
+                                  ? 'Opišite vaše največje časovne izzive (npr. "Preveč časa porabimo za ročno vnašanje računov")'
+                                  : 'Describe your biggest time challenges (e.g., "We spend too much time manually entering invoices")'}
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-color-1">•</span>
+                              <span>
+                                {locale === 'sl'
+                                  ? 'Omenite trenutne procese, ki so ponavljajoči (rezervacije, obvestila, poročila)'
+                                  : 'Mention current repetitive processes (bookings, notifications, reports)'}
+                              </span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-color-1">•</span>
+                              <span>
+                                {locale === 'sl'
+                                  ? 'Navedite približno število ur tedensko, ki jih porabite za administracijo'
+                                  : 'Indicate roughly how many hours per week you spend on admin tasks}'}
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Message */}
