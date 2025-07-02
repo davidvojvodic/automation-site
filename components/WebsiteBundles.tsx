@@ -82,7 +82,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
   ];
 
   return (
-    <Section crosses className={cn("overflow-hidden", className)} id="bundles">
+    <Section crosses className={cn("", className)} id="bundles">
       <div className="container relative z-2">
         <div className="animate-bundle-heading">
           <Heading tag={t("tag")} title={t("title")} text={t("subtitle")} />

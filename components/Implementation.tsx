@@ -88,12 +88,6 @@ function Implementation({ className }: ImplementationProps) {
                       >
                         {t(`${step.key}.status`)}
                       </Badge>
-                      <Badge
-                        variant="outline"
-                        className="text-xs text-n-3 border-n-6"
-                      >
-                        {t(`${step.key}.duration`)}
-                      </Badge>
                     </div>
                     <CardTitle className="text-n-1 group-hover:text-color-1 transition-colors">
                       {t(`${step.key}.title`)}
@@ -145,12 +139,6 @@ function Implementation({ className }: ImplementationProps) {
                           className="bg-color-1/20 text-color-1 border-color-1/30 text-xs"
                         >
                           {t(`${step.key}.status`)}
-                        </Badge>
-                        <Badge
-                          variant="outline"
-                          className="text-n-3 border-n-6 text-xs"
-                        >
-                          {t(`${step.key}.duration`)}
                         </Badge>
                       </div>
                       <CardTitle className="text-n-1">
