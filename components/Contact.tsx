@@ -19,7 +19,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Section from "./Section";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
-import { MessageCircle, Shield, CheckCircle, Lightbulb } from "lucide-react";
+import { MessageCircle, Shield, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
 
 // Create validation schema with translations
@@ -80,33 +80,39 @@ export function Contact({ className }: ContactProps) {
     try {
       const formDataWithLocale = {
         ...values,
-        language: locale
+        language: locale,
       };
-      
+
       console.log("Form submission:", formDataWithLocale);
-      
+
       // Send to API route which forwards to n8n
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(formDataWithLocale)
+        body: JSON.stringify(formDataWithLocale),
       });
-      
+
       if (response.ok) {
         toast.success(t("messages.success"), {
-          description: locale === 'sl' ? "Odzvali se vam bomo v najkrajšem možnem času." : "We'll get back to you as soon as possible.",
+          description:
+            locale === "sl"
+              ? "Odzvali se vam bomo v najkrajšem možnem času."
+              : "We'll get back to you as soon as possible.",
           duration: 5000,
         });
         form.reset();
       } else {
-        throw new Error('Form submission failed');
+        throw new Error("Form submission failed");
       }
     } catch (error) {
       console.error("Form submission error:", error);
       toast.error(t("messages.error"), {
-        description: locale === 'sl' ? "Prosimo, poskusite znova ali nas kontaktirajte direktno." : "Please try again or contact us directly.",
+        description:
+          locale === "sl"
+            ? "Prosimo, poskusite znova ali nas kontaktirajte direktno."
+            : "Please try again or contact us directly.",
         duration: 5000,
       });
     } finally {
@@ -317,13 +323,15 @@ export function Contact({ className }: ContactProps) {
                         </div>
                         <div>
                           <h4 className="text-sm font-semibold text-n-1 mb-2">
-                            {locale === 'sl' ? '💡 Nasveti za boljšo ponudbo:' : '💡 Tips for a better offer:'}
+                            {locale === "sl"
+                              ? "💡 Nasveti za boljšo ponudbo:"
+                              : "💡 Tips for a better offer:"}
                           </h4>
                           <ul className="text-xs text-n-3 space-y-1">
                             <li className="flex items-start gap-2">
                               <span className="text-color-1">•</span>
                               <span>
-                                {locale === 'sl' 
+                                {locale === "sl"
                                   ? 'Opišite vaše največje časovne izzive (npr. "Preveč časa porabimo za ročno vnašanje računov")'
                                   : 'Describe your biggest time challenges (e.g., "We spend too much time manually entering invoices")'}
                               </span>
@@ -331,17 +339,17 @@ export function Contact({ className }: ContactProps) {
                             <li className="flex items-start gap-2">
                               <span className="text-color-1">•</span>
                               <span>
-                                {locale === 'sl'
-                                  ? 'Omenite trenutne procese, ki so ponavljajoči (rezervacije, obvestila, poročila)'
-                                  : 'Mention current repetitive processes (bookings, notifications, reports)'}
+                                {locale === "sl"
+                                  ? "Omenite trenutne procese, ki so ponavljajoči (rezervacije, obvestila, poročila)"
+                                  : "Mention current repetitive processes (bookings, notifications, reports)"}
                               </span>
                             </li>
                             <li className="flex items-start gap-2">
                               <span className="text-color-1">•</span>
                               <span>
-                                {locale === 'sl'
-                                  ? 'Navedite približno število ur tedensko, ki jih porabite za administracijo'
-                                  : 'Indicate roughly how many hours per week you spend on admin tasks}'}
+                                {locale === "sl"
+                                  ? "Navedite približno število ur tedensko, ki jih porabite za administracijo"
+                                  : "Indicate roughly how many hours per week you spend on admin tasks}"}
                               </span>
                             </li>
                           </ul>
@@ -377,7 +385,10 @@ export function Contact({ className }: ContactProps) {
                   </div>
 
                   {/* Submit Button */}
-                  <div className="text-center pt-8 animate-contact-submit" style={{ animationDelay: "1400ms" }}>
+                  <div
+                    className="text-center pt-8 animate-contact-submit"
+                    style={{ animationDelay: "1400ms" }}
+                  >
                     <div className="flex flex-col items-center gap-4">
                       <CustomButton
                         onClick={(e) => {
@@ -389,11 +400,27 @@ export function Contact({ className }: ContactProps) {
                       >
                         {isSubmitting ? (
                           <span className="flex items-center gap-2">
-                            <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            <svg
+                              className="animate-spin h-4 w-4"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                              ></circle>
+                              <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                              ></path>
                             </svg>
-                            {locale === 'sl' ? 'Pošiljanje...' : 'Sending...'}
+                            {locale === "sl" ? "Pošiljanje..." : "Sending..."}
                           </span>
                         ) : (
                           t("form.submitButton")
