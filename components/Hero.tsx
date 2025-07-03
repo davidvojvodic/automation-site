@@ -21,20 +21,23 @@ function Hero(props: HeroProps) {
 
   return (
     <Section
-      className={cn("pt-[12rem] -mt-[5.25rem]", props.className)}
+      className={cn("pt-[12rem] mt-3", props.className)}
       crosses={true}
-      crossesOffset="lg:translate-y-[5.25rem]"
+      crossesOffset="lg:translate-y-[.25rem]"
       customPaddings="py-10 lg:py-16 xl:py-20"
       id="hero"
     >
-      <div className="container relative mt-1 lg:mt-36" ref={parallaxRef}>
+      <div className="container relative mt-1 lg:mt-36 " ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           {/* Animated Main Title */}
-          <h1 className="h1 mb-6 animate-hero-title">
-            <span className="inline-block" style={{ animationDelay: '0ms' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6 animate-hero-title">
+            <span className="inline-block" style={{ animationDelay: "0ms" }}>
               {t("title")}
             </span>{" "}
-            <span className="inline-block relative animate-hero-subtitle" style={{ animationDelay: '300ms' }}>
+            <span
+              className="inline-block relative animate-hero-subtitle"
+              style={{ animationDelay: "300ms" }}
+            >
               {t("subtitle")}
               <Image
                 src={curve}
@@ -42,21 +45,24 @@ function Hero(props: HeroProps) {
                 width={624}
                 height={28}
                 alt="Curve"
-                style={{ animationDelay: '800ms' }}
+                style={{ animationDelay: "800ms" }}
               />
             </span>
           </h1>
-          
+
           {/* Animated Description */}
-          <p className="body-1 max-w-3xl mx-auto mt-12 mb-6 text-n-2 lg:mb-8 animate-hero-description" style={{ animationDelay: '600ms' }}>
+          <p
+            className="body-1 max-w-3xl mx-auto mt-12 mb-6 text-n-2 lg:mb-8 animate-hero-description"
+            style={{ animationDelay: "600ms" }}
+          >
             {t("description")}
           </p>
-          
+
           {/* Animated CTA Button */}
-          <div className="animate-hero-cta" style={{ animationDelay: '900ms' }}>
-            <Button 
-              className="mt-6 group relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-white/20" 
-              href="#contact" 
+          <div className="animate-hero-cta" style={{ animationDelay: "900ms" }}>
+            <Button
+              className="mt-6 group relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-white/20"
+              href="#contact"
               white
             >
               <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">
@@ -109,7 +115,10 @@ function Hero(props: HeroProps) {
           <BackgroundCircles parallaxRef={parallaxRef} />
         </div>
 
-        <CompanyLogos className="relative z-10 mt-10 md:mt-40 animate-hero-logos" style={{ animationDelay: '1200ms' }} />
+        <CompanyLogos
+          className="relative z-10 mt-10 md:mt-32 animate-hero-logos"
+          style={{ animationDelay: "1200ms" }}
+        />
       </div>
 
       <BottomLine />

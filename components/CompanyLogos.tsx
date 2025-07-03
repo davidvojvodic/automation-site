@@ -11,12 +11,10 @@ interface CompanyLogosProps extends HTMLAttributes<HTMLDivElement> {
 
 function CompanyLogos({ className, ...props }: CompanyLogosProps) {
   const t = useTranslations("HomePage.companyLogos");
-  
+
   return (
     <div className={cn("", className)} {...props}>
-      <h5 className="tagline mb-6 text-center text-n-1/50">
-        {t("tagline")}
-      </h5>
+      <h5 className="tagline mb-6 text-center text-n-1/50">{t("tagline")}</h5>
       <Marquee
         speed={30}
         gradient={true}
@@ -29,11 +27,11 @@ function CompanyLogos({ className, ...props }: CompanyLogosProps) {
             className="flex items-center justify-center mx-8 h-[5rem]"
             key={index}
           >
-            <Image 
-              src={logo} 
-              width={120} 
-              height={40} 
-              alt={`Integration logo ${index}`} 
+            <Image
+              src={logo}
+              width={120}
+              height={40}
+              alt={`Integration logo ${index}`}
               className="object-contain h-10 w-auto opacity-70 hover:opacity-100 transition-opacity"
             />
           </div>
