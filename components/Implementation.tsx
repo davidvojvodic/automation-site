@@ -68,12 +68,12 @@ function Implementation({ className }: ImplementationProps) {
                 style={{ animationDelay: `${500 + index * 200}ms` }}
               >
                 {/* Step Card */}
-                <Card className="border-n-6 bg-n-8 hover:bg-n-7 hover:border-color-1/30 hover:scale-105 transition-all duration-500 group relative pt-10">
+                <Card className="border-n-6 bg-n-8 hover:bg-n-7 hover:border-color-1/30 hover:scale-105 transition-all duration-500 group relative">
                   {/* Enhanced hover */}
-                  {/* Step Number Circle */}
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-10">
-                    <div className="w-12 h-12 bg-gradient-to-br from-color-1 to-color-2 rounded-full flex items-center justify-center border-4 border-n-8 shadow-lg group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-color-1/20 transition-all duration-300">
-                      <span className="text-white font-bold">{step.id}</span>
+                  {/* Step Number Badge */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="bg-color-1/10 border border-color-1/30 text-color-1 text-xs font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm group-hover:bg-color-1/20 group-hover:border-color-1/50 transition-all duration-300">
+                      {t("stepLabel")} {step.id}
                     </div>
                   </div>
 
