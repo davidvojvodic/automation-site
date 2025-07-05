@@ -75,7 +75,7 @@ function Services({ className }: ServicesProps) {
 
         <div className="relative">
           {/* Clean Grid Layout - 3 columns on desktop, 2 on tablet, 1 on mobile */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
             {solutions.map((solution, index) => (
               <div
                 key={solution.id}
@@ -99,7 +99,7 @@ function Services({ className }: ServicesProps) {
                 {/* Card content */}
                 <div
                   className={cn(
-                    "relative h-full rounded-2xl p-8",
+                    "relative h-full rounded-2xl p-4 sm:p-6 lg:p-8",
                     "bg-n-8 border border-n-6",
                     "group-hover:border-transparent",
                     "transition-all duration-500"
@@ -117,40 +117,40 @@ function Services({ className }: ServicesProps) {
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div className="mb-6">
+                    <div className="mb-4 sm:mb-5 lg:mb-6">
                       <div
                         className={cn(
-                          "w-14 h-14 rounded-xl flex items-center justify-center",
+                          "w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center",
                           "bg-gradient-to-br",
                           solution.gradient,
                           "group-hover:scale-110 transition-transform duration-300"
                         )}
                       >
-                        <solution.icon className="w-7 h-7 text-n-1" />
+                        <solution.icon className="w-6 h-6 sm:w-7 sm:h-7 text-n-1" />
                       </div>
                     </div>
 
                     {/* Title & Description */}
-                    <h4 className="h5 mb-3 text-n-1">
+                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 text-n-1">
                       {t(`${solution.key}.title`)}
                     </h4>
-                    <p className="body-2 mb-6 text-n-3">
+                    <p className="text-sm sm:text-base mb-4 sm:mb-5 lg:mb-6 text-n-3 leading-relaxed">
                       {t(`${solution.key}.description`)}
                     </p>
 
                     {/* Metrics */}
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-3">
-                        <Clock className="w-4 h-4 text-color-1" />
-                        <span className="text-sm text-n-2">
+                    <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-5 lg:mb-6">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-color-1 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm text-n-2">
                           <span className="font-semibold text-n-1">
                             {t(`${solution.key}.timeMetric`)}
                           </span>
                         </span>
                       </div>
-                      <div className="flex items-center gap-3">
-                        <Euro className="w-4 h-4 text-color-1" />
-                        <span className="text-sm text-n-2">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <Euro className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-color-1 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm text-n-2">
                           <span className="font-semibold text-n-1">
                             {t(`${solution.key}.costMetric`)}
                           </span>
@@ -159,8 +159,8 @@ function Services({ className }: ServicesProps) {
                     </div>
 
                     {/* ROI Text */}
-                    <div className="pt-6 border-t border-n-6">
-                      <p className="text-sm font-medium text-color-1">
+                    <div className="pt-4 sm:pt-5 lg:pt-6 border-t border-n-6">
+                      <p className="text-xs sm:text-sm font-medium text-color-1">
                         {t(`${solution.key}.roi`)}
                       </p>
                     </div>
@@ -171,9 +171,9 @@ function Services({ className }: ServicesProps) {
           </div>
 
           {/* Bottom CTA Section */}
-          <div className="mt-16 text-center">
-            <p className="text-n-3 mb-6">{t("ctaText")}</p>
-            <Button href="#contact" white>
+          <div className="mt-8 sm:mt-12 lg:mt-16 text-center">
+            <p className="text-sm sm:text-base text-n-3 mb-4 sm:mb-6">{t("ctaText")}</p>
+            <Button href="#contact" white className="text-sm sm:text-base">
               {t("ctaButton")}
             </Button>
           </div>

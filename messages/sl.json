@@ -12,7 +12,7 @@
       "services": "Storitve",
       "solutions": "Rešitve",
       "WebsiteBundles": "Spletni Paketi",
-      "benefits": "Prednosti",
+      "benefits": "Kaj pridobite",
       "process": "Proces",
       "getStarted": "Začnite",
       "contact": "Kontakt"
@@ -355,7 +355,7 @@
         },
         "business": {
           "title": "Poslovna spletna stran + avtomatizacija strank",
-          "description": "Profesionalna poslovna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalifikacijo in avtomatskim negovanjem.",
+          "description": "Profesionalna poslovna spletna stran z inteligentnim zajemanjem potencialnih strank, kvalifikacijo in avtomatskim obveščanjem.",
           "roi": "3x hitrejša kvalifikacija potencialnih strank",
           "basicFeatures": [
             "Profesionalna poslovna spletna stran s kontaktnimi obrazci",

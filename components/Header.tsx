@@ -74,10 +74,10 @@ export function Header({ className, locale = "en" }: HeaderProps) {
         <a className="block" href={`/${locale}`}>
           <Image
             src={flowko}
-            width={140}
-            height={50}
+            width={120}
+            height={45}
             alt="Flowko"
-            className="lg:w-[160px] lg:h-[60px]"
+            className="lg:w-[140px] lg:h-[50px]"
           />
         </a>
 

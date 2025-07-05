@@ -90,20 +90,20 @@ const WebsiteBundles = ({ className }: BundleProps) => {
 
         {/* Value Proposition */}
         <div
-          className="flex justify-center mb-16 animate-bundle-benefits"
+          className="flex justify-center mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits"
           style={{ animationDelay: "300ms" }}
         >
           <div className="relative max-w-4xl text-center">
-            <div className="flex flex-wrap justify-center gap-6 mb-8">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
               {[t("benefits.0"), t("benefits.1"), t("benefits.2")].map(
                 (benefit, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 px-6 py-3 bg-n-7 rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
+                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
                     style={{ animationDelay: `${400 + index * 100}ms` }}
                   >
-                    <div className="w-3 h-3 bg-color-1 rounded-full animate-pulse"></div>
-                    <span className="body-2 text-n-1">{benefit}</span>
+                    <div className="w-2.5 sm:w-3 h-2.5 sm:h-3 bg-color-1 rounded-full animate-pulse flex-shrink-0"></div>
+                    <span className="text-sm sm:text-base text-n-1 whitespace-nowrap">{benefit}</span>
                   </div>
                 )
               )}
@@ -112,12 +112,12 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         </div>
 
         {/* Bundle Cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-stretch">
           {bundles.map((bundle, index) => (
             <div
               key={bundle.id}
               className={cn(
-                "relative p-6 lg:p-8 bg-n-8 border border-n-6 rounded-3xl overflow-hidden h-full flex flex-col",
+                "relative p-4 sm:p-6 lg:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
                 "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
                 "hover:-translate-y-1",
                 "transition-all duration-500 ease-out group cursor-pointer",
@@ -129,21 +129,21 @@ const WebsiteBundles = ({ className }: BundleProps) => {
             >
               <div className="relative z-10 flex flex-col h-full">
                 {/* Icon & Title */}
-                <div className="flex items-start gap-4 mb-6">
+                <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="flex-shrink-0 group-hover:rotate-3 transition-all duration-300">
-                    <div className="w-16 h-16 rounded-2xl bg-color-1/10 flex items-center justify-center group-hover:bg-color-1/20 transition-colors duration-300">
+                    <div className="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 rounded-xl sm:rounded-2xl bg-color-1/10 flex items-center justify-center group-hover:bg-color-1/20 transition-colors duration-300">
                       {React.createElement(bundle.icon, {
-                        className: "w-8 h-8 text-color-1",
+                        className: "w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-color-1",
                       })}
                     </div>
                   </div>
                   <div className="flex-1">
-                    <div className="relative mb-3">
-                      <h3 className="h5 text-n-1 relative z-10 group-hover:text-color-1 transition-colors duration-300">
+                    <div className="relative mb-2 sm:mb-3">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-n-1 relative z-10 group-hover:text-color-1 transition-colors duration-300">
                         {bundle.title}
                       </h3>
                     </div>
-                    <p className="body-2 text-n-4 group-hover:text-n-3 transition-colors duration-300">
+                    <p className="text-sm sm:text-base text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
                       {bundle.description}
                     </p>
                   </div>
@@ -151,16 +151,16 @@ const WebsiteBundles = ({ className }: BundleProps) => {
 
                 {/* Key Metrics */}
                 <div className="mb-6">
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-1.5 lg:gap-2">
                     {Object.entries(bundle.keyMetrics).map(([key]) => (
                       <div
                         key={key}
-                        className="bg-n-7 rounded-lg p-2.5 text-center"
+                        className="bg-n-7 rounded-lg p-2 sm:p-2.5 text-center group-hover:bg-n-6 transition-colors duration-300"
                       >
-                        <p className="text-sm font-bold text-color-1">
+                        <p className="text-xs sm:text-sm font-bold text-color-1 leading-tight">
                           {t(`metricValues.${key}`)}
                         </p>
-                        <p className="text-xs text-n-4">
+                        <p className="text-[10px] sm:text-xs text-n-4 mt-0.5 leading-tight">
                           {t(`metrics.${key}`)}
                         </p>
                       </div>
@@ -169,55 +169,55 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 </div>
 
                 {/* What's Included */}
-                <div className="mb-6 flex-1">
-                  <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <Package className="w-4 h-4 text-color-1" />
+                <div className="mb-4 sm:mb-6 flex-1">
+                  <h4 className="text-xs sm:text-sm font-bold text-n-1 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                    <Package className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1" />
                     {t("included")}
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {t
                       .raw(`${bundle.id}.basicFeatures`)
                       .map((feature: string, featureIndex: number) => (
                         <li
                           key={featureIndex}
-                          className="flex items-start gap-2"
+                          className="flex items-start gap-1.5 sm:gap-2"
                         >
-                          <Check className="w-4 h-4 text-color-1 mt-0.5 flex-shrink-0" />
-                          <span className="text-sm text-n-1">{feature}</span>
+                          <Check className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1 mt-0.5 flex-shrink-0" />
+                          <span className="text-xs sm:text-sm text-n-1 leading-relaxed">{feature}</span>
                         </li>
                       ))}
                   </ul>
                 </div>
 
                 {/* What We Can Implement */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-color-1" />
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-xs sm:text-sm font-bold text-n-1 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
+                    <Sparkles className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1" />
                     {t("whatWeImplement")}
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {t
                       .raw(`${bundle.id}.advancedFeatures`)
                       .map((feature: string, featureIndex: number) => (
                         <li
                           key={featureIndex}
-                          className="flex items-start gap-2"
+                          className="flex items-start gap-1.5 sm:gap-2"
                         >
-                          <div className="w-2 h-2 bg-color-1 rounded-full mt-1.5 flex-shrink-0"></div>
-                          <span className="text-sm text-n-3">{feature}</span>
+                          <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-color-1 rounded-full mt-1 sm:mt-1.5 flex-shrink-0"></div>
+                          <span className="text-xs sm:text-sm text-n-3 leading-relaxed">{feature}</span>
                         </li>
                       ))}
                   </ul>
                 </div>
 
                 {/* Pricing & CTA */}
-                <div className="space-y-4 mt-auto">
+                <div className="space-y-3 sm:space-y-4 mt-auto">
                   <div>
                     {/* Popular tag on its own line for mobile */}
                     {bundle.popular && (
-                      <div className="flex justify-start mb-3 sm:hidden">
-                        <div className="px-2.5 py-1 bg-color-1 rounded-full">
-                          <span className="text-xs font-bold text-n-8 uppercase tracking-wider whitespace-nowrap">
+                      <div className="flex justify-start mb-2 sm:hidden">
+                        <div className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-color-1 rounded-full">
+                          <span className="text-[10px] sm:text-xs font-bold text-n-8 uppercase tracking-wider whitespace-nowrap">
                             {t("popular")}
                           </span>
                         </div>
@@ -225,16 +225,16 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                     )}
 
                     <div className="flex items-center justify-between mb-2">
-                      <div className="flex flex-col gap-1">
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-sm text-n-4">
+                      <div className="flex flex-col gap-0.5 sm:gap-1">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
+                          <span className="text-xs sm:text-sm text-n-4">
                             {t("startingFrom")}
                           </span>
-                          <span className="h4 text-color-1">
+                          <span className="text-2xl sm:text-3xl font-bold text-color-1">
                             {bundle.price}
                           </span>
                         </div>
-                        <p className="text-xs text-color-1 font-medium mt-2">
+                        <p className="text-[10px] sm:text-xs text-color-1 font-medium mt-1 sm:mt-2">
                           {bundle.roi}
                         </p>
                       </div>
@@ -247,28 +247,28 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                         </div>
                       )}
                     </div>
-                    <p className="text-sm text-n-4">{t("pricingNote")}</p>
+                    <p className="text-xs sm:text-sm text-n-4">{t("pricingNote")}</p>
                   </div>
 
-                  <Button className="w-full" href="#contact">
+                  <Button className="w-full text-sm sm:text-base" href="#contact">
                     {t("cta")}
                   </Button>
                 </div>
               </div>
 
               {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-color-1/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 group-hover:from-color-1/20 transition-all duration-500"></div>
+              <div className="absolute top-0 right-0 w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 bg-gradient-to-bl from-color-1/10 to-transparent rounded-full -translate-y-12 sm:-translate-y-14 lg:-translate-y-16 translate-x-12 sm:translate-x-14 lg:translate-x-16 group-hover:scale-125 sm:group-hover:scale-135 lg:group-hover:scale-150 group-hover:from-color-1/20 transition-all duration-500"></div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
         <div
-          className="text-center mt-16 animate-bundle-bottom-cta"
+          className="text-center mt-8 sm:mt-12 lg:mt-16 animate-bundle-bottom-cta"
           style={{ animationDelay: "1400ms" }}
         >
-          <p className="body-1 text-n-4 mb-6">{t("bottomText")}</p>
-          <Button className="px-8" href="#contact">
+          <p className="text-sm sm:text-base lg:text-lg text-n-4 mb-4 sm:mb-6">{t("bottomText")}</p>
+          <Button className="px-6 sm:px-8 text-sm sm:text-base" href="#contact">
             {t("bottomCta")}
           </Button>
         </div>
