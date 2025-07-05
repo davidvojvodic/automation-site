@@ -246,7 +246,7 @@
         "messageMin": "Please describe your automation needs or challenges"
       },
       "messages": {
-        "success": "Thank you! We'll be in touch within 2 hours.",
+        "success": "Thank you for your interest! Your inquiry has been successfully submitted.",
         "error": "Something went wrong. Please try again or email us directly."
       }
     },

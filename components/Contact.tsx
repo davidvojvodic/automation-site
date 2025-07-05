@@ -98,8 +98,8 @@ export function Contact({ className }: ContactProps) {
         toast.success(t("messages.success"), {
           description:
             locale === "sl"
-              ? "Odzvali se vam bomo v najkrajšem možnem času."
-              : "We'll get back to you as soon as possible.",
+              ? "Preverili bomo vašo poizvedbo in se vam kmalu oglasili z brezplačno analizo."
+              : "We'll review your inquiry and get back to you soon with your free analysis.",
           duration: 5000,
         });
         form.reset();

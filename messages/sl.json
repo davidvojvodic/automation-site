@@ -246,7 +246,7 @@
         "messageMin": "Opišite vaše potrebe po avtomatizaciji ali izzive"
       },
       "messages": {
-        "success": "Hvala! Kontaktirali vas bomo v 2 urah.",
+        "success": "Hvala za vaš interes! Vaša poizvedba je bila uspešno poslana.",
         "error": "Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte direktno po e-pošti."
       }
     },

@@ -41,7 +41,7 @@ function Hero(props: HeroProps) {
               {t("subtitle")}
               <Image
                 src={curve}
-                className="absolute top-full left-0 w-full scale-75 sm:scale-90 lg:scale-100 xl:-mt-2 animate-hero-curve"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[200px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[450px] xl:max-w-[500px] xl:-mt-2 animate-hero-curve"
                 width={624}
                 height={28}
                 alt="Curve"
