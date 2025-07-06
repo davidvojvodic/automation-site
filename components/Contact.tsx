@@ -77,6 +77,17 @@ export function Contact({ className }: ContactProps) {
 
   async function onSubmit(values: ContactFormValues) {
     setIsSubmitting(true);
+    
+    // Show loading toast
+    const loadingToast = toast.loading(
+      locale === "sl" ? "Pošiljanje..." : "Sending...",
+      {
+        description: locale === "sl" 
+          ? "Obdelujemo vašo zahtevo..." 
+          : "Processing your request...",
+      }
+    );
+    
     try {
       const formDataWithLocale = {
         ...values,
@@ -96,11 +107,13 @@ export function Contact({ className }: ContactProps) {
 
       if (response.ok) {
         toast.success(t("messages.success"), {
+          id: loadingToast,
           description:
             locale === "sl"
               ? "Preverili bomo vašo poizvedbo in se vam kmalu oglasili z brezplačno analizo."
               : "We'll review your inquiry and get back to you soon with your free analysis.",
           duration: 5000,
+          icon: "🎉",
         });
         form.reset();
       } else {
@@ -109,11 +122,13 @@ export function Contact({ className }: ContactProps) {
     } catch (error) {
       console.error("Form submission error:", error);
       toast.error(t("messages.error"), {
+        id: loadingToast,
         description:
           locale === "sl"
             ? "Prosimo, poskusite znova ali nas kontaktirajte direktno."
             : "Please try again or contact us directly.",
         duration: 5000,
+        icon: "❌",
       });
     } finally {
       setIsSubmitting(false);
