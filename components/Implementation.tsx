@@ -10,7 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Search, Target, Settings, TrendingUp, Shield, CheckCircle } from "lucide-react";
+import { Search, Target, Settings, TrendingUp, CheckCircle } from "lucide-react";
 
 interface ImplementationProps {
   className?: string;

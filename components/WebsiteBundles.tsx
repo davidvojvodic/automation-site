@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import { Zap, TrendingUp, Building2, Globe, Workflow, ShoppingCart, Code, Database } from "lucide-react";
+import { Zap, Globe, Workflow, ShoppingCart, Code, Database } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface BundleProps {
@@ -128,9 +128,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 solution.popular &&
                   "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
                 solution.isPremium &&
-                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10",
-                solution.isEnterprise &&
-                  "border-color-4/50 bg-gradient-to-br from-color-4/5 to-transparent hover:from-color-4/10"
+                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10"
               )}
               style={{ animationDelay: `${700 + index * 150}ms` }}
             >
@@ -142,15 +140,13 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                       <div
                         className={cn(
                           "w-14 sm:w-16 h-14 sm:h-16 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                          solution.isPremium && "bg-color-6/10",
-                          solution.isEnterprise && "bg-color-4/10"
+                          solution.isPremium && "bg-color-6/10"
                         )}
                       >
                         {React.createElement(solution.icon, {
                           className: cn(
                             "w-7 sm:w-8 h-7 sm:h-8 text-color-1",
-                            solution.isPremium && "text-color-6",
-                            solution.isEnterprise && "text-color-4"
+                            solution.isPremium && "text-color-6"
                           ),
                         })}
                       </div>
@@ -162,10 +158,8 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                         "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
                         solution.popular && "bg-color-1 text-n-8",
                         solution.isPremium && "bg-color-6 text-n-8",
-                        solution.isEnterprise && "bg-color-4 text-n-8",
                         !solution.popular &&
                           !solution.isPremium &&
-                          !solution.isEnterprise &&
                           "bg-n-6 text-n-3"
                       )}
                     >
@@ -259,8 +253,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                   "absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-all duration-500",
                   solution.isPremium
                     ? "from-color-6/10 group-hover:from-color-6/20"
-                    : solution.isEnterprise
-                    ? "from-color-4/10 group-hover:from-color-4/20"
                     : "from-color-1/10 group-hover:from-color-1/20"
                 )}
               ></div>
@@ -276,7 +268,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         >
           <div className="max-w-2xl mx-auto">
             <p className="text-base sm:text-lg text-n-4 mb-6">
-              Ready to transform your business with professional web development and intelligent automation? Let's discuss your project requirements and technical objectives.
+              Ready to transform your business with professional web development and intelligent automation? Let&apos;s discuss your project requirements and technical objectives.
             </p>
             <div className="flex justify-center">
               <Button className="px-8 text-base" href="#contact">

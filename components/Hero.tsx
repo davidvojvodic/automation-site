@@ -21,13 +21,19 @@ function Hero(props: HeroProps) {
 
   return (
     <Section
-      className={cn("pt-[8rem] sm:pt-[10rem] lg:pt-[12rem] mt-2 sm:mt-3", props.className)}
+      className={cn(
+        "pt-[8rem] sm:pt-[10rem] lg:pt-[12rem] mt-2 sm:mt-3",
+        props.className
+      )}
       crosses={true}
       crossesOffset="lg:translate-y-[.25rem]"
       customPaddings="py-6 sm:py-8 lg:py-16 xl:py-20"
       id="hero"
     >
-      <div className="container relative mt-1 sm:mt-8 lg:mt-36" ref={parallaxRef}>
+      <div
+        className="container relative mt-1 sm:mt-8 lg:mt-36"
+        ref={parallaxRef}
+      >
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-10 sm:mb-16 md:mb-20 lg:mb-[6.25rem]">
           {/* Animated Main Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 animate-hero-title">
@@ -41,7 +47,7 @@ function Hero(props: HeroProps) {
               {t("subtitle")}
               <Image
                 src={curve}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[200px] sm:max-w-[280px] md:max-w-[350px] lg:max-w-[450px] xl:max-w-[500px] xl:-mt-2 animate-hero-curve"
+                className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[250px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[730px] xl:max-w-[500px] xl:-mt-2 animate-hero-curve"
                 width={624}
                 height={28}
                 alt="Curve"
