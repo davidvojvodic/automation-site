@@ -1,13 +1,13 @@
+import AIServices from "@/components/AIServices";
 import Benefits from "@/components/Benefits";
 import Collaboration from "@/components/Collaboration";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WebsiteBundles from "@/components/WebsiteBundles";
 // import Pricing from "@/components/Pricing";
 import Implementation from "@/components/Implementation";
-import Services from "@/components/Services";
-import WebsiteBundles from "@/components/WebsiteBundles";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 
 export default async function Home({
@@ -22,9 +22,9 @@ export default async function Home({
         <Header locale={locale} />
         <Hero />
         <Collaboration />
-        <Services />
-        <Implementation />
+        <AIServices />
         <WebsiteBundles />
+        <Implementation />
         <Benefits />
         {/* <Pricing /> */}
         <Contact />

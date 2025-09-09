@@ -2,275 +2,288 @@ import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import {
-  Check,
-  ShoppingCart,
-  Building2,
-  Wrench,
-  Briefcase,
-  Package,
-  Sparkles,
-} from "lucide-react";
+import { Zap, TrendingUp, Building2, Globe, Workflow, ShoppingCart, Code, Database } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 
 interface BundleProps {
   className?: string;
 }
 
 const WebsiteBundles = ({ className }: BundleProps) => {
-  const t = useTranslations("HomePage.bundles");
-
-  const bundles = [
+  const solutions = [
     {
-      id: "business",
-      icon: Building2,
-      title: t("business.title"),
-      description: t("business.description"),
-      price: "€3,500",
-      keyMetrics: {
-        leadSpeed: "3x faster qualification",
-        followUp: "50% less manual work",
-        showRate: "25% more meetings",
-      },
-      timeline: "6-8 weeks",
-      popular: true,
-      roi: t("business.roi"),
+      id: "foundation",
+      icon: Zap,
+      title: "Foundation Bundle",
+      subtitle: "Business Website + Core Automations",
+      description: "Professional web presence with essential automation workflows to streamline customer interactions and lead management for service-based businesses.",
+      outcome: "Professional digital presence with automated lead capture",
+      idealFor: "Service businesses, consultants, agencies, professional services",
+      investmentLevel: "Starter Package",
+      capabilities: [
+        "Professional responsive website (5-8 pages)",
+        "Contact form automation with instant notifications",
+        "Lead capture workflows and email sequences",
+        "Google Analytics and tracking setup",
+        "Basic CRM integration for lead management",
+        "Monthly maintenance and hosting included"
+      ],
+      badge: "Essential",
+      popular: false,
     },
     {
-      id: "ecommerce",
+      id: "growth",
       icon: ShoppingCart,
-      title: t("ecommerce.title"),
-      description: t("ecommerce.description"),
-      price: "€5,500",
-      keyMetrics: {
-        timeSaved: "25+ hours/week",
-        errorReduction: "90% fewer errors",
-        cartRecovery: "30% recovery rate",
-      },
-      timeline: "6-8 weeks",
-      roi: t("ecommerce.roi"),
+      title: "Growth Bundle",
+      subtitle: "E-commerce + Marketing Automation",
+      description: "Complete online store with intelligent automation systems for inventory, orders, and customer lifecycle management to maximize sales and retention.",
+      outcome: "Automated e-commerce operations with intelligent marketing",
+      idealFor: "Product businesses, online retailers, physical stores going digital",
+      investmentLevel: "Growth Package",
+      capabilities: [
+        "Full e-commerce store with payment processing",
+        "Automated inventory management and low-stock alerts",
+        "Order processing workflows and fulfillment automation",
+        "Customer email campaigns and abandoned cart recovery",
+        "Product recommendation and upselling automation",
+        "Analytics dashboard with sales insights and reporting"
+      ],
+      badge: "Popular",
+      popular: true,
     },
     {
-      id: "service",
-      icon: Wrench,
-      title: t("service.title"),
-      description: t("service.description"),
-      price: "€3,000",
-      keyMetrics: {
-        noShows: "90% reduction",
-        scheduling: "50% time saved",
-        payments: "30% faster collection",
-      },
-      timeline: "6-8 weeks",
-      roi: t("service.roi"),
-    },
-    {
-      id: "professional",
-      icon: Briefcase,
-      title: t("professional.title"),
-      description: t("professional.description"),
-      price: "€3,500",
-      keyMetrics: {
-        projectSpeed: "50% faster delivery",
-        revisions: "30% fewer cycles",
-        adminTime: "40% reduction",
-      },
-      timeline: "6-8 weeks",
-      roi: t("professional.roi"),
+      id: "dominator",
+      icon: Code,
+      title: "Dominator Bundle",
+      subtitle: "Custom Web App + Advanced Automation",
+      description: "Bespoke web application development with sophisticated automation infrastructure for complex business operations and multi-system integrations.",
+      outcome: "Custom digital ecosystem with advanced automation orchestration",
+      idealFor: "SaaS startups, tech companies, businesses with complex operations",
+      investmentLevel: "Premium Package",
+      capabilities: [
+        "Custom web application development with modern tech stack",
+        "User authentication, roles, and permission systems",
+        "Multi-system workflow orchestration and API integrations",
+        "Advanced analytics dashboards with real-time data",
+        "Database design and migration automation",
+        "Scalable architecture with monitoring and alerting"
+      ],
+      badge: "Premium",
+      popular: false,
+      isPremium: true,
     },
   ];
 
   return (
     <Section crosses className={cn("", className)} id="bundles">
       <div className="container relative z-2">
+        {/* Header */}
         <div className="animate-bundle-heading">
-          <Heading tag={t("tag")} title={t("title")} text={t("subtitle")} />
+          <Heading 
+            tag="Website Development + Automation" 
+            title="Complete Digital Solutions" 
+            text="Professional web development combined with intelligent automation systems to accelerate business growth and operational efficiency" 
+          />
         </div>
 
-        {/* Value Proposition */}
+        {/* Value Proposition Pills */}
         <div
           className="flex justify-center mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits"
           style={{ animationDelay: "300ms" }}
         >
           <div className="relative max-w-4xl text-center">
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
-              {[t("benefits.0"), t("benefits.1"), t("benefits.2")].map(
-                (benefit, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
-                    style={{ animationDelay: `${400 + index * 100}ms` }}
-                  >
-                    <div className="w-2.5 sm:w-3 h-2.5 sm:h-3 bg-color-1 rounded-full animate-pulse flex-shrink-0"></div>
-                    <span className="text-sm sm:text-base text-n-1 whitespace-nowrap">{benefit}</span>
-                  </div>
-                )
-              )}
+              {[
+                { icon: Globe, text: "Modern Web Development" },
+                { icon: Database, text: "Smart Automation Integration" },
+                { icon: Workflow, text: "End-to-End Solutions" },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
+                  style={{ animationDelay: `${400 + index * 100}ms` }}
+                >
+                  <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-color-1 flex-shrink-0" />
+                  <span className="text-sm sm:text-base text-n-1 whitespace-nowrap">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Bundle Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-stretch">
-          {bundles.map((bundle, index) => (
-            <div
-              key={bundle.id}
+        {/* Solution Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
+          {solutions.map((solution, index) => (
+            <a
+              href="#contact"
+              key={solution.id}
               className={cn(
-                "relative p-4 sm:p-6 lg:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
+                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
                 "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
                 "hover:-translate-y-1",
                 "transition-all duration-500 ease-out group cursor-pointer",
                 "animate-bundle-card",
-                bundle.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10"
+                solution.popular &&
+                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
+                solution.isPremium &&
+                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10",
+                solution.isEnterprise &&
+                  "border-color-4/50 bg-gradient-to-br from-color-4/5 to-transparent hover:from-color-4/10"
               )}
               style={{ animationDelay: `${700 + index * 150}ms` }}
             >
               <div className="relative z-10 flex flex-col h-full">
-                {/* Icon & Title */}
-                <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <div className="flex-shrink-0 group-hover:rotate-3 transition-all duration-300">
-                    <div className="w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 rounded-xl sm:rounded-2xl bg-color-1/10 flex items-center justify-center group-hover:bg-color-1/20 transition-colors duration-300">
-                      {React.createElement(bundle.icon, {
-                        className: "w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-color-1",
-                      })}
+                {/* Header with Icon, Badge, and Title */}
+                <div className="mb-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-4">
+                      <div
+                        className={cn(
+                          "w-14 sm:w-16 h-14 sm:h-16 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
+                          solution.isPremium && "bg-color-6/10",
+                          solution.isEnterprise && "bg-color-4/10"
+                        )}
+                      >
+                        {React.createElement(solution.icon, {
+                          className: cn(
+                            "w-7 sm:w-8 h-7 sm:h-8 text-color-1",
+                            solution.isPremium && "text-color-6",
+                            solution.isEnterprise && "text-color-4"
+                          ),
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Badge */}
+                    <div
+                      className={cn(
+                        "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
+                        solution.popular && "bg-color-1 text-n-8",
+                        solution.isPremium && "bg-color-6 text-n-8",
+                        solution.isEnterprise && "bg-color-4 text-n-8",
+                        !solution.popular &&
+                          !solution.isPremium &&
+                          !solution.isEnterprise &&
+                          "bg-n-6 text-n-3"
+                      )}
+                    >
+                      {solution.badge}
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="relative mb-2 sm:mb-3">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-n-1 relative z-10 group-hover:text-color-1 transition-colors duration-300">
-                        {bundle.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm sm:text-base text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
-                      {bundle.description}
+
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-n-1 mb-2 group-hover:text-color-1 transition-colors duration-300">
+                      {solution.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-color-1 font-medium mb-3">
+                      {solution.subtitle}
+                    </p>
+                    <p className="text-sm text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
+                      {solution.description}
                     </p>
                   </div>
                 </div>
 
-                {/* Key Metrics */}
-                <div className="mb-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-1.5 lg:gap-2">
-                    {Object.entries(bundle.keyMetrics).map(([key]) => (
-                      <div
-                        key={key}
-                        className="bg-n-7 rounded-lg p-2 sm:p-2.5 text-center group-hover:bg-n-6 transition-colors duration-300"
-                      >
-                        <p className="text-xs sm:text-sm font-bold text-color-1 leading-tight">
-                          {t(`metricValues.${key}`)}
-                        </p>
-                        <p className="text-[10px] sm:text-xs text-n-4 mt-0.5 leading-tight">
-                          {t(`metrics.${key}`)}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* What's Included */}
-                <div className="mb-4 sm:mb-6 flex-1">
-                  <h4 className="text-xs sm:text-sm font-bold text-n-1 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
-                    <Package className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1" />
-                    {t("included")}
-                  </h4>
-                  <ul className="space-y-1.5 sm:space-y-2">
-                    {t
-                      .raw(`${bundle.id}.basicFeatures`)
-                      .map((feature: string, featureIndex: number) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-start gap-1.5 sm:gap-2"
-                        >
-                          <Check className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1 mt-0.5 flex-shrink-0" />
-                          <span className="text-xs sm:text-sm text-n-1 leading-relaxed">{feature}</span>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-
-                {/* What We Can Implement */}
-                <div className="mb-4 sm:mb-6">
-                  <h4 className="text-xs sm:text-sm font-bold text-n-1 uppercase tracking-wider mb-2 sm:mb-3 flex items-center gap-1.5 sm:gap-2">
-                    <Sparkles className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-color-1" />
-                    {t("whatWeImplement")}
-                  </h4>
-                  <ul className="space-y-1.5 sm:space-y-2">
-                    {t
-                      .raw(`${bundle.id}.advancedFeatures`)
-                      .map((feature: string, featureIndex: number) => (
-                        <li
-                          key={featureIndex}
-                          className="flex items-start gap-1.5 sm:gap-2"
-                        >
-                          <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-color-1 rounded-full mt-1 sm:mt-1.5 flex-shrink-0"></div>
-                          <span className="text-xs sm:text-sm text-n-3 leading-relaxed">{feature}</span>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-
-                {/* Pricing & CTA */}
-                <div className="space-y-3 sm:space-y-4 mt-auto">
-                  <div>
-                    {/* Popular tag on its own line for mobile */}
-                    {bundle.popular && (
-                      <div className="flex justify-start mb-2 sm:hidden">
-                        <div className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-color-1 rounded-full">
-                          <span className="text-[10px] sm:text-xs font-bold text-n-8 uppercase tracking-wider whitespace-nowrap">
-                            {t("popular")}
-                          </span>
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex flex-col gap-0.5 sm:gap-1">
-                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2">
-                          <span className="text-xs sm:text-sm text-n-4">
-                            {t("startingFrom")}
-                          </span>
-                          <span className="text-2xl sm:text-3xl font-bold text-color-1">
-                            {bundle.price}
-                          </span>
-                        </div>
-                        <p className="text-[10px] sm:text-xs text-color-1 font-medium mt-1 sm:mt-2">
-                          {bundle.roi}
-                        </p>
-                      </div>
-                      {/* Popular tag for desktop */}
-                      {bundle.popular && (
-                        <div className="hidden sm:block px-2.5 py-1 bg-color-1 rounded-full">
-                          <span className="text-xs font-bold text-n-8 uppercase tracking-wider whitespace-nowrap">
-                            {t("popular")}
-                          </span>
-                        </div>
-                      )}
+                {/* Investment Section */}
+                <div className="price-section mb-6">
+                  <div className="mb-2">
+                    <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
+                      Ideal For
                     </div>
-                    <p className="text-xs sm:text-sm text-n-4">{t("pricingNote")}</p>
+                    <p className="text-sm text-n-2 mb-3">
+                      {solution.idealFor}
+                    </p>
+                    <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
+                      Package Level
+                    </div>
+                    <span className="text-base font-bold text-color-1">
+                      {solution.investmentLevel}
+                    </span>
                   </div>
+                </div>
 
-                  <Button className="w-full text-sm sm:text-base" href="#contact">
-                    {t("cta")}
-                  </Button>
+                {/* Key Capabilities */}
+                <div className="mb-6 flex-1">
+                  <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <Workflow className="w-4 h-4 text-color-1" />
+                    Included Features
+                  </h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    {solution.capabilities.map(
+                      (capability: string, capIndex: number) => (
+                        <div
+                          key={capIndex}
+                          className="flex items-center gap-2 p-2 rounded-lg bg-n-7 group-hover:bg-n-6 transition-colors duration-300"
+                        >
+                          <div className="w-2 h-2 bg-color-1 rounded-full flex-shrink-0"></div>
+                          <span className="text-sm text-n-1">{capability}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+
+                {/* Success Outcome */}
+                <div className="mt-auto">
+                  <div
+                    className={cn(
+                      "p-4 rounded-xl border-l-4 bg-gradient-to-r",
+                      solution.isPremium
+                        ? "border-color-6 from-color-6/10 to-transparent"
+                        : "border-color-1 from-color-1/10 to-transparent"
+                    )}
+                  >
+                    <p className="text-sm font-bold text-n-1 mb-1">
+                      Expected Outcome
+                    </p>
+                    <p
+                      className={cn(
+                        "text-lg font-bold",
+                        solution.isPremium
+                          ? "text-color-6"
+                          : "text-color-1"
+                      )}
+                    >
+                      {solution.outcome}
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-24 sm:w-28 lg:w-32 h-24 sm:h-28 lg:h-32 bg-gradient-to-bl from-color-1/10 to-transparent rounded-full -translate-y-12 sm:-translate-y-14 lg:-translate-y-16 translate-x-12 sm:translate-x-14 lg:translate-x-16 group-hover:scale-125 sm:group-hover:scale-135 lg:group-hover:scale-150 group-hover:from-color-1/20 transition-all duration-500"></div>
-            </div>
+              {/* Background Decoration */}
+              <div
+                className={cn(
+                  "absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-all duration-500",
+                  solution.isPremium
+                    ? "from-color-6/10 group-hover:from-color-6/20"
+                    : solution.isEnterprise
+                    ? "from-color-4/10 group-hover:from-color-4/20"
+                    : "from-color-1/10 group-hover:from-color-1/20"
+                )}
+              ></div>
+            </a>
           ))}
         </div>
 
+
         {/* Bottom CTA */}
         <div
-          className="text-center mt-8 sm:mt-12 lg:mt-16 animate-bundle-bottom-cta"
+          className="text-center mt-12 sm:mt-16 lg:mt-20 animate-bundle-bottom-cta"
           style={{ animationDelay: "1400ms" }}
         >
-          <p className="text-sm sm:text-base lg:text-lg text-n-4 mb-4 sm:mb-6">{t("bottomText")}</p>
-          <Button className="px-6 sm:px-8 text-sm sm:text-base" href="#contact">
-            {t("bottomCta")}
-          </Button>
+          <div className="max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-n-4 mb-6">
+              Ready to transform your business with professional web development and intelligent automation? Let's discuss your project requirements and technical objectives.
+            </p>
+            <div className="flex justify-center">
+              <Button className="px-8 text-base" href="#contact">
+                Start Your Project
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </Section>

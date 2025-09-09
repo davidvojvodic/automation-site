@@ -2,98 +2,138 @@
   "HomePage": {
     "hero": {
       "title": "Automate Your Business",
-      "subtitle": "with Intelligent Workflows",
-      "description": "Save 15+ hours every week by automating repetitive tasks. Let AI handle the routine work while you focus on growing your business.",
-      "cta": "Schedule Free Assessment",
+      "subtitle": "with Intelligent AI Systems",
+      "description": "Transform repetitive tasks into revenue-generating opportunities. Our AI-powered automation helps SMBs save 15+ hours weekly while increasing monthly revenue through smarter workflows.",
+      "cta": "Get Your Free Automation Assessment",
       "generating": "Building automated workflow..."
     },
     "navigation": {
       "features": "Features",
+      "solutions": "Automation Systems",
       "services": "Services",
-      "solutions": "Solutions",
-      "WebsiteBundles": "Website Bundles",
+      "WebsiteBundles": "Complete Digital Solutions",
       "benefits": "What You Gain",
       "process": "Process",
       "getStarted": "Get Started",
       "contact": "Contact"
     },
     "solutions": {
-      "title": "AI Workflow Automation Solutions",
-      "subtitle": "Transform your business operations with intelligent workflows that deliver measurable ROI",
-      "bottomText": "Built on enterprise-grade automation platform",
-      "ctaText": "Ready to transform your business?",
-      "ctaButton": "Start Your Automation Journey",
-      "solution1": {
-        "title": "Intelligent Document Processing",
-        "description": "AI-powered document workflows that eliminate manual data entry and approval bottlenecks",
-        "features": [
-          "OCR + AI extraction from invoices, contracts, and forms with 99% accuracy",
-          "Automated approval workflows with smart routing based on amount and type",
-          "Digital signatures and GDPR-compliant audit trails"
-        ],
-        "roi": "Process documents 10x faster with 80% cost reduction",
-        "timeMetric": "10x faster processing",
-        "costMetric": "80% cost reduction"
+      "title": "Custom Automation Solutions",
+      "subtitle": "Tailored automation capabilities we'll develop for your business",
+      "approach": {
+        "efficiency": "Proven Results",
+        "integration": "Expert Implementation", 
+        "results": "Consultation-Focused"
       },
-      "solution2": {
-        "title": "Manufacturing Process Automation", 
-        "description": "Smart production workflows that optimize efficiency and reduce downtime",
-        "features": [
-          "Real-time production monitoring with automated quality alerts",
-          "Inventory forecasting with automated purchase order generation",
-          "Predictive maintenance scheduling based on equipment data"
+      "capabilities": "Core Capabilities",
+      "cta": "Discuss Your Automation Needs",
+      "viewProcess": "View Process Example",
+      "capability1": {
+        "id": "customer-service",
+        "title": "Customer Service Automation",
+        "subtitle": "Support Excellence",
+        "description": "Transform customer interactions with intelligent routing and automated responses",
+        "icon": "Headphones",
+        "benefits": [
+          "24/7 availability",
+          "Instant response times",
+          "Consistent service quality",
+          "Reduced agent workload"
         ],
-        "roi": "Reduce operational costs by 30-40% with real-time optimization",
-        "timeMetric": "30-40% cost reduction",
-        "costMetric": "99% fewer production errors"
+        "consultationFocus": "customer service automation solutions"
       },
-      "solution3": {
-        "title": "Professional Services Automation",
-        "description": "Streamlined client workflows from intake to invoice with minimal manual work",
-        "features": [
-          "Automated client onboarding with document collection and CRM sync",
-          "Project milestone tracking with automated billing and invoicing",
-          "Contract generation and e-signature workflows with approval routing"
+      "capability2": {
+        "id": "sales-process",
+        "title": "Sales Process Automation",
+        "subtitle": "Revenue Growth",
+        "description": "Streamline lead management and accelerate sales cycles with smart automation",
+        "icon": "TrendingUp",
+        "benefits": [
+          "Qualified lead scoring",
+          "Automated follow-ups",
+          "Pipeline visibility",
+          "Higher conversion rates"
         ],
-        "roi": "Save 2+ hours per client with 70% faster project delivery",
-        "timeMetric": "2+ hrs saved per client",
-        "costMetric": "70% faster delivery"
+        "consultationFocus": "sales automation solutions"
       },
-      "solution4": {
-        "title": "E-commerce & Marketing Automation",
-        "description": "Smart workflows from order to delivery with automated marketing for increased sales",
-        "features": [
-          "Real-time inventory sync across all sales channels and marketplaces",
-          "Automated order routing to suppliers and fulfillment centers",
-          "Customer communication workflows with shipping updates and tracking"
+      "capability3": {
+        "id": "data-integration",
+        "title": "Data Integration & Synchronization",
+        "subtitle": "Unified Operations",
+        "description": "Connect disparate systems for real-time data flow and unified reporting",
+        "icon": "Database",
+        "benefits": [
+          "Real-time synchronization",
+          "Unified dashboards",
+          "Error reduction",
+          "Automated reporting"
         ],
-        "roi": "Handle 300% more orders with same team size",
-        "timeMetric": "300% order capacity",
-        "costMetric": "15:1 ROI first year"
+        "consultationFocus": "data integration solutions"
       },
-      "solution5": {
-        "title": "Compliance & Reporting Automation",
-        "description": "GDPR-compliant workflows that automate regulatory requirements and audit preparation",
-        "features": [
-          "Automated GDPR data processing workflows with consent management",
-          "Real-time regulatory reporting with audit trail generation",
-          "Risk monitoring alerts with automated escalation procedures"
+      "capability4": {
+        "id": "marketing-automation",
+        "title": "Marketing Campaign Automation",
+        "subtitle": "Campaign Excellence",
+        "description": "Orchestrate multi-channel marketing campaigns with personalized customer journeys",
+        "icon": "Target",
+        "benefits": [
+          "Multi-channel coordination",
+          "Personalized journeys",
+          "Performance tracking",
+          "ROI optimization"
         ],
-        "roi": "Reduce compliance costs by 60% with automated audit readiness",
-        "timeMetric": "60% compliance cost cut",
-        "costMetric": "Audit-ready always"
+        "consultationFocus": "marketing automation solutions"
       },
-      "solution6": {
-        "title": "Hyperautomation Platform Integration",
-        "description": "Connect every business tool with intelligent workflows using advanced low-code platform",
-        "features": [
-          "1000+ pre-built app integrations with custom API connections",
-          "Low-code workflow builder enabling citizen developers across teams",
-          "AI-powered error detection with automatic retry and escalation logic"
+      "capability5": {
+        "id": "financial-processes",
+        "title": "Financial Process Automation",
+        "subtitle": "Accuracy & Speed",
+        "description": "Streamline invoicing, payments, and financial reporting with precision automation",
+        "icon": "Calculator",
+        "benefits": [
+          "Automated invoicing",
+          "Payment processing",
+          "Financial reporting",
+          "Compliance tracking"
         ],
-        "roi": "Eliminate 200+ hours of manual work per employee annually",
-        "timeMetric": "200+ hrs/employee/year",
-        "costMetric": "30-200% ROI year 1"
+        "consultationFocus": "financial automation solutions"
+      },
+      "capability6": {
+        "id": "hr-admin",
+        "title": "HR & Administrative Automation",
+        "subtitle": "Operational Efficiency",
+        "description": "Optimize employee onboarding, document management, and administrative workflows",
+        "icon": "Users",
+        "benefits": [
+          "Employee onboarding",
+          "Document workflows",
+          "Compliance automation",
+          "Performance tracking"
+        ],
+        "consultationFocus": "HR and administrative automation solutions"
+      },
+      "processExamples": {
+        "title": "See Automation in Action",
+        "subtitle": "Real examples of how we transform manual processes into efficient automated workflows",
+        "example1": {
+          "title": "Customer Service Automation Example",
+          "beforeTitle": "Manual Process",
+          "afterTitle": "Automated Process",
+          "beforeTime": "80 minutes",
+          "afterTime": "8 minutes",
+          "improvement": "90% faster",
+          "beforeSteps": [
+            "Manual email sorting (15 min)",
+            "Agent research & categorization (20 min)",
+            "Knowledge base search (30 min)",
+            "Draft & review response (15 min)"
+          ],
+          "afterSteps": [
+            "Smart routing & categorization (1 min)",
+            "AI-generated response (2 min)",
+            "Agent review & send (5 min)"
+          ]
+        }
       }
     },
     "benefits": {
@@ -288,133 +328,118 @@
         "optional": "Optional"
       }
     },
-    "bundles": {
-        "tag": "Complete Digital Solutions",
-        "title": "Website + Automation Bundles",
-        "subtitle": "Get a professional website and powerful automation workflows in one comprehensive package. Launch faster, automate smarter, grow bigger.",
-        "benefits": [
-          "Professional website + automation",
-          "Faster time to market",
-          "Integrated solution approach"
-        ],
-        "popular": "Most Popular",
-        "included": "What's Included",
-        "whatWeImplement": "What We Can Implement",
-        "startingFrom": "Starting from",
-        "deliveryTime": "Delivery",
-        "metrics": {
-          "timeSaved": "Time Saved",
-          "errorReduction": "Fewer Errors",
-          "cartRecovery": "Cart Recovery",
-          "leadSpeed": "Qualification",
-          "followUp": "Manual Work",
-          "showRate": "Show Rate",
-          "noShows": "Fewer No-shows",
-          "scheduling": "Faster Scheduling",
-          "payments": "Faster Payments",
-          "projectSpeed": "Faster Delivery",
-          "revisions": "Fewer Revisions",
-          "adminTime": "Less Admin Work"
-        },
-        "metricValues": {
-          "timeSaved": "25+ hours/week",
-          "errorReduction": "90% fewer errors",
-          "cartRecovery": "30% recovery rate",
-          "leadSpeed": "3x faster qualification",
-          "followUp": "50% less manual work",
-          "showRate": "25% more meetings",
-          "noShows": "90% reduction",
-          "scheduling": "50% time saved",
-          "payments": "30% faster collection",
-          "projectSpeed": "50% faster delivery",
-          "revisions": "30% fewer cycles",
-          "adminTime": "40% reduction"
-        },
-        "pricingNote": "Final price depends on custom AI automations and project complexity",
-        "cta": "Get Your Bundle",
-        "bottomText": "Need a custom solution? We create tailored website and automation packages for any business.",
-        "bottomCta": "Discuss Your Project",
-        "ecommerce": {
-          "title": "E-commerce + Automation",
-          "description": "Professional online store with advanced AI-powered workflows that automate your entire sales process from order to delivery.",
-          "roi": "Save 25+ hours/week on order management",
-          "basicFeatures": [
-            "Professional e-commerce website with payment integration",
-            "Automated order confirmation and tracking emails",
-            "Basic inventory sync across 2-3 platforms",
-            "Customer welcome email sequence",
-            "Order status notifications"
-          ],
-          "advancedFeatures": [
-            "AI-powered abandoned cart recovery with dynamic discounts",
-            "Multi-platform inventory sync (5+ channels)",
-            "Predictive analytics for demand forecasting",
-            "Advanced customer segmentation and personalization",
-            "Intelligent fraud detection system",
-            "Smart pricing optimization based on market data"
-          ]
-        },
-        "business": {
-          "title": "Business Website + Lead Generation",
-          "description": "Professional corporate website with intelligent lead capture, qualification, and automated nurturing workflows.",
-          "roi": "3x faster lead qualification",
-          "basicFeatures": [
-            "Professional business website with contact forms",
-            "Lead capture forms with CRM integration",
-            "Automated meeting scheduling",
-            "Basic email follow-up sequences",
-            "Contact management and organization"
-          ],
-          "advancedFeatures": [
-            "AI-powered lead scoring and qualification",
-            "Dynamic proposal generation with smart pricing",
-            "Behavior-triggered nurture campaigns",
-            "Predictive analytics for conversion likelihood",
-            "Multi-source lead enrichment",
-            "Advanced sales pipeline automation"
-          ]
-        },
-        "service": {
-          "title": "Service Business + Booking Automation",
-          "description": "Service-focused website with seamless appointment booking, client management, and automated payment processing.",
-          "roi": "90% reduction in no-shows",
-          "basicFeatures": [
-            "Service-focused website with booking system",
-            "Online appointment scheduling",
-            "Email and SMS appointment reminders",
-            "Payment collection at booking",
-            "Basic invoice generation"
-          ],
-          "advancedFeatures": [
-            "AI-optimized reminder timing to reduce no-shows",
-            "Multi-channel reminders (SMS, Email, WhatsApp, ...)",
-            "Predictive no-show analysis and prevention",
-            "Automated rescheduling and cancellation workflows",
-            "Smart scheduling recommendations",
-            "Advanced financial reporting and analytics"
-          ]
-        },
-        "professional": {
-          "title": "Project Management + Client Collaboration",
-          "description": "Streamlined project management platform with automated client collaboration, time tracking, and delivery workflows for consultants and agencies.",
-          "roi": "50% faster project delivery",
-          "basicFeatures": [
-            "Professional portfolio website with case studies",
-            "Project management dashboard with client access",
-            "Time tracking and automated timesheets",
-            "Client collaboration tools and file sharing",
-            "Milestone-based invoicing and payments"
-          ],
-          "advancedFeatures": [
-            "AI-powered project timeline optimization",
-            "Automated resource allocation across projects",
-            "Smart deadline management and alerts",
-            "Advanced profitability tracking per project",
-            "Client satisfaction automation and feedback loops",
-            "Intelligent workload balancing for teams"
-          ]
-        }
+    "aiServices": {
+      "tag": "Strategic Consulting",
+      "title": "AI Strategy & Implementation Consulting",
+      "subtitle": "Transform your business with expert AI strategy development and custom implementation guidance.",
+      "approach": {
+        "implementation": "Strategic Planning",
+        "results": "Implementation Roadmap",
+        "partnership": "Ongoing Support"
       },
+      "capabilities": "Consulting Areas",
+      "cta": "Discuss Your Strategy",
+      "ctaCustom": "Get Strategy Assessment",
+      "bottomText": "Every successful AI transformation starts with a clear strategy and implementation roadmap tailored to your business.",
+      "bottomCtaPrimary": "Schedule Strategy Session",
+      "bottomCtaSecondary": "Download Strategy Guide",
+      "service1": {
+        "id": "ai-readiness-assessment",
+        "title": "AI Readiness Assessment",
+        "subtitle": "Strategic Foundation",
+        "description": "Comprehensive evaluation of your current business processes, technology stack, and team readiness for AI implementation.",
+        "outcome": "Clear AI implementation roadmap with prioritized opportunities and realistic timelines",
+        "badge": "Start Here",
+        "capabilities": [
+          "Current state analysis and gap identification",
+          "AI opportunity assessment across all business functions",
+          "Technology readiness evaluation and recommendations",
+          "Team skills assessment and training roadmap",
+          "ROI projections and success metrics definition"
+        ],
+        "consultationFocus": "AI readiness and strategy development"
+      },
+      "service2": {
+        "id": "implementation-planning",
+        "title": "Implementation Planning",
+        "subtitle": "Tactical Execution",
+        "description": "Detailed project planning and phased implementation strategy for your AI transformation initiatives.",
+        "outcome": "Step-by-step implementation plan with clear milestones, budgets, and success metrics",
+        "badge": "Popular",
+        "capabilities": [
+          "Phased implementation roadmap development",
+          "Technology vendor evaluation and selection",
+          "Budget planning and resource allocation",
+          "Risk assessment and mitigation strategies",
+          "Success metrics and KPI framework design"
+        ],
+        "consultationFocus": "implementation strategy and project planning"
+      },
+      "service3": {
+        "id": "change-management",
+        "title": "AI Change Management",
+        "subtitle": "Team Transformation",
+        "description": "Guide your team through successful AI adoption with structured change management and training programs.",
+        "outcome": "Smooth AI adoption with high team engagement and minimal disruption to operations",
+        "badge": "Essential",
+        "capabilities": [
+          "Stakeholder alignment and communication strategy",
+          "Employee training and skill development programs",
+          "Change resistance identification and resolution",
+          "AI governance and best practices establishment",
+          "Ongoing support and performance optimization"
+        ],
+        "consultationFocus": "organizational change and team development"
+      },
+      "service4": {
+        "id": "performance-optimization",
+        "title": "Performance Optimization",
+        "subtitle": "Continuous Improvement",
+        "description": "Ongoing monitoring and optimization of your AI implementations to maximize ROI and business impact.",
+        "outcome": "25-40% improvement in AI system performance and measurable business impact",
+        "badge": "Results-Driven",
+        "capabilities": [
+          "AI system performance monitoring and analysis",
+          "ROI measurement and business impact assessment",
+          "Optimization recommendations and implementation",
+          "Advanced analytics and reporting dashboards",
+          "Scaling strategies and capacity planning"
+        ],
+        "consultationFocus": "performance optimization and ROI maximization"
+      },
+      "service5": {
+        "id": "custom-development",
+        "title": "Custom AI Development",
+        "subtitle": "Tailored Solutions",
+        "description": "Design and develop custom AI solutions that perfectly match your unique business requirements and processes.",
+        "outcome": "Bespoke AI systems that deliver competitive advantages unique to your business",
+        "badge": "Enterprise",
+        "capabilities": [
+          "Custom AI model development and training",
+          "Proprietary algorithm design and optimization",
+          "Integration with legacy systems and databases",
+          "Custom user interfaces and dashboards",
+          "Intellectual property development and protection"
+        ],
+        "consultationFocus": "custom AI development and innovation"
+      },
+      "service6": {
+        "id": "strategic-advisory",
+        "title": "Strategic AI Advisory",
+        "subtitle": "Executive Guidance",
+        "description": "Ongoing strategic advisory services for leadership teams navigating AI transformation and competitive positioning.",
+        "outcome": "Clear strategic direction with executive-level insights for AI-driven competitive advantage",
+        "badge": "Executive",
+        "capabilities": [
+          "Board-level AI strategy presentations and guidance",
+          "Competitive intelligence and market positioning",
+          "Merger and acquisition AI due diligence",
+          "AI ethics and governance framework development",
+          "Long-term strategic roadmap and vision alignment"
+        ],
+        "consultationFocus": "executive strategy and competitive positioning"
+      }
+    },
     "footer": {
       "copyright": "© {year} Flowko. All rights reserved.",
       "contact": {

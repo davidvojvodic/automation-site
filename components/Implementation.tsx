@@ -3,44 +3,52 @@
 import { cn } from "@/lib/utils";
 import Section from "./Section";
 import Heading from "./Heading";
-import { useTranslations } from "next-intl";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Search, ClipboardList, Settings, Rocket } from "lucide-react";
+import { Search, Target, Settings, TrendingUp, Shield, CheckCircle } from "lucide-react";
 
 interface ImplementationProps {
   className?: string;
 }
 
 function Implementation({ className }: ImplementationProps) {
-  const t = useTranslations("HomePage.implementation");
-
   const steps = [
     {
       id: 1,
-      key: "step1",
       icon: Search,
+      title: "Discovery & Risk Assessment",
+      status: "Phase 1",
+      description: "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities, map existing processes, and create a detailed assessment before any implementation begins.",
+      outcome: "Clear roadmap with identified opportunities and protected investments"
     },
     {
       id: 2,
-      key: "step2",
-      icon: ClipboardList,
+      icon: Target,
+      title: "Proof of Concept & Quick Wins",
+      status: "Phase 2", 
+      description: "Build and test a small, low-risk automation in a controlled environment with minimal disruption. We deliver immediate, measurable value while proving the concept works for your specific business context.",
+      outcome: "Working demonstration with measurable time and cost savings"
     },
     {
       id: 3,
-      key: "step3",
       icon: Settings,
+      title: "Controlled Implementation & Training",
+      status: "Phase 3",
+      description: "Gradual rollout of proven automations with continuous monitoring and comprehensive team training. Your team becomes confident and comfortable with the new systems through our phased approach with fallback plans.",
+      outcome: "Fully operational automation system with confident, trained team"
     },
     {
       id: 4,
-      key: "step4",
-      icon: Rocket,
+      icon: TrendingUp,
+      title: "Scale & Continuous Optimization",
+      status: "Phase 4",
+      description: "Expand successful automations across your business with ongoing monitoring and support. Built on a proven foundation, your automation infrastructure scales with your growth and delivers continuous value.",
+      outcome: "Scalable automation system that grows with your business"
     },
   ];
 
@@ -48,124 +56,95 @@ function Implementation({ className }: ImplementationProps) {
     <Section crosses className={cn(className)} id="process">
       <div className="container">
         <div className="animate-process-heading">
-          <Heading tag={t("tag")} title={t("title")} text={t("subtitle")} />
-        </div>
-
-        {/* Desktop Timeline */}
-        <div className="hidden lg:block max-w-6xl mx-auto relative">
-          {/* Simple gradient connecting line */}
-          <div
-            className="absolute top-36 left-0 right-0 h-1 bg-gradient-to-r from-color-1 via-color-2 to-color-3 rounded-full z-0 animate-process-line"
-            style={{ animationDelay: "300ms" }}
+          <Heading 
+            tag="Proven Process" 
+            title="Safe, Step-by-Step Automation Implementation" 
+            text="Risk-managed approach that protects your business while delivering measurable results at every phase" 
           />
-
-          {/* Steps Grid */}
-          <div className="grid grid-cols-4 gap-8 relative">
-            {steps.map((step, index) => (
-              <div
-                key={step.id}
-                className="relative animate-process-step"
-                style={{ animationDelay: `${500 + index * 200}ms` }}
-              >
-                {/* Step Card */}
-                <Card className="border-n-6 bg-n-8 hover:bg-n-7 hover:border-color-1/30 hover:scale-105 transition-all duration-500 group relative">
-                  {/* Enhanced hover */}
-                  {/* Step Number Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-color-1/10 border border-color-1/30 text-color-1 text-xs font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm group-hover:bg-color-1/20 group-hover:border-color-1/50 transition-all duration-300">
-                      {t("stepLabel")} {step.id}
-                    </div>
-                  </div>
-
-                  <CardHeader className="text-center pb-3">
-                    <div className="flex justify-center items-center gap-2 mb-3">
-                      <step.icon className="w-8 h-8 text-color-1 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
-                    </div>
-                    <div className="flex justify-center gap-2 mb-3">
-                      <Badge
-                        variant="secondary"
-                        className="text-xs bg-color-1/20 text-color-1 border-color-1/30"
-                      >
-                        {t(`${step.key}.status`)}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-n-1 group-hover:text-color-1 transition-colors">
-                      {t(`${step.key}.title`)}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-n-3 text-center text-sm">
-                      {t(`${step.key}.description`)}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Mobile Timeline - Vertical with animations */}
-        <div className="lg:hidden relative max-w-md mx-auto">
-          {/* Animated vertical line */}
-          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-color-1 via-color-2 to-color-3 rounded-full overflow-hidden">
-            <div className="absolute inset-0 w-1 bg-gradient-to-b from-color-1 to-color-2 rounded-full animate-pulse" />
-          </div>
-
-          <div className="space-y-8">
-            {steps.map((step) => (
-              <div key={step.id} className="relative flex items-start">
-                {/* Mobile timeline circle */}
-                <div className="absolute left-6 -translate-x-1/2 z-10">
-                  <div className="relative">
-                    <div className="absolute inset-0 w-10 h-10 bg-gradient-to-r from-color-1 to-color-2 rounded-full animate-ping opacity-30" />
-                    <div className="relative w-10 h-10 bg-gradient-to-br from-color-1 to-color-2 rounded-full flex items-center justify-center border-3 border-n-8 shadow-lg">
-                      <span className="text-white font-bold text-sm">
-                        {step.id}
-                      </span>
+        {/* Implementation Process Accordion */}
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {steps.map((step, index) => (
+              <AccordionItem
+                key={step.id}
+                value={`phase-${step.id}`}
+                className={cn(
+                  "border border-n-6 bg-n-8 rounded-2xl overflow-hidden",
+                  "hover:border-color-1/30 transition-all duration-300",
+                  "animate-process-step"
+                )}
+                style={{ animationDelay: `${300 + index * 150}ms` }}
+              >
+                <AccordionTrigger className="px-6 py-6 hover:no-underline group">
+                  <div className="flex items-center gap-4 text-left w-full">
+                    {/* Phase Icon and Number */}
+                    <div className="flex items-center gap-4">
+                      <div className="relative">
+                        <div className="w-12 h-12 bg-gradient-to-br from-color-1 to-color-2 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-lg">
+                            {step.id}
+                          </span>
+                        </div>
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-n-8 rounded-full flex items-center justify-center border-2 border-color-1">
+                          <step.icon className="w-3 h-3 text-color-1" />
+                        </div>
+                      </div>
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-n-8 rounded-full flex items-center justify-center border-2 border-color-1">
-                      <step.icon className="w-3 h-3 text-color-1" />
-                    </div>
-                  </div>
-                </div>
 
-                {/* Mobile content card */}
-                <div className="ml-12 flex-1">
-                  <Card className="border-n-6 bg-n-8/80 backdrop-blur-sm hover:bg-n-8/90 transition-all duration-300">
-                    <CardHeader className="pb-3">
-                      <div className="flex items-center gap-2 mb-2">
+                    {/* Phase Title and Status */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-1">
                         <Badge
                           variant="secondary"
                           className="bg-color-1/20 text-color-1 border-color-1/30 text-xs"
                         >
-                          {t(`${step.key}.status`)}
+                          {step.status}
                         </Badge>
                       </div>
-                      <CardTitle className="text-n-1">
-                        {t(`${step.key}.title`)}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-n-3 leading-relaxed">
-                        {t(`${step.key}.description`)}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+                      <h3 className="text-xl font-bold text-n-1 group-hover:text-color-1 transition-colors">
+                        {step.title}
+                      </h3>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+
+                <AccordionContent className="px-6 pb-6">
+                  <div className="space-y-4 ml-16">
+                    {/* Description */}
+                    <p className="text-n-3 text-left leading-relaxed">
+                      {step.description}
+                    </p>
+                    
+                    {/* Phase Outcome */}
+                    <div className="bg-n-7 rounded-lg p-4 border-l-4 border-color-1">
+                      <div className="flex items-start gap-2 mb-2">
+                        <CheckCircle className="w-4 h-4 text-color-1 flex-shrink-0 mt-0.5" />
+                        <span className="text-sm font-semibold text-color-1 uppercase tracking-wide">
+                          Phase Outcome
+                        </span>
+                      </div>
+                      <p className="text-base font-medium text-n-1 leading-relaxed">
+                        {step.outcome}
+                      </p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
 
         {/* Call to Action */}
         <div
-          className="flex justify-center mt-16 animate-process-cta"
+          className="flex justify-center mt-12 animate-process-cta"
           style={{ animationDelay: "1300ms" }}
         >
           <div className="text-center">
-            <div className="tagline mb-4">{t("ctaTitle")}</div>
+            <div className="tagline mb-3">Technical Implementation Excellence</div>
             <button className="button hover:scale-105 transition-transform duration-300">
-              {t("ctaButton")}
+              View Technical Capabilities
             </button>
           </div>
         </div>

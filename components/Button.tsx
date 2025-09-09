@@ -22,13 +22,13 @@ export function Button({
   disabled,
 }: ButtonProps) {
   const classes = cn(
-    "button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1",
+    "button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 bg-transparent",
     px ? px : "px-7",
     white ? "text-n-8" : "text-n-1",
     disabled && "opacity-50 cursor-not-allowed hover:text-current",
     className
   );
-  const spanClasses = "relative z-10";
+  const spanClasses = "relative z-10 flex items-center justify-center gap-2";
 
   if (href) {
     return (
