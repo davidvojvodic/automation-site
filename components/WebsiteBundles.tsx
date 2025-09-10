@@ -19,7 +19,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       description: "Professional web presence with essential automation workflows to streamline customer interactions and lead management for service-based businesses.",
       outcome: "Professional digital presence with automated lead capture",
       idealFor: "Service businesses, consultants, agencies, professional services",
-      investmentLevel: "Starter Package",
       capabilities: [
         "Professional responsive website (5-8 pages)",
         "Contact form automation with instant notifications",
@@ -39,7 +38,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       description: "Complete online store with intelligent automation systems for inventory, orders, and customer lifecycle management to maximize sales and retention.",
       outcome: "Automated e-commerce operations with intelligent marketing",
       idealFor: "Product businesses, online retailers, physical stores going digital",
-      investmentLevel: "Growth Package",
       capabilities: [
         "Full e-commerce store with payment processing",
         "Automated inventory management and low-stock alerts",
@@ -59,7 +57,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       description: "Bespoke web application development with sophisticated automation infrastructure for complex business operations and multi-system integrations.",
       outcome: "Custom digital ecosystem with advanced automation orchestration",
       idealFor: "SaaS startups, tech companies, businesses with complex operations",
-      investmentLevel: "Premium Package",
       capabilities: [
         "Custom web application development with modern tech stack",
         "User authentication, roles, and permission systems",
@@ -180,22 +177,14 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                   </div>
                 </div>
 
-                {/* Investment Section */}
-                <div className="price-section mb-6">
-                  <div className="mb-2">
-                    <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
-                      Ideal For
-                    </div>
-                    <p className="text-sm text-n-2 mb-3">
-                      {solution.idealFor}
-                    </p>
-                    <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
-                      Package Level
-                    </div>
-                    <span className="text-base font-bold text-color-1">
-                      {solution.investmentLevel}
-                    </span>
+                {/* Target Audience */}
+                <div className="mb-6">
+                  <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
+                    Ideal For
                   </div>
+                  <p className="text-sm text-n-2">
+                    {solution.idealFor}
+                  </p>
                 </div>
 
                 {/* Key Capabilities */}
@@ -218,7 +207,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                     )}
                   </div>
                 </div>
-
 
                 {/* Success Outcome */}
                 <div className="mt-auto">

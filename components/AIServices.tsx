@@ -33,7 +33,7 @@ type IconName = keyof typeof iconMap;
 
 const AIServices = ({ className }: AIServicesProps) => {
 
-  // Flowko Automation Systems from Services.tsx
+  // Flowko Automation Systems - Standard services first, then Premium/Enterprise
   const automationSystems = [
     {
       id: "lead-generation",
@@ -74,42 +74,22 @@ const AIServices = ({ className }: AIServicesProps) => {
       popular: false,
     },
     {
-      id: "ai-content-systems",
-      icon: "Target" as IconName,
-      title: "AI Content & UGC Systems",
-      subtitle: "OpenAI + Character-Consistent Branding",
-      description: "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
-      outcome: "Brand-consistent content at scale",
-      capabilities: [
-        "AI-driven content creation with brand algorithms",
-        "Multi-format content optimization workflows",
-        "Automated content calendar management",
-        "SEO optimization and keyword integration",
-        "Multi-channel distribution automation"
-      ],
-      badge: "Content AI",
-      techStack: ["n8n", "OpenAI GPT-4", "DALL-E 3", "Buffer API"],
-      applications: ["Content creation", "Social media", "SEO optimization", "Brand management"],
-      popular: false,
-    },
-    {
-      id: "conversion-optimization",
+      id: "hr-administrative",
       icon: "Bot" as IconName,
-      title: "Conversion Optimization",
-      subtitle: "Predictive Scoring + AI Nurturing",
-      description: "Advanced conversion optimization using predictive lead scoring and AI-powered nurture sequences. Our machine learning models identify high-value prospects and automatically nurture them with personalized multi-channel campaigns.",
-      outcome: "Higher conversion rates",
+      title: "HR & Administrative Automation",
+      subtitle: "Employee Operations + Document Management",
+      description: "Streamline employee onboarding, document workflows, and administrative processes with intelligent automation. Complete HR operations from hiring to offboarding with automated compliance tracking and seamless integration.",
+      outcome: "Streamlined HR operations and compliance",
       capabilities: [
-        "Predictive scoring algorithms for qualification",
-        "AI-driven nurture sequence optimization",
-        "Dynamic messaging adaptation workflows",
-        "Behavioral pattern analysis automation",
-        "Multi-channel campaign trigger systems"
+        "Automated employee onboarding and offboarding workflows",
+        "Document management and approval automation",
+        "Time tracking and attendance system integration",
+        "Performance review and evaluation workflows",
+        "Compliance monitoring and reporting automation"
       ],
-      badge: "Conversion",
-      techStack: ["n8n", "TensorFlow", "Mixpanel", "Mailchimp"],
-      applications: ["Lead nurturing", "Email campaigns", "Behavioral tracking", "A/B testing"],
-      isPremium: true,
+      badge: "Operations",
+      techStack: ["n8n", "Google Workspace", "BambooHR", "Slack"],
+      applications: ["Employee onboarding", "Document workflows", "Time tracking", "Compliance management"],
       popular: false,
     },
     {
@@ -133,22 +113,42 @@ const AIServices = ({ className }: AIServicesProps) => {
       popular: false,
     },
     {
-      id: "digital-transformation",
-      icon: "Zap" as IconName,
-      title: "Complete Digital Transformation",
-      subtitle: "End-to-End Automation + Custom Development",
-      description: "Complete digital ecosystem transformation with custom web applications, real-time analytics dashboards, and integrated AI workflows. End-to-end automation connecting all business systems with predictive analytics and ML forecasting.",
-      outcome: "Complete digital ecosystem",
+      id: "ai-content-systems",
+      icon: "Target" as IconName,
+      title: "AI Content & UGC Systems",
+      subtitle: "OpenAI + Character-Consistent Branding",
+      description: "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
+      outcome: "Brand-consistent content at scale",
       capabilities: [
-        "Custom dashboard development and analytics",
-        "Comprehensive workflow automation architecture",
-        "Intelligent system integration protocols",
-        "Machine learning forecasting systems",
-        "Performance monitoring and optimization"
+        "AI-driven content creation with brand algorithms",
+        "Multi-format content optimization workflows",
+        "Automated content calendar management",
+        "SEO optimization and keyword integration",
+        "Multi-channel distribution automation"
+      ],
+      badge: "Content AI",
+      techStack: ["n8n", "OpenAI GPT-4", "DALL-E 3", "Buffer API"],
+      applications: ["Content creation", "Social media", "SEO optimization", "Brand management"],
+      isPremium: true,
+      popular: false,
+    },
+    {
+      id: "automation-dashboard",
+      icon: "Zap" as IconName,
+      title: "Business Automation Command Center",
+      subtitle: "Custom Dashboard + Complete Workflow Control",
+      description: "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
+      outcome: "Complete automation visibility and control",
+      capabilities: [
+        "Custom dashboard development with real-time monitoring",
+        "Centralized control panel for all n8n automations",
+        "Business performance analytics and KPI tracking",
+        "Automated workflow status and health monitoring",
+        "Custom reporting and business intelligence integration"
       ],
       badge: "Enterprise",
-      techStack: ["n8n", "React", "Python", "AWS", "Docker"],
-      applications: ["Custom apps", "Analytics dashboards", "System integration", "ML forecasting"],
+      techStack: ["n8n", "React/Next.js", "Node.js", "Database", "APIs"],
+      applications: ["Automation monitoring", "Business analytics", "Workflow control", "Performance tracking"],
       isEnterprise: true,
       popular: false,
     },

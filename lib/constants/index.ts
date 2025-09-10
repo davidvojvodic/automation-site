@@ -39,17 +39,17 @@ export const navigation = [
   {
     id: "0",
     title: "solutions",
-    url: "#services",
+    url: "#ai-services",
   },
   {
     id: "1",
-    title: "process",
-    url: "#process",
+    title: "WebsiteBundles",
+    url: "#bundles",
   },
   {
     id: "2",
-    title: "WebsiteBundles",
-    url: "#bundles",
+    title: "process",
+    url: "#process",
   },
   {
     id: "3",
