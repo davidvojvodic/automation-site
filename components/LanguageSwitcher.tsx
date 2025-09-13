@@ -4,6 +4,7 @@ import { useRouter, usePathname } from "@/i18n/routing";
 import { locales } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
+import ReactCountryFlag from "react-country-flag";
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -20,6 +21,13 @@ const languageFullNames: Record<string, string> = {
   en: "English",
   sl: "Slovenščina",
   // hr: "Hrvatski", // Temporarily disabled
+};
+
+// ISO 3166-1 alpha-2 country codes for flags
+const languageCountryCodes: Record<string, string> = {
+  en: "GB", // Great Britain flag for English
+  sl: "SI", // Slovenia flag
+  // hr: "HR", // Croatia flag - Temporarily disabled
 };
 
 export function LanguageSwitcher({ className, locale }: LanguageSwitcherProps) {
@@ -51,19 +59,15 @@ export function LanguageSwitcher({ className, locale }: LanguageSwitcherProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-n-1/50 hover:text-n-1 transition-colors font-code text-xs font-semibold uppercase"
       >
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          strokeWidth="2"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-          />
-        </svg>
+        <ReactCountryFlag
+          countryCode={languageCountryCodes[locale]}
+          svg
+          style={{
+            width: '1.25em',
+            height: '1.25em',
+          }}
+          title={languageFullNames[locale]}
+        />
         {languageNames[locale]}
         <svg
           className={cn("w-3 h-3 transition-transform", isOpen && "rotate-180")}
@@ -77,16 +81,25 @@ export function LanguageSwitcher({ className, locale }: LanguageSwitcherProps) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-40 bg-n-8 border border-n-6 rounded-lg shadow-lg overflow-hidden">
+        <div className="absolute right-0 mt-2 w-48 bg-n-8 border border-n-6 rounded-lg shadow-lg overflow-hidden">
           {locales.map((lng) => (
             <button
               key={lng}
               onClick={() => handleLanguageChange(lng)}
               className={cn(
-                "w-full px-4 py-2 text-left text-sm hover:bg-n-7 transition-colors",
+                "w-full px-4 py-2 text-left text-sm hover:bg-n-7 transition-colors flex items-center gap-3",
                 locale === lng ? "text-n-1 bg-n-7" : "text-n-3"
               )}
             >
+              <ReactCountryFlag
+                countryCode={languageCountryCodes[lng]}
+                svg
+                style={{
+                  width: '1.25em',
+                  height: '1.25em',
+                }}
+                title={languageFullNames[lng]}
+              />
               {languageFullNames[lng]}
             </button>
           ))}

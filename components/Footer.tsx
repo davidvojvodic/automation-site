@@ -41,8 +41,6 @@ const Footer = () => {
             >
               {t("contact.email")}
             </a>
-            <span className="hidden sm:block text-white">•</span>
-            <span className="caption">{t("contact.location")}</span>
           </div>
         </div>
 

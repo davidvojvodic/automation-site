@@ -54,15 +54,14 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       icon: Code,
       title: "Dominator Bundle",
       subtitle: "Custom Web App + Advanced Automation",
-      description: "Bespoke web application development with sophisticated automation infrastructure for complex business operations and multi-system integrations.",
-      outcome: "Custom digital ecosystem with advanced automation orchestration",
+      description: "Enterprise-grade web application development with custom automation architecture. Every project is uniquely scoped based on your technical requirements and business objectives through detailed consultation.",
+      outcome: "Tailored digital ecosystem designed for your specific business model",
       idealFor: "SaaS startups, tech companies, businesses with complex operations",
       capabilities: [
-        "Custom web application development with modern tech stack",
-        "User authentication, roles, and permission systems",
+        "Custom web application development tailored to your requirements",
+        "Scalable user authentication, roles, and permission systems",
         "Multi-system workflow orchestration and API integrations",
-        "Advanced analytics dashboards with real-time data",
-        "Database design and migration automation",
+        "Enterprise-grade analytics dashboards with real-time data",
         "Scalable architecture with monitoring and alerting"
       ],
       badge: "Premium",
@@ -76,8 +75,8 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       <div className="container relative z-2">
         {/* Header */}
         <div className="animate-bundle-heading">
-          <Heading 
-            tag="Website Development + Automation" 
+          <Heading
+            tag="Web Development + Automation"
             title="Complete Digital Solutions" 
             text="Professional web development combined with intelligent automation systems to accelerate business growth and operational efficiency" 
           />

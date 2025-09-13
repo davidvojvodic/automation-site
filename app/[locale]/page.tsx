@@ -1,5 +1,5 @@
 import AIServices from "@/components/AIServices";
-import Benefits from "@/components/Benefits";
+import BenefitsBanner from "@/components/BenefitsBanner";
 import Collaboration from "@/components/Collaboration";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,7 +25,7 @@ export default async function Home({
         <AIServices />
         <WebsiteBundles />
         <Implementation />
-        <Benefits />
+        <BenefitsBanner />
         {/* <Pricing /> */}
         <Contact />
         <Footer />

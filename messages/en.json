@@ -138,59 +138,30 @@
     },
     "benefits": {
       "title": "Transform Your Business Operations",
+      "subtitle": "Save 20+ hours weekly with intelligent automation that works while you sleep",
       "benefit1": {
-        "title": "Save Time Weekly",
-        "description": "Automate routine tasks and focus on what matters most.",
-        "points": [
-          "Automated customer communication",
-          "Intelligent document processing",
-          "Focus on strategic growth activities"
-        ]
+        "title": "Save 20+ Hours Weekly",
+        "description": "Automate routine tasks so you can focus on what truly drives growth"
       },
       "benefit2": {
-        "title": "Effortless Business Growth",
-        "description": "Scale operations automatically as demand increases.",
-        "points": [
-          "AI chatbots handle customer inquiries",
-          "Multi-channel automation",
-          "Automatic capacity scaling"
-        ]
+        "title": "Scale Without Headaches",
+        "description": "Handle 10x more customers with the same team size"
       },
       "benefit3": {
-        "title": "Eliminate Errors",
-        "description": "Perfect consistency in every process, every time.",
-        "points": [
-          "No mistakes in customer orders or invoices",
-          "Automatic checks before sending anything",
-          "Complete record of all business activities"
-        ]
+        "title": "Zero Human Errors",
+        "description": "Perfect consistency in every process, every single time"
       },
       "benefit4": {
-        "title": "Lightning-Fast Responses",
-        "description": "Respond to customers instantly, 24/7.",
-        "points": [
-          "Instant quote generation",
-          "24/7 automated support",
-          "Real-time notifications"
-        ]
+        "title": "24/7 Instant Responses",
+        "description": "Never miss a customer inquiry, even at 3 AM"
       },
       "benefit5": {
-        "title": "Maximize Revenue",
-        "description": "Capture every sale with automated follow-ups.",
-        "points": [
-          "Automated lead nurturing",
-          "Smart upselling workflows",
-          "Never miss a sales opportunity"
-        ]
+        "title": "ROI Within 30 Days",
+        "description": "Start saving money immediately with proven automation systems"
       },
       "benefit6": {
-        "title": "Stay Ahead of Competition",
-        "description": "Use AI insights to outperform competitors.",
-        "points": [
-          "Predictive analytics",
-          "Automated market intelligence",
-          "Data-driven optimization"
-        ]
+        "title": "Competitive Advantage",
+        "description": "AI insights that help you stay two steps ahead"
       }
     },
     "implementation": {
@@ -258,8 +229,8 @@
         "website": "Company Website",
         "industry": "Industry",
         "message": "How can we help you automate your business?",
-        "bundleInterest": "I'm interested in Website + Automation Bundles",
-        "bundleInterestDescription": "Get a complete digital solution with professional website + automation workflows",
+        "bundleInterest": "I'm interested in Complete Digital Solutions",
+        "bundleInterestDescription": "Custom web development + automation workflows tailored to your business",
         "firstNamePlaceholder": "Your first name",
         "lastNamePlaceholder": "Your last name",
         "emailPlaceholder": "your.email@company.com",
@@ -444,8 +415,7 @@
       "copyright": "© {year} Flowko. All rights reserved.",
       "contact": {
         "email": "info@flowko.io",
-        "location": "Murska Sobota, Slovenia",
-        "description": "AI automation solutions for European SMBs"
+        "description": "Intelligent business automation that works while you sleep"
       },
       "legal": {
         "privacy": "Privacy Policy",

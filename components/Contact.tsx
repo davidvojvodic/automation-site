@@ -364,7 +364,7 @@ export function Contact({ className }: ContactProps) {
                               <span>
                                 {locale === "sl"
                                   ? "Navedite približno število ur tedensko, ki jih porabite za administracijo"
-                                  : "Indicate roughly how many hours per week you spend on admin tasks}"}
+                                  : "Indicate roughly how many hours per week you spend on admin tasks"}
                               </span>
                             </li>
                           </ul>

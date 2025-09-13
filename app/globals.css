@@ -264,6 +264,37 @@
   opacity: 0;
 }
 
+/* Accordion Animations */
+@keyframes accordion-expand {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-collapse {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+[data-slot="accordion-content"][data-state="open"] {
+  animation: accordion-expand 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-slot="accordion-content"][data-state="closed"] {
+  animation: accordion-collapse 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 /* Contact Section Animations */
 @keyframes contact-header {
   from {

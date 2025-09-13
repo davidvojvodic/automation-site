@@ -10,45 +10,54 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Search, Target, Settings, TrendingUp, CheckCircle } from "lucide-react";
+import { Search, Target, Settings, TrendingUp, CheckCircle, Shield } from "lucide-react";
 
 interface ImplementationProps {
   className?: string;
 }
 
+interface Step {
+  id: number;
+  icon: any;
+  title: string;
+  status: string;
+  description: string;
+  outcome: string;
+}
+
 function Implementation({ className }: ImplementationProps) {
-  const steps = [
+  const steps: Step[] = [
     {
       id: 1,
       icon: Search,
       title: "Discovery & Risk Assessment",
       status: "Phase 1",
-      description: "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities, map existing processes, and create a detailed assessment before any implementation begins.",
+      description: "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities and assess risks before any implementation begins.",
       outcome: "Clear roadmap with identified opportunities and protected investments"
     },
     {
       id: 2,
       icon: Target,
-      title: "Proof of Concept & Quick Wins",
-      status: "Phase 2", 
-      description: "Build and test a small, low-risk automation in a controlled environment with minimal disruption. We deliver immediate, measurable value while proving the concept works for your specific business context.",
-      outcome: "Working demonstration with measurable time and cost savings"
+      title: "Strategic Planning & Architecture",
+      status: "Phase 2",
+      description: "Design the technical architecture and implementation strategy based on discovery findings. We create detailed blueprints with fallback plans before any development begins.",
+      outcome: "Technical architecture blueprint with defined success metrics"
     },
     {
       id: 3,
       icon: Settings,
-      title: "Controlled Implementation & Training",
+      title: "Controlled Implementation & Testing",
       status: "Phase 3",
-      description: "Gradual rollout of proven automations with continuous monitoring and comprehensive team training. Your team becomes confident and comfortable with the new systems through our phased approach with fallback plans.",
-      outcome: "Fully operational automation system with confident, trained team"
+      description: "Build and deploy automation systems in a controlled environment with comprehensive testing. We implement with continuous monitoring and rollback capabilities to ensure zero business disruption.",
+      outcome: "Fully functional automation systems validated through testing"
     },
     {
       id: 4,
       icon: TrendingUp,
-      title: "Scale & Continuous Optimization",
+      title: "Launch & Team Training",
       status: "Phase 4",
-      description: "Expand successful automations across your business with ongoing monitoring and support. Built on a proven foundation, your automation infrastructure scales with your growth and delivers continuous value.",
-      outcome: "Scalable automation system that grows with your business"
+      description: "Full system deployment with comprehensive team training and knowledge transfer. Your team becomes autonomous with the new automation systems through hands-on training and documentation.",
+      outcome: "Fully operational automation system with confident, trained team"
     },
   ];
 
@@ -56,10 +65,10 @@ function Implementation({ className }: ImplementationProps) {
     <Section crosses className={cn(className)} id="process">
       <div className="container">
         <div className="animate-process-heading">
-          <Heading 
-            tag="Proven Process" 
-            title="Safe, Step-by-Step Automation Implementation" 
-            text="Risk-managed approach that protects your business while delivering measurable results at every phase" 
+          <Heading
+            tag="Proven Process"
+            title="Our Delivery Process"
+            text="Systematic approach that ensures your automation projects deliver results without disrupting your business"
           />
         </div>
 
@@ -116,7 +125,7 @@ function Implementation({ className }: ImplementationProps) {
                     <p className="text-n-3 text-left leading-relaxed">
                       {step.description}
                     </p>
-                    
+
                     {/* Phase Outcome */}
                     <div className="bg-n-7 rounded-lg p-4 border-l-4 border-color-1">
                       <div className="flex items-start gap-2 mb-2">
@@ -136,18 +145,6 @@ function Implementation({ className }: ImplementationProps) {
           </Accordion>
         </div>
 
-        {/* Call to Action */}
-        <div
-          className="flex justify-center mt-12 animate-process-cta"
-          style={{ animationDelay: "1300ms" }}
-        >
-          <div className="text-center">
-            <div className="tagline mb-3">Technical Implementation Excellence</div>
-            <button className="button hover:scale-105 transition-transform duration-300">
-              View Technical Capabilities
-            </button>
-          </div>
-        </div>
       </div>
     </Section>
   );

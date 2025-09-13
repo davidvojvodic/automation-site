@@ -51,11 +51,6 @@ export const navigation = [
     title: "process",
     url: "#process",
   },
-  {
-    id: "3",
-    title: "benefits",
-    url: "#features",
-  },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
@@ -244,16 +239,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Save Time",
-    text: "Reclaim 15+ hours per week by automating repetitive tasks and manual processes that slow down your team.",
+    title: "Save 20+ Hours Weekly",
+    text: "Automate routine tasks so you can focus on what truly drives growth",
     backgroundUrl: "assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Scale Efficiently",
-    text: "Grow your business without proportionally increasing headcount through intelligent workflow automation.",
+    title: "Scale Without Headaches",
+    text: "Handle 10x more customers with the same team size",
     backgroundUrl: "assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -261,16 +256,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Reduce Errors",
-    text: "Eliminate human error with automated data transfers and consistent process execution across your organization.",
+    title: "Zero Human Errors",
+    text: "Perfect consistency in every process, every single time",
     backgroundUrl: "assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast Implementation",
-    text: "Get your automations up and running in 1-2 weeks with our sprint-style delivery approach.",
+    title: "24/7 Instant Responses",
+    text: "Never miss a customer inquiry, even at 3 AM",
     backgroundUrl: "assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -278,16 +273,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "ROI Focused",
-    text: "Every automation is designed with measurable time and cost savings, ensuring clear return on investment.",
+    title: "ROI Within 30 Days",
+    text: "Start saving money immediately with proven automation systems",
     backgroundUrl: "assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "24/7 Monitoring",
-    text: "Automated health checks and real-time alerts ensure your workflows run smoothly around the clock.",
+    title: "Competitive Advantage",
+    text: "AI insights that help you stay two steps ahead",
     backgroundUrl: "assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,

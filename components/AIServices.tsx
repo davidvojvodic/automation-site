@@ -2,9 +2,9 @@ import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import { 
-  Workflow, 
-  Bot, 
+import {
+  Workflow,
+  Bot,
   Target,
   Zap,
   TrendingUp,
@@ -30,9 +30,7 @@ const iconMap = {
 
 type IconName = keyof typeof iconMap;
 
-
 const AIServices = ({ className }: AIServicesProps) => {
-
   // Flowko Automation Systems - Standard services first, then Premium/Enterprise
   const automationSystems = [
     {
@@ -40,18 +38,24 @@ const AIServices = ({ className }: AIServicesProps) => {
       icon: "Search" as IconName,
       title: "Lead Generation Systems",
       subtitle: "Multi-Source Data + AI-Powered Prospecting",
-      description: "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows. Advanced targeting algorithms combined with intelligent contact sequencing for consistent business development.",
+      description:
+        "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows. Advanced targeting algorithms combined with intelligent contact sequencing for consistent business development.",
       outcome: "Consistent qualified prospects",
       capabilities: [
         "Multi-platform data aggregation and enrichment",
         "AI-powered prospect qualification scoring",
         "Personalized outreach campaign orchestration",
-        "Real-time lead scoring with behavioral triggers",
-        "Automated contact sequencing workflows"
+        "Contact enrichment with engagement signals",
+        "Automated contact sequencing workflows",
       ],
       badge: "Lead Gen",
       techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "HubSpot"],
-      applications: ["B2B prospecting", "Lead qualification", "Sales outreach", "CRM integration"],
+      applications: [
+        "B2B prospecting",
+        "Lead qualification",
+        "Sales outreach",
+        "CRM integration",
+      ],
       popular: true,
     },
     {
@@ -59,56 +63,74 @@ const AIServices = ({ className }: AIServicesProps) => {
       icon: "TrendingUp" as IconName,
       title: "Sales Process Automation",
       subtitle: "AI Proposals + CRM Integration",
-      description: "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows. Our system creates dynamic proposals and manages your entire sales pipeline automatically.",
+      description:
+        "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows. Our system creates dynamic proposals and manages your entire sales pipeline automatically.",
       outcome: "Streamlined sales pipeline",
       capabilities: [
         "Intelligent proposal generation with dynamic pricing",
         "Advanced lead scoring models with automation",
         "Automated follow-up orchestration workflows",
         "Sales asset generation and optimization",
-        "Seamless CRM integration and synchronization"
+        "Seamless CRM integration and synchronization",
       ],
       badge: "Sales AI",
       techStack: ["n8n", "Claude 3", "Salesforce API", "DocuSign"],
-      applications: ["Proposal automation", "Pipeline management", "CRM workflows", "Sales analytics"],
+      applications: [
+        "Proposal automation",
+        "Pipeline management",
+        "CRM workflows",
+        "Sales analytics",
+      ],
       popular: false,
     },
     {
-      id: "hr-administrative",
+      id: "recruitment-automation",
       icon: "Bot" as IconName,
-      title: "HR & Administrative Automation",
-      subtitle: "Employee Operations + Document Management",
-      description: "Streamline employee onboarding, document workflows, and administrative processes with intelligent automation. Complete HR operations from hiring to offboarding with automated compliance tracking and seamless integration.",
-      outcome: "Streamlined HR operations and compliance",
+      title: "Recruitment Automation",
+      subtitle: "AI-Powered Candidate Processing + ATS Integration",
+      description:
+        "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms. Streamline your entire recruitment pipeline from application to hire with intelligent automation.",
+      outcome: "Streamlined recruitment pipeline with reduced time-to-hire",
       capabilities: [
-        "Automated employee onboarding and offboarding workflows",
-        "Document management and approval automation",
-        "Time tracking and attendance system integration",
-        "Performance review and evaluation workflows",
-        "Compliance monitoring and reporting automation"
+        "AI-powered CV parsing and candidate data extraction",
+        "Automated candidate scoring and ranking algorithms",
+        "Multi-platform job posting automation (LinkedIn, Indeed, etc.)",
+        "Interview scheduling and calendar coordination workflows",
+        "Automated candidate communication and follow-up sequences",
       ],
-      badge: "Operations",
-      techStack: ["n8n", "Google Workspace", "BambooHR", "Slack"],
-      applications: ["Employee onboarding", "Document workflows", "Time tracking", "Compliance management"],
+      badge: "Recruitment",
+      techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "ATS Integration"],
+      applications: [
+        "CV processing automation",
+        "Candidate scoring systems",
+        "Interview scheduling",
+        "Multi-platform recruitment",
+      ],
       popular: false,
     },
     {
       id: "voice-ai-agents",
       icon: "Mic" as IconName,
       title: "Voice & AI Agent Systems",
-      subtitle: "ElevenLabs + 24/7 Multilingual Support",
-      description: "24/7 AI voice agents with 29-language support for customer service, appointment booking, and sales support. Our integration provides natural conversations that feel human while handling routine tasks automatically.",
+      subtitle: "AI-Powered + 24/7 Multilingual Support",
+      description:
+        "24/7 AI voice agents with 31+ language support for customer service, appointment booking, and sales support. Multi-platform integration provides natural conversations that feel human while handling routine tasks automatically.",
       outcome: "24/7 intelligent voice support",
       capabilities: [
         "Natural conversation processing with AI",
-        "29-language support with native accents",
+        "31+ language support with automatic detection",
         "Intelligent call routing and escalation",
         "Appointment scheduling automation workflows",
-        "CRM integration with conversation tracking"
+        "CRM integration with conversation tracking",
       ],
       badge: "Voice AI",
-      techStack: ["n8n", "ElevenLabs", "Whisper API", "Calendly"],
-      applications: ["Customer service", "Appointment booking", "Sales calls", "Support tickets"],
+      techStack: ["n8n", "Voice AI APIs", "Speech Recognition", "Calendly"],
+      applications: [
+        "Customer service",
+        "Appointment booking",
+        "Sales calls",
+        "Support tickets",
+      ],
       isPremium: true,
       popular: false,
     },
@@ -117,52 +139,63 @@ const AIServices = ({ className }: AIServicesProps) => {
       icon: "Target" as IconName,
       title: "AI Content & UGC Systems",
       subtitle: "OpenAI + Character-Consistent Branding",
-      description: "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
+      description:
+        "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
       outcome: "Brand-consistent content at scale",
       capabilities: [
         "AI-driven content creation with brand algorithms",
         "Multi-format content optimization workflows",
         "Automated content calendar management",
         "SEO optimization and keyword integration",
-        "Multi-channel distribution automation"
+        "Multi-channel distribution automation",
       ],
       badge: "Content AI",
       techStack: ["n8n", "OpenAI GPT-4", "DALL-E 3", "Buffer API"],
-      applications: ["Content creation", "Social media", "SEO optimization", "Brand management"],
+      applications: [
+        "Content creation",
+        "Social media",
+        "SEO optimization",
+        "Brand management",
+      ],
       isPremium: true,
       popular: false,
     },
     {
       id: "automation-dashboard",
       icon: "Zap" as IconName,
-      title: "Business Automation Command Center",
+      title: "Automation Intelligence Platform",
       subtitle: "Custom Dashboard + Complete Workflow Control",
-      description: "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
+      description:
+        "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
       outcome: "Complete automation visibility and control",
       capabilities: [
         "Custom dashboard development with real-time monitoring",
         "Centralized control panel for all n8n automations",
         "Business performance analytics and KPI tracking",
         "Automated workflow status and health monitoring",
-        "Custom reporting and business intelligence integration"
+        "Custom reporting and business intelligence integration",
       ],
       badge: "Enterprise",
       techStack: ["n8n", "React/Next.js", "Node.js", "Database", "APIs"],
-      applications: ["Automation monitoring", "Business analytics", "Workflow control", "Performance tracking"],
+      applications: [
+        "Automation monitoring",
+        "Business analytics",
+        "Workflow control",
+        "Performance tracking",
+      ],
       isEnterprise: true,
       popular: false,
     },
   ];
-
 
   return (
     <Section crosses className={cn("", className)} id="ai-services">
       <div className="container relative z-2">
         {/* Header */}
         <div className="animate-bundle-heading">
-          <Heading 
-            title="Technical Implementation Systems" 
-            text="Multi-platform automation architectures using open-source orchestration, AI language models, and voice synthesis technologies for workflow optimization" 
+          <Heading
+            title="Technical Implementation Systems"
+            text="Multi-platform automation architectures using open-source orchestration, AI language models, and voice synthesis technologies for workflow optimization"
           />
         </div>
 
@@ -197,143 +230,145 @@ const AIServices = ({ className }: AIServicesProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
           {automationSystems.map((system, index) => {
             const IconComponent = iconMap[system.icon];
-            
+
             return (
-            <div
-              key={system.id}
-              className={cn(
-                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
-                "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
-                "hover:-translate-y-1",
-                "transition-all duration-500 ease-out group",
-                "animate-bundle-card",
-                system.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
-                system.isPremium &&
-                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10",
-                system.isEnterprise &&
-                  "border-color-4/50 bg-gradient-to-br from-color-4/5 to-transparent hover:from-color-4/10"
-              )}
-              style={{ animationDelay: `${700 + index * 150}ms` }}
-            >
-              <div className="relative z-10 flex flex-col h-full">
-                {/* Header with Icon, Badge, and Title */}
-                <div className="mb-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-4">
+              <div
+                key={system.id}
+                className={cn(
+                  "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
+                  "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
+                  "hover:-translate-y-1",
+                  "transition-all duration-500 ease-out group",
+                  "animate-bundle-card",
+                  system.popular &&
+                    "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
+                  system.isPremium &&
+                    "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10",
+                  system.isEnterprise &&
+                    "border-color-4/50 bg-gradient-to-br from-color-4/5 to-transparent hover:from-color-4/10"
+                )}
+                style={{ animationDelay: `${700 + index * 150}ms` }}
+              >
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Header with Icon, Badge, and Title */}
+                  <div className="mb-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-4">
+                        <div
+                          className={cn(
+                            "w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
+                            system.isPremium && "bg-color-6/10",
+                            system.isEnterprise && "bg-color-4/10"
+                          )}
+                        >
+                          <IconComponent
+                            className={cn(
+                              "w-6 sm:w-7 h-6 sm:h-7 text-color-1",
+                              system.isPremium && "text-color-6",
+                              system.isEnterprise && "text-color-4"
+                            )}
+                          />
+                        </div>
+                      </div>
+
+                      {/* Badge */}
                       <div
                         className={cn(
-                          "w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                          system.isPremium && "bg-color-6/10",
-                          system.isEnterprise && "bg-color-4/10"
+                          "px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
+                          system.popular && "bg-color-1 text-n-8",
+                          system.isPremium && "bg-color-6 text-n-8",
+                          system.isEnterprise && "bg-color-4 text-n-8",
+                          !system.popular &&
+                            !system.isPremium &&
+                            !system.isEnterprise &&
+                            "bg-n-6 text-n-3"
                         )}
                       >
-                        <IconComponent className={cn(
-                          "w-6 sm:w-7 h-6 sm:h-7 text-color-1",
-                          system.isPremium && "text-color-6",
-                          system.isEnterprise && "text-color-4"
-                        )} />
+                        {system.badge}
                       </div>
                     </div>
 
-                    {/* Badge */}
-                    <div
-                      className={cn(
-                        "px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                        system.popular && "bg-color-1 text-n-8",
-                        system.isPremium && "bg-color-6 text-n-8",
-                        system.isEnterprise && "bg-color-4 text-n-8",
-                        !system.popular &&
-                          !system.isPremium &&
-                          !system.isEnterprise &&
-                          "bg-n-6 text-n-3"
-                      )}
-                    >
-                      {system.badge}
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold text-n-1 mb-2 group-hover:text-color-1 transition-colors duration-300">
+                        {system.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-color-1 font-medium mb-3">
+                        {system.subtitle}
+                      </p>
+                      <p className="text-sm text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
+                        {system.description}
+                      </p>
                     </div>
                   </div>
 
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-n-1 mb-2 group-hover:text-color-1 transition-colors duration-300">
-                      {system.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-color-1 font-medium mb-3">
-                      {system.subtitle}
-                    </p>
-                    <p className="text-sm text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
-                      {system.description}
-                    </p>
+                  {/* Key Capabilities */}
+                  <div className="mb-4 flex-1">
+                    <h4 className="text-xs font-bold text-n-1 uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <Workflow className="w-3 h-3 text-color-1" />
+                      Key Capabilities
+                    </h4>
+                    <div className="space-y-1">
+                      {system.capabilities.map(
+                        (capability: string, capIndex: number) => (
+                          <div
+                            key={capIndex}
+                            className="flex items-start gap-2 text-xs"
+                          >
+                            <div className="w-1.5 h-1.5 bg-color-1 rounded-full flex-shrink-0 mt-1.5"></div>
+                            <span className="text-n-2 leading-relaxed">
+                              {capability}
+                            </span>
+                          </div>
+                        )
+                      )}
+                    </div>
                   </div>
-                </div>
 
-
-                {/* Key Capabilities */}
-                <div className="mb-4 flex-1">
-                  <h4 className="text-xs font-bold text-n-1 uppercase tracking-wider mb-3 flex items-center gap-2">
-                    <Workflow className="w-3 h-3 text-color-1" />
-                    Key Capabilities
-                  </h4>
-                  <div className="space-y-1">
-                    {system.capabilities.map(
-                      (capability: string, capIndex: number) => (
-                        <div
-                          key={capIndex}
-                          className="flex items-start gap-2 text-xs"
-                        >
-                          <div className="w-1.5 h-1.5 bg-color-1 rounded-full flex-shrink-0 mt-1.5"></div>
-                          <span className="text-n-2 leading-relaxed">{capability}</span>
-                        </div>
-                      )
-                    )}
-                  </div>
-                </div>
-
-                {/* Implementation Outcome */}
-                <div className="mt-auto">
-                  <div
-                    className={cn(
-                      "p-3 rounded-lg border-l-4 bg-gradient-to-r",
-                      system.isPremium
-                        ? "border-color-6 from-color-6/10 to-transparent"
-                        : system.isEnterprise
-                        ? "border-color-4 from-color-4/10 to-transparent"
-                        : "border-color-1 from-color-1/10 to-transparent"
-                    )}
-                  >
-                    <p className="text-xs font-bold text-n-1 mb-1">
-                      System Outcome
-                    </p>
-                    <p
+                  {/* Implementation Outcome */}
+                  <div className="mt-auto">
+                    <div
                       className={cn(
-                        "text-sm font-bold",
+                        "p-3 rounded-lg border-l-4 bg-gradient-to-r",
                         system.isPremium
-                          ? "text-color-6"
+                          ? "border-color-6 from-color-6/10 to-transparent"
                           : system.isEnterprise
-                          ? "text-color-4"
-                          : "text-color-1"
+                          ? "border-color-4 from-color-4/10 to-transparent"
+                          : "border-color-1 from-color-1/10 to-transparent"
                       )}
                     >
-                      {system.outcome}
-                    </p>
+                      <p className="text-xs font-bold text-n-1 mb-1">
+                        System Outcome
+                      </p>
+                      <p
+                        className={cn(
+                          "text-sm font-bold",
+                          system.isPremium
+                            ? "text-color-6"
+                            : system.isEnterprise
+                            ? "text-color-4"
+                            : "text-color-1"
+                        )}
+                      >
+                        {system.outcome}
+                      </p>
+                    </div>
                   </div>
                 </div>
+
+                {/* Background Decoration */}
+                <div
+                  className={cn(
+                    "absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-all duration-500",
+                    system.isPremium
+                      ? "from-color-6/10 group-hover:from-color-6/20"
+                      : system.isEnterprise
+                      ? "from-color-4/10 group-hover:from-color-4/20"
+                      : "from-color-1/10 group-hover:from-color-1/20"
+                  )}
+                ></div>
               </div>
-
-              {/* Background Decoration */}
-              <div
-                className={cn(
-                  "absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-all duration-500",
-                  system.isPremium
-                    ? "from-color-6/10 group-hover:from-color-6/20"
-                    : system.isEnterprise
-                    ? "from-color-4/10 group-hover:from-color-4/20"
-                    : "from-color-1/10 group-hover:from-color-1/20"
-                )}
-              ></div>
-
-            </div>
-          );
-        })}
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}
@@ -343,11 +378,13 @@ const AIServices = ({ className }: AIServicesProps) => {
         >
           <div className="max-w-2xl mx-auto">
             <p className="text-base sm:text-lg text-n-4 mb-6">
-              Explore automation architecture implementations and workflow orchestration methodologies. Technical consultation available for custom integration requirements.
+              Explore automation architecture implementations and workflow
+              orchestration methodologies. Technical consultation available for
+              custom integration requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="px-8 text-base" href="#contact">
-                Technical Consultation
+                Get Started
               </Button>
             </div>
           </div>

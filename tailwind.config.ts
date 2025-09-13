@@ -81,6 +81,20 @@ const config = {
         "benefit-card-5": "url(/assets/benefits/card-5.svg)",
         "benefit-card-6": "url(/assets/benefits/card-6.svg)",
       },
+      keyframes: {
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-in-from-top": {
+          from: { transform: "translateY(-0.5rem)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in 0.3s ease-out",
+        "slide-in-from-top-2": "slide-in-from-top 0.3s ease-out",
+      },
     },
   },
   plugins: [],
