@@ -16,7 +16,6 @@ import {
   Zap,
   DollarSign,
   Shield,
-  Check,
 } from "lucide-react";
 
 interface BenefitItem {
