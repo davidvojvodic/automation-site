@@ -165,35 +165,40 @@
       }
     },
     "implementation": {
-      "title": "Your Path to Business Automation",
-      "subtitle": "Transform chaos into streamlined efficiency in just 4 proven steps",
-      "tag": "Start saving time today",
-      "stepLabel": "Step",
-      "ctaTitle": "Ready to Reclaim 20+ Hours Weekly?",
-      "ctaButton": "Get Your Free ROI Analysis",
-      "step1": {
-        "title": "Free Discovery Call",
-        "description": "We analyze your current workflows and identify the biggest automation opportunities for immediate time and cost savings.",
-        "duration": "30 minutes",
-        "status": "Week 1"
+      "tag": "Proven Process",
+      "title": "Our Delivery Process",
+      "description": "Systematic approach that ensures your automation projects deliver results without disrupting your business",
+      "subtitle": "Systematic approach that ensures your automation projects deliver results without disrupting your business",
+      "phase1": {
+        "status": "Phase 1",
+        "title": "Discovery & Risk Assessment",
+        "description": "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities and assess risks before any implementation begins.",
+        "outcome": "Clear roadmap with identified opportunities and protected investments"
       },
-      "step2": {
-        "title": "Custom ROI Blueprint",
-        "description": "Get your personalized automation roadmap with guaranteed time savings, cost reductions, and exact ROI projections.",
-        "duration": "3-5 days",
-        "status": "Week 1-2"
+      "phase2": {
+        "status": "Phase 2",
+        "title": "Strategic Planning & Architecture",
+        "description": "Design the technical architecture and implementation strategy based on discovery findings. We create detailed blueprints with fallback plans before any development begins.",
+        "outcome": "Technical architecture blueprint with defined success metrics"
       },
-      "step3": {
-        "title": "Build & Go Live",
-        "description": "Watch your automations come to life with weekly demos and real-time progress tracking until everything runs flawlessly.",
-        "duration": "2-4 weeks",
-        "status": "Week 2-5"
+      "phase3": {
+        "status": "Phase 3",
+        "title": "Controlled Implementation & Testing",
+        "description": "Build and deploy automation systems in a controlled environment with comprehensive testing. We implement with continuous monitoring and rollback capabilities to ensure zero business disruption.",
+        "outcome": "Fully functional automation systems validated through testing"
       },
-      "step4": {
-        "title": "Launch & Scale",
-        "description": "Your team becomes automation-ready with complete training, documentation, and ongoing support for maximum impact.",
-        "duration": "3-5 days",
-        "status": "Week 5-6"
+      "phase4": {
+        "status": "Phase 4",
+        "title": "Launch & Team Training",
+        "description": "Full system deployment with comprehensive team training and knowledge transfer. Your team becomes autonomous with the new automation systems through hands-on training and documentation.",
+        "outcome": "Fully operational automation system with confident, trained team"
+      },
+      "labels": {
+        "phase1": "Phase 1",
+        "phase2": "Phase 2",
+        "phase3": "Phase 3",
+        "phase4": "Phase 4",
+        "phaseOutcome": "Phase Outcome"
       }
     },
     "collaboration": {
@@ -217,6 +222,12 @@
     },
     "companyLogos": {
       "tagline": "Automate workflows across your favorite business apps"
+    },
+    "benefitsBanner": {
+      "save20Hours": "Save 20+ Hours Weekly",
+      "scaleWithoutHiring": "Scale Without Hiring",
+      "accuracy": "99.9% Accuracy",
+      "operation24x7": "24/7 Operation"
     },
     "contact": {
       "title": "Start Your Automation Journey",
@@ -299,116 +310,164 @@
         "optional": "Optional"
       }
     },
-    "aiServices": {
-      "tag": "Strategic Consulting",
-      "title": "AI Strategy & Implementation Consulting",
-      "subtitle": "Transform your business with expert AI strategy development and custom implementation guidance.",
-      "approach": {
-        "implementation": "Strategic Planning",
-        "results": "Implementation Roadmap",
-        "partnership": "Ongoing Support"
+    "websiteBundles": {
+      "tag": "Web Development + Automation",
+      "title": "Complete Digital Solutions",
+      "subtitle": "Professional web development combined with intelligent automation systems to accelerate business growth and operational efficiency",
+      "valueProps": {
+        "modernWeb": "Modern Web Development",
+        "smartAutomation": "Smart Automation Integration",
+        "endToEnd": "End-to-End Solutions"
       },
-      "capabilities": "Consulting Areas",
-      "cta": "Discuss Your Strategy",
-      "ctaCustom": "Get Strategy Assessment",
-      "bottomText": "Every successful AI transformation starts with a clear strategy and implementation roadmap tailored to your business.",
-      "bottomCtaPrimary": "Schedule Strategy Session",
-      "bottomCtaSecondary": "Download Strategy Guide",
-      "service1": {
-        "id": "ai-readiness-assessment",
-        "title": "AI Readiness Assessment",
-        "subtitle": "Strategic Foundation",
-        "description": "Comprehensive evaluation of your current business processes, technology stack, and team readiness for AI implementation.",
-        "outcome": "Clear AI implementation roadmap with prioritized opportunities and realistic timelines",
-        "badge": "Start Here",
-        "capabilities": [
-          "Current state analysis and gap identification",
-          "AI opportunity assessment across all business functions",
-          "Technology readiness evaluation and recommendations",
-          "Team skills assessment and training roadmap",
-          "ROI projections and success metrics definition"
-        ],
-        "consultationFocus": "AI readiness and strategy development"
-      },
-      "service2": {
-        "id": "implementation-planning",
-        "title": "Implementation Planning",
-        "subtitle": "Tactical Execution",
-        "description": "Detailed project planning and phased implementation strategy for your AI transformation initiatives.",
-        "outcome": "Step-by-step implementation plan with clear milestones, budgets, and success metrics",
-        "badge": "Popular",
-        "capabilities": [
-          "Phased implementation roadmap development",
-          "Technology vendor evaluation and selection",
-          "Budget planning and resource allocation",
-          "Risk assessment and mitigation strategies",
-          "Success metrics and KPI framework design"
-        ],
-        "consultationFocus": "implementation strategy and project planning"
-      },
-      "service3": {
-        "id": "change-management",
-        "title": "AI Change Management",
-        "subtitle": "Team Transformation",
-        "description": "Guide your team through successful AI adoption with structured change management and training programs.",
-        "outcome": "Smooth AI adoption with high team engagement and minimal disruption to operations",
+      "foundation": {
+        "title": "Foundation Bundle",
+        "subtitle": "Business Website + Core Automations",
+        "description": "Professional web presence with essential automation workflows to streamline customer interactions and lead management for service-based businesses.",
+        "idealFor": "Service businesses, consultants, agencies, professional services",
         "badge": "Essential",
-        "capabilities": [
-          "Stakeholder alignment and communication strategy",
-          "Employee training and skill development programs",
-          "Change resistance identification and resolution",
-          "AI governance and best practices establishment",
-          "Ongoing support and performance optimization"
-        ],
-        "consultationFocus": "organizational change and team development"
+        "capabilities": {
+          "0": "Professional responsive website (5-8 pages)",
+          "1": "Contact form automation with instant notifications",
+          "2": "Lead capture workflows and email sequences",
+          "3": "Google Analytics and tracking setup",
+          "4": "Basic CRM integration for lead management"
+        }
       },
-      "service4": {
-        "id": "performance-optimization",
-        "title": "Performance Optimization",
-        "subtitle": "Continuous Improvement",
-        "description": "Ongoing monitoring and optimization of your AI implementations to maximize ROI and business impact.",
-        "outcome": "25-40% improvement in AI system performance and measurable business impact",
-        "badge": "Results-Driven",
-        "capabilities": [
-          "AI system performance monitoring and analysis",
-          "ROI measurement and business impact assessment",
-          "Optimization recommendations and implementation",
-          "Advanced analytics and reporting dashboards",
-          "Scaling strategies and capacity planning"
-        ],
-        "consultationFocus": "performance optimization and ROI maximization"
+      "growth": {
+        "title": "Growth Bundle",
+        "subtitle": "E-commerce + Marketing Automation",
+        "description": "Complete online store with intelligent automation systems for inventory, orders, and customer lifecycle management to maximize sales and retention.",
+        "idealFor": "Product businesses, online retailers, physical stores going digital",
+        "badge": "Popular",
+        "capabilities": {
+          "0": "Full e-commerce store with payment processing",
+          "1": "Automated inventory management and low-stock alerts",
+          "2": "Order processing workflows and fulfillment automation",
+          "3": "Customer email campaigns and abandoned cart recovery",
+          "4": "Product recommendation and upselling automation"
+        }
       },
-      "service5": {
-        "id": "custom-development",
-        "title": "Custom AI Development",
-        "subtitle": "Tailored Solutions",
-        "description": "Design and develop custom AI solutions that perfectly match your unique business requirements and processes.",
-        "outcome": "Bespoke AI systems that deliver competitive advantages unique to your business",
+      "dominator": {
+        "title": "Dominator Bundle",
+        "subtitle": "Custom Web App + Advanced Automation",
+        "description": "Enterprise-grade web application development with custom automation architecture. Every project is uniquely scoped based on your technical requirements and business objectives through detailed consultation.",
+        "idealFor": "SaaS startups, tech companies, businesses with complex operations",
+        "badge": "Premium",
+        "capabilities": {
+          "0": "Custom web application development tailored to your requirements",
+          "1": "Scalable user authentication, roles, and permission systems",
+          "2": "Multi-system workflow orchestration and API integrations",
+          "3": "Enterprise-grade analytics dashboards with real-time data"
+        }
+      },
+      "labels": {
+        "idealFor": "Ideal For",
+        "includedFeatures": "Included Features"
+      },
+      "bottomCta": {
+        "description": "Ready to transform your business with professional web development and intelligent automation? Let's discuss your project requirements and technical objectives.",
+        "button": "Start Your Project"
+      }
+    },
+    "aiServices": {
+      "title": "AI Automation Systems",
+      "subtitle": "Multi-platform automation architectures using open-source orchestration, AI language models, and voice synthesis technologies for workflow optimization",
+      "valueProps": {
+        "visualWorkflow": "Visual Workflow Design",
+        "multiSystem": "Multi-System Integration",
+        "enterpriseScale": "Enterprise Scalability"
+      },
+      "leadGeneration": {
+        "title": "Lead Generation Systems",
+        "subtitle": "Multi-Source Data + AI-Powered Prospecting",
+        "description": "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows. Advanced targeting algorithms combined with intelligent contact sequencing for consistent business development.",
+        "outcome": "Consistent qualified prospects",
+        "badge": "Lead Gen",
+        "capabilities": {
+          "0": "Multi-platform data aggregation and enrichment",
+          "1": "AI-powered prospect qualification scoring",
+          "2": "Personalized outreach campaign orchestration",
+          "3": "Contact enrichment with engagement signals",
+          "4": "Automated contact sequencing workflows"
+        }
+      },
+      "salesAutomation": {
+        "title": "Sales Process Automation",
+        "subtitle": "AI Proposals + CRM Integration",
+        "description": "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows. Our system creates dynamic proposals and manages your entire sales pipeline automatically.",
+        "outcome": "Streamlined sales pipeline",
+        "badge": "Sales AI",
+        "capabilities": {
+          "0": "Intelligent proposal generation with dynamic pricing",
+          "1": "Advanced lead scoring models with automation",
+          "2": "Automated follow-up orchestration workflows",
+          "3": "Sales asset generation and optimization",
+          "4": "Seamless CRM integration and synchronization"
+        }
+      },
+      "recruitment": {
+        "title": "Recruitment Automation",
+        "subtitle": "AI-Powered Candidate Processing + ATS Integration",
+        "description": "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms. Streamline your entire recruitment pipeline from application to hire with intelligent automation.",
+        "outcome": "Streamlined recruitment pipeline with reduced time-to-hire",
+        "badge": "Recruitment",
+        "capabilities": {
+          "0": "AI-powered CV parsing and candidate data extraction",
+          "1": "Automated candidate scoring and ranking algorithms",
+          "2": "Multi-platform job posting automation (LinkedIn, Indeed, etc.)",
+          "3": "Interview scheduling and calendar coordination workflows",
+          "4": "Automated candidate communication and follow-up sequences"
+        }
+      },
+      "voiceAI": {
+        "title": "Voice & AI Agent Systems",
+        "subtitle": "AI-Powered + 24/7 Multilingual Support",
+        "description": "24/7 AI voice agents with 31+ language support for customer service, appointment booking, and sales support. Multi-platform integration provides natural conversations that feel human while handling routine tasks automatically.",
+        "outcome": "24/7 intelligent voice support",
+        "badge": "Voice AI",
+        "capabilities": {
+          "0": "Natural conversation processing with AI",
+          "1": "31+ language support with automatic detection",
+          "2": "Intelligent call routing and escalation",
+          "3": "Appointment scheduling automation workflows",
+          "4": "CRM integration with conversation tracking"
+        }
+      },
+      "contentSystems": {
+        "title": "AI Content & UGC Systems",
+        "subtitle": "AI-Powered + Character-Consistent Branding",
+        "description": "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
+        "outcome": "Brand-consistent content at scale",
+        "badge": "Content AI",
+        "capabilities": {
+          "0": "AI-driven content creation with brand algorithms",
+          "1": "Multi-format content optimization workflows",
+          "2": "Automated content calendar management",
+          "3": "SEO optimization and keyword integration",
+          "4": "Multi-channel distribution automation"
+        }
+      },
+      "automationDashboard": {
+        "title": "Automation Intelligence Platform",
+        "subtitle": "Custom Dashboard + Complete Workflow Control",
+        "description": "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
+        "outcome": "Complete automation visibility and control",
         "badge": "Enterprise",
-        "capabilities": [
-          "Custom AI model development and training",
-          "Proprietary algorithm design and optimization",
-          "Integration with legacy systems and databases",
-          "Custom user interfaces and dashboards",
-          "Intellectual property development and protection"
-        ],
-        "consultationFocus": "custom AI development and innovation"
+        "capabilities": {
+          "0": "Custom dashboard development with real-time monitoring",
+          "1": "Centralized control panel for all n8n automations",
+          "2": "Business performance analytics and KPI tracking",
+          "3": "Automated workflow status and health monitoring",
+          "4": "Custom reporting and business intelligence integration"
+        }
       },
-      "service6": {
-        "id": "strategic-advisory",
-        "title": "Strategic AI Advisory",
-        "subtitle": "Executive Guidance",
-        "description": "Ongoing strategic advisory services for leadership teams navigating AI transformation and competitive positioning.",
-        "outcome": "Clear strategic direction with executive-level insights for AI-driven competitive advantage",
-        "badge": "Executive",
-        "capabilities": [
-          "Board-level AI strategy presentations and guidance",
-          "Competitive intelligence and market positioning",
-          "Merger and acquisition AI due diligence",
-          "AI ethics and governance framework development",
-          "Long-term strategic roadmap and vision alignment"
-        ],
-        "consultationFocus": "executive strategy and competitive positioning"
+      "labels": {
+        "keyCapabilities": "Key Capabilities",
+        "systemOutcome": "System Outcome"
+      },
+      "bottomCta": {
+        "description": "Explore automation architecture implementations and workflow orchestration methodologies. Technical consultation available for custom integration requirements.",
+        "button": "Get Started"
       }
     },
     "footer": {
@@ -423,6 +482,11 @@
         "cookies": "Cookie Policy",
         "legal": "Legal Notice",
         "cookieSettings": "Cookie Settings"
+      },
+      "pricing": {
+        "tag": "Get started with Flowko",
+        "title": "Flexible Pricing for Every Business",
+        "linkText": "See the full details"
       }
     }
   }

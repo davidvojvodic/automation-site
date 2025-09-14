@@ -18,8 +18,8 @@
       "contact": "Kontakt"
     },
     "solutions": {
-      "title": "Prikaz Avtomatizacijskih Sistemov",
-      "subtitle": "Odkrijte, kaj lahko avtomatiziramo za vaše podjetje",
+      "title": "Avtomatizacijske Rešitve po Meri",
+      "subtitle": "Prilagojene avtomatizacijske zmožnosti, ki jih bomo razvili za vaše podjetje",
       "approach": {
         "efficiency": "Dokazani Rezultati",
         "integration": "Ekspertna Izvedba", 
@@ -137,96 +137,71 @@
       }
     },
     "benefits": {
-      "title": "Preobrazite Svoje Poslovanje",
+      "title": "Preobrazite Svoje Poslovne Operacije",
+      "subtitle": "Prihranite 20+ ur tedensko z inteligentno avtomatizacijo, ki dela medtem ko spite",
       "benefit1": {
-        "title": "Prihranite čas",
-        "description": "Avtomatizirajte rutinska opravila in se osredotočite na tisto, kar je res pomembno.",
-        "points": [
-          "Avtomatska komunikacija s strankami",
-          "Inteligentno procesiranje dokumentov",
-          "Osredotočenost na strateške aktivnosti rasti"
-        ]
+        "title": "Prihranite 20+ Ur Tedensko",
+        "description": "Avtomatizirajte rutinska opravila, da se lahko osredotočite na tisto, kar res poganja rast"
       },
       "benefit2": {
-        "title": "Enostavna Rast Poslovanja",
-        "description": "Samodejno povečajte zmogljivosti, ko raste povpraševanje.",
-        "points": [
-          "AI klepetalni roboti za podporo strankam",
-          "Avtomatizacija na več kanalih",
-          "Prilagodljivo povečevanje zmogljivosti"
-        ]
+        "title": "Rast Brez Glavobolov",
+        "description": "Obdelajte 10x več strank z enakim številom ekipe"
       },
       "benefit3": {
-        "title": "Odpravite Napake",
-        "description": "Popolna natančnost in doslednost v vsakem procesu.",
-        "points": [
-          "Brez napak v naro\u010dilih ali ra\u010dunih",
-          "Avtomatsko preverjanje pred po\u0161iljanjem",
-          "Popoln zapis vseh poslovnih aktivnosti"
-        ]
+        "title": "Nič Človeških Napak",
+        "description": "Popolna doslednost v vsakem procesu, vsakič znova"
       },
       "benefit4": {
-        "title": "Hitra Odzivnost 24/7",
-        "description": "Odgovorite strankam takoj, kadarkoli.",
-        "points": [
-          "Takojšnje ustvarjanje ponudb",
-          "24/7 avtomatska podpora",
-          "Takojšnja obvestila"
-        ]
+        "title": "24/7 Takojšnji Odgovori",
+        "description": "Nikoli ne zamudite povpraševanja stranke, niti ob 3. uri zjutraj"
       },
       "benefit5": {
-        "title": "Povečajte Prihodke",
-        "description": "Izkoristite vsako priložnost za prodajo z avtomatskim sledenjem.",
-        "points": [
-          "Avtomatsko negovanje potencialnih strank",
-          "Inteligentni delovni tokovi za navzkrižno prodajo",
-          "Nobena priložnost se ne izgubi"
-        ]
+        "title": "ROI V 30 Dneh",
+        "description": "Začnite takoj varčevati denar z dokazanimi avtomatizacijskimi sistemi"
       },
       "benefit6": {
-        "title": "Ostanite Pred Konkurenco",
-        "description": "Uporabite AI vpoglede za premagovanje konkurentov.",
-        "points": [
-          "Prediktivne analitike",
-          "Avtomatska tržna inteligenca",
-          "Podatkovno vodena optimizacija"
-        ]
+        "title": "Konkurenčna Prednost",
+        "description": "AI vpogledi, ki vam pomagajo ostati dva koraka pred konkurenco"
       }
     },
     "implementation": {
-      "title": "Vaša pot do poslovne avtomatizacije",
-      "subtitle": "Preobrazite kaos v učinkovite procese v le 4 preizkušenih korakih",
-      "tag": "Začnite prihranjevati čas danes",
-      "stepLabel": "Korak",
-      "ctaTitle": "Pripravljeni povrniti 20+ ur tedensko?",
-      "ctaButton": "Pridobite Brezplačno ROI Analizo",
-      "step1": {
-        "title": "Brezplačen Odkrivni Klic",
-        "description": "Analiziramo vaše trenutne delovne procese in identificiramo največje priložnosti za avtomatizacijo za takojšnje prihranke časa in stroškov.",
-        "duration": "30 minut",
-        "status": "1. teden"
+      "tag": "Preverjen Pristop",
+      "title": "Kako Poteka Naše Delo",
+      "description": "Sistematičen pristop, ki zagotavlja, da vaši avtomatizacijski projekti dosegajo rezultate brez motenja vašega poslovanja",
+      "phase1": {
+        "status": "Faza 1",
+        "title": "Pregled Stanja in Možnosti",
+        "description": "Pogledamo si, kako trenutno delate in kje lahko avtomatizacija pomaga. Brez obveznosti preverimo vaše procese in najdemo najboljše rešitve.",
+        "outcome": "Jasen načrt, kjer lahko avtomatizacija najbolj pomaga vašemu podjetju"
       },
-      "step2": {
-        "title": "Načrt ROI po Meri",
-        "description": "Prejemite personalizirano pot avtomatizacije z zagotovljenimi prihranki časa, zmanjšanjem stroškov in natančnimi ROI projekcijami.",
-        "duration": "3-5 dni",
-        "status": "1.-2. teden"
+      "phase2": {
+        "status": "Faza 2",
+        "title": "Načrtovanje in Priprava",
+        "description": "Pripravimo natančen načrt, kako bo avtomatizacija delovala v vašem podjetju. Sestavimo jasen plan dela z rezervnimi rešitvami, preden začnemo z gradnjo.",
+        "outcome": "Pripravljen načrt z jasnimi cilji za vašo avtomatizacijo"
       },
-      "step3": {
-        "title": "Izgradnja in Zagon",
-        "description": "Spremljajte, kako vaše avtomatizacije oživijo s tedenskimi demonstracijami in sledenjem napredka v realnem času do popolnega delovanja.",
-        "duration": "2-4 tedne",
-        "status": "2.-5. teden"
+      "phase3": {
+        "status": "Faza 3",
+        "title": "Gradnja in Testiranje",
+        "description": "Zgradimo avtomatizacije in jih temeljito preizkusimo, preden jih vključimo v vaše delo. Vse deluje varno in brez motenj vašega vsakdanjega poslovanja.",
+        "outcome": "Delujoče avtomatizacije, pripravljene za uporabo v vašem podjetju"
       },
-      "step4": {
-        "title": "Lansiranje in Skaliranje",
-        "description": "Vaša ekipa postane pripravljena na avtomatizacijo s celotnim usposabljanjem, dokumentacijo in podporo za maksimalen učinek.",
-        "duration": "3-5 dni",
-        "status": "5.-6. teden"
+      "phase4": {
+        "status": "Faza 4",
+        "title": "Zagon in Usposabljanje",
+        "description": "Zaženemo avtomatizacije in naučimo vašo ekipo, kako jih uporabljati. Z praktičnim usposabljanjem in navodili postanete samostojni pri upravljanju novih rešitev.",
+        "outcome": "Vaša ekipa zna samostojno uporabljati nove avtomatizacije"
+      },
+      "labels": {
+        "phase1": "Faza 1",
+        "phase2": "Faza 2",
+        "phase3": "Faza 3",
+        "phase4": "Faza 4",
+        "phaseOutcome": "Izid Faze"
       }
     },
     "collaboration": {
-      "title": "Povežite poslovne aplikacije in avtomatizirajte procese",
+      "title": "Povežite Vaša Poslovna Orodja in Avtomatizirajte Delovne Tokove",
       "description": "Povežite vaše najljubše poslovne aplikacije in ustvarite zmogljive avtomatizacije, ki prihranijo več kot 20 ur tedensko. Vso tehnično zahtevnost uredimo mi.",
       "buttonText": "Poglejte, kako deluje",
       "features": {
@@ -247,9 +222,15 @@
     "companyLogos": {
       "tagline": "Avtomatizirajte delovne tokove v vaših priljubljenih poslovnih aplikacijah"
     },
+    "benefitsBanner": {
+      "save20Hours": "Prihranite 20+ Ur Tedensko",
+      "scaleWithoutHiring": "Rastite brez dodatnega zaposlovanja",
+      "accuracy": "99,9% Natančnost",
+      "operation24x7": "24/7 Delovanje"
+    },
     "contact": {
-      "title": "Začnite svojo avtomatizacijsko pot",
-      "subtitle": "Pridobite brezplačno revizijo avtomatizacije in odkrijte, kako prihraniti več kot 20 ur tedensko",
+      "title": "Začnite Vašo Avtomatizacijsko Pot",
+      "subtitle": "Pridobite brezplačni pregled avtomatizacije in odkrijte, kako prihraniti 20+ ur tedensko",
       "form": {
         "firstName": "Ime",
         "lastName": "Priimek",
@@ -258,8 +239,8 @@
         "website": "Spletna stran podjetja",
         "industry": "Panoga",
         "message": "Kako vam lahko pomagamo avtomatizirati vaše poslovanje?",
-        "bundleInterest": "Zanimajo me paketi Spletna stran + Avtomatizacija",
-        "bundleInterestDescription": "Pridobite celovito digitalno rešitev s profesionalno spletno stranjo + avtomatiziranimi delovnimi tokovi",
+        "bundleInterest": "Zanimajo me Celovite Digitalne Rešitve",
+        "bundleInterestDescription": "Spletni razvoj po meri + avtomatizacijski poteki dela prilagojeni vašemu podjetju",
         "firstNamePlaceholder": "Vaše ime",
         "lastNamePlaceholder": "Vaš priimek",
         "emailPlaceholder": "vas.email@podjetje.si",
@@ -267,7 +248,7 @@
         "websitePlaceholder": "https://vasepodjetje.si",
         "industryPlaceholder": "npr. Spletna trgovina, Proizvodnja,...",
         "messagePlaceholder": "Povejte nam o vaših najbolj zamudnih opravilih ali procesih, ki bi jih radi avtomatizirali...",
-        "submitButton": "Pridobite brezplačno revizijo avtomatizacije",
+        "submitButton": "Pridobite brezplačni pregled avtomatizacije",
         "required": "*",
         "privacyNote": "Spoštujemo vašo zasebnost. Vaši podatki so varni in jih ne bomo nikoli delili."
       },
@@ -328,138 +309,172 @@
         "optional": "Neobvezno"
       }
     },
+    "websiteBundles": {
+      "tag": "Spletni Razvoj + Avtomatizacija",
+      "title": "Celovite Digitalne Rešitve",
+      "subtitle": "Profesionalni spletni razvoj v kombinaciji s pametnimi avtomatizacijami za hitrejšo rast in boljšo učinkovitost poslovanja",
+      "valueProps": {
+        "modernWeb": "Moderni Spletni Razvoj",
+        "smartAutomation": "Pametne Avtomatizacije",
+        "endToEnd": "Celovite Rešitve"
+      },
+      "foundation": {
+        "title": "Temeljni Paket",
+        "subtitle": "Poslovna Spletna Stran + Osnovna Avtomatizacija",
+        "description": "Profesionalna spletna prisotnost z osnovnimi avtomatizacijami za lažje delo s strankami in pridobivanje novih strank v storitvenih podjetjih.",
+        "idealFor": "Storitvena podjetja, svetovalci, agencije, profesionalne storitve",
+        "badge": "Osnovno",
+        "capabilities": {
+          "0": "Profesionalna odzivna spletna stran (5-8 strani)",
+          "1": "Avtomatizacija kontaktnih obrazcev z takojšnjimi obvestili",
+          "2": "Sistem za zbiranje potencialnih strank in e-poštna zaporedja",
+          "3": "Nastavitev Google Analytics in spremljanja",
+          "4": "Osnovna CRM integracija za upravljanje potencialnih strank"
+        }
+      },
+      "growth": {
+        "title": "Rastni Paket",
+        "subtitle": "E-trgovina + Trženjska Avtomatizacija",
+        "description": "Popolna spletna trgovina s pametnimi avtomatizacijami za zaloge, naročila in upravljanje strank za boljšo prodajo in zadržanje kupcev.",
+        "idealFor": "Produktna podjetja, spletni trgovci, fizične trgovine v digitalizaciji",
+        "badge": "Premium",
+        "capabilities": {
+          "0": "Spletna trgovina s plačilnim sistemom",
+          "1": "Avtomatizirano upravljanje zalog in opozorila o nizkih zalogah",
+          "2": "Avtomatsko izpolnjevanje naročil",
+          "3": "E-poštne kampanje za stranke in obnovitev zapuščenih košaric",
+          "4": "Priporočila izdelkov in avtomatsko povečanje prodaje"
+        }
+      },
+      "dominator": {
+        "title": "Dominator Paket",
+        "subtitle": "Prilagojena Spletna Aplikacija + Napredna Avtomatizacija",
+        "description": "Napredni razvoj spletnih aplikacij s prilagojenimi avtomatizacijami. Vsak projekt je narejen po meri glede na vaše potrebe in poslovne cilje z podrobnim svetovanjem.",
+        "idealFor": "SaaS startup-i, tehnološka podjetja, podjetja s kompleksnimi operacijami",
+        "badge": "Enterprise",
+        "capabilities": {
+          "0": "Prilagojeni razvoj spletnih aplikacij po vaših zahtevah",
+          "1": "Uporabniški računi z različnimi dostopi in pravicami",
+          "2": "Povezovanje več sistemov in API integracije",
+          "3": "Napredne analitične plošče v realnem času",
+          "4": "Skalabilna arhitektura z nadzorom in opozarjanjem"
+        }
+      },
+      "labels": {
+        "idealFor": "Idealno Za",
+        "includedFeatures": "Vključene Funkcije"
+      },
+      "bottomCta": {
+        "description": "Pripravljeni izboljšati svoje podjetje s profesionalno spletno stranjo in pametnimi avtomatizacijami? Pogovorimo se o vaših potrebah in ciljih.",
+        "button": "Začnite Svoj Projekt"
+      }
+    },
     "aiServices": {
-      "tag": "AI rešitve",
-      "title": "Specializirane AI in avtomatizacijske storitve",
-      "subtitle": "Strokovno zasnovani AI sistemi, ki preoblikujejo način delovanja evropskih SME podjetij.",
-      "approach": {
-        "implementation": "Hitra implementacija",
-        "results": "Merljiva donosnost",
-        "partnership": "Stalno partnerstvo"
+      "title": "AI Avtomatizacijski Sistemi",
+      "subtitle": "Večplatformske avtomatizacijske arhitekture z odprtokodno orkestracijo, AI jezikovnimi modeli in tehnologijami sinteze govora za optimizacijo delovnih tokov",
+      "valueProps": {
+        "visualWorkflow": "Vizualno Oblikovanje Procesov",
+        "multiSystem": "Povezovanje Sistemov",
+        "enterpriseScale": "Skalabilnost za Podjetja"
       },
-      "capabilities": "Kategorije storitev",
-      "cta": "Pogovorite se o vaši AI strategiji",
-      "ctaCustom": "Pridobite prilagojeno AI rešitev",
-      "bottomText": "Vsaka AI transformacija se začne z razumevanjem vaših specifičnih izzivov in priložnosti.",
-      "bottomCtaPrimary": "Rezervirajte AI strateški klic",
-      "bottomCtaSecondary": "Prenesite AI implementacijski vodnik",
-      "investmentLevel": "Nivo investicije",
-      "idealFor": "Idealno za",
-      "service1": {
-        "id": "automation-workflows",
-        "title": "AI avtomatizacija procesov",
-        "subtitle": "Procesna inteligenca",
-        "description": "Preoblikujte ročne poslovne procese z inteligentnimi avtomatizacijskimi tokovi dela, ki se učijo in prilagajajo vašim operacijam.",
-        "outcome": "Zmanjšajte ročno delo za 70% in povečajte natančnost ter hitrost",
-        "badge": "Najbolj priljubljena",
-        "idealFor": "Rastoča podjetja s ponavljajočimi procesi (10-50 zaposlenih)",
-        "investmentLevel": "Investicija za rast",
-        "capabilities": [
-          "Inteligentno mapiranje in optimizacija procesov",
-          "Prilagojena avtomatizacija s AI odločanjem",
-          "Integracija več sistemov in sinhronizacija podatkov",
-          "Spremljanje v realnem času in analitika uspešnosti",
-          "Usposabljanje zaposlenih in podpora pri spremembah"
-        ],
-        "consultationFocus": "rešitve avtomatizacije procesov"
+      "leadGeneration": {
+        "title": "Sistemi za Pridobivanje Potencialnih Strank",
+        "subtitle": "Podatki iz različnih virov + AI pomoč pri iskanju strank",
+        "description": "Avtomatski sistemi za iskanje in ovrednotenje potencialnih strank z zbiranjem podatkov iz različnih virov in AI pomočjo pri vzpostavljanju stika. Iskanje pravih strank s premišljenimi stiki za rast vašega podjetja.",
+        "outcome": "Kvalificirane potencialne stranke",
+        "badge": "Stranke",
+        "capabilities": {
+          "0": "Zbiranje in dopolnjevanje podatkov z več platform",
+          "1": "AI-podprto ocenjevanje kvalifikacije potencialnih strank",
+          "2": "Upravljanje prilagojenih kampanj za stik",
+          "3": "Dodatne informacije o odzivu kontaktov",
+          "4": "Avtomatski postopki za stike s strankami"
+        }
       },
-      "service2": {
-        "id": "ai-systems",
-        "title": "AI poslovni sistemi",
-        "subtitle": "Inteligentno delovanje",
-        "description": "Celoviti AI sistemi, ki se integrirajo z vašimi obstoječimi orodji za zagotavljanje inteligentnih vpogledov in avtomatiziranega odločanja.",
-        "outcome": "Povečajte hitrost odločanja za 80% z AI vpogledi, ki temeljijo na podatkih",
-        "badge": "Pripravljen za podjetja",
-        "idealFor": "Utečena podjetja pripravljena na AI transformacijo (20-100 zaposlenih)",
-        "investmentLevel": "Profesionalna investicija",
-        "capabilities": [
-          "Razvoj in usposabljanje prilagojenih AI modelov",
-          "Prediktivna analitika in napovedni sistemi",
-          "Inteligentno procesiranje in analiza dokumentov",
-          "Nadzorne plošče poslovne inteligence v realnem času",
-          "AI-podprta poročila in priporočila"
-        ],
-        "consultationFocus": "implementacija AI sistemov"
+      "salesAutomation": {
+        "title": "Avtomatizacija Prodaje",
+        "subtitle": "AI Ponudbe + CRM Integracija",
+        "description": "Sistemi, ki avtomatizirajo prodajni proces z AI pomočjo pri ustvarjanju ponudb, spremljanju strank in povezovanju z vašo CRM rešitvijo. Sistem ustvarja ponudbe in vas obvešča o uspešnih priložnostih.",
+        "outcome": "Urejen prodajni proces",
+        "badge": "Prodaja",
+        "capabilities": {
+          "0": "AI pomoč pri ustvarjanju ponudb s prilagojenim cenikom",
+          "1": "Ocenjevanje potencialnih strank po verjetnosti nakupa",
+          "2": "Avtomatsko spremljanje in opominjanje za nadaljnje korake",
+          "3": "Ustvarjanje in optimizacija prodajnih gradiv",
+          "4": "Povezava z vašo CRM rešitvijo za sprotno sinhronizacijo"
+        }
       },
-      "service3": {
-        "id": "ai-agents",
-        "title": "AI agenti in chatboti",
-        "subtitle": "Pogovorna AI",
-        "description": "Inteligentni AI agenti, ki obravnavajo interakcije s strankami, notranje poizvedbe in poslovno komunikacijo 24/7.",
-        "outcome": "Avtomatizirajte 85% rutinskih poizvedb in povečajte zadovoljstvo strank",
-        "badge": "Priljubljena pri strankah",
-        "idealFor": "Storitvena podjetja z visoko interakcijo s strankami (5-30 zaposlenih)",
-        "investmentLevel": "Pametna investicija",
-        "capabilities": [
-          "Razvoj prilagojenih AI chatbotov z NLP",
-          "Večkanalno uvajanje (spletna stran, WhatsApp, email)",
-          "Inteligentno usmerjanje in eskalacijski sistemi",
-          "Kontinuirano učenje in izboljševanje",
-          "Integracija s CRM in poslovnimi sistemi"
-        ],
-        "consultationFocus": "uvajanje AI agentov"
+      "recruitment": {
+        "title": "Avtomatizacija Zaposlovanja",
+        "subtitle": "AI Obdelava Kandidatov + ATS Integracija",
+        "description": "AI obdelava življenjepisov in ocenjevanje kandidatov z avtomatskim objavljanjem delovnih mest na več platformah. Poenostavite postopek zaposlovanja od prijave do zaposlitve z pametno avtomatizacijo.",
+        "outcome": "Urejen postopek zaposlovanja",
+        "badge": "Kadri",
+        "capabilities": {
+          "0": "AI obdelava življenjepisov in zbiranje informacij o kandidatih",
+          "1": "Avtomatsko ocenjevanje in razvrščanje kandidatov",
+          "2": "Večplatformska avtomatizacija objavljanja delovnih mest (LinkedIn, Indeed, itd.)",
+          "3": "Razporejanje intervjujev in usklajevanje koledarja",
+          "4": "Avtomatska komunikacija s kandidati in opominjanje"
+        }
       },
-      "service4": {
-        "id": "document-processing",
-        "title": "Inteligentno procesiranje dokumentov",
-        "subtitle": "Osvoboditev podatkov",
-        "description": "AI-podprto procesiranje dokumentov, ki samodejno ekstraktira, klasificira in obdeluje poslovne dokumente.",
-        "outcome": "Procesirajte dokumente 95% hitreje s popolno natančnostjo in skladnostjo",
-        "badge": "Pripravljena za skladnost",
-        "idealFor": "Industrije z veliko dokumentov (pravo, finance, zdravstvo, logistika)",
-        "investmentLevel": "Investicija v učinkovitost",
-        "capabilities": [
-          "AI klasifikacija in ekstraktiranje dokumentov",
-          "Avtomatizirana validacija in preverjanje podatkov",
-          "Integracija z obstoječimi sistemi za upravljanje dokumentov",
-          "Upravljanje skladnosti in revizijske sledi",
-          "Podpora za več jezikov in formatov"
-        ],
-        "consultationFocus": "avtomatizacija procesiranja dokumentov"
+      "voiceAI": {
+        "title": "Glasovni AI Asistenti",
+        "subtitle": "AI-Podprto + 24/7 Večjezična Podpora",
+        "description": "24/7 AI glasovni pomočniki, ki govorijo 31+ jezikov za strankarsko storitev, rezervacijo terminov in prodajno podporo. Zvenijo človeško in rešujejo vsakodnevne naloge brez vašega posredovanja.",
+        "outcome": "24/7 pametna govorna podpora",
+        "badge": "Govor",
+        "capabilities": {
+          "0": "Vodenje naravnih pogovorov z AI",
+          "1": "Podpora 31+ jezikov z avtomatskim prepoznavanjem",
+          "2": "Pametno preusmerjanje klicev na pravo osebo",
+          "3": "Avtomatska rezervacija terminov",
+          "4": "Povezava s CRM in shranjevanje vseh pogovorov"
+        }
       },
-      "service5": {
-        "id": "rpa-integration",
-        "title": "Robotska procesna avtomatizacija",
-        "subtitle": "Digitalna delovna sila",
-        "description": "AI-podprte RPA rešitve, ki avtomatizirajo kompleksne poslovne procese preko več sistemov in aplikacij.",
-        "outcome": "Uvedite digitalne delavce, ki obravnavajo kompleksne naloge 24/7 brez napak",
-        "badge": "Skalabilna rešitev",
-        "idealFor": "Podjetja s kompleksnimi, večstopenjskimi procesi (15-75 zaposlenih)",
-        "investmentLevel": "Skalabilna investicija",
-        "capabilities": [
-          "Oblikovanje celovite procesne avtomatizacije",
-          "Razvoj in uvajanje AI-podprtih botov",
-          "Obravnavanje izjem in upravljanje napak",
-          "Spremljanje uspešnosti botov in optimizacija",
-          "Skalabilna avtomatizacijska infrastruktura"
-        ],
-        "consultationFocus": "implementacija RPA"
+      "contentSystems": {
+        "title": "AI Ustvarjanje Vsebin & UGC",
+        "subtitle": "AI-Podprto + Enotnost Blagovne Znamke",
+        "description": "AI ustvarja vsebine in uporabniške kampanje v stilu vaše blagovne znamke. Sistem ustvarja blog objave, objave za socialne medije in trženjske materiale, pri tem pa ohranja enak stil na vseh platformah.",
+        "outcome": "Konsistentne vsebine v velikem obsegu",
+        "badge": "Vsebina",
+        "capabilities": {
+          "0": "AI ustvarjanje vsebin v slogu vaše blagovne znamke",
+          "1": "Prilagajanje vsebin za različne platforme",
+          "2": "Avtomatsko načrtovanje objav",
+          "3": "SEO optimizacija in integracija ključnih besed",
+          "4": "Avtomatsko objavljanje na več platformah"
+        }
       },
-      "service6": {
-        "id": "ai-consulting",
-        "title": "AI strategija in svetovanje",
-        "subtitle": "Strateška transformacija",
-        "description": "Celovit razvoj AI strategije in navodila za implementacijo za podjetja pripravljena na transformacijo z umetno inteligenco.",
-        "outcome": "Ustvarite jasno AI načrt z merljivimi mejniki in cilji donosnosti",
-        "badge": "Strateška",
-        "idealFor": "Napredne vodstvene skupine, ki načrtujejo digitalno transformacijo",
-        "investmentLevel": "Strateška investicija",
-        "capabilities": [
-          "Ocena pripravljenosti na AI in analiza vrzeli",
-          "Prilagojena AI strategija in implementacijska načrt",
-          "Priporočila tehnološkega sklada in načrtovanje",
-          "Programi upravljanja sprememb in usposabljanja",
-          "Stalno strateško svetovanje in optimizacija"
-        ],
-        "consultationFocus": "razvoj AI strategije"
+      "automationDashboard": {
+        "title": "Platforma za Avtomatizacije",
+        "subtitle": "Poslovna Nadzorna Plošča",
+        "description": "Enotno mesto za upravljanje vseh vaših poslovnih avtomatizacij. Enostavno spremljanje delovanja, pregled rezultatov in nadzor nad vsemi avtomatiziranimi procesi v vašem podjetju.",
+        "outcome": "Popoln nadzor nad vsemi avtomatizacijami",
+        "badge": "Enterprise",
+        "capabilities": {
+          "0": "Izdelava plošče po meri s spremljanjem v realnem času",
+          "1": "Enotno upravljanje vseh avtomatizacij",
+          "2": "Analitika uspešnosti poslovanja in spremljanje KPI",
+          "3": "Avtomatsko preverjanje stanja in delovanja procesov",
+          "4": "Prilagojeno poročanje in povezava s poslovnimi podatki"
+        }
+      },
+      "labels": {
+        "keyCapabilities": "Ključne Zmožnosti",
+        "systemOutcome": "Izid Sistema"
+      },
+      "bottomCta": {
+        "description": "Odkrijte kako avtomatizacija lahko izboljša vaše poslovanje. Na voljo je tudi svetovanje za prilagojene rešitve za vaše podjetje.",
+        "button": "Začnite"
       }
     },
     "footer": {
       "copyright": "© {year} Flowko. Vse pravice pridržane.",
       "contact": {
         "email": "info@flowko.io",
-        "location": "Murska Sobota, Slovenija",
-        "description": "AI avtomatizacijske rešitve za evropska mala in srednja podjetja"
+        "description": "Inteligentna avtomatizacija poslovanja, ki dela medtem ko spite"
       },
       "legal": {
         "privacy": "Pravilnik o zasebnosti",
@@ -467,6 +482,11 @@
         "cookies": "Pravilnik o piškotkih",
         "legal": "Pravno obvestilo",
         "cookieSettings": "Nastavitve piškotkov"
+      },
+      "pricing": {
+        "tag": "Začnite z Flowko",
+        "title": "Prilagodljivo cenovno oblikovanje za vsako podjetje",
+        "linkText": "Oglejte si vse podrobnosti"
       }
     }
   }

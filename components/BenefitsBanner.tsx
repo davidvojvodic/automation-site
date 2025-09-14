@@ -3,37 +3,44 @@
 import { cn } from "@/lib/utils";
 import Section from "./Section";
 import { Clock, TrendingUp, ShieldCheck, Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface BenefitsBannerProps {
   className?: string;
 }
 
 function BenefitsBanner({ className }: BenefitsBannerProps) {
+  const t = useTranslations("HomePage.benefitsBanner");
+
   const benefits = [
     {
       icon: Clock,
-      text: "Save 20+ Hours Weekly",
+      text: t("save20Hours"),
     },
     {
       icon: TrendingUp,
-      text: "Scale Without Hiring",
+      text: t("scaleWithoutHiring"),
     },
     {
       icon: ShieldCheck,
-      text: "99.9% Accuracy",
+      text: t("accuracy"),
     },
     {
       icon: Zap,
-      text: "24/7 Operation",
+      text: t("operation24x7"),
     },
   ];
 
   return (
-    <Section crosses customPaddings="py-6 lg:py-12 xl:py-16" className={cn(className)}>
+    <Section
+      crosses
+      customPaddings="py-6 lg:py-12 xl:py-16"
+      className={cn(className)}
+    >
       <div className="container">
         <div className="relative z-1">
           <div className="bg-n-8/90 backdrop-blur border border-n-1/10 rounded-[2rem] py-4 sm:py-5 lg:py-6">
-            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-12">
+            <div className="flex flex-wrap items-center justify-evenly gap-6 sm:gap-8 lg:gap-12">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}

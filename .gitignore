@@ -43,3 +43,21 @@ next-env.d.ts
 # claude
 CLAUDE.md
 /.claude/settings.local.json
+
+# MCP configuration (contains API keys and local paths)
+.mcp.json
+
+# Environment backups from integration
+.env.claude-framework
+.mcp.json.claude-framework
+
+# Claude session/cache files
+.claude/cache/
+.claude/tmp/
+.claude/*.log
+.claude
+logs
+mcp-servers/*
+
+# Local hook overrides
+.claude/hooks/*.local.*

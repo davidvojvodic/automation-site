@@ -26,7 +26,7 @@ export default async function Home({
         <WebsiteBundles />
         <Implementation />
         <BenefitsBanner />
-        {/* <Pricing /> */}
+
         <Contact />
         <Footer />
       </div>

@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import Section from "./Section";
 import Heading from "./Heading";
+import { useTranslations } from "next-intl";
 import {
   Accordion,
   AccordionContent,
@@ -26,38 +27,40 @@ interface Step {
 }
 
 function Implementation({ className }: ImplementationProps) {
+  const t = useTranslations("HomePage.implementation");
+
   const steps: Step[] = [
     {
       id: 1,
       icon: Search,
-      title: "Discovery & Risk Assessment",
-      status: "Phase 1",
-      description: "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities and assess risks before any implementation begins.",
-      outcome: "Clear roadmap with identified opportunities and protected investments"
+      title: t("phase1.title"),
+      status: t("labels.phase1"),
+      description: t("phase1.description"),
+      outcome: t("phase1.outcome")
     },
     {
       id: 2,
       icon: Target,
-      title: "Strategic Planning & Architecture",
-      status: "Phase 2",
-      description: "Design the technical architecture and implementation strategy based on discovery findings. We create detailed blueprints with fallback plans before any development begins.",
-      outcome: "Technical architecture blueprint with defined success metrics"
+      title: t("phase2.title"),
+      status: t("labels.phase2"),
+      description: t("phase2.description"),
+      outcome: t("phase2.outcome")
     },
     {
       id: 3,
       icon: Settings,
-      title: "Controlled Implementation & Testing",
-      status: "Phase 3",
-      description: "Build and deploy automation systems in a controlled environment with comprehensive testing. We implement with continuous monitoring and rollback capabilities to ensure zero business disruption.",
-      outcome: "Fully functional automation systems validated through testing"
+      title: t("phase3.title"),
+      status: t("labels.phase3"),
+      description: t("phase3.description"),
+      outcome: t("phase3.outcome")
     },
     {
       id: 4,
       icon: TrendingUp,
-      title: "Launch & Team Training",
-      status: "Phase 4",
-      description: "Full system deployment with comprehensive team training and knowledge transfer. Your team becomes autonomous with the new automation systems through hands-on training and documentation.",
-      outcome: "Fully operational automation system with confident, trained team"
+      title: t("phase4.title"),
+      status: t("labels.phase4"),
+      description: t("phase4.description"),
+      outcome: t("phase4.outcome")
     },
   ];
 
@@ -66,9 +69,9 @@ function Implementation({ className }: ImplementationProps) {
       <div className="container">
         <div className="animate-process-heading">
           <Heading
-            tag="Proven Process"
-            title="Our Delivery Process"
-            text="Systematic approach that ensures your automation projects deliver results without disrupting your business"
+            tag={t("tag")}
+            title={t("title")}
+            text={t("description")}
           />
         </div>
 
@@ -131,7 +134,7 @@ function Implementation({ className }: ImplementationProps) {
                       <div className="flex items-start gap-2 mb-2">
                         <CheckCircle className="w-4 h-4 text-color-1 flex-shrink-0 mt-0.5" />
                         <span className="text-sm font-semibold text-color-1 uppercase tracking-wide">
-                          Phase Outcome
+                          {t("labels.phaseOutcome")}
                         </span>
                       </div>
                       <p className="text-base font-medium text-n-1 leading-relaxed">

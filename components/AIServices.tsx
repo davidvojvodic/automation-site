@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
@@ -13,6 +15,7 @@ import {
   Search,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface AIServicesProps {
   className?: string;
@@ -31,24 +34,25 @@ const iconMap = {
 type IconName = keyof typeof iconMap;
 
 const AIServices = ({ className }: AIServicesProps) => {
+  const t = useTranslations("HomePage.aiServices");
+
   // Flowko Automation Systems - Standard services first, then Premium/Enterprise
   const automationSystems = [
     {
       id: "lead-generation",
       icon: "Search" as IconName,
-      title: "Lead Generation Systems",
-      subtitle: "Multi-Source Data + AI-Powered Prospecting",
-      description:
-        "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows. Advanced targeting algorithms combined with intelligent contact sequencing for consistent business development.",
-      outcome: "Consistent qualified prospects",
+      title: t("leadGeneration.title"),
+      subtitle: t("leadGeneration.subtitle"),
+      description: t("leadGeneration.description"),
+      outcome: t("leadGeneration.outcome"),
       capabilities: [
-        "Multi-platform data aggregation and enrichment",
-        "AI-powered prospect qualification scoring",
-        "Personalized outreach campaign orchestration",
-        "Contact enrichment with engagement signals",
-        "Automated contact sequencing workflows",
+        t("leadGeneration.capabilities.0"),
+        t("leadGeneration.capabilities.1"),
+        t("leadGeneration.capabilities.2"),
+        t("leadGeneration.capabilities.3"),
+        t("leadGeneration.capabilities.4"),
       ],
-      badge: "Lead Gen",
+      badge: t("leadGeneration.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "HubSpot"],
       applications: [
         "B2B prospecting",
@@ -61,19 +65,18 @@ const AIServices = ({ className }: AIServicesProps) => {
     {
       id: "sales-automation",
       icon: "TrendingUp" as IconName,
-      title: "Sales Process Automation",
-      subtitle: "AI Proposals + CRM Integration",
-      description:
-        "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows. Our system creates dynamic proposals and manages your entire sales pipeline automatically.",
-      outcome: "Streamlined sales pipeline",
+      title: t("salesAutomation.title"),
+      subtitle: t("salesAutomation.subtitle"),
+      description: t("salesAutomation.description"),
+      outcome: t("salesAutomation.outcome"),
       capabilities: [
-        "Intelligent proposal generation with dynamic pricing",
-        "Advanced lead scoring models with automation",
-        "Automated follow-up orchestration workflows",
-        "Sales asset generation and optimization",
-        "Seamless CRM integration and synchronization",
+        t("salesAutomation.capabilities.0"),
+        t("salesAutomation.capabilities.1"),
+        t("salesAutomation.capabilities.2"),
+        t("salesAutomation.capabilities.3"),
+        t("salesAutomation.capabilities.4"),
       ],
-      badge: "Sales AI",
+      badge: t("salesAutomation.badge"),
       techStack: ["n8n", "Claude 3", "Salesforce API", "DocuSign"],
       applications: [
         "Proposal automation",
@@ -86,19 +89,18 @@ const AIServices = ({ className }: AIServicesProps) => {
     {
       id: "recruitment-automation",
       icon: "Bot" as IconName,
-      title: "Recruitment Automation",
-      subtitle: "AI-Powered Candidate Processing + ATS Integration",
-      description:
-        "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms. Streamline your entire recruitment pipeline from application to hire with intelligent automation.",
-      outcome: "Streamlined recruitment pipeline with reduced time-to-hire",
+      title: t("recruitment.title"),
+      subtitle: t("recruitment.subtitle"),
+      description: t("recruitment.description"),
+      outcome: t("recruitment.outcome"),
       capabilities: [
-        "AI-powered CV parsing and candidate data extraction",
-        "Automated candidate scoring and ranking algorithms",
-        "Multi-platform job posting automation (LinkedIn, Indeed, etc.)",
-        "Interview scheduling and calendar coordination workflows",
-        "Automated candidate communication and follow-up sequences",
+        t("recruitment.capabilities.0"),
+        t("recruitment.capabilities.1"),
+        t("recruitment.capabilities.2"),
+        t("recruitment.capabilities.3"),
+        t("recruitment.capabilities.4"),
       ],
-      badge: "Recruitment",
+      badge: t("recruitment.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "ATS Integration"],
       applications: [
         "CV processing automation",
@@ -111,19 +113,18 @@ const AIServices = ({ className }: AIServicesProps) => {
     {
       id: "voice-ai-agents",
       icon: "Mic" as IconName,
-      title: "Voice & AI Agent Systems",
-      subtitle: "AI-Powered + 24/7 Multilingual Support",
-      description:
-        "24/7 AI voice agents with 31+ language support for customer service, appointment booking, and sales support. Multi-platform integration provides natural conversations that feel human while handling routine tasks automatically.",
-      outcome: "24/7 intelligent voice support",
+      title: t("voiceAI.title"),
+      subtitle: t("voiceAI.subtitle"),
+      description: t("voiceAI.description"),
+      outcome: t("voiceAI.outcome"),
       capabilities: [
-        "Natural conversation processing with AI",
-        "31+ language support with automatic detection",
-        "Intelligent call routing and escalation",
-        "Appointment scheduling automation workflows",
-        "CRM integration with conversation tracking",
+        t("voiceAI.capabilities.0"),
+        t("voiceAI.capabilities.1"),
+        t("voiceAI.capabilities.2"),
+        t("voiceAI.capabilities.3"),
+        t("voiceAI.capabilities.4"),
       ],
-      badge: "Voice AI",
+      badge: t("voiceAI.badge"),
       techStack: ["n8n", "Voice AI APIs", "Speech Recognition", "Calendly"],
       applications: [
         "Customer service",
@@ -137,19 +138,18 @@ const AIServices = ({ className }: AIServicesProps) => {
     {
       id: "ai-content-systems",
       icon: "Target" as IconName,
-      title: "AI Content & UGC Systems",
-      subtitle: "OpenAI + Character-Consistent Branding",
-      description:
-        "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
-      outcome: "Brand-consistent content at scale",
+      title: t("contentSystems.title"),
+      subtitle: t("contentSystems.subtitle"),
+      description: t("contentSystems.description"),
+      outcome: t("contentSystems.outcome"),
       capabilities: [
-        "AI-driven content creation with brand algorithms",
-        "Multi-format content optimization workflows",
-        "Automated content calendar management",
-        "SEO optimization and keyword integration",
-        "Multi-channel distribution automation",
+        t("contentSystems.capabilities.0"),
+        t("contentSystems.capabilities.1"),
+        t("contentSystems.capabilities.2"),
+        t("contentSystems.capabilities.3"),
+        t("contentSystems.capabilities.4"),
       ],
-      badge: "Content AI",
+      badge: t("contentSystems.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "DALL-E 3", "Buffer API"],
       applications: [
         "Content creation",
@@ -163,19 +163,18 @@ const AIServices = ({ className }: AIServicesProps) => {
     {
       id: "automation-dashboard",
       icon: "Zap" as IconName,
-      title: "Automation Intelligence Platform",
-      subtitle: "Custom Dashboard + Complete Workflow Control",
-      description:
-        "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
-      outcome: "Complete automation visibility and control",
+      title: t("automationDashboard.title"),
+      subtitle: t("automationDashboard.subtitle"),
+      description: t("automationDashboard.description"),
+      outcome: t("automationDashboard.outcome"),
       capabilities: [
-        "Custom dashboard development with real-time monitoring",
-        "Centralized control panel for all n8n automations",
-        "Business performance analytics and KPI tracking",
-        "Automated workflow status and health monitoring",
-        "Custom reporting and business intelligence integration",
+        t("automationDashboard.capabilities.0"),
+        t("automationDashboard.capabilities.1"),
+        t("automationDashboard.capabilities.2"),
+        t("automationDashboard.capabilities.3"),
+        t("automationDashboard.capabilities.4"),
       ],
-      badge: "Enterprise",
+      badge: t("automationDashboard.badge"),
       techStack: ["n8n", "React/Next.js", "Node.js", "Database", "APIs"],
       applications: [
         "Automation monitoring",
@@ -194,8 +193,8 @@ const AIServices = ({ className }: AIServicesProps) => {
         {/* Header */}
         <div className="animate-bundle-heading">
           <Heading
-            title="Technical Implementation Systems"
-            text="Multi-platform automation architectures using open-source orchestration, AI language models, and voice synthesis technologies for workflow optimization"
+            title={t("title")}
+            text={t("subtitle")}
           />
         </div>
 
@@ -207,9 +206,9 @@ const AIServices = ({ className }: AIServicesProps) => {
           <div className="relative max-w-4xl text-center">
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
               {[
-                { icon: Workflow, text: "Visual Workflow Design" },
-                { icon: TrendingUp, text: "Multi-System Integration" },
-                { icon: Building2, text: "Enterprise Scalability" },
+                { icon: Workflow, text: t("valueProps.visualWorkflow") },
+                { icon: TrendingUp, text: t("valueProps.multiSystem") },
+                { icon: Building2, text: t("valueProps.enterpriseScale") },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -305,7 +304,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                   <div className="mb-4 flex-1">
                     <h4 className="text-xs font-bold text-n-1 uppercase tracking-wider mb-3 flex items-center gap-2">
                       <Workflow className="w-3 h-3 text-color-1" />
-                      Key Capabilities
+                      {t("labels.keyCapabilities")}
                     </h4>
                     <div className="space-y-1">
                       {system.capabilities.map(
@@ -337,7 +336,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                       )}
                     >
                       <p className="text-xs font-bold text-n-1 mb-1">
-                        System Outcome
+                        {t("labels.systemOutcome")}
                       </p>
                       <p
                         className={cn(
@@ -378,13 +377,11 @@ const AIServices = ({ className }: AIServicesProps) => {
         >
           <div className="max-w-2xl mx-auto">
             <p className="text-base sm:text-lg text-n-4 mb-6">
-              Explore automation architecture implementations and workflow
-              orchestration methodologies. Technical consultation available for
-              custom integration requirements.
+              {t("bottomCta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="px-8 text-base" href="#contact">
-                Get Started
+                {t("bottomCta.button")}
               </Button>
             </div>
           </div>

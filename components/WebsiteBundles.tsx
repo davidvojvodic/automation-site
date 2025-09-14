@@ -1,70 +1,69 @@
+"use client";
+
 import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
 import { Zap, Globe, Workflow, ShoppingCart, Code, Database } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface BundleProps {
   className?: string;
 }
 
 const WebsiteBundles = ({ className }: BundleProps) => {
+  const t = useTranslations("HomePage.websiteBundles");
+
   const solutions = [
     {
       id: "foundation",
       icon: Zap,
-      title: "Foundation Bundle",
-      subtitle: "Business Website + Core Automations",
-      description: "Professional web presence with essential automation workflows to streamline customer interactions and lead management for service-based businesses.",
-      outcome: "Professional digital presence with automated lead capture",
-      idealFor: "Service businesses, consultants, agencies, professional services",
+      title: t("foundation.title"),
+      subtitle: t("foundation.subtitle"),
+      description: t("foundation.description"),
+      idealFor: t("foundation.idealFor"),
       capabilities: [
-        "Professional responsive website (5-8 pages)",
-        "Contact form automation with instant notifications",
-        "Lead capture workflows and email sequences",
-        "Google Analytics and tracking setup",
-        "Basic CRM integration for lead management",
-        "Monthly maintenance and hosting included"
+        t("foundation.capabilities.0"),
+        t("foundation.capabilities.1"),
+        t("foundation.capabilities.2"),
+        t("foundation.capabilities.3"),
+        t("foundation.capabilities.4"),
       ],
-      badge: "Essential",
+      badge: t("foundation.badge"),
       popular: false,
     },
     {
       id: "growth",
       icon: ShoppingCart,
-      title: "Growth Bundle",
-      subtitle: "E-commerce + Marketing Automation",
-      description: "Complete online store with intelligent automation systems for inventory, orders, and customer lifecycle management to maximize sales and retention.",
-      outcome: "Automated e-commerce operations with intelligent marketing",
-      idealFor: "Product businesses, online retailers, physical stores going digital",
+      title: t("growth.title"),
+      subtitle: t("growth.subtitle"),
+      description: t("growth.description"),
+      idealFor: t("growth.idealFor"),
       capabilities: [
-        "Full e-commerce store with payment processing",
-        "Automated inventory management and low-stock alerts",
-        "Order processing workflows and fulfillment automation",
-        "Customer email campaigns and abandoned cart recovery",
-        "Product recommendation and upselling automation",
-        "Analytics dashboard with sales insights and reporting"
+        t("growth.capabilities.0"),
+        t("growth.capabilities.1"),
+        t("growth.capabilities.2"),
+        t("growth.capabilities.3"),
+        t("growth.capabilities.4"),
       ],
-      badge: "Popular",
+      badge: t("growth.badge"),
       popular: true,
     },
     {
       id: "dominator",
       icon: Code,
-      title: "Dominator Bundle",
-      subtitle: "Custom Web App + Advanced Automation",
-      description: "Enterprise-grade web application development with custom automation architecture. Every project is uniquely scoped based on your technical requirements and business objectives through detailed consultation.",
-      outcome: "Tailored digital ecosystem designed for your specific business model",
-      idealFor: "SaaS startups, tech companies, businesses with complex operations",
+      title: t("dominator.title"),
+      subtitle: t("dominator.subtitle"),
+      description: t("dominator.description"),
+      idealFor: t("dominator.idealFor"),
       capabilities: [
-        "Custom web application development tailored to your requirements",
-        "Scalable user authentication, roles, and permission systems",
-        "Multi-system workflow orchestration and API integrations",
-        "Enterprise-grade analytics dashboards with real-time data",
-        "Scalable architecture with monitoring and alerting"
+        t("dominator.capabilities.0"),
+        t("dominator.capabilities.1"),
+        t("dominator.capabilities.2"),
+        t("dominator.capabilities.3"),
       ],
-      badge: "Premium",
+      badge: t("dominator.badge"),
       popular: false,
       isPremium: true,
     },
@@ -76,9 +75,9 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         {/* Header */}
         <div className="animate-bundle-heading">
           <Heading
-            tag="Web Development + Automation"
-            title="Complete Digital Solutions" 
-            text="Professional web development combined with intelligent automation systems to accelerate business growth and operational efficiency" 
+            tag={t("tag")}
+            title={t("title")}
+            text={t("subtitle")}
           />
         </div>
 
@@ -90,9 +89,9 @@ const WebsiteBundles = ({ className }: BundleProps) => {
           <div className="relative max-w-4xl text-center">
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
               {[
-                { icon: Globe, text: "Modern Web Development" },
-                { icon: Database, text: "Smart Automation Integration" },
-                { icon: Workflow, text: "End-to-End Solutions" },
+                { icon: Globe, text: t("valueProps.modernWeb") },
+                { icon: Database, text: t("valueProps.smartAutomation") },
+                { icon: Workflow, text: t("valueProps.endToEnd") },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -179,7 +178,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 {/* Target Audience */}
                 <div className="mb-6">
                   <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
-                    Ideal For
+                    {t("labels.idealFor")}
                   </div>
                   <p className="text-sm text-n-2">
                     {solution.idealFor}
@@ -190,7 +189,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 <div className="mb-6 flex-1">
                   <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-4 flex items-center gap-2">
                     <Workflow className="w-4 h-4 text-color-1" />
-                    Included Features
+                    {t("labels.includedFeatures")}
                   </h4>
                   <div className="grid grid-cols-1 gap-2">
                     {solution.capabilities.map(
@@ -204,32 +203,6 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                         </div>
                       )
                     )}
-                  </div>
-                </div>
-
-                {/* Success Outcome */}
-                <div className="mt-auto">
-                  <div
-                    className={cn(
-                      "p-4 rounded-xl border-l-4 bg-gradient-to-r",
-                      solution.isPremium
-                        ? "border-color-6 from-color-6/10 to-transparent"
-                        : "border-color-1 from-color-1/10 to-transparent"
-                    )}
-                  >
-                    <p className="text-sm font-bold text-n-1 mb-1">
-                      Expected Outcome
-                    </p>
-                    <p
-                      className={cn(
-                        "text-lg font-bold",
-                        solution.isPremium
-                          ? "text-color-6"
-                          : "text-color-1"
-                      )}
-                    >
-                      {solution.outcome}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -255,11 +228,11 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         >
           <div className="max-w-2xl mx-auto">
             <p className="text-base sm:text-lg text-n-4 mb-6">
-              Ready to transform your business with professional web development and intelligent automation? Let&apos;s discuss your project requirements and technical objectives.
+              {t("bottomCta.description")}
             </p>
             <div className="flex justify-center">
               <Button className="px-8 text-base" href="#contact">
-                Start Your Project
+                {t("bottomCta.button")}
               </Button>
             </div>
           </div>
