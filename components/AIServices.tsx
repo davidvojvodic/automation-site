@@ -15,7 +15,7 @@ import {
   Search,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface AIServicesProps {
   className?: string;
@@ -35,6 +35,7 @@ type IconName = keyof typeof iconMap;
 
 const AIServices = ({ className }: AIServicesProps) => {
   const t = useTranslations("HomePage.aiServices");
+  const locale = useLocale();
 
   // Flowko Automation Systems - Standard services first, then Premium/Enterprise
   const automationSystems = [
@@ -187,8 +188,68 @@ const AIServices = ({ className }: AIServicesProps) => {
     },
   ];
 
+  // Generate structured data for services
+  const generateServiceStructuredData = () => {
+    const services = automationSystems.map((system) => ({
+      "@type": "Service",
+      "@id": `https://flowko.io/${locale}#${system.id}`,
+      name: system.title,
+      description: system.description,
+      serviceOutput: system.outcome,
+      provider: {
+        "@type": "Organization",
+        name: "Flowko",
+        url: "https://flowko.io"
+      },
+      serviceType: locale === "sl" ? "Avtomatizacija poslovnih procesov" : "Business Process Automation",
+      category: system.badge,
+      keywords: system.techStack.join(", "),
+      areaServed: [
+        {
+          "@type": "Country",
+          name: locale === "sl" ? "Slovenija" : "Slovenia"
+        },
+        {
+          "@type": "Country",
+          name: locale === "sl" ? "Avstrija" : "Austria"
+        },
+        {
+          "@type": "Country",
+          name: locale === "sl" ? "Hrvaška" : "Croatia"
+        }
+      ],
+      offers: {
+        "@type": "Offer",
+        description: system.subtitle,
+        category: system.isPremium ? "Premium" : system.isEnterprise ? "Enterprise" : "Standard"
+      }
+    }));
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: locale === "sl" ? "AI Avtomatizacijski sistemi" : "AI Automation Systems",
+      description: locale === "sl"
+        ? "Celovite rešitve za avtomatizacijo poslovnih procesov z AI tehnologijo"
+        : "Comprehensive AI-powered business process automation solutions",
+      numberOfItems: services.length,
+      itemListElement: services.map((service, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: service
+      }))
+    };
+  };
+
   return (
     <Section crosses className={cn("", className)} id="ai-services">
+      {/* Service Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateServiceStructuredData())
+        }}
+      />
       <div className="container relative z-2">
         {/* Header */}
         <div className="animate-bundle-heading">

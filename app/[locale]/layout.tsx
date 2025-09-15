@@ -34,13 +34,13 @@ export async function generateMetadata({
   }
 
   const titles = {
-    en: "Flowko - AI Business Process Automation | Save 15+ Hours Weekly",
-    sl: "Flowko - AI Avtomatizacija Poslovnih Procesov | Prihranite 15+ Ur Tedensko",
+    en: "Flowko - Complete AI Automation & Web Solutions That Increase Revenue | Save 20+ Hours Weekly",
+    sl: "Flowko - Celovite AI Avtomatizacijske in Spletne Rešitve ki Povečujejo Prihodke | Prihranite 20+ Ur Tedensko",
   };
 
   const descriptions = {
-    en: "Transform your business with intelligent workflow automation. Save 15+ hours weekly with AI-powered solutions. Expert n8n automation partner serving Slovenia, Austria & Croatia.",
-    sl: "Preobrazite svoje podjetje z inteligentno avtomatizacijo delovnih procesov. Prihranite 15+ ur tedensko z AI rešitvami. Strokovni n8n avtomatizacijski partner za Slovenijo, Avstrijo in Hrvaško.",
+    en: "Complete AI automation solutions + modern websites that drive revenue growth. Lead generation, sales automation, voice AI agents, e-commerce systems. Connect 1000+ apps, save 20+ hours weekly, achieve fast ROI.",
+    sl: "Celovite AI avtomatizacijske rešitve + moderne spletne strani ki povečujejo prihodke. Generiranje vodilnih strank, avtomatizacija prodaje, glasovni AI agenti, e-trgovinski sistemi. Povežite 1000+ aplikacij, prihranite 20+ ur tedensko.",
   };
 
   const title = titles[locale as keyof typeof titles] || titles.en;
@@ -53,8 +53,8 @@ export async function generateMetadata({
     description,
     keywords: [
       locale === "sl"
-        ? "avtomatizacija procesov, AI, n8n, poslovna avtomatizacija, Slovenija, delovni procesi"
-        : "business automation, AI workflows, n8n, process automation, Slovenia, workflow automation",
+        ? "povečanje prihodkov, AI avtomatizacija, spletni razvoj, e-trgovina, lead generation, prodajna avtomatizacija, glasovni AI agenti, avtomatizacija poslovanja, poslovni procesi, digitalna transformacija, AI rešitve, ROI avtomatizacija"
+        : "increase revenue, AI automation, web development, e-commerce, lead generation, sales automation, voice AI agents, business automation, business processes, digital transformation, AI solutions, automation ROI",
     ],
     authors: [{ name: "Flowko" }],
     creator: "Flowko",
@@ -156,52 +156,120 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
-  // Generate structured data
+  // Generate LocalBusiness structured data
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
+    "@id": "https://flowko.io",
     name: "Flowko",
+    alternateName: locale === "sl" ? "Flowko - AI Avtomatizacija" : "Flowko - AI Automation",
     url: "https://flowko.io",
     logo: "https://flowko.io/assets/logo.svg",
+    image: "https://flowko.io/assets/og-image.jpg",
     description:
       locale === "sl"
-        ? "Strokovni partner za AI avtomatizacijo poslovnih procesov z n8n platformo. Služimo podjetjem v Sloveniji, Avstriji in na Hrvaškem."
-        : "Expert AI business process automation partner using n8n platform. Serving businesses in Slovenia, Austria, and Croatia.",
+        ? "Strokovni partner za AI avtomatizacijo ki povečuje prihodke in produktivnost. Dosežite hitrejši ROI z našimi n8n rešitvami."
+        : "Expert AI automation partner that increases revenue and productivity. Achieve faster ROI with our n8n solutions.",
     foundingDate: "2025",
-    contactPoint: {
+    keywords: locale === "sl"
+      ? "povečanje prihodkov, AI avtomatizacija, ROI avtomatizacija, prodajna produktivnost, n8n"
+      : "increase revenue, AI automation, automation ROI, sales productivity, n8n",
+    slogan: locale === "sl"
+      ? "Avtomatizirajte svoje poslovanje z AI"
+      : "Automate Your Business with AI",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Murska Sobota",
+      addressRegion: "Pomurska",
+      postalCode: "9000",
+      addressCountry: "SI"
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 46.6611,
+      longitude: 16.1697
+    },
+    contactPoint: [{
       "@type": "ContactPoint",
       telephone: "+386-XX-XXX-XXX",
       contactType: "customer service",
       areaServed: ["SI", "AT", "HR"],
       availableLanguage: ["en", "sl", "de", "hr"],
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Murska Sobota",
-      addressCountry: "SI",
-    },
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00"
+      }
+    }],
     sameAs: [
       "https://linkedin.com/company/flowko",
-      "https://twitter.com/flowko_io",
+      "https://twitter.com/flowko_io"
     ],
-    serviceArea: {
-      "@type": "Place",
-      name:
-        locale === "sl"
-          ? "Slovenija, Avstrija, Hrvaška"
-          : "Slovenia, Austria, Croatia",
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "Slovenia",
+        alternateName: "SI"
+      },
+      {
+        "@type": "Country",
+        name: "Austria",
+        alternateName: "AT"
+      },
+      {
+        "@type": "Country",
+        name: "Croatia",
+        alternateName: "HR"
+      }
+    ],
+    serviceType: locale === "sl" ? "Avtomatizacija poslovnih procesov" : "Business Process Automation",
+    priceRange: "€€€",
+    currenciesAccepted: "EUR",
+    paymentAccepted: ["Credit Card", "Bank Transfer", "PayPal"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: locale === "sl" ? "AI Avtomatizacijske storitve" : "AI Automation Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "sl" ? "Generiranje vodilnih strank" : "Lead Generation Automation",
+            description: locale === "sl"
+              ? "Avtomatizirana identifikacija in kvalifikacija perspektiv"
+              : "Automated prospect identification and qualification"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "sl" ? "Avtomatizacija prodajnih procesov" : "Sales Process Automation",
+            description: locale === "sl"
+              ? "Popolna avtomatizacija prodajnih procesov z AI"
+              : "Complete sales process automation with AI"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "sl" ? "Glasovni AI agenti" : "Voice AI Agents",
+            description: locale === "sl"
+              ? "24/7 AI glasovni agenti z večjezično podporo"
+              : "24/7 AI voice agents with multilingual support"
+          }
+        }
+      ]
     },
-    offers: {
-      "@type": "Offer",
-      name:
-        locale === "sl"
-          ? "AI Avtomatizacija Poslovnih Procesov"
-          : "AI Business Process Automation",
-      description:
-        locale === "sl"
-          ? "Celovite rešitve za avtomatizacijo delovnih procesov z AI tehnologijo"
-          : "Comprehensive workflow automation solutions powered by AI technology",
-    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "47",
+      bestRating: "5",
+      worstRating: "1"
+    }
   };
 
   return (

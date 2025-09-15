@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import Section from "./Section";
 import Heading from "./Heading";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Accordion,
   AccordionContent,
@@ -28,6 +28,7 @@ interface Step {
 
 function Implementation({ className }: ImplementationProps) {
   const t = useTranslations("HomePage.implementation");
+  const locale = useLocale();
 
   const steps: Step[] = [
     {
@@ -64,8 +65,82 @@ function Implementation({ className }: ImplementationProps) {
     },
   ];
 
+  // Generate FAQ structured data for automation implementation
+  const generateFAQStructuredData = () => {
+    const faqs = [
+      {
+        question: locale === "sl"
+          ? "Kako dolgo traja implementacija avtomatizacije?"
+          : "How long does automation implementation take?",
+        answer: locale === "sl"
+          ? "Naš postopek implementacije traja 1-4 tedne, odvisno od kompleksnosti. Faza 1 (odkrivanje) traja 3-5 dni, Faza 2 (načrtovanje) 5-7 dni, Faza 3 (implementacija) 1-2 tedna, Faza 4 (usposabljanje) 2-3 dni."
+          : "Our implementation process takes 1-4 weeks depending on complexity. Phase 1 (Discovery) takes 3-5 days, Phase 2 (Planning) 5-7 days, Phase 3 (Implementation) 1-2 weeks, Phase 4 (Training) 2-3 days."
+      },
+      {
+        question: locale === "sl"
+          ? "Ali lahko avtomatizacija motiti naše trenutne poslovne procese?"
+          : "Can automation disrupt our current business processes?",
+        answer: locale === "sl"
+          ? "Ne, naš pristop zagotavlja ničelno motenje poslovanja. Implementiramo z nadzorovanim okoljem, kontinuirnim spremljanjem in zmožnostmi vračanja. Vaši trenutni procesi ostajajo aktivni med implementacijo."
+          : "No, our approach ensures zero business disruption. We implement with controlled environments, continuous monitoring, and rollback capabilities. Your current processes remain active during implementation."
+      },
+      {
+        question: locale === "sl"
+          ? "Kakšne so tipične prihranke časa z avtomatizacijo?"
+          : "What are typical time savings with automation?",
+        answer: locale === "sl"
+          ? "Naši stranke v povprečju prihranijo 15+ ur tedensko na tim. Vodilne avtomatizacije lahko prihranijo do 20+ ur tedensko, prodajni procesi 10-15 ur, finančni procesi 8-12 ur tedensko."
+          : "Our clients typically save 15+ hours weekly per team. Lead generation automation can save 20+ hours weekly, sales processes 10-15 hours, financial processes 8-12 hours weekly."
+      },
+      {
+        question: locale === "sl"
+          ? "Ali potrebujemo tehnično znanje za upravljanje avtomatizacij?"
+          : "Do we need technical knowledge to manage automations?",
+        answer: locale === "sl"
+          ? "Ne, projektiramo uporabniku prijazne sisteme. V fazi 4 zagotavljamo celovito usposabljanje ekipe in dokumentacijo. Vaša ekipa postane avtonomna z novimi avtomatizacijskimi sistemi."
+          : "No, we design user-friendly systems. In Phase 4, we provide comprehensive team training and documentation. Your team becomes autonomous with the new automation systems."
+      },
+      {
+        question: locale === "sl"
+          ? "Katere tehnologije uporabljate za avtomatizacijo?"
+          : "What technologies do you use for automation?",
+        answer: locale === "sl"
+          ? "Uporabljamo n8n (vodilno platformo za avtomatizacijo), OpenAI GPT-4, Claude 3, API integracije, ter specializirane orodja kot so HubSpot, Salesforce, LinkedIn API in druge poslovne aplikacije."
+          : "We use n8n (leading automation platform), OpenAI GPT-4, Claude 3, API integrations, and specialized tools like HubSpot, Salesforce, LinkedIn API, and other business applications."
+      },
+      {
+        question: locale === "sl"
+          ? "Ali nudite podporo po implementaciji?"
+          : "Do you provide post-implementation support?",
+        answer: locale === "sl"
+          ? "Da, nudimo različne nivoje podpore: od e-poštne podpore do namenskih SLA in četrtletnih strateških pregledov. Vključujemo tudi spremljanje uspešnosti in optimizacijske sprinte."
+          : "Yes, we offer various support levels: from email support to dedicated SLAs and quarterly strategy reviews. We also include performance monitoring and optimization sprints."
+      }
+    ];
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map(faq => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer
+        }
+      }))
+    };
+  };
+
   return (
-    <Section crosses className={cn(className)} id="process">
+    <Section crosses className={cn(className)} id="implementation">
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateFAQStructuredData())
+        }}
+      />
       <div className="container">
         <div className="animate-process-heading">
           <Heading

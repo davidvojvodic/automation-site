@@ -9,7 +9,7 @@ import { useRef } from "react";
 import CompanyLogos from "./CompanyLogos";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export interface HeroProps {
   className?: string;
@@ -18,6 +18,7 @@ export interface HeroProps {
 function Hero(props: HeroProps) {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("HomePage.hero");
+  const locale = useLocale();
 
   return (
     <Section
@@ -35,10 +36,13 @@ function Hero(props: HeroProps) {
         ref={parallaxRef}
       >
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-10 sm:mb-16 md:mb-20 lg:mb-[6.25rem]">
-          {/* Animated Main Title */}
+          {/* SEO-optimized Main Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 animate-hero-title">
             <span className="inline-block" style={{ animationDelay: "0ms" }}>
               {t("title")}
+              {locale === "sl" && (
+                <span className="sr-only"> - Avtomatizacija poslovnih procesov v Sloveniji</span>
+              )}
             </span>{" "}
             <span
               className="inline-block relative animate-hero-subtitle"
@@ -50,7 +54,7 @@ function Hero(props: HeroProps) {
                 className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[250px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[730px] xl:max-w-[730px] xl:mt-1 animate-hero-curve"
                 width={624}
                 height={28}
-                alt="Curve"
+                alt={locale === "sl" ? "Poudark za AI avtomatizacijo" : "Curve highlighting AI automation"}
                 style={{ animationDelay: "800ms" }}
               />
             </span>

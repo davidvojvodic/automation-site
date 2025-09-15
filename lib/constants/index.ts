@@ -49,7 +49,17 @@ export const navigation = [
   {
     id: "2",
     title: "process",
-    url: "#process",
+    url: "#implementation",
+  },
+  {
+    id: "3",
+    title: "pricing",
+    url: "#pricing",
+  },
+  {
+    id: "4",
+    title: "contact",
+    url: "#contact",
   },
 ];
 

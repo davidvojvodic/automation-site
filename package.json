@@ -11,7 +11,10 @@
     "audit:security": "npm audit",
     "audit:performance": "npm run build && npm run start",
     "backup": "node scripts/backup.js",
-    "health-check": "curl -f https://flowko.io/api/health || exit 1"
+    "health-check": "curl -f https://flowko.io/api/health || exit 1",
+    "test:seo": "node tests/run-seo-validation.js",
+    "test:components": "node tests/validate-components.js",
+    "test:performance": "node tests/validate-performance.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
