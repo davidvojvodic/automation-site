@@ -135,57 +135,8 @@ export async function GET(): Promise<NextResponse> {
       });
     });
 
-    // Additional SEO-focused pages for Slovenia market
-    const seoPages: SitemapEntry[] = [
-      {
-        url: `${baseUrl}/sl/avtomatizacija-poslovanja-slovenija`,
-        lastModified: currentDate,
-        changeFrequency: 'monthly',
-        priority: 0.9,
-        alternates: {
-          languages: {
-            'en': `${baseUrl}/en/business-automation-slovenia`,
-            'sl': `${baseUrl}/sl/avtomatizacija-poslovanja-slovenija`,
-          },
-        },
-      },
-      {
-        url: `${baseUrl}/en/business-automation-slovenia`,
-        lastModified: currentDate,
-        changeFrequency: 'monthly',
-        priority: 0.9,
-        alternates: {
-          languages: {
-            'en': `${baseUrl}/en/business-automation-slovenia`,
-            'sl': `${baseUrl}/sl/avtomatizacija-poslovanja-slovenija`,
-          },
-        },
-      },
-      {
-        url: `${baseUrl}/sl/n8n-svetovanje-slovenija`,
-        lastModified: currentDate,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        alternates: {
-          languages: {
-            'en': `${baseUrl}/en/n8n-consulting-slovenia`,
-            'sl': `${baseUrl}/sl/n8n-svetovanje-slovenija`,
-          },
-        },
-      },
-      {
-        url: `${baseUrl}/en/n8n-consulting-slovenia`,
-        lastModified: currentDate,
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        alternates: {
-          languages: {
-            'en': `${baseUrl}/en/n8n-consulting-slovenia`,
-            'sl': `${baseUrl}/sl/n8n-svetovanje-slovenija`,
-          },
-        },
-      },
-    ];
+    // Additional SEO-focused pages for Slovenia market - removed to fix 404 errors
+    const seoPages: SitemapEntry[] = [];
 
     // Combine all entries
     const allEntries = [
