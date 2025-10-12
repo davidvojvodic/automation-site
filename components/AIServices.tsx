@@ -149,7 +149,7 @@ const AIServices = ({ className }: AIServicesProps) => {
         "Sales calls",
         "Support tickets",
       ],
-      isPremium: true,
+      isIntelligence: true,
       popular: false,
     },
     {
@@ -174,7 +174,6 @@ const AIServices = ({ className }: AIServicesProps) => {
         "SEO optimization",
         "Brand management",
       ],
-      isPremium: true,
       popular: false,
     },
     {
@@ -199,7 +198,7 @@ const AIServices = ({ className }: AIServicesProps) => {
         "Workflow control",
         "Performance tracking",
       ],
-      isEnterprise: true,
+      isIntelligence: true,
       popular: false,
     },
   ];
@@ -237,7 +236,7 @@ const AIServices = ({ className }: AIServicesProps) => {
       offers: {
         "@type": "Offer",
         description: system.subtitle,
-        category: system.isPremium ? "Premium" : system.isEnterprise ? "Enterprise" : "Standard"
+        category: system.isIntelligence ? "Intelligence Layer" : "Core Automation"
       }
     }));
 
@@ -309,16 +308,10 @@ const AIServices = ({ className }: AIServicesProps) => {
                 key={system.id}
                 className={cn(
                   "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
-                  "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
                   "hover:-translate-y-1",
                   "transition-all duration-500 ease-out group",
                   "animate-bundle-card",
-                  system.popular &&
-                    "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
-                  system.isPremium &&
-                    "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10",
-                  system.isEnterprise &&
-                    "border-color-4/50 bg-gradient-to-br from-color-4/5 to-transparent hover:from-color-4/10"
+                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent shadow-xl shadow-color-1/10 hover:from-color-1/10 hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/15"
                 )}
                 style={{ animationDelay: `${700 + index * 150}ms` }}
               >
@@ -329,16 +322,14 @@ const AIServices = ({ className }: AIServicesProps) => {
                       <div className="flex items-center gap-4">
                         <div
                           className={cn(
-                            "w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                            system.isPremium && "bg-color-6/10",
-                            system.isEnterprise && "bg-color-4/10"
+                            "w-12 sm:w-14 h-12 sm:h-14 rounded-xl flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
+                            "bg-color-1/10"
                           )}
                         >
                           <IconComponent
                             className={cn(
-                              "w-6 sm:w-7 h-6 sm:h-7 text-color-1",
-                              system.isPremium && "text-color-6",
-                              system.isEnterprise && "text-color-4"
+                              "w-6 sm:w-7 h-6 sm:h-7",
+                              "text-color-1"
                             )}
                           />
                         </div>
@@ -348,13 +339,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                       <div
                         className={cn(
                           "px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                          system.popular && "bg-color-1 text-n-8",
-                          system.isPremium && "bg-color-6 text-n-8",
-                          system.isEnterprise && "bg-color-4 text-n-8",
-                          !system.popular &&
-                            !system.isPremium &&
-                            !system.isEnterprise &&
-                            "bg-n-6 text-n-3"
+                          system.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
                         )}
                       >
                         {system.badge}
@@ -403,11 +388,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                 <div
                   className={cn(
                     "absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl to-transparent rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-all duration-500",
-                    system.isPremium
-                      ? "from-color-6/10 group-hover:from-color-6/20"
-                      : system.isEnterprise
-                      ? "from-color-4/10 group-hover:from-color-4/20"
-                      : "from-color-1/10 group-hover:from-color-1/20"
+                    "from-color-1/10 group-hover:from-color-1/20"
                   )}
                 ></div>
               </div>
@@ -446,16 +427,12 @@ const AIServices = ({ className }: AIServicesProps) => {
                       <div
                         className={cn(
                           "w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0",
-                          selectedSystem.isPremium ? "bg-color-6/10" :
-                          selectedSystem.isEnterprise ? "bg-color-4/10" :
                           "bg-color-1/10"
                         )}
                       >
                         <IconComponent
                           className={cn(
                             "w-7 h-7",
-                            selectedSystem.isPremium ? "text-color-6" :
-                            selectedSystem.isEnterprise ? "text-color-4" :
                             "text-color-1"
                           )}
                         />
@@ -464,10 +441,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                         <div
                           className={cn(
                             "inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2",
-                            selectedSystem.popular && "bg-color-1 text-n-8",
-                            selectedSystem.isPremium && "bg-color-6 text-n-8",
-                            selectedSystem.isEnterprise && "bg-color-4 text-n-8",
-                            !selectedSystem.popular && !selectedSystem.isPremium && !selectedSystem.isEnterprise && "bg-n-6 text-n-3"
+                            selectedSystem.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
                           )}
                         >
                           {selectedSystem.badge}
@@ -498,8 +472,6 @@ const AIServices = ({ className }: AIServicesProps) => {
                             <div
                               className={cn(
                                 "w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2",
-                                selectedSystem.isPremium ? "bg-color-6" :
-                                selectedSystem.isEnterprise ? "bg-color-4" :
                                 "bg-color-1"
                               )}
                             />
@@ -519,8 +491,6 @@ const AIServices = ({ className }: AIServicesProps) => {
                       <p
                         className={cn(
                           "text-base font-semibold leading-relaxed",
-                          selectedSystem.isPremium ? "text-color-6" :
-                          selectedSystem.isEnterprise ? "text-color-4" :
                           "text-color-1"
                         )}
                       >

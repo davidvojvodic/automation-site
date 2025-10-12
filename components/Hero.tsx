@@ -1,13 +1,12 @@
 "use client";
 
-import { curve } from "@/public/assets";
 import Button from "./Button";
 import Section from "./Section";
 import { BackgroundCircles, BottomLine } from "./design/Hero";
+import { HeroCurve } from "./design/HeroCurve";
 
 import { useRef } from "react";
 import CompanyLogos from "./CompanyLogos";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
 
@@ -46,16 +45,12 @@ function Hero(props: HeroProps) {
             </span>{" "}
             <span
               className="inline-block relative animate-hero-subtitle"
-              style={{ animationDelay: "300ms" }}
+              style={{ animationDelay: "100ms" }}
             >
               {t("subtitle")}
-              <Image
-                src={curve}
-                className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[250px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[730px] xl:max-w-[730px] xl:mt-1 animate-hero-curve"
-                width={624}
-                height={28}
-                alt={locale === "sl" ? "Poudark za AI avtomatizacijo" : "Curve highlighting AI automation"}
-                style={{ animationDelay: "800ms" }}
+              <HeroCurve
+                className="absolute top-full left-1/2 -translate-x-1/2 w-full max-w-[250px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[730px] xl:max-w-[730px] -mt-1 sm:-mt-1.5 md:-mt-2"
+                delay={200}
               />
             </span>
           </h1>
@@ -63,13 +58,13 @@ function Hero(props: HeroProps) {
           {/* Animated Description */}
           <p
             className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto mt-6 sm:mt-8 lg:mt-12 mb-4 sm:mb-6 text-n-2 lg:mb-8 animate-hero-description leading-relaxed"
-            style={{ animationDelay: "600ms" }}
+            style={{ animationDelay: "200ms" }}
           >
             {t("description")}
           </p>
 
           {/* Animated CTA Button */}
-          <div className="animate-hero-cta" style={{ animationDelay: "900ms" }}>
+          <div className="animate-hero-cta" style={{ animationDelay: "300ms" }}>
             <Button
               className="mt-4 sm:mt-6 text-sm sm:text-base group relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-white/20"
               href="#contact"
@@ -127,7 +122,7 @@ function Hero(props: HeroProps) {
 
         <CompanyLogos
           className="relative z-10 mt-10 md:mt-32 animate-hero-logos"
-          style={{ animationDelay: "1200ms" }}
+          style={{ animationDelay: "400ms" }}
         />
       </div>
 

@@ -118,14 +118,21 @@ const WebsiteBundles = ({ className }: BundleProps) => {
               key={solution.id}
               className={cn(
                 "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
-                "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/10",
                 "hover:-translate-y-1",
                 "transition-all duration-500 ease-out group cursor-pointer",
                 "animate-bundle-card",
+                // Default shadows for depth
+                !solution.isPremium && "shadow-xl shadow-color-1/10",
+                solution.isPremium && "shadow-xl shadow-color-6/10",
+                // Popular card styling
                 solution.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10",
+                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10 hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/15",
+                // Premium card styling
                 solution.isPremium &&
-                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10"
+                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10 hover:border-color-6/40 hover:shadow-2xl hover:shadow-color-6/15",
+                // Foundation card hover (neutral)
+                !solution.popular && !solution.isPremium &&
+                  "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/15"
               )}
               style={{ animationDelay: `${700 + index * 150}ms` }}
             >
