@@ -23,7 +23,7 @@ function Hero(props: HeroProps) {
   return (
     <Section
       className={cn(
-        "pt-[8rem] sm:pt-[10rem] lg:pt-[12rem] mt-2 sm:mt-3",
+        "pt-16 sm:pt-[10rem] lg:pt-[12rem] mt-2 sm:mt-3",
         props.className
       )}
       crosses={true}

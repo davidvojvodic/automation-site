@@ -147,7 +147,7 @@ export function Contact({ className }: ContactProps) {
 
           {/* Form */}
           <div
-            className="relative bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden animate-contact-form"
+            className="relative bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 overflow-hidden animate-contact-form"
             style={{ animationDelay: "200ms" }}
           >
             {/* Subtle gradient overlay */}
@@ -157,13 +157,19 @@ export function Contact({ className }: ContactProps) {
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-6 sm:space-y-8"
+                  className="space-y-8 sm:space-y-10"
                 >
-                  {/* Basic Contact Info */}
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 animate-contact-fields"
-                    style={{ animationDelay: "400ms" }}
-                  >
+                  {/* Section 1: Your Information */}
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-n-1 mb-4 sm:mb-5">
+                      {locale === "sl" ? "Vaši podatki" : "Your Information"}
+                    </h3>
+                    <div className="space-y-5 sm:space-y-6">
+                      {/* Basic Contact Info */}
+                      <div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 animate-contact-fields"
+                        style={{ animationDelay: "400ms" }}
+                      >
                     <FormField
                       control={form.control}
                       name="firstName"
@@ -176,7 +182,7 @@ export function Contact({ className }: ContactProps) {
                             <Input
                               placeholder={t("form.firstNamePlaceholder")}
                               {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
+                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
                             />
                           </FormControl>
                           <FormMessage />
@@ -196,22 +202,22 @@ export function Contact({ className }: ContactProps) {
                             <Input
                               placeholder={t("form.lastNamePlaceholder")}
                               {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
+                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
                             />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                  </div>
+                      </div>
 
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 animate-contact-fields"
-                    style={{ animationDelay: "600ms" }}
-                  >
-                    <FormField
-                      control={form.control}
-                      name="email"
+                      <div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 animate-contact-fields"
+                        style={{ animationDelay: "600ms" }}
+                      >
+                        <FormField
+                          control={form.control}
+                          name="email"
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel className="text-sm sm:text-base text-n-1">
@@ -222,7 +228,7 @@ export function Contact({ className }: ContactProps) {
                               type="email"
                               placeholder={t("form.emailPlaceholder")}
                               {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
+                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
                             />
                           </FormControl>
                           <FormMessage />
@@ -242,99 +248,137 @@ export function Contact({ className }: ContactProps) {
                             <Input
                               placeholder={t("form.companyPlaceholder")}
                               {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
+                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
                             />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
-                    />
+                        />
+                      </div>
+                    </div>
                   </div>
 
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 animate-contact-fields"
-                    style={{ animationDelay: "800ms" }}
-                  >
-                    <FormField
-                      control={form.control}
-                      name="industry"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-sm sm:text-base text-n-1">
-                            {t("form.industry")} {t("form.required")}
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder={t("form.industryPlaceholder")}
-                              {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="website"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-sm sm:text-base text-n-1">
-                            {t("form.website")}
-                          </FormLabel>
-                          <FormControl>
-                            <Input
-                              type="url"
-                              placeholder={t("form.websitePlaceholder")}
-                              {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-9 sm:h-10"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                  {/* Section 2: Company Details */}
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-n-1 mb-4 sm:mb-5">
+                      {locale === "sl" ? "Podatki o podjetju" : "Company Details"}
+                    </h3>
+                    <div className="space-y-5 sm:space-y-6">
+                      <div
+                        className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 animate-contact-fields"
+                        style={{ animationDelay: "800ms" }}
+                      >
+                        <FormField
+                          control={form.control}
+                          name="company"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm sm:text-base text-n-1">
+                                {t("form.company")} {t("form.required")}
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  placeholder={t("form.companyPlaceholder")}
+                                  {...field}
+                                  className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        <FormField
+                          control={form.control}
+                          name="industry"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm sm:text-base text-n-1">
+                                {t("form.industry")} {t("form.required")}
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  placeholder={t("form.industryPlaceholder")}
+                                  {...field}
+                                  className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 animate-contact-fields">
+                        <FormField
+                          control={form.control}
+                          name="website"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm sm:text-base text-n-1">
+                                {t("form.website")} {locale === "sl" ? "(neobvezno)" : "(optional)"}
+                              </FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="url"
+                                  placeholder={t("form.websitePlaceholder")}
+                                  {...field}
+                                  className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 h-11 sm:h-12"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Bundle Interest Checkbox */}
-                  <div
-                    className="animate-contact-fields"
-                    style={{ animationDelay: "1000ms" }}
-                  >
-                    <FormField
-                      control={form.control}
-                      name="bundleInterest"
-                      render={({ field }) => (
-                        <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                          <FormControl>
-                            <Checkbox
-                              checked={field.value}
-                              onCheckedChange={field.onChange}
-                              className="border-n-6 data-[state=checked]:bg-color-1 data-[state=checked]:border-color-1"
-                            />
-                          </FormControl>
-                          <div className="space-y-1 leading-none">
-                            <FormLabel className="text-n-1 font-medium cursor-pointer">
-                              {t("form.bundleInterest")}
-                            </FormLabel>
-                            <p className="text-xs sm:text-sm text-n-4">
-                              {t("form.bundleInterestDescription")}
-                            </p>
-                          </div>
-                        </FormItem>
-                      )}
-                    />
-                  </div>
+                  {/* Section 3: How Can We Help? */}
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-semibold text-n-1 mb-4 sm:mb-5">
+                      {locale === "sl" ? "Kako vam lahko pomagamo?" : "How Can We Help?"}
+                    </h3>
+                    <div className="space-y-5 sm:space-y-6">
+                      {/* Bundle Interest Checkbox */}
+                      <div
+                        className="animate-contact-fields"
+                        style={{ animationDelay: "1000ms" }}
+                      >
+                        <FormField
+                          control={form.control}
+                          name="bundleInterest"
+                          render={({ field }) => (
+                            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                              <FormControl>
+                                <Checkbox
+                                  checked={field.value}
+                                  onCheckedChange={field.onChange}
+                                  className="border-n-6 data-[state=checked]:bg-color-1 data-[state=checked]:border-color-1"
+                                />
+                              </FormControl>
+                              <div className="space-y-1 leading-none">
+                                <FormLabel className="text-n-1 font-medium cursor-pointer">
+                                  {t("form.bundleInterest")}
+                                </FormLabel>
+                                <p className="text-xs sm:text-sm text-n-4">
+                                  {t("form.bundleInterestDescription")}
+                                </p>
+                              </div>
+                            </FormItem>
+                          )}
+                        />
+                      </div>
 
-                  {/* Guidance Notice */}
-                  <div
-                    className="animate-contact-fields"
-                    style={{ animationDelay: "1100ms" }}
-                  >
+                      {/* Guidance Notice */}
+                      <div
+                        className="animate-contact-fields"
+                        style={{ animationDelay: "1100ms" }}
+                      >
                     <div className="bg-color-1/5 border border-color-1/20 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
                       <div className="flex items-start gap-3">
-                        <div className="w-4 h-4 sm:w-5 sm:h-5 bg-color-1 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <CheckCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" />
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-color-1 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                         </div>
                         <div>
                           <h4 className="text-xs sm:text-sm font-semibold text-n-1 mb-1.5 sm:mb-2">
@@ -342,7 +386,7 @@ export function Contact({ className }: ContactProps) {
                               ? "💡 Nasveti za boljšo ponudbo:"
                               : "💡 Tips for a better offer:"}
                           </h4>
-                          <ul className="text-[11px] sm:text-xs text-n-3 space-y-0.5 sm:space-y-1">
+                          <ul className="text-xs sm:text-sm text-n-3 space-y-0.5 sm:space-y-1">
                             <li className="flex items-start gap-2">
                               <span className="text-color-1">•</span>
                               <span>
@@ -373,30 +417,33 @@ export function Contact({ className }: ContactProps) {
                     </div>
                   </div>
 
-                  {/* Message */}
-                  <div
-                    className="animate-contact-fields"
-                    style={{ animationDelay: "1200ms" }}
-                  >
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-sm sm:text-base text-n-1">
-                            {t("form.message")} {t("form.required")}
-                          </FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder={t("form.messagePlaceholder")}
-                              {...field}
-                              className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 min-h-[100px] sm:min-h-[120px]"
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                      {/* Message */}
+                      <div
+                        className="animate-contact-fields"
+                        style={{ animationDelay: "1200ms" }}
+                      >
+                        <FormField
+                          control={form.control}
+                          name="message"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel className="text-sm sm:text-base text-n-1">
+                                {t("form.message")} {t("form.required")}
+                              </FormLabel>
+                              <FormControl>
+                                <Textarea
+                                  rows={5}
+                                  placeholder={t("form.messagePlaceholder")}
+                                  {...field}
+                                  className="bg-n-7 border-n-6 text-sm sm:text-base text-n-1 placeholder:text-n-4 min-h-[120px]"
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </div>
                   </div>
 
                   {/* Submit Button */}
@@ -441,7 +488,7 @@ export function Contact({ className }: ContactProps) {
                           t("form.submitButton")
                         )}
                       </CustomButton>
-                      <p className="text-[11px] sm:text-xs text-n-5 max-w-md">
+                      <p className="text-xs sm:text-sm text-n-5 max-w-md">
                         {t("form.privacyNote")}
                       </p>
                     </div>
@@ -457,19 +504,19 @@ export function Contact({ className }: ContactProps) {
             >
               <div className="flex flex-wrap justify-center gap-3 sm:gap-6 lg:gap-8 text-n-4 text-xs sm:text-sm">
                 <div className="flex items-center gap-1.5 sm:gap-2 bg-n-7/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-n-6/50">
-                  <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-color-1 flex-shrink-0" />
+                  <MessageCircle className="w-5 h-5 sm:w-5 sm:h-5 text-color-1 flex-shrink-0" />
                   <span className="whitespace-nowrap">
                     {t("trustIndicators.freeConsultation")}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2 bg-n-7/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-n-6/50">
-                  <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-color-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 sm:w-5 sm:h-5 text-color-1 flex-shrink-0" />
                   <span className="whitespace-nowrap">
                     {t("trustIndicators.noObligation")}
                   </span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:gap-2 bg-n-7/50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-n-6/50">
-                  <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-color-1 flex-shrink-0" />
+                  <Shield className="w-5 h-5 sm:w-5 sm:h-5 text-color-1 flex-shrink-0" />
                   <span className="whitespace-nowrap">
                     {t("trustIndicators.gdprCompliant")}
                   </span>

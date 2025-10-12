@@ -8,14 +8,11 @@
       "generating": "Building automated workflow..."
     },
     "navigation": {
-      "features": "Features",
-      "solutions": "Automation Systems",
       "services": "Services",
-      "WebsiteBundles": "Complete Digital Solutions",
-      "benefits": "What You Gain",
-      "process": "Process",
-      "getStarted": "Get Started",
-      "contact": "Contact"
+      "websites": "Websites",
+      "howItWorks": "How It Works",
+      "contact": "Contact",
+      "getStarted": "Get Started"
     },
     "solutions": {
       "title": "Custom Automation Solutions",
@@ -462,8 +459,11 @@
         }
       },
       "labels": {
-        "keyCapabilities": "Key Capabilities",
-        "systemOutcome": "System Outcome"
+        "keyCapabilities": "Example Capabilities",
+        "customizableNote": "Fully customizable to your needs",
+        "systemOutcome": "Typical Results:",
+        "expandCapabilities": "Expand capabilities",
+        "collapseCapabilities": "Collapse capabilities"
       },
       "bottomCta": {
         "description": "Explore automation architecture implementations and workflow orchestration methodologies. Technical consultation available for custom integration requirements.",

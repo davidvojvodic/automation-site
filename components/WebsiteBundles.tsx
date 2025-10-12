@@ -82,12 +82,13 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         </div>
 
         {/* Value Proposition Pills */}
-        <div
-          className="flex justify-center mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits"
-          style={{ animationDelay: "300ms" }}
-        >
-          <div className="relative max-w-4xl text-center">
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
+        <div className="-mx-5 md:-mx-10 lg:-mx-[3.75rem]">
+          <div
+            className="flex sm:justify-center mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits px-5 md:px-10 lg:px-[3.75rem]"
+            style={{ animationDelay: "300ms" }}
+          >
+            <div className="relative w-full sm:max-w-4xl text-center">
+              <div className="flex flex-col sm:flex-row flex-wrap sm:justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
               {[
                 { icon: Globe, text: t("valueProps.modernWeb") },
                 { icon: Database, text: t("valueProps.smartAutomation") },
@@ -95,7 +96,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
+                  className="w-full sm:w-auto flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
                   style={{ animationDelay: `${400 + index * 100}ms` }}
                 >
                   <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-color-1 flex-shrink-0" />
@@ -106,6 +107,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
               ))}
             </div>
           </div>
+        </div>
         </div>
 
         {/* Solution Cards */}

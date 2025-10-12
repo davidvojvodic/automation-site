@@ -8,14 +8,11 @@
       "generating": "Ustvarjanje avtomatiziranega delovnega toka..."
     },
     "navigation": {
-      "features": "Funkcionalnosti",
-      "solutions": "Avtomatizacijski Sistemi",
       "services": "Storitve",
-      "WebsiteBundles": "Celovite Digitalne Rešitve",
-      "benefits": "Kaj pridobite",
-      "process": "Proces",
-      "getStarted": "Začnite",
-      "contact": "Kontakt"
+      "websites": "Spletne strani",
+      "howItWorks": "Kako deluje",
+      "contact": "Kontakt",
+      "getStarted": "Začnite"
     },
     "solutions": {
       "title": "Avtomatizacijske Rešitve po Meri",
@@ -462,8 +459,11 @@
         }
       },
       "labels": {
-        "keyCapabilities": "Ključne Zmožnosti",
-        "systemOutcome": "Izid Sistema"
+        "keyCapabilities": "Primeri zmogljivosti",
+        "customizableNote": "Popolnoma prilagodljivo vašim potrebam",
+        "systemOutcome": "Tipični rezultati:",
+        "expandCapabilities": "Razširi zmožnosti",
+        "collapseCapabilities": "Skrij zmožnosti"
       },
       "bottomCta": {
         "description": "Odkrijte kako avtomatizacija lahko izboljša vaše poslovanje. Na voljo je tudi svetovanje za prilagojene rešitve za vaše podjetje.",

@@ -87,7 +87,7 @@ export function Header({ className, locale = "en" }: HeaderProps) {
             "fixed top-[4.5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent"
           )}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <div className="relative z-2 flex flex-col items-center justify-start pt-16 mx-auto lg:flex-row lg:pt-0">
             {/* Navigation Links */}
             <div className="flex flex-col lg:flex-row items-center">
               {navigation.map((item) => (
@@ -99,8 +99,8 @@ export function Header({ className, locale = "en" }: HeaderProps) {
                     "block relative transition-all duration-300",
 
                     // Mobile styles
-                    "text-2xl font-code uppercase text-n-1 text-center",
-                    "px-6 py-6 md:py-8",
+                    "text-xl font-sans capitalize text-n-1 text-center",
+                    "px-6 py-3 md:py-4",
                     item.url === hash || (item.url === pathname && !hash)
                       ? "text-color-1"
                       : "hover:text-color-1",

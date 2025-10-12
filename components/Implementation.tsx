@@ -198,7 +198,7 @@ function Implementation({ className }: ImplementationProps) {
                 </AccordionTrigger>
 
                 <AccordionContent className="px-6 pb-6">
-                  <div className="space-y-4 ml-16">
+                  <div className="space-y-4">
                     {/* Description */}
                     <p className="text-n-3 text-left leading-relaxed">
                       {step.description}

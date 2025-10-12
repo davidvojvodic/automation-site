@@ -83,6 +83,16 @@ import sheetsLogo from "./sheets.svg";
 import whatsappLogo from "./WhatsApp.svg";
 import telegramLogo from "./Telegram.svg";
 import airtableLogo from "./airtable.png";
+import salesforceLogo from "./Salesforce.com_logo.svg";
+import shopifyLogo from "./shopify-icon.svg";
+import asanaLogo from "./asana-logo.svg";
+import microsoftTeamsLogo from "./MS-teams.svg";
+import mailchimpLogo from "./mailchimp-svgrepo-com.svg";
+import openaiLogo from "./icons8-chatgpt-50.png";
+import googleCalendarLogo from "./Google_Calendar_icon_(2020).svg";
+import metaLogo from "./Meta_Platforms_Inc._logo_(cropped).svg";
+import geminiLogo from "./Google-gemini-icon.svg";
+import anthropicLogo from "./Symbol.svg";
 import ecommerceIcon from "./bundles/ecommerce-icon.svg";
 import businessIcon from "./bundles/business-icon.svg";
 import serviceIcon from "./bundles/service-icon.svg";
@@ -164,6 +174,16 @@ export {
   whatsappLogo,
   telegramLogo,
   airtableLogo,
+  salesforceLogo,
+  shopifyLogo,
+  asanaLogo,
+  microsoftTeamsLogo,
+  mailchimpLogo,
+  openaiLogo,
+  googleCalendarLogo,
+  metaLogo,
+  geminiLogo,
+  anthropicLogo,
   ecommerceIcon,
   businessIcon,
   serviceIcon,
