@@ -66,15 +66,20 @@ function Hero(props: HeroProps) {
           {/* Animated CTA Button */}
           <div className="animate-hero-cta" style={{ animationDelay: "300ms" }}>
             <Button
-              className="mt-4 sm:mt-6 text-sm sm:text-base group relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-white/20"
+              className="mt-4 sm:mt-6 text-sm sm:text-base
+                hover:scale-[1.02] hover:text-color-1
+                hover:shadow-[0_8px_24px_-4px_rgba(172,106,255,0.20),0_4px_8px_-2px_rgba(172,106,255,0.10)]
+                focus-visible:scale-[1.02] focus-visible:text-color-1
+                focus-visible:shadow-[0_8px_24px_-4px_rgba(172,106,255,0.20),0_4px_8px_-2px_rgba(172,106,255,0.10)]
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-color-1 focus-visible:outline-offset-2
+                active:scale-[0.98]
+                motion-reduce:hover:scale-100 motion-reduce:focus-visible:scale-100
+                motion-reduce:active:scale-100 motion-reduce:transition-colors
+                transition-all duration-200 ease-in-out"
               href="#contact"
               white
             >
-              <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">
-                {t("cta")}
-              </span>
-              {/* Button glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+              {t("cta")}
             </Button>
           </div>
         </div>
