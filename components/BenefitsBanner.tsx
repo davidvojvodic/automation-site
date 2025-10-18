@@ -40,7 +40,7 @@ function BenefitsBanner({ className }: BenefitsBannerProps) {
       <div className="container">
         <div className="relative z-1">
           <div className="-mx-5 sm:mx-0">
-            <div className="bg-n-8/90 backdrop-blur border border-n-1/10 rounded-none sm:rounded-2xl lg:rounded-[2rem] px-5 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 lg:py-6">
+            <div className="bg-n-8/90 backdrop-blur rounded-none sm:rounded-2xl lg:rounded-[2rem] px-5 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 lg:py-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 {benefits.map((benefit, index) => (
                   <div

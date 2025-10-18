@@ -32,28 +32,39 @@ export function Collaboration({ className }: CollaborationProps) {
   return (
     <Section className={cn(className)}>
       <div className={cn("container lg:flex")}>
-        <div className="max-w-[25rem]">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">{t("title")}</h2>
-
+        <div className="max-w-[45rem]">
+          <h2 className="font-bold text-[1.5rem] leading-[2.25rem] md:text-[1.75rem] md:leading-[2.25rem] lg:text-[2rem] lg:leading-[3rem] xl:text-[2.5rem] xl:leading-tight mb-4 sm:mb-6 md:mb-8">
+            {t("title")}
+          </h2>
           <ul className="max-w-[22rem] mb-8 sm:mb-10 md:mb-14">
             {["feature1", "feature2", "feature3"].map((key) => (
               <li className="mb-2 sm:mb-3 py-2 sm:py-3" key={key}>
                 <div className="flex items-center">
-                  <Image src={check} width={24} height={24} alt="check" className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <h6 className="text-sm sm:text-base font-semibold ml-3 sm:ml-5">{t(`features.${key}.title`)}</h6>
+                  <Image
+                    src={check}
+                    width={24}
+                    height={24}
+                    alt="check"
+                    className="w-5 h-5 sm:w-6 sm:h-6"
+                  />
+                  <h6 className="text-base sm:text-lg lg:text-xl font-bold ml-3 sm:ml-5">
+                    {t(`features.${key}.title`)}
+                  </h6>
                 </div>
-                <p className="text-xs sm:text-sm mt-2 sm:mt-3 text-n-4 leading-relaxed">
+                <p className="text-sm sm:text-base mt-2 sm:mt-3 text-n-4 leading-relaxed">
                   {t(`features.${key}.text`)}
                 </p>
               </li>
             ))}
           </ul>
 
-          <Button href="#process" className="text-sm sm:text-base">{t("buttonText")}</Button>
+          <Button href="#process" className="text-sm sm:text-base">
+            {t("buttonText")}
+          </Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-8 sm:mt-6 lg:mt-4">
-          <p className="text-xs sm:text-sm lg:text-base mb-6 sm:mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto leading-relaxed">
             {t("description")}
           </p>
 
