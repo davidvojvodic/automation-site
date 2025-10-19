@@ -1,24 +1,24 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Flowko - AI Automation Solutions for European SMBs",
-  description: "Save 15+ hours weekly with intelligent workflow automation. Eliminate repetitive tasks, reduce costs by 90%, and unlock capacity for growth.",
-  keywords: ["AI automation", "workflow automation", "business process automation", "n8n", "European SMB", "Slovenia"],
+  title: "Flowko - Increase Revenue with AI Automation | Sales & Lead Generation Systems",
+  description: "Accelerate revenue growth with intelligent automation. Increase sales conversion rates, generate more qualified leads, save time. Proven systems for European SMBs.",
+  keywords: ["increase revenue", "sales automation", "lead generation automation", "business growth automation", "AI revenue systems", "accelerate sales", "n8n automation", "European SMB", "Slovenia business automation", "automated lead generation", "CRM automation"],
   authors: [{ name: "Flowko" }],
   creator: "Flowko",
   publisher: "Flowko",
   metadataBase: new URL("https://flowko.io"),
   openGraph: {
-    title: "Flowko - AI Automation Solutions for European SMBs",
-    description: "Save 15+ hours weekly with intelligent workflow automation. Eliminate repetitive tasks, reduce costs by 90%, and unlock capacity for growth.",
+    title: "Increase Revenue with Intelligent AI Automation",
+    description: "Accelerate sales, generate qualified leads, increase conversion rates. Professional automation systems for European SMBs. Save time while growing revenue.",
     url: "https://flowko.io",
     siteName: "Flowko",
     images: [
       {
-        url: "/favicon-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "Flowko - AI Automation Solutions"
+        url: "/assets/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Flowko - Increase Revenue with AI Business Automation"
       }
     ],
     locale: "en_US",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flowko - AI Automation Solutions",
-    description: "Save 15+ hours weekly with intelligent workflow automation",
-    images: ["/favicon-512x512.png"],
+    title: "Flowko - Revenue-Focused AI Automation",
+    description: "Increase sales & lead generation | Measurable growth | European SMB specialists",
+    images: ["/assets/og-image.jpg"],
     creator: "@flowko"
   },
   robots: {

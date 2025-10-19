@@ -90,7 +90,7 @@ export async function GET(): Promise<NextResponse> {
     ];
 
     // Section anchors for single-page architecture
-    const sectionAnchors = ['ai-services', 'pricing', 'implementation', 'contact'];
+    const sectionAnchors = ['hero', 'ai-services', 'bundles', 'implementation', 'contact'];
     const sectionPages: SitemapEntry[] = [];
 
     ['en', 'sl'].forEach(locale => {

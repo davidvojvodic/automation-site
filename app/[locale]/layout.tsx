@@ -34,13 +34,13 @@ export async function generateMetadata({
   }
 
   const titles = {
-    en: "Flowko - Complete AI Automation & Web Solutions That Increase Revenue | Save 20+ Hours Weekly",
-    sl: "Flowko - Celovite AI Avtomatizacijske in Spletne Rešitve ki Povečujejo Prihodke | Prihranite 20+ Ur Tedensko",
+    en: "Flowko - Increase Revenue with AI Automation | Sales, Lead Gen & Web Development",
+    sl: "Flowko - Povečajte Prihodke z AI Avtomatizacijo | Prodaja, Lead Gen in Spletni Razvoj",
   };
 
   const descriptions = {
-    en: "Complete AI automation solutions + modern websites that drive revenue growth. Lead generation, sales automation, voice AI agents, e-commerce systems. Connect 1000+ apps, save 20+ hours weekly, achieve fast ROI.",
-    sl: "Celovite AI avtomatizacijske rešitve + moderne spletne strani ki povečujejo prihodke. Generiranje vodilnih strank, avtomatizacija prodaje, glasovni AI agenti, e-trgovinski sistemi. Povežite 1000+ aplikacij, prihranite 20+ ur tedensko.",
+    en: "Grow revenue with intelligent automation systems. Lead generation, sales automation, voice AI agents, custom web development. Increase conversion rates while saving time. European SMB specialists.",
+    sl: "Povečajte prihodke z inteligentno avtomatizacijo. Generiranje vodilnih strank, avtomatizacija prodaje, glasovni AI agenti. Povečajte konverzije in prihranite čas. Slovenski specialisti za evropska MSP.",
   };
 
   const title = titles[locale as keyof typeof titles] || titles.en;
@@ -162,114 +162,134 @@ export default async function LocaleLayout({
     "@type": "LocalBusiness",
     "@id": "https://flowko.io",
     name: "Flowko",
-    alternateName: locale === "sl" ? "Flowko - AI Avtomatizacija" : "Flowko - AI Automation",
+    alternateName:
+      locale === "sl" ? "Flowko - AI Avtomatizacija" : "Flowko - AI Automation",
     url: "https://flowko.io",
-    logo: "https://flowko.io/assets/logo.svg",
+    logo: "https://flowko.io/favicon-512x512.png",
     image: "https://flowko.io/assets/og-image.jpg",
     description:
       locale === "sl"
         ? "Strokovni partner za AI avtomatizacijo ki povečuje prihodke in produktivnost. Dosežite hitrejši ROI z našimi n8n rešitvami."
         : "Expert AI automation partner that increases revenue and productivity. Achieve faster ROI with our n8n solutions.",
     foundingDate: "2025",
-    keywords: locale === "sl"
-      ? "povečanje prihodkov, AI avtomatizacija, ROI avtomatizacija, prodajna produktivnost, n8n"
-      : "increase revenue, AI automation, automation ROI, sales productivity, n8n",
-    slogan: locale === "sl"
-      ? "Avtomatizirajte svoje poslovanje z AI"
-      : "Automate Your Business with AI",
+    keywords:
+      locale === "sl"
+        ? "povečanje prihodkov, AI avtomatizacija, ROI avtomatizacija, prodajna produktivnost, n8n"
+        : "increase revenue, AI automation, automation ROI, sales productivity, n8n",
+    slogan:
+      locale === "sl"
+        ? "Avtomatizirajte svoje poslovanje z AI"
+        : "Automate Your Business with AI",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Murska Sobota",
       addressRegion: "Pomurska",
       postalCode: "9000",
-      addressCountry: "SI"
+      addressCountry: "SI",
     },
     geo: {
       "@type": "GeoCoordinates",
       latitude: 46.6611,
-      longitude: 16.1697
+      longitude: 16.1697,
     },
-    contactPoint: [{
-      "@type": "ContactPoint",
-      telephone: "+386-XX-XXX-XXX",
-      contactType: "customer service",
-      areaServed: ["SI", "AT", "HR"],
-      availableLanguage: ["en", "sl", "de", "hr"],
-      hoursAvailable: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "17:00"
-      }
-    }],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+386-XX-XXX-XXX",
+        contactType: "customer service",
+        areaServed: ["SI", "AT", "HR"],
+        availableLanguage: ["en", "sl", "de", "hr"],
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "17:00",
+        },
+      },
+    ],
     sameAs: [
       "https://linkedin.com/company/flowko",
-      "https://twitter.com/flowko_io"
+      "https://twitter.com/flowko_io",
     ],
     areaServed: [
       {
         "@type": "Country",
         name: "Slovenia",
-        alternateName: "SI"
+        alternateName: "SI",
       },
       {
         "@type": "Country",
         name: "Austria",
-        alternateName: "AT"
+        alternateName: "AT",
       },
       {
         "@type": "Country",
         name: "Croatia",
-        alternateName: "HR"
-      }
+        alternateName: "HR",
+      },
     ],
-    serviceType: locale === "sl" ? "Avtomatizacija poslovnih procesov" : "Business Process Automation",
+    serviceType:
+      locale === "sl"
+        ? "Avtomatizacija poslovnih procesov"
+        : "Business Process Automation",
     priceRange: "€€€",
     currenciesAccepted: "EUR",
     paymentAccepted: ["Credit Card", "Bank Transfer", "PayPal"],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: locale === "sl" ? "AI Avtomatizacijske storitve" : "AI Automation Services",
+      name:
+        locale === "sl"
+          ? "AI Avtomatizacijske storitve"
+          : "AI Automation Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: locale === "sl" ? "Generiranje vodilnih strank" : "Lead Generation Automation",
-            description: locale === "sl"
-              ? "Avtomatizirana identifikacija in kvalifikacija perspektiv"
-              : "Automated prospect identification and qualification"
-          }
+            name:
+              locale === "sl"
+                ? "Generiranje vodilnih strank"
+                : "Lead Generation Automation",
+            description:
+              locale === "sl"
+                ? "Avtomatizirana identifikacija in kvalifikacija perspektiv"
+                : "Automated prospect identification and qualification",
+          },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: locale === "sl" ? "Avtomatizacija prodajnih procesov" : "Sales Process Automation",
-            description: locale === "sl"
-              ? "Popolna avtomatizacija prodajnih procesov z AI"
-              : "Complete sales process automation with AI"
-          }
+            name:
+              locale === "sl"
+                ? "Avtomatizacija prodajnih procesov"
+                : "Sales Process Automation",
+            description:
+              locale === "sl"
+                ? "Popolna avtomatizacija prodajnih procesov z AI"
+                : "Complete sales process automation with AI",
+          },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
             name: locale === "sl" ? "Glasovni AI agenti" : "Voice AI Agents",
-            description: locale === "sl"
-              ? "24/7 AI glasovni agenti z večjezično podporo"
-              : "24/7 AI voice agents with multilingual support"
-          }
-        }
-      ]
+            description:
+              locale === "sl"
+                ? "24/7 AI glasovni agenti z večjezično podporo"
+                : "24/7 AI voice agents with multilingual support",
+          },
+        },
+      ],
     },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
       reviewCount: "47",
       bestRating: "5",
-      worstRating: "1"
-    }
+      worstRating: "1",
+    },
   };
 
   return (
