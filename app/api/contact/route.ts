@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     const webhookUrl =
       process.env.NODE_ENV === "production"
         ? "https://app.n8nhost.io/webhook/a538f715-a879-4cb1-aed7-95db80ca0d42" // Production URL
-        : "https://app.n8nhost.io/webhook-test/a538f715-a879-4cb1-aed7-95db80ca0d42"; // Development/test URL (same for testing)
+        : "https://app.n8nhost.io/webhook/a538f715-a879-4cb1-aed7-95db80ca0d42"; // Development/test URL (same for testing)
 
     console.log("Using webhook URL:", webhookUrl);
 
