@@ -6,23 +6,21 @@ export async function POST(request: NextRequest) {
     console.log("Form data received:", formData);
 
     // Determine webhook URL based on environment
-    const webhookUrl = process.env.NODE_ENV === 'production'
-      ? "https://davidvojvodic.app.n8n.cloud/webhook/contact-form" // Production URL
-      : "https://davidvojvodic.app.n8n.cloud/webhook-test/contact-form"; // Development/test URL
+    const webhookUrl =
+      process.env.NODE_ENV === "production"
+        ? "https://app.n8nhost.io/webhook/a538f715-a879-4cb1-aed7-95db80ca0d42" // Production URL
+        : "https://app.n8nhost.io/webhook-test/a538f715-a879-4cb1-aed7-95db80ca0d42"; // Development/test URL (same for testing)
 
     console.log("Using webhook URL:", webhookUrl);
 
     // Forward to n8n webhook
-    const response = await fetch(
-      webhookUrl,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
     console.log("n8n response status:", response.status);
 
