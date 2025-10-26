@@ -12,7 +12,8 @@
       "websites": "Spletne strani",
       "howItWorks": "Kako deluje",
       "contact": "Kontakt",
-      "getStarted": "Začnite"
+      "getStarted": "Začnite",
+      "bookACall": "Rezervirajte Klic"
     },
     "solutions": {
       "title": "Avtomatizacijske Rešitve po Meri",
@@ -227,7 +228,12 @@
     },
     "contact": {
       "title": "Začnite Vašo Avtomatizacijsko Pot",
-      "subtitle": "Pridobite brezplačni pregled avtomatizacije in odkrijte, kako prihraniti 20+ ur tedensko",
+      "subtitle": "Pridobite brezplačni pregled avtomatizacije in poenostavite svoje poslovne procese",
+      "quickBooking": {
+        "title": "Potrebujete hitrejše odgovore? Rezervirajte klic direktno",
+        "button": "Rezervirajte Klic",
+        "backToForm": "Nazaj na Kontaktni Obrazec"
+      },
       "form": {
         "firstName": "Ime",
         "lastName": "Priimek",
@@ -266,6 +272,25 @@
       "messages": {
         "success": "Hvala za vaš interes! Vaša poizvedba je bila uspešno poslana.",
         "error": "Nekaj je šlo narobe. Poskusite znova ali nas kontaktirajte direktno po e-pošti."
+      },
+      "success": {
+        "bookingTitle": "Rezervirajte Strateški Klic",
+        "bundleRecommendation": "Glede na vaše zanimanje za naše spletne pakete priporočamo rezervacijo 45-minutne digitalne strategije, kjer se podrobno pogovorimo o zahtevah vašega projekta.",
+        "generalRecommendation": "Priporočamo rezervacijo 30-minutnega pregleda avtomatizacije, kjer raziščemo, kako lahko pomagamo poenostaviti vaše poslovanje.",
+        "alternativeText": "Raje druga dolžina?",
+        "alternativeLink": "Rezervirajte {duration}-minutni klic"
+      },
+      "booking": {
+        "title": "Rezervirajte Strateški Klic",
+        "subtitle": "Izberite sestanek, ki najbolj ustreza vašim potrebam in rezervirajte čas, ki vam ustreza",
+        "duration30": {
+          "title": "30-Minutni Klic",
+          "description": "Popolno za raziskovanje priložnosti za avtomatizacijo in strokovne nasvete o poenostavitvi vaših poslovnih operacij."
+        },
+        "duration45": {
+          "title": "45-Minutni Klic",
+          "description": "Idealno za poglobljen pogovor o projektih spletnih paketov, tehničnih zahtevah in celovitem načrtovanju digitalne strategije."
+        }
       }
     },
     "cookieBanner": {

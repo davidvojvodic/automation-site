@@ -12,7 +12,8 @@
       "websites": "Websites",
       "howItWorks": "How It Works",
       "contact": "Contact",
-      "getStarted": "Get Started"
+      "getStarted": "Get Started",
+      "bookACall": "Book a Call"
     },
     "solutions": {
       "title": "Custom Automation Solutions",
@@ -228,7 +229,12 @@
     },
     "contact": {
       "title": "Start Your Automation Journey",
-      "subtitle": "Get a free automation audit and discover how to save 20+ hours per week",
+      "subtitle": "Get a free automation audit and streamline your business processes",
+      "quickBooking": {
+        "title": "Need faster answers? Book a call directly",
+        "button": "Book a Call Now",
+        "backToForm": "Back to Contact Form"
+      },
       "form": {
         "firstName": "First Name",
         "lastName": "Last Name",
@@ -267,6 +273,25 @@
       "messages": {
         "success": "Thank you for your interest! Your inquiry has been successfully submitted.",
         "error": "Something went wrong. Please try again or email us directly."
+      },
+      "success": {
+        "bookingTitle": "Schedule Your Strategy Call",
+        "bundleRecommendation": "Based on your interest in our website bundles, we recommend booking a 45-minute digital strategy session to discuss your project requirements in detail.",
+        "generalRecommendation": "We recommend booking a 30-minute automation audit to explore how we can help streamline your business operations.",
+        "alternativeText": "Prefer a different duration?",
+        "alternativeLink": "Book a {duration}-minute call instead"
+      },
+      "booking": {
+        "title": "Schedule Your Strategy Call",
+        "subtitle": "Choose the session that best fits your needs and book a time that works for you",
+        "duration30": {
+          "title": "30-Minute Call",
+          "description": "Perfect for exploring automation opportunities and getting expert advice on streamlining your business operations."
+        },
+        "duration45": {
+          "title": "45-Minute Call",
+          "description": "Ideal for in-depth discussion of website bundle projects, technical requirements, and comprehensive digital strategy planning."
+        }
       }
     },
     "cookieBanner": {

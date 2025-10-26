@@ -125,7 +125,7 @@ export function Header({ className, locale = "en" }: HeaderProps) {
               {/* Mobile CTA Button */}
               <div className="lg:hidden mt-8 px-6">
                 <Button className="px-12" href="#contact" onClick={handleClick}>
-                  {t("getStarted")}
+                  {t("bookACall")}
                 </Button>
               </div>
             </div>
@@ -139,7 +139,7 @@ export function Header({ className, locale = "en" }: HeaderProps) {
 
         {/* Primary CTA Button - Desktop */}
         <Button className="hidden lg:flex ml-6" href="#contact">
-          {t("getStarted")}
+          {t("bookACall")}
         </Button>
 
         {/* Mobile Menu Button */}
