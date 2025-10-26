@@ -318,7 +318,7 @@ export function ContactFormProgressive({
                 </div>
                 <button
                   onClick={() => setActiveTab("booking")}
-                  className="px-4 py-2 sm:px-6 sm:py-2.5 bg-color-1 hover:bg-color-2 text-white rounded-lg transition-colors font-medium text-sm sm:text-base whitespace-nowrap"
+                  className="px-4 py-2 sm:px-6 sm:py-2.5 bg-color-1 hover:bg-color-1/90 text-white rounded-lg transition-colors font-medium text-sm sm:text-base whitespace-nowrap"
                 >
                   {t("quickBooking.button")}
                 </button>
