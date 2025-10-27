@@ -47,7 +47,7 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "websites",
+    title: "packages",
     url: "#bundles",
   },
   {
