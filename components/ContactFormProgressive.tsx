@@ -646,7 +646,7 @@ export function ContactFormProgressive({
                         )}
 
                         <div className="flex-1 flex justify-end min-w-0">
-                          {!isLastStep ? (
+                          {currentStep < 3 ? (
                             <CustomButton
                               onClick={(e) => {
                                 e.preventDefault();
