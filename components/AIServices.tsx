@@ -407,7 +407,7 @@ const AIServices = ({ className }: AIServicesProps) => {
           }}
           direction="right"
         >
-          <DrawerContent className="bg-n-8 border-l border-n-6 overflow-y-auto overflow-x-hidden">
+          <DrawerContent className="bg-n-8 border-l border-n-6 flex flex-col">
             {drawerContent && (() => {
               const selectedSystem = automationSystems.find(s => s.id === drawerContent);
               if (!selectedSystem) return null;
@@ -416,52 +416,54 @@ const AIServices = ({ className }: AIServicesProps) => {
 
               return (
                 <>
-                  <DrawerHeader className="relative border-b border-n-6/50 pb-4">
-                    {/* Close Button */}
-                    <DrawerClose className="absolute top-4 right-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
-                      <X className="h-4 w-4 text-n-3" />
-                      <span className="sr-only">Close</span>
-                    </DrawerClose>
+                  {/* Close Button - Fixed position */}
+                  <DrawerClose className="absolute top-4 right-4 z-10 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
+                    <X className="h-4 w-4 text-n-3" />
+                    <span className="sr-only">Close</span>
+                  </DrawerClose>
 
-                    <div className="flex items-start gap-4 mb-4">
-                      <div
-                        className={cn(
-                          "w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0",
-                          "bg-color-1/10"
-                        )}
-                      >
-                        <IconComponent
-                          className={cn(
-                            "w-7 h-7",
-                            "text-color-1"
-                          )}
-                        />
-                      </div>
-                      <div className="flex-1">
+                  {/* Scrollable content wrapper with webkit touch scrolling for iOS */}
+                  <div className="flex-1 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
+                    <DrawerHeader className="relative border-b border-n-6/50 pb-4">
+                      <div className="flex items-start gap-4 mb-4">
                         <div
                           className={cn(
-                            "inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2",
-                            selectedSystem.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
+                            "w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0",
+                            "bg-color-1/10"
                           )}
                         >
-                          {selectedSystem.badge}
+                          <IconComponent
+                            className={cn(
+                              "w-7 h-7",
+                              "text-color-1"
+                            )}
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <div
+                            className={cn(
+                              "inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2",
+                              selectedSystem.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
+                            )}
+                          >
+                            {selectedSystem.badge}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <DrawerTitle className="text-2xl font-bold text-n-1">
-                      {selectedSystem.title}
-                    </DrawerTitle>
-                    <DrawerDescription className="text-base text-color-1 font-medium mt-2">
-                      {selectedSystem.subtitle}
-                    </DrawerDescription>
-                    <p className="text-sm text-n-4 mt-3 leading-relaxed">
-                      {selectedSystem.description}
-                    </p>
-                  </DrawerHeader>
+                      <DrawerTitle className="text-2xl font-bold text-n-1">
+                        {selectedSystem.title}
+                      </DrawerTitle>
+                      <DrawerDescription className="text-base text-color-1 font-medium mt-2">
+                        {selectedSystem.subtitle}
+                      </DrawerDescription>
+                      <p className="text-sm text-n-4 mt-3 leading-relaxed">
+                        {selectedSystem.description}
+                      </p>
+                    </DrawerHeader>
 
-                  <div className="space-y-6 py-6 px-4">
-                    {/* Capabilities */}
-                    <div>
+                    <div className="space-y-6 py-6 px-4">
+                      {/* Capabilities */}
+                      <div>
                       <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider flex items-center gap-2 mb-4">
                         <Workflow className="w-4 h-4 text-color-1" />
                         {t("labels.keyCapabilities")}
@@ -514,6 +516,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                           </div>
                         ))}
                       </div>
+                    </div>
                     </div>
                   </div>
                 </>

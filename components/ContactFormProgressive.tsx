@@ -130,8 +130,8 @@ export function ContactFormProgressive({
         const paddingTop = parseFloat(computedStyle.paddingTop);
         const paddingBottom = parseFloat(computedStyle.paddingBottom);
 
-        // Add padding to content height
-        setContainerHeight(contentHeight + paddingTop + paddingBottom);
+        // Add padding to content height + extra buffer for trust indicators
+        setContainerHeight(contentHeight + paddingTop + paddingBottom + 50);
       } else if (
         activeTab === "booking" &&
         bookingContentRef.current &&
@@ -156,10 +156,14 @@ export function ContactFormProgressive({
     // Measure immediately
     measureHeight();
 
-    // Also measure after a short delay to account for dynamic content
-    const timeoutId = setTimeout(measureHeight, 100);
+    // Also measure after delays to account for dynamic content and animations
+    const timeoutId1 = setTimeout(measureHeight, 100);
+    const timeoutId2 = setTimeout(measureHeight, 300);
 
-    return () => clearTimeout(timeoutId);
+    return () => {
+      clearTimeout(timeoutId1);
+      clearTimeout(timeoutId2);
+    };
   }, [activeTab, currentStep]);
 
   // Calculate display progress for 3-step form (success screen is step 4, not counted)
@@ -340,7 +344,7 @@ export function ContactFormProgressive({
               className={cn(
                 "absolute inset-0 transition-opacity duration-[400ms] ease-out",
                 activeTab === "form"
-                  ? "opacity-100 z-10 delay-300"
+                  ? "opacity-100 z-10 delay-300 pointer-events-auto"
                   : "opacity-0 pointer-events-none z-0 delay-0",
                 "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-2 sm:p-6 md:p-8 overflow-hidden"
               )}
@@ -745,7 +749,7 @@ export function ContactFormProgressive({
               className={cn(
                 "absolute inset-0 transition-opacity duration-[400ms] ease-out",
                 activeTab === "booking"
-                  ? "opacity-100 z-10 delay-300"
+                  ? "opacity-100 z-10 delay-300 pointer-events-auto"
                   : "opacity-0 pointer-events-none z-0 delay-0",
                 "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-2 sm:p-6 md:p-8 overflow-hidden"
               )}
