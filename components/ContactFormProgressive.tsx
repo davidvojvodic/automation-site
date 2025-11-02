@@ -146,9 +146,9 @@ export function ContactFormProgressive({
         const paddingTop = parseFloat(computedStyle.paddingTop);
         const paddingBottom = parseFloat(computedStyle.paddingBottom);
 
-        // Add padding to content height, ensure minimum height for Cal widget
+        // Use dynamic content height with minimum to ensure Cal widget isn't cut off
         setContainerHeight(
-          Math.max(contentHeight + paddingTop + paddingBottom, 950)
+          Math.max(contentHeight + paddingTop + paddingBottom + 20, 700)
         );
       }
     };
@@ -156,15 +156,22 @@ export function ContactFormProgressive({
     // Measure immediately
     measureHeight();
 
-    // Also measure after delays to account for dynamic content and animations
-    const timeoutId1 = setTimeout(measureHeight, 100);
-    const timeoutId2 = setTimeout(measureHeight, 300);
+    // Use ResizeObserver to automatically detect size changes (Cal widget loading, success states, etc.)
+    let resizeObserver: ResizeObserver | null = null;
+
+    if (activeTab === "booking" && bookingContentRef.current) {
+      resizeObserver = new ResizeObserver(() => {
+        measureHeight();
+      });
+      resizeObserver.observe(bookingContentRef.current);
+    }
 
     return () => {
-      clearTimeout(timeoutId1);
-      clearTimeout(timeoutId2);
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
     };
-  }, [activeTab, currentStep]);
+  }, [activeTab, currentStep, selectedDuration]);
 
   // Calculate display progress for 3-step form (success screen is step 4, not counted)
   const displayProgress = Math.min((currentStep / 3) * 100, 100);
