@@ -3,7 +3,7 @@
     "hero": {
       "title": "Avtomatizirajte Vaše Poslovanje",
       "subtitle": "z Inteligentnimi AI Sistemi",
-      "description": "Pretvorite ponavljajoča se opravila v priložnosti za ustvarjanje prihodkov. Naši AI-pogojeni avtomatizacijski sistemi pomagajo podjetjem prihraniti 15+ ur tedensko in povečati mesečni prihodek z pametnejšimi delovnimi tokovi.",
+      "description": "Medtem ko se vaša konkurenca utaplja v rutinskih opravilih, boste vi dominirali z inteligentnimi AI sistemi. Gradimo pametne poslovne ekosisteme, ki premišljeno delujejo, presegajo in prekašajo ročne operacije.",
       "cta": "Pridobite Vašo Brezplačno Oceno Avtomatizacije",
       "generating": "Ustvarjanje avtomatiziranega delovnega toka..."
     },
@@ -168,27 +168,27 @@
       "description": "Sistematičen pristop, ki zagotavlja, da vaši avtomatizacijski projekti dosegajo rezultate brez motenja vašega poslovanja",
       "phase1": {
         "status": "Faza 1",
-        "title": "Pregled Stanja in Možnosti",
-        "description": "Pogledamo si, kako trenutno delate in kje lahko avtomatizacija pomaga. Brez obveznosti preverimo vaše procese in najdemo najboljše rešitve.",
-        "outcome": "Jasen načrt, kjer lahko avtomatizacija najbolj pomaga vašemu podjetju"
+        "title": "Odkrivanje in Ocena Tveganj",
+        "description": "Celovita analiza vaših trenutnih sistemov in delovnih tokov brez obveznosti. Identificiramo priložnosti za avtomatizacijo in ocenimo tveganja, preden se začne kakršna koli implementacija.",
+        "outcome": "Jasen načrt z identificiranimi priložnostmi in zaščitenimi naložbami"
       },
       "phase2": {
         "status": "Faza 2",
-        "title": "Načrtovanje in Priprava",
-        "description": "Pripravimo natančen načrt, kako bo avtomatizacija delovala v vašem podjetju. Sestavimo jasen plan dela z rezervnimi rešitvami, preden začnemo z gradnjo.",
-        "outcome": "Pripravljen načrt z jasnimi cilji za vašo avtomatizacijo"
+        "title": "Strateško Načrtovanje in Arhitektura",
+        "description": "Oblikujemo tehnično arhitekturo in implementacijsko strategijo na podlagi ugotovitev iz odkrivanja. Ustvarimo podrobne načrte z rezervnimi rešitvami, preden se začne kakršen koli razvoj.",
+        "outcome": "Načrt tehnične arhitekture z definiranimi merili uspeha"
       },
       "phase3": {
         "status": "Faza 3",
-        "title": "Gradnja in Testiranje",
-        "description": "Zgradimo avtomatizacije in jih temeljito preizkusimo, preden jih vključimo v vaše delo. Vse deluje varno in brez motenj vašega vsakdanjega poslovanja.",
-        "outcome": "Delujoče avtomatizacije, pripravljene za uporabo v vašem podjetju"
+        "title": "Nadzorovana Implementacija in Testiranje",
+        "description": "Gradimo in vzpostavimo avtomatizacijske sisteme v nadzorovanem okolju s celovitim testiranjem. Implementiramo s stalnim nadzorom in zmožnostmi vrnitve za zagotovitev ničelnih motenj poslovanja.",
+        "outcome": "Popolnoma funkcionalni avtomatizacijski sistemi, preverjeni s testiranjem"
       },
       "phase4": {
         "status": "Faza 4",
-        "title": "Zagon in Usposabljanje",
-        "description": "Zaženemo avtomatizacije in naučimo vašo ekipo, kako jih uporabljati. Z praktičnim usposabljanjem in navodili postanete samostojni pri upravljanju novih rešitev.",
-        "outcome": "Vaša ekipa zna samostojno uporabljati nove avtomatizacije"
+        "title": "Zagon in Usposabljanje Ekipe",
+        "description": "Popolna uvedba sistema s celovitim usposabljanjem ekipe in prenosom znanja. Vaša ekipa postane samostojna pri upravljanju novih avtomatizacijskih sistemov z praktičnim usposabljanjem in dokumentacijo.",
+        "outcome": "Popolnoma operativen avtomatizacijski sistem s samozavestno, usposobljeno ekipo"
       },
       "labels": {
         "phase1": "Faza 1",
@@ -373,13 +373,12 @@
         "subtitle": "Prilagojena Spletna Aplikacija + Napredna Avtomatizacija",
         "description": "Napredni razvoj spletnih aplikacij s prilagojenimi avtomatizacijami. Vsak projekt je narejen po meri glede na vaše potrebe in poslovne cilje z podrobnim svetovanjem.",
         "idealFor": "SaaS startup-i, tehnološka podjetja, podjetja s kompleksnimi operacijami",
-        "badge": "Enterprise",
+        "badge": "Premium",
         "capabilities": {
           "0": "Prilagojeni razvoj spletnih aplikacij po vaših zahtevah",
-          "1": "Uporabniški računi z različnimi dostopi in pravicami",
-          "2": "Povezovanje več sistemov in API integracije",
-          "3": "Napredne analitične plošče v realnem času",
-          "4": "Skalabilna arhitektura z nadzorom in opozarjanjem"
+          "1": "Skalabilni sistemi preverjanja pristnosti uporabnikov, vlog in dovoljenj",
+          "2": "Orkestracija delovnih tokov več sistemov in API integracije",
+          "3": "Analitične plošče poslovne ravni s podatki v realnem času"
         }
       },
       "labels": {
