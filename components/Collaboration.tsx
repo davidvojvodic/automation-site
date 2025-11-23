@@ -1,7 +1,6 @@
 import React from "react";
 import { check, flowkoSymbol } from "@/public/assets";
 import { collabApps } from "@/lib/constants";
-import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
 import Image, { StaticImageData } from "next/image";
