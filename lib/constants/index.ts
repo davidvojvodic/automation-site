@@ -211,44 +211,6 @@ export const collabApps = [
   },
 ];
 
-export const pricing = [
-  {
-    id: "0",
-    title: "Jumpstart",
-    description: "Perfect for getting started with automation",
-    price: "2200",
-    features: [
-      "Up to 3 custom workflows",
-      "Comprehensive training & documentation",
-      "1-2 week delivery timeline",
-      "Email support included",
-    ],
-  },
-  {
-    id: "1",
-    title: "Growth",
-    description: "Ideal for scaling businesses",
-    price: "550",
-    features: [
-      "10 development hours per month",
-      "Monthly optimization sprints",
-      "Email & chat support",
-      "Performance monitoring included",
-    ],
-  },
-  {
-    id: "2",
-    title: "Scale",
-    description: "For enterprise-level automation needs",
-    price: "1100",
-    features: [
-      "20 development hours per month",
-      "Priority SLA & dedicated support",
-      "Quarterly strategy reviews",
-      "Advanced analytics dashboard",
-    ],
-  },
-];
 
 export const benefits = [
   {

@@ -32,6 +32,16 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       ],
       badge: t("foundation.badge"),
       popular: false,
+      timeline: "3-4 weeks",
+      pricing: "Custom quote based on requirements",
+      techStack: ["Next.js", "React", "Tailwind CSS", "n8n", "Vercel"],
+      deliverables: [
+        "Fully responsive website",
+        "Content management system",
+        "Automated workflows",
+        "Analytics dashboard",
+        "1 month support included"
+      ]
     },
     {
       id: "growth",
@@ -49,6 +59,16 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       ],
       badge: t("growth.badge"),
       popular: true,
+      timeline: "5-7 weeks",
+      pricing: "Custom quote based on requirements",
+      techStack: ["Next.js", "Stripe", "n8n", "PostgreSQL", "Vercel"],
+      deliverables: [
+        "E-commerce platform",
+        "Payment processing setup",
+        "Inventory management system",
+        "Marketing automation workflows",
+        "3 months support included"
+      ]
     },
     {
       id: "dominator",
@@ -66,6 +86,17 @@ const WebsiteBundles = ({ className }: BundleProps) => {
       badge: t("dominator.badge"),
       popular: false,
       isPremium: true,
+      timeline: "8-12 weeks",
+      pricing: "Enterprise pricing - Contact for custom quote",
+      techStack: ["Custom tech stack based on requirements", "Cloud infrastructure", "Advanced integrations"],
+      deliverables: [
+        "Custom web application",
+        "Complete technical architecture",
+        "Multi-system integrations",
+        "Enterprise dashboards",
+        "6 months support included",
+        "Dedicated technical consultant"
+      ]
     },
   ];
 
@@ -99,7 +130,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                   className="w-full sm:w-auto flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-n-7 rounded-xl sm:rounded-2xl hover:bg-n-6 hover:scale-105 transition-all duration-300 animate-bundle-pill"
                   style={{ animationDelay: `${400 + index * 100}ms` }}
                 >
-                  <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-color-1 flex-shrink-0" />
+                  <item.icon className="w-4 sm:w-5 h-4 sm:h-5 text-color-6 flex-shrink-0" />
                   <span className="text-sm sm:text-base text-n-1 whitespace-nowrap">
                     {item.text}
                   </span>
@@ -113,26 +144,25 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         {/* Solution Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
           {solutions.map((solution, index) => (
-            <a
-              href="#contact"
+            <div
               key={solution.id}
               className={cn(
                 "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
                 "hover:-translate-y-1",
-                "transition-all duration-500 ease-out group cursor-pointer",
+                "transition-all duration-500 ease-out group",
                 "animate-bundle-card",
                 // Default shadows for depth
-                !solution.isPremium && "shadow-xl shadow-color-1/10",
-                solution.isPremium && "shadow-xl shadow-color-6/10",
+                !solution.isPremium && "shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
+                solution.isPremium && "shadow-xl shadow-color-2/10 hover:shadow-2xl hover:shadow-color-2/20",
                 // Popular card styling
                 solution.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-transparent hover:from-color-1/10 hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/15",
+                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/60",
                 // Premium card styling
                 solution.isPremium &&
-                  "border-color-6/50 bg-gradient-to-br from-color-6/5 to-transparent hover:from-color-6/10 hover:border-color-6/40 hover:shadow-2xl hover:shadow-color-6/15",
-                // Foundation card hover (neutral)
+                  "border-color-2/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-2/60",
+                // Foundation card hover
                 !solution.popular && !solution.isPremium &&
-                  "hover:border-color-1/40 hover:shadow-2xl hover:shadow-color-1/15"
+                  "bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/40"
               )}
               style={{ animationDelay: `${700 + index * 150}ms` }}
             >
@@ -143,14 +173,13 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                     <div className="flex items-center gap-4">
                       <div
                         className={cn(
-                          "w-14 sm:w-16 h-14 sm:h-16 rounded-xl bg-color-1/10 flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                          solution.isPremium && "bg-color-6/10"
+                          "w-14 sm:w-16 h-14 sm:h-16 rounded-xl flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
+                          "bg-gradient-to-br from-color-1/20 to-color-2/20"
                         )}
                       >
                         {React.createElement(solution.icon, {
                           className: cn(
-                            "w-7 sm:w-8 h-7 sm:h-8 text-color-1",
-                            solution.isPremium && "text-color-6"
+                            "w-7 sm:w-8 h-7 sm:h-8 text-color-1"
                           ),
                         })}
                       </div>
@@ -160,8 +189,8 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                     <div
                       className={cn(
                         "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                        solution.popular && "bg-color-1 text-n-8",
-                        solution.isPremium && "bg-color-6 text-n-8",
+                        solution.popular && "bg-gradient-to-r from-color-1 to-color-2 text-n-8",
+                        solution.isPremium && "bg-gradient-to-r from-color-1 to-color-2 text-n-8",
                         !solution.popular &&
                           !solution.isPremium &&
                           "bg-n-6 text-n-3"
@@ -172,21 +201,18 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-n-1 mb-2 group-hover:text-color-1 transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold text-n-1 mb-2">
                       {solution.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-color-1 font-medium mb-3">
+                    <p className="text-sm sm:text-base bg-gradient-to-r from-color-1 to-color-2 bg-clip-text text-transparent font-medium">
                       {solution.subtitle}
-                    </p>
-                    <p className="text-sm text-n-4 group-hover:text-n-3 transition-colors duration-300 leading-relaxed">
-                      {solution.description}
                     </p>
                   </div>
                 </div>
 
                 {/* Target Audience */}
-                <div className="mb-6">
-                  <div className="text-xs text-n-4 uppercase tracking-wider mb-1">
+                <div className="mb-4">
+                  <div className="text-xs text-n-4 uppercase tracking-wider mb-2">
                     {t("labels.idealFor")}
                   </div>
                   <p className="text-sm text-n-2">
@@ -194,58 +220,46 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                   </p>
                 </div>
 
-                {/* Key Capabilities */}
-                <div className="mb-6 flex-1">
-                  <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <Workflow className="w-4 h-4 text-color-1" />
-                    {t("labels.includedFeatures")}
-                  </h4>
+                {/* All Features */}
+                <div className="flex-1 mb-6">
+                  <div className="mb-3">
+                    <h4 className="text-xs font-bold bg-gradient-to-r from-color-1 to-color-2 bg-clip-text text-transparent uppercase tracking-wider">
+                      Includes
+                    </h4>
+                  </div>
                   <div className="grid grid-cols-1 gap-2">
                     {solution.capabilities.map(
                       (capability: string, capIndex: number) => (
                         <div
                           key={capIndex}
-                          className="flex items-center gap-2 p-2 rounded-lg bg-n-7 group-hover:bg-n-6 transition-colors duration-300"
+                          className="flex items-start gap-2 text-xs text-n-3"
                         >
-                          <div className="w-2 h-2 bg-color-1 rounded-full flex-shrink-0"></div>
-                          <span className="text-sm text-n-1">{capability}</span>
+                          <div className="w-1.5 h-1.5 bg-gradient-to-r from-color-1 to-color-2 rounded-full flex-shrink-0 mt-1.5"></div>
+                          <span>{capability}</span>
                         </div>
                       )
                     )}
                   </div>
                 </div>
+
+                {/* CTA Button */}
+                <div className="mt-auto">
+                  <Button
+                    className="w-full"
+                    href="#contact"
+                  >
+                    Get Started
+                  </Button>
+                </div>
               </div>
 
               {/* Background Decoration */}
-              <div
-                className={cn(
-                  "absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-all duration-500",
-                  solution.isPremium
-                    ? "from-color-6/10 group-hover:from-color-6/20"
-                    : "from-color-1/10 group-hover:from-color-1/20"
-                )}
-              ></div>
-            </a>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-color-1/15 via-color-2/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 group-hover:from-color-1/25 group-hover:via-color-2/20 transition-all duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-color-2/10 to-transparent rounded-full translate-y-12 -translate-x-12 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
+            </div>
           ))}
         </div>
 
-
-        {/* Bottom CTA */}
-        <div
-          className="text-center mt-12 sm:mt-16 lg:mt-20 animate-bundle-bottom-cta"
-          style={{ animationDelay: "1400ms" }}
-        >
-          <div className="max-w-2xl mx-auto">
-            <p className="text-base sm:text-lg text-n-4 mb-6">
-              {t("bottomCta.description")}
-            </p>
-            <div className="flex justify-center">
-              <Button className="px-8 text-base" href="#contact">
-                {t("bottomCta.button")}
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </Section>
   );

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WebsiteBundles from "@/components/WebsiteBundles";
-// import Pricing from "@/components/Pricing";
+import Pricing from "@/components/Pricing";
 import Implementation from "@/components/Implementation";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
 
@@ -24,6 +24,7 @@ export default async function Home({
         <Collaboration />
         <AIServices />
         <WebsiteBundles />
+        <Pricing />
         <Implementation />
         <BenefitsBanner />
 

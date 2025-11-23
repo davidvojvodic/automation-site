@@ -353,7 +353,7 @@ export function ContactFormProgressive({
                 activeTab === "form"
                   ? "opacity-100 z-10 delay-300 pointer-events-auto"
                   : "opacity-0 pointer-events-none z-0 delay-0",
-                "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-2 sm:p-6 md:p-8 overflow-hidden"
+                "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 overflow-hidden"
               )}
             >
               {/* Subtle gradient overlay */}
@@ -758,7 +758,7 @@ export function ContactFormProgressive({
                 activeTab === "booking"
                   ? "opacity-100 z-10 delay-300 pointer-events-auto"
                   : "opacity-0 pointer-events-none z-0 delay-0",
-                "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-2 sm:p-6 md:p-8 overflow-hidden"
+                "bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 overflow-hidden"
               )}
             >
               {/* Subtle gradient overlay */}

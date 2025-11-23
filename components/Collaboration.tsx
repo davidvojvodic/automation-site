@@ -57,10 +57,6 @@ export function Collaboration({ className }: CollaborationProps) {
               </li>
             ))}
           </ul>
-
-          <Button href="#process" className="text-sm sm:text-base">
-            {t("buttonText")}
-          </Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-8 sm:mt-6 lg:mt-4">
