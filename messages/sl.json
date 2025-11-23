@@ -440,32 +440,53 @@
           "4": "Avtomatska komunikacija s kandidati in opominjanje"
         }
       },
-      "voiceAI": {
-        "title": "Glasovni AI Asistenti",
+      "customerSupport": {
+        "title": "Avtomatizacija Podpore Strank",
         "subtitle": "AI-Podprto + 24/7 Večjezična Podpora",
-        "description": "24/7 AI glasovni pomočniki, ki govorijo 31+ jezikov za strankarsko storitev, rezervacijo terminov in prodajno podporo. Zvenijo človeško in rešujejo vsakodnevne naloge brez vašega posredovanja.",
-        "outcome": "24/7 pametna govorna podpora",
-        "badge": "Govor",
+        "description": "Preoblikujte strankarsko službo s pametno avtomatizacijo podpore prek več kanalov. Obdelujte povpraševanja prek glasu, klepeta, e-pošte in SMS-ov s podporo 31+ jezikov, ohranjajte kontekst pogovorov in zagotavljajte nemoteno predajo na osebje ko je potrebno.",
+        "outcome": "24/7 inteligentna strankova podpora",
+        "badge": "Podpora",
         "capabilities": {
-          "0": "Vodenje naravnih pogovorov z AI",
-          "1": "Podpora 31+ jezikov z avtomatskim prepoznavanjem",
-          "2": "Pametno preusmerjanje klicev na pravo osebo",
-          "3": "Avtomatska rezervacija terminov",
-          "4": "Povezava s CRM in shranjevanje vseh pogovorov"
+          "0": "Kategorizacija pogovorov, preferenc in zgodovine interakcij s strankami",
+          "1": "Obdelava povpraševanj prek več kanalov (glas, klepet, e-pošta, SMS)",
+          "2": "Obdelava naravnega pogovora s podporo 31+ jezikov",
+          "3": "Pametna eskalacija in prenos klicev na osebje ko je potrebno",
+          "4": "Avtomatska rezervacija terminov in upravljanje koledarja",
+          "5": "Sprotne posodobitve CRM na podlagi pogovorov s strankami",
+          "6": "Avtomatsko usmerjanje na ustrezne člane ekipe"
         }
       },
-      "contentSystems": {
-        "title": "AI Ustvarjanje Vsebin & UGC",
-        "subtitle": "AI-Podprto + Enotnost Blagovne Znamke",
-        "description": "AI ustvarja vsebine in uporabniške kampanje v stilu vaše blagovne znamke. Sistem ustvarja blog objave, objave za socialne medije in trženjske materiale, pri tem pa ohranja enak stil na vseh platformah.",
-        "outcome": "Konsistentne vsebine v velikem obsegu",
-        "badge": "Vsebina",
+      "marketingAutomation": {
+        "title": "Avtomatizacija Marketinga",
+        "subtitle": "AI Vsebine + Upravljanje Kampanj",
+        "description": "Celostna avtomatizacija marketinga od ustvarjanja vsebin do upravljanja kampanj. Ustvarjajte vsebine skladne z blagovno znamko, avtomatizirajte vključenost v družbenih medijih, spremljajte uspešnost kampanj in izvajajte 24/7 raziskave konkurence.",
+        "outcome": "Konsistenten marketing v velikem obsegu",
+        "badge": "Marketing",
         "capabilities": {
-          "0": "AI ustvarjanje vsebin v slogu vaše blagovne znamke",
-          "1": "Prilagajanje vsebin za različne platforme",
-          "2": "Avtomatsko načrtovanje objav",
-          "3": "SEO optimizacija in integracija ključnih besed",
-          "4": "Avtomatsko objavljanje na več platformah"
+          "0": "AI ustvarjanje vsebin z algoritmi za konsistentnost blagovne znamke",
+          "1": "24/7 avtomatizacija raziskav industrije in konkurence",
+          "2": "Večkanalno spremljanje in poročanje o uspešnosti kampanj",
+          "3": "Avtomatizacija neposrednih sporočil in takojšnje vključenosti",
+          "4": "Avtomatsko upravljanje in razporejanje koledarja vsebin",
+          "5": "SEO optimizacija in integracija ključnih besed",
+          "6": "Večkanalno objavljanje in distribucija vsebin",
+          "7": "Ustvarjanje poročil o kampanjah in vpogledi za optimizacijo"
+        }
+      },
+      "executiveAssistant": {
+        "title": "Izvršni Asistent AI",
+        "subtitle": "AI-Podprta Produktivnost + Izvršna Podpora",
+        "description": "Vaš inteligentni izvršni asistent, ki upravlja vaše dnevne operacije, usklajuje urnike, razvrsti komunikacije in vas ohranja osredotočene na strateško delo. Avtomatizira rutinske naloge in zagotavlja uporabne vpoglede v vaše vzorce produktivnosti.",
+        "outcome": "Pridobite 15+ ur na teden za strateško delo",
+        "badge": "Osebni AI",
+        "capabilities": {
+          "0": "Prilagojen dnevni urnik z nalogami, roki in sestanki",
+          "1": "Inteligentno upravljanje nabiralnika in razvrščanje e-pošte",
+          "2": "Usklajevanje sestankov z notranjimi in zunanjimi kontakti",
+          "3": "Avtomatizacija nalog po sestankih in načrtovanje nadaljnjih korakov",
+          "4": "Dnevna, tedenska in mesečna poročila o produktivnosti z vpogledi",
+          "5": "Upravljanje komunikacij prek več kanalov (e-pošta, Slack, Teams)",
+          "6": "Pridobivanje podatkov in izvajanje dejanj v vaših orodjih na zahtevo"
         }
       },
       "automationDashboard": {
@@ -492,6 +513,56 @@
       "bottomCta": {
         "description": "Odkrijte kako avtomatizacija lahko izboljša vaše poslovanje. Na voljo je tudi svetovanje za prilagojene rešitve za vaše podjetje.",
         "button": "Začnite"
+      }
+    },
+    "pricing": {
+      "tag": "Transparentno Cenovno Oblikovanje",
+      "title": "Prilagodljive avtomatizacijske storitve za vsako fazo rasti",
+      "subtitle": "Izberite svetovanje, izvedbo projektov ali dolgoročno partnerstvo - vse s transparentnimi cenami",
+      "consulting": {
+        "title": "Svetovanje za Avtomatizacijo",
+        "price": "€120/ura",
+        "priceSubtext": "Količinski paketi na voljo",
+        "description": "Strokovno svetovanje za vašo avtomatizacijsko strategijo. Idealno za enkratna posvetovanja, odpravljanje težav s procesi ali strokovne nasvete o vaši avtomatizacijski poti.",
+        "badge": "Prilagodljivo",
+        "cta": "Rezervirajte Svetovanje",
+        "features": {
+          "0": "Razvoj in načrtovanje AI strategije",
+          "1": "Odpravljanje težav in optimizacija procesov",
+          "2": "Delavnice za preslikavo procesov",
+          "3": "Ocena tehnične izvedljivosti",
+          "4": "Analiza priložnosti za avtomatizacijo"
+        }
+      },
+      "customProject": {
+        "title": "Projekt Avtomatizacije po Meri",
+        "price": "Pridobite Ponudbo",
+        "priceSubtext": "Prilagojeno obsegu vašega projekta",
+        "description": "Celostna izvedba avtomatizacijskega projekta od načrtovanja do uvedbe. Poskrbimo za vse - načrtovanje, razvoj, integracijo, testiranje in uvedbo vaših sistemov avtomatizacije.",
+        "badge": "Najbolj Priljubljeno",
+        "cta": "Pridobite Ponudbo",
+        "features": {
+          "0": "Polno načrtovanje in definiranje obsega projekta",
+          "1": "Razvoj in integracija procesov po meri",
+          "2": "Nastavitev integracije več sistemov",
+          "3": "2-8 tednov izvedbe glede na obseg",
+          "4": "Testiranje, uvedba in usposabljanje vključeno"
+        }
+      },
+      "partner": {
+        "title": "Partner za Avtomatizacijo",
+        "price": "€4,000/mesec",
+        "priceSubtext": "Brez dolgoročnih obveznosti",
+        "description": "Vaša predana ekipa za razvoj avtomatizacij. Nenehna optimizacija procesov, prednostna podpora in stalne izboljšave. Partnerstvo od meseca do meseca, ki se prilagaja vašim potrebam.",
+        "badge": "Najboljša Vrednost",
+        "cta": "Postanite Partner",
+        "features": {
+          "0": "Predani vodja projekta in razvijalec",
+          "1": "Prilagodljivost mesečnih obveznosti",
+          "2": "Nenehna optimizacija procesov",
+          "3": "Prednostna podpora in vzdrževanje",
+          "4": "Skaliranje kapacitete glede na vaše potrebe"
+        }
       }
     },
     "footer": {

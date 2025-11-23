@@ -441,32 +441,53 @@
           "4": "Automated candidate communication and follow-up sequences"
         }
       },
-      "voiceAI": {
-        "title": "Voice & AI Agent Systems",
+      "customerSupport": {
+        "title": "Customer Support Automation",
         "subtitle": "AI-Powered + 24/7 Multilingual Support",
-        "description": "24/7 AI voice agents with 31+ language support for customer service, appointment booking, and sales support. Multi-platform integration provides natural conversations that feel human while handling routine tasks automatically.",
-        "outcome": "24/7 intelligent voice support",
-        "badge": "Voice AI",
+        "description": "Transform customer service with intelligent multi-channel support automation. Handle inquiries via voice, chat, email, and SMS with 31+ language support while maintaining conversation context and seamless escalation to human agents when needed.",
+        "outcome": "24/7 intelligent customer support",
+        "badge": "Support AI",
         "capabilities": {
-          "0": "Natural conversation processing with AI",
-          "1": "31+ language support with automatic detection",
-          "2": "Intelligent call routing and escalation",
-          "3": "Appointment scheduling automation workflows",
-          "4": "CRM integration with conversation tracking"
+          "0": "Categorize customer conversations, preferences, and interaction history",
+          "1": "Handle multi-channel inquiries (voice, chat, email, SMS)",
+          "2": "Natural conversation processing with 31+ language support",
+          "3": "Intelligent escalation and live call transfer when needed",
+          "4": "Appointment scheduling and calendar automation",
+          "5": "Real-time CRM updates based on customer conversations",
+          "6": "Automated routing to appropriate team members"
         }
       },
-      "contentSystems": {
-        "title": "AI Content & UGC Systems",
-        "subtitle": "AI-Powered + Character-Consistent Branding",
-        "description": "AI-powered content creation with character-consistent UGC campaigns. Generate blog posts, social content, and marketing materials while maintaining perfect brand consistency across all channels.",
-        "outcome": "Brand-consistent content at scale",
-        "badge": "Content AI",
+      "marketingAutomation": {
+        "title": "Marketing Automation",
+        "subtitle": "AI-Powered Content + Campaign Management",
+        "description": "Complete marketing automation from content creation to campaign management. Generate brand-consistent content across all channels, automate social media engagement, track campaign performance, and conduct 24/7 competitive research to stay ahead.",
+        "outcome": "Brand-consistent marketing at scale",
+        "badge": "Marketing AI",
         "capabilities": {
-          "0": "AI-driven content creation with brand algorithms",
-          "1": "Multi-format content optimization workflows",
-          "2": "Automated content calendar management",
-          "3": "SEO optimization and keyword integration",
-          "4": "Multi-channel distribution automation"
+          "0": "AI-driven content creation with brand consistency algorithms",
+          "1": "24/7 industry and competitor research automation",
+          "2": "Multi-channel campaign performance tracking and reporting",
+          "3": "Social media DM automation and instant engagement",
+          "4": "Automated content calendar management and scheduling",
+          "5": "SEO optimization and keyword integration",
+          "6": "Multi-channel distribution and publishing automation",
+          "7": "Campaign report generation and optimization insights"
+        }
+      },
+      "executiveAssistant": {
+        "title": "Executive Assistant AI",
+        "subtitle": "AI-Powered Personal Productivity + Executive Support",
+        "description": "Your intelligent executive assistant that manages your daily operations, coordinates schedules, prioritizes communications, and keeps you focused on strategic work. Automates routine tasks and provides actionable insights into your productivity patterns.",
+        "outcome": "Reclaim 15+ hours per week for strategic work",
+        "badge": "Personal AI",
+        "capabilities": {
+          "0": "Customized daily agenda with tasks, deadlines, and meetings",
+          "1": "Intelligent inbox management and email prioritization",
+          "2": "Meeting coordination with internal and external contacts",
+          "3": "Post-meeting task automation and follow-up scheduling",
+          "4": "Daily, weekly, and monthly productivity reports with insights",
+          "5": "Multi-channel communication management (email, Slack, Teams)",
+          "6": "On-demand data retrieval and actions across your tech stack"
         }
       },
       "automationDashboard": {
@@ -493,6 +514,56 @@
       "bottomCta": {
         "description": "Explore automation architecture implementations and workflow orchestration methodologies. Technical consultation available for custom integration requirements.",
         "button": "Get Started"
+      }
+    },
+    "pricing": {
+      "tag": "Transparent Pricing",
+      "title": "Flexible automation services for every stage of growth",
+      "subtitle": "Choose consulting, project-based delivery, or ongoing partnership - all with transparent pricing",
+      "consulting": {
+        "title": "Automation Consulting",
+        "price": "€120/hour",
+        "priceSubtext": "Bulk packages available",
+        "description": "Expert guidance for your automation strategy. Perfect for one-off consultations, troubleshooting existing workflows, or getting professional advice on your automation roadmap.",
+        "badge": "Flexible",
+        "cta": "Book Consultation",
+        "features": {
+          "0": "AI strategy development and planning",
+          "1": "Workflow troubleshooting and optimization",
+          "2": "Process mapping workshops",
+          "3": "Technical feasibility assessment",
+          "4": "Automation opportunity analysis"
+        }
+      },
+      "customProject": {
+        "title": "Custom Automation Project",
+        "price": "Get Quote",
+        "priceSubtext": "Tailored to your project scope",
+        "description": "Complete automation project delivery from scoping to deployment. We handle everything - planning, development, integration, testing, and launch of your custom automation systems.",
+        "badge": "Most Popular",
+        "cta": "Get Custom Quote",
+        "features": {
+          "0": "Full project scoping and planning",
+          "1": "Custom workflow development and integration",
+          "2": "Multi-system integration setup",
+          "3": "2-8 week turnaround based on scope",
+          "4": "Testing, deployment, and training included"
+        }
+      },
+      "partner": {
+        "title": "Automation Partner",
+        "price": "€4,000/month",
+        "priceSubtext": "No long-term commitment required",
+        "description": "Your dedicated automation development team. Continuous workflow optimization, priority support, and ongoing improvements. Month-to-month partnership that scales with your needs.",
+        "badge": "Best Value",
+        "cta": "Become a Partner",
+        "features": {
+          "0": "Dedicated project manager and developer",
+          "1": "Month-to-month commitment flexibility",
+          "2": "Continuous workflow optimization",
+          "3": "Priority support and maintenance",
+          "4": "Scale capacity based on your needs"
+        }
       }
     },
     "footer": {
