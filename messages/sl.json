@@ -28,7 +28,7 @@
       "viewProcess": "Oglejte si Primer Procesa",
       "capability1": {
         "id": "customer-service",
-        "title": "Avtomatizacija Strankove Službe",
+        "title": "Avtomatizacija Podpore Strankam",
         "subtitle": "Odličnost Podpore",
         "description": "Spremenite interakcije s strankami z inteligentnim usmerjanjem in avtomatiziranimi odgovori",
         "icon": "Headphones",
@@ -38,7 +38,7 @@
           "Dosledna kakovost storitev",
           "Zmanjšana obremenitev agentov"
         ],
-        "consultationFocus": "rešitve za avtomatizacijo strankove službe"
+        "consultationFocus": "rešitve za avtomatizacijo podpore strankam"
       },
       "capability2": {
         "id": "sales-process",
@@ -114,7 +114,7 @@
         "title": "Oglejte si Avtomatizacijo v Akciji",
         "subtitle": "Pravi primeri, kako spreminjamo ročne procese v učinkovite avtomatizirane poteke dela",
         "example1": {
-          "title": "Primer Avtomatizacije Strankove Službe",
+          "title": "Primer Avtomatizacije Podpore Strankam",
           "beforeTitle": "Ročni Proces",
           "afterTitle": "Avtomatizirani Proces",
           "beforeTime": "80 minut",
@@ -143,7 +143,7 @@
       },
       "benefit2": {
         "title": "Rast Brez Glavobolov",
-        "description": "Obdelajte 10x več strank z enakim številom ekipe"
+        "description": "Obdelajte 10x več strank z enako ekipo"
       },
       "benefit3": {
         "title": "Nič Človeških Napak",
@@ -340,6 +340,12 @@
         "smartAutomation": "Pametne Avtomatizacije",
         "endToEnd": "Celovite Rešitve"
       },
+      "labels": {
+        "idealFor": "Idealno Za",
+        "includedFeatures": "Vključene Funkcije",
+        "includes": "Vključuje",
+        "getStarted": "Začnite"
+      },
       "foundation": {
         "title": "Temeljni Paket",
         "subtitle": "Poslovna Spletna Stran + Osnovna Avtomatizacija",
@@ -380,10 +386,6 @@
           "2": "Orkestracija delovnih tokov več sistemov in API integracije",
           "3": "Analitične plošče poslovne ravni s podatki v realnem času"
         }
-      },
-      "labels": {
-        "idealFor": "Idealno Za",
-        "includedFeatures": "Vključene Funkcije"
       },
       "bottomCta": {
         "description": "Pripravljeni izboljšati svoje podjetje s profesionalno spletno stranjo in pametnimi avtomatizacijami? Pogovorimo se o vaših potrebah in ciljih.",
@@ -441,10 +443,10 @@
         }
       },
       "customerSupport": {
-        "title": "Avtomatizacija Podpore Strank",
+        "title": "Avtomatizacija Podpore Strankam",
         "subtitle": "AI-Podprto + 24/7 Večjezična Podpora",
-        "description": "Preoblikujte strankarsko službo s pametno avtomatizacijo podpore prek več kanalov. Obdelujte povpraševanja prek glasu, klepeta, e-pošte in SMS-ov s podporo 31+ jezikov, ohranjajte kontekst pogovorov in zagotavljajte nemoteno predajo na osebje ko je potrebno.",
-        "outcome": "24/7 inteligentna strankova podpora",
+        "description": "Preoblikujte podporo strankam s pametno avtomatizacijo prek več kanalov. Obdelujte povpraševanja prek glasu, klepeta, e-pošte in SMS-ov s podporo 31+ jezikov, ohranjajte kontekst pogovorov in zagotavljajte nemoteno predajo osebju, ko je potrebno.",
+        "outcome": "24/7 inteligentna podpora strankam",
         "badge": "Podpora",
         "capabilities": {
           "0": "Kategorizacija pogovorov, preferenc in zgodovine interakcij s strankami",
@@ -508,7 +510,10 @@
         "customizableNote": "Popolnoma prilagodljivo vašim potrebam",
         "systemOutcome": "Tipični rezultati:",
         "expandCapabilities": "Razširi zmožnosti",
-        "collapseCapabilities": "Skrij zmožnosti"
+        "collapseCapabilities": "Skrij zmožnosti",
+        "clickToExplore": "Kliknite za podrobnosti",
+        "viewEnterpriseCapabilities": "Oglejte si vse zmožnosti",
+        "useCases": "Primeri uporabe"
       },
       "bottomCta": {
         "description": "Odkrijte kako avtomatizacija lahko izboljša vaše poslovanje. Na voljo je tudi svetovanje za prilagojene rešitve za vaše podjetje.",
@@ -519,6 +524,9 @@
       "tag": "Transparentno Cenovno Oblikovanje",
       "title": "Prilagodljive avtomatizacijske storitve za vsako fazo rasti",
       "subtitle": "Izberite svetovanje, izvedbo projektov ali dolgoročno partnerstvo - vse s transparentnimi cenami",
+      "labels": {
+        "whatsIncluded": "Kaj je vključeno"
+      },
       "consulting": {
         "title": "Svetovanje za Avtomatizacijo",
         "price": "€120/ura",

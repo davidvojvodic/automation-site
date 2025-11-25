@@ -371,7 +371,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                   {/* Click Hint */}
                   <div className="mt-auto">
                     <div className="flex items-center justify-center gap-2 text-xs text-n-4 group-hover:text-n-2 transition-colors duration-300">
-                      <span className="font-medium">Click to explore service</span>
+                      <span className="font-medium">{t("labels.clickToExplore")}</span>
                       <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -451,7 +451,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                       )}
                     >
                       <Workflow className="w-4 h-4 sm:w-5 sm:h-5" />
-                      <span>View Full Enterprise Capabilities</span>
+                      <span>{t("labels.viewEnterpriseCapabilities")}</span>
                       <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 -rotate-90" />
                     </button>
                   </div>
@@ -573,7 +573,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                     {/* Applications */}
                     <div className="border-t border-n-6/50 pt-6">
                       <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3">
-                        Use Cases
+                        {t("labels.useCases")}
                       </h4>
                       <div className="grid grid-cols-2 gap-2">
                         {selectedSystem.applications.map((app: string, index: number) => (
@@ -594,7 +594,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                         href="#contact"
                         onClick={() => setOpenDrawer(null)}
                       >
-                        Get Started
+                        {t("bottomCta.button")}
                       </Button>
                     </div>
                     </div>

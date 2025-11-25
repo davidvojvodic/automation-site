@@ -224,7 +224,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                 <div className="flex-1 mb-6">
                   <div className="mb-3">
                     <h4 className="text-xs font-bold bg-gradient-to-r from-color-1 to-color-2 bg-clip-text text-transparent uppercase tracking-wider">
-                      Includes
+                      {t("labels.includes")}
                     </h4>
                   </div>
                   <div className="grid grid-cols-1 gap-2">
@@ -248,7 +248,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                     className="w-full"
                     href="#contact"
                   >
-                    Get Started
+                    {t("labels.getStarted")}
                   </Button>
                 </div>
               </div>
