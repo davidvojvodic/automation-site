@@ -148,7 +148,7 @@ export function KnowledgeChatLayout() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-80px)] bg-n-8">
+    <div className="flex h-full bg-n-8">
       <ConversationSidebar
         conversations={conversations}
         activeConversationId={activeConversationId}
