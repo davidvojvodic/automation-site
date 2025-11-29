@@ -15,6 +15,8 @@ import {
   AlertTriangle,
   Sparkles,
   Brain,
+  Copy,
+  Check,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
@@ -42,15 +44,29 @@ interface KnowledgeChatProps {
   onConversationUpdate?: () => void;
 }
 
-export function KnowledgeChat({ conversationId, onConversationUpdate }: KnowledgeChatProps) {
+export function KnowledgeChat({
+  conversationId,
+  onConversationUpdate,
+}: KnowledgeChatProps) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingMessages, setLoadingMessages] = useState(true);
   const [error, setError] = useState("");
   const [expandedSources, setExpandedSources] = useState<string | null>(null);
+  const [copiedMessageId, setCopiedMessageId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleCopyMessage = async (messageId: string, content: string) => {
+    try {
+      await navigator.clipboard.writeText(content);
+      setCopiedMessageId(messageId);
+      setTimeout(() => setCopiedMessageId(null), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -63,7 +79,7 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
   // Load messages when conversation changes
   useEffect(() => {
     loadMessages();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [conversationId]);
 
   const loadMessages = async () => {
@@ -76,21 +92,23 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
       }
 
       const data = await response.json();
-      const loadedMessages = data.conversation.messages.map((msg: {
-        id: string;
-        role: 'user' | 'assistant';
-        content: string;
-        sources?: Source[];
-        confidence?: 'high' | 'medium' | 'low';
-        created_at: string;
-      }) => ({
-        id: msg.id,
-        role: msg.role,
-        content: msg.content,
-        sources: msg.sources || [],
-        confidence: msg.confidence,
-        timestamp: new Date(msg.created_at),
-      }));
+      const loadedMessages = data.conversation.messages.map(
+        (msg: {
+          id: string;
+          role: "user" | "assistant";
+          content: string;
+          sources?: Source[];
+          confidence?: "high" | "medium" | "low";
+          created_at: string;
+        }) => ({
+          id: msg.id,
+          role: msg.role,
+          content: msg.content,
+          sources: msg.sources || [],
+          confidence: msg.confidence,
+          timestamp: new Date(msg.created_at),
+        })
+      );
 
       setMessages(loadedMessages);
     } catch (err) {
@@ -144,7 +162,9 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
       setError("Failed to send message. Please try again.");
       console.error("Chat error:", err);
       // Remove optimistic message on error
-      setMessages((prev) => prev.filter((m) => m.id !== optimisticUserMessage.id));
+      setMessages((prev) =>
+        prev.filter((m) => m.id !== optimisticUserMessage.id)
+      );
     } finally {
       setLoading(false);
       inputRef.current?.focus();
@@ -194,7 +214,9 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
             <Loader2 className="w-8 h-8 text-white animate-spin" />
           </div>
         </div>
-        <p className="mt-6 text-sm text-n-3 font-medium">Loading conversation...</p>
+        <p className="mt-6 text-sm text-n-3 font-medium">
+          Loading conversation...
+        </p>
       </div>
     );
   }
@@ -213,9 +235,11 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
             </div>
             <div className="mb-2 inline-flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-color-1/10 to-color-2/10 border border-color-1/20 rounded-full">
               <Sparkles className="w-3.5 h-3.5 text-color-1" />
-              <span className="text-xs font-medium text-color-1">AI-Powered Knowledge Base</span>
+              <span className="text-xs font-medium text-color-1">
+                AI-Powered Knowledge Base
+              </span>
             </div>
-            <h3 className="text-2xl font-bold text-n-1 mb-3 bg-gradient-to-r from-n-1 to-n-3 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold text-n-1 mb-3 bg-gradient-to-r from-n-1 to-n-3 bg-clip-text">
               Ask me anything about Flowko
             </h3>
             <p className="text-sm text-n-3 max-w-md mb-8 leading-relaxed">
@@ -278,24 +302,80 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
                   )}
                 >
                   {message.role === "user" ? (
-                    <p className="text-sm whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                    <p className="text-sm whitespace-pre-wrap leading-relaxed">
+                      {message.content}
+                    </p>
                   ) : (
                     <div className="prose prose-sm prose-invert max-w-none">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
-                          h1: (props) => <h1 className="text-lg font-bold text-n-1 mb-3 mt-4 first:mt-0" {...props} />,
-                          h2: (props) => <h2 className="text-base font-semibold text-n-1 mb-2 mt-3 first:mt-0" {...props} />,
-                          h3: (props) => <h3 className="text-sm font-semibold text-n-2 mb-2 mt-2" {...props} />,
-                          p: (props) => <p className="text-sm text-n-2 leading-relaxed mb-3 last:mb-0" {...props} />,
-                          ul: (props) => <ul className="list-disc list-inside text-sm text-n-2 space-y-1 mb-3" {...props} />,
-                          ol: (props) => <ol className="list-decimal list-inside text-sm text-n-2 space-y-1 mb-3" {...props} />,
-                          li: (props) => <li className="text-sm text-n-2" {...props} />,
-                          strong: (props) => <strong className="font-semibold text-n-1" {...props} />,
-                          em: (props) => <em className="italic text-n-2" {...props} />,
-                          code: (props) => <code className="px-1.5 py-0.5 bg-n-6 text-color-1 rounded text-xs font-mono" {...props} />,
-                          pre: (props) => <pre className="bg-n-6 p-3 rounded-lg overflow-x-auto mb-3" {...props} />,
-                          a: (props) => <a className="text-color-1 hover:text-color-2 underline transition-colors" {...props} />,
+                          h1: (props) => (
+                            <h1
+                              className="text-lg font-bold text-n-1 mb-3 mt-4 first:mt-0"
+                              {...props}
+                            />
+                          ),
+                          h2: (props) => (
+                            <h2
+                              className="text-base font-semibold text-n-1 mb-2 mt-3 first:mt-0"
+                              {...props}
+                            />
+                          ),
+                          h3: (props) => (
+                            <h3
+                              className="text-sm font-semibold text-n-2 mb-2 mt-2"
+                              {...props}
+                            />
+                          ),
+                          p: (props) => (
+                            <p
+                              className="text-sm text-n-2 leading-relaxed mb-3 last:mb-0"
+                              {...props}
+                            />
+                          ),
+                          ul: (props) => (
+                            <ul
+                              className="list-disc list-inside text-sm text-n-2 space-y-1 mb-3"
+                              {...props}
+                            />
+                          ),
+                          ol: (props) => (
+                            <ol
+                              className="list-decimal list-inside text-sm text-n-2 space-y-1 mb-3"
+                              {...props}
+                            />
+                          ),
+                          li: (props) => (
+                            <li className="text-sm text-n-2" {...props} />
+                          ),
+                          strong: (props) => (
+                            <strong
+                              className="font-semibold text-n-1"
+                              {...props}
+                            />
+                          ),
+                          em: (props) => (
+                            <em className="italic text-n-2" {...props} />
+                          ),
+                          code: (props) => (
+                            <code
+                              className="px-1.5 py-0.5 bg-n-6 text-color-1 rounded text-xs font-mono"
+                              {...props}
+                            />
+                          ),
+                          pre: (props) => (
+                            <pre
+                              className="bg-n-6 p-3 rounded-lg overflow-x-auto mb-3"
+                              {...props}
+                            />
+                          ),
+                          a: (props) => (
+                            <a
+                              className="text-color-1 hover:text-color-2 underline transition-colors"
+                              {...props}
+                            />
+                          ),
                         }}
                       >
                         {message.content}
@@ -304,9 +384,31 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
                   )}
                 </div>
 
-                {message.role === "assistant" && message.confidence && (
-                  <div className="flex items-center gap-2">
-                    {getConfidenceBadge(message.confidence)}
+                {message.role === "assistant" && (
+                  <div className="flex items-center gap-2 flex-wrap">
+                    {message.confidence &&
+                      getConfidenceBadge(message.confidence)}
+                    <button
+                      onClick={() =>
+                        handleCopyMessage(message.id, message.content)
+                      }
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-n-7 border border-n-6 hover:border-color-1/50 rounded-lg text-xs text-n-3 hover:text-color-1 transition-all duration-300 hover:shadow-md hover:shadow-color-1/5"
+                      title="Copy answer"
+                    >
+                      {copiedMessageId === message.id ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-green-400" />
+                          <span className="text-green-400 font-medium">
+                            Copied!
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5" />
+                          <span className="font-medium">Copy</span>
+                        </>
+                      )}
+                    </button>
                   </div>
                 )}
 
@@ -382,11 +484,22 @@ export function KnowledgeChat({ conversationId, onConversationUpdate }: Knowledg
             </div>
             <div className="flex items-center gap-3 px-5 py-3 bg-gradient-to-br from-n-7 to-n-8 border border-n-6 rounded-2xl shadow-md">
               <Loader2 className="w-4 h-4 text-color-1 animate-spin" />
-              <span className="text-sm text-n-2 font-medium">Searching knowledge base...</span>
+              <span className="text-sm text-n-2 font-medium">
+                Searching knowledge base...
+              </span>
               <div className="flex gap-1">
-                <div className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <div className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <div className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <div
+                  className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce"
+                  style={{ animationDelay: "0ms" }}
+                />
+                <div
+                  className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce"
+                  style={{ animationDelay: "150ms" }}
+                />
+                <div
+                  className="w-1.5 h-1.5 bg-color-1 rounded-full animate-bounce"
+                  style={{ animationDelay: "300ms" }}
+                />
               </div>
             </div>
           </div>

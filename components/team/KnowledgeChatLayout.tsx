@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ConversationSidebar } from "./ConversationSidebar";
 import { KnowledgeChat } from "./KnowledgeChat";
 import { useRouter } from "next/navigation";
@@ -20,52 +20,69 @@ export function KnowledgeChatLayout() {
   const [loading, setLoading] = useState(true);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
-  // Load conversations on mount
+  // Track if initial selection has been done to prevent race conditions
+  const initialSelectionDone = useRef(false);
+
+  // Load conversations and handle initial selection in a single effect
   useEffect(() => {
-    loadConversations();
+    const loadInitialData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("/api/conversations");
+
+        if (response.status === 401) {
+          router.push("/login");
+          return;
+        }
+
+        if (!response.ok) {
+          throw new Error("Failed to load conversations");
+        }
+
+        const data = await response.json();
+        const loadedConversations: Conversation[] = data.conversations || [];
+        setConversations(loadedConversations);
+
+        // Only do initial selection once, on first load
+        if (!initialSelectionDone.current && loadedConversations.length > 0) {
+          const savedConversationId = localStorage.getItem("activeConversationId");
+          if (savedConversationId && loadedConversations.some((c) => c.id === savedConversationId)) {
+            setActiveConversationId(savedConversationId);
+          } else {
+            setActiveConversationId(loadedConversations[0].id);
+          }
+          initialSelectionDone.current = true;
+        }
+      } catch (error) {
+        console.error("Error loading conversations:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadInitialData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Load active conversation from localStorage
-  useEffect(() => {
-    const savedConversationId = localStorage.getItem("activeConversationId");
-    if (savedConversationId && conversations.some((c) => c.id === savedConversationId)) {
-      setActiveConversationId(savedConversationId);
-    } else if (conversations.length > 0) {
-      // Select most recent conversation
-      setActiveConversationId(conversations[0].id);
-    }
-  }, [conversations]);
-
-  // Save active conversation to localStorage
+  // Save active conversation to localStorage when it changes
   useEffect(() => {
     if (activeConversationId) {
       localStorage.setItem("activeConversationId", activeConversationId);
     }
   }, [activeConversationId]);
 
-  const loadConversations = async () => {
+  // Reload conversations without changing selection (for title updates, etc.)
+  const reloadConversations = useCallback(async () => {
     try {
-      setLoading(true);
       const response = await fetch("/api/conversations");
-
-      if (response.status === 401) {
-        router.push("/login");
-        return;
+      if (response.ok) {
+        const data = await response.json();
+        setConversations(data.conversations || []);
       }
-
-      if (!response.ok) {
-        throw new Error("Failed to load conversations");
-      }
-
-      const data = await response.json();
-      setConversations(data.conversations || []);
     } catch (error) {
-      console.error("Error loading conversations:", error);
-    } finally {
-      setLoading(false);
+      console.error("Error reloading conversations:", error);
     }
-  };
+  }, []);
 
   const handleNewConversation = async () => {
     try {
@@ -83,7 +100,8 @@ export function KnowledgeChatLayout() {
       const data = await response.json();
       const newConversation = data.conversation;
 
-      setConversations([newConversation, ...conversations]);
+      // Use functional update to avoid stale state issues
+      setConversations((prev) => [newConversation, ...prev]);
       setActiveConversationId(newConversation.id);
     } catch (error) {
       console.error("Error creating conversation:", error);
@@ -107,14 +125,17 @@ export function KnowledgeChatLayout() {
         throw new Error("Failed to delete conversation");
       }
 
-      // Remove from state
-      setConversations(conversations.filter((c) => c.id !== id));
+      // Use functional update to get accurate remaining conversations
+      setConversations((prev) => {
+        const remaining = prev.filter((c) => c.id !== id);
 
-      // If deleted conversation was active, select another
-      if (activeConversationId === id) {
-        const remaining = conversations.filter((c) => c.id !== id);
-        setActiveConversationId(remaining.length > 0 ? remaining[0].id : null);
-      }
+        // If deleted conversation was active, select another
+        if (activeConversationId === id) {
+          setActiveConversationId(remaining.length > 0 ? remaining[0].id : null);
+        }
+
+        return remaining;
+      });
     } catch (error) {
       console.error("Error deleting conversation:", error);
       alert("Failed to delete conversation. Please try again.");
@@ -122,8 +143,8 @@ export function KnowledgeChatLayout() {
   };
 
   const handleConversationUpdate = () => {
-    // Reload conversations to update titles and message counts
-    loadConversations();
+    // Reload conversations to update titles and message counts without changing selection
+    reloadConversations();
   };
 
   return (

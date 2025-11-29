@@ -3,12 +3,23 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import {
   MessageSquarePlus,
   Trash2,
   ChevronLeft,
   ChevronRight,
   MessageSquare,
   Loader2,
+  AlertTriangle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -42,17 +53,32 @@ export function ConversationSidebar({
   onToggleCollapse,
 }: ConversationSidebarProps) {
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
+  const [pendingDeleteTitle, setPendingDeleteTitle] = useState<string>("");
 
-  const handleDelete = async (e: React.MouseEvent, id: string) => {
+  const handleDeleteClick = (e: React.MouseEvent, id: string, title: string) => {
     e.stopPropagation();
+    setPendingDeleteId(id);
+    setPendingDeleteTitle(title);
+    setDeleteModalOpen(true);
+  };
 
-    if (!confirm("Are you sure you want to delete this conversation?")) {
-      return;
-    }
+  const handleConfirmDelete = async () => {
+    if (!pendingDeleteId) return;
 
-    setDeletingId(id);
-    await onDeleteConversation(id);
+    setDeleteModalOpen(false);
+    setDeletingId(pendingDeleteId);
+    await onDeleteConversation(pendingDeleteId);
     setDeletingId(null);
+    setPendingDeleteId(null);
+    setPendingDeleteTitle("");
+  };
+
+  const handleCancelDelete = () => {
+    setDeleteModalOpen(false);
+    setPendingDeleteId(null);
+    setPendingDeleteTitle("");
   };
 
   const formatDate = (dateString: string) => {
@@ -197,7 +223,7 @@ export function ConversationSidebar({
                   </div>
 
                   <button
-                    onClick={(e) => handleDelete(e, conversation.id)}
+                    onClick={(e) => handleDeleteClick(e, conversation.id, conversation.title)}
                     className={cn(
                       "opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0",
                       "w-8 h-8 rounded-lg flex items-center justify-center",
@@ -217,6 +243,39 @@ export function ConversationSidebar({
           </div>
         )}
       </div>
+
+      {/* Delete Confirmation Modal */}
+      <AlertDialog open={deleteModalOpen} onOpenChange={setDeleteModalOpen}>
+        <AlertDialogContent className="bg-n-7 border-n-6">
+          <AlertDialogHeader>
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
+                <AlertTriangle className="w-5 h-5 text-red-400" />
+              </div>
+              <AlertDialogTitle className="text-n-1">Delete Conversation</AlertDialogTitle>
+            </div>
+            <AlertDialogDescription className="text-n-3">
+              Are you sure you want to delete{" "}
+              <span className="font-medium text-n-2">&quot;{pendingDeleteTitle}&quot;</span>?
+              This action cannot be undone and all messages will be permanently removed.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter className="gap-2">
+            <AlertDialogCancel
+              onClick={handleCancelDelete}
+              className="bg-n-6 border-n-5 text-n-2 hover:bg-n-5 hover:text-n-1"
+            >
+              Cancel
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleConfirmDelete}
+              className="bg-red-500 hover:bg-red-600 text-white"
+            >
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
