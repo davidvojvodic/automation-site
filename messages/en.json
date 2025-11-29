@@ -15,181 +15,43 @@
       "getStarted": "Get Started",
       "bookACall": "Book a Call"
     },
-    "solutions": {
-      "title": "Custom Automation Solutions",
-      "subtitle": "Tailored automation capabilities we'll develop for your business",
-      "approach": {
-        "efficiency": "Proven Results",
-        "integration": "Expert Implementation", 
-        "results": "Consultation-Focused"
-      },
-      "capabilities": "Core Capabilities",
-      "cta": "Discuss Your Automation Needs",
-      "viewProcess": "View Process Example",
-      "capability1": {
-        "id": "customer-service",
-        "title": "Customer Service Automation",
-        "subtitle": "Support Excellence",
-        "description": "Transform customer interactions with intelligent routing and automated responses",
-        "icon": "Headphones",
-        "benefits": [
-          "24/7 availability",
-          "Instant response times",
-          "Consistent service quality",
-          "Reduced agent workload"
-        ],
-        "consultationFocus": "customer service automation solutions"
-      },
-      "capability2": {
-        "id": "sales-process",
-        "title": "Sales Process Automation",
-        "subtitle": "Revenue Growth",
-        "description": "Streamline lead management and accelerate sales cycles with smart automation",
-        "icon": "TrendingUp",
-        "benefits": [
-          "Qualified lead scoring",
-          "Automated follow-ups",
-          "Pipeline visibility",
-          "Higher conversion rates"
-        ],
-        "consultationFocus": "sales automation solutions"
-      },
-      "capability3": {
-        "id": "data-integration",
-        "title": "Data Integration & Synchronization",
-        "subtitle": "Unified Operations",
-        "description": "Connect disparate systems for real-time data flow and unified reporting",
-        "icon": "Database",
-        "benefits": [
-          "Real-time synchronization",
-          "Unified dashboards",
-          "Error reduction",
-          "Automated reporting"
-        ],
-        "consultationFocus": "data integration solutions"
-      },
-      "capability4": {
-        "id": "marketing-automation",
-        "title": "Marketing Campaign Automation",
-        "subtitle": "Campaign Excellence",
-        "description": "Orchestrate multi-channel marketing campaigns with personalized customer journeys",
-        "icon": "Target",
-        "benefits": [
-          "Multi-channel coordination",
-          "Personalized journeys",
-          "Performance tracking",
-          "ROI optimization"
-        ],
-        "consultationFocus": "marketing automation solutions"
-      },
-      "capability5": {
-        "id": "financial-processes",
-        "title": "Financial Process Automation",
-        "subtitle": "Accuracy & Speed",
-        "description": "Streamline invoicing, payments, and financial reporting with precision automation",
-        "icon": "Calculator",
-        "benefits": [
-          "Automated invoicing",
-          "Payment processing",
-          "Financial reporting",
-          "Compliance tracking"
-        ],
-        "consultationFocus": "financial automation solutions"
-      },
-      "capability6": {
-        "id": "hr-admin",
-        "title": "HR & Administrative Automation",
-        "subtitle": "Operational Efficiency",
-        "description": "Optimize employee onboarding, document management, and administrative workflows",
-        "icon": "Users",
-        "benefits": [
-          "Employee onboarding",
-          "Document workflows",
-          "Compliance automation",
-          "Performance tracking"
-        ],
-        "consultationFocus": "HR and administrative automation solutions"
-      },
-      "processExamples": {
-        "title": "See Automation in Action",
-        "subtitle": "Real examples of how we transform manual processes into efficient automated workflows",
-        "example1": {
-          "title": "Customer Service Automation Example",
-          "beforeTitle": "Manual Process",
-          "afterTitle": "Automated Process",
-          "beforeTime": "80 minutes",
-          "afterTime": "8 minutes",
-          "improvement": "90% faster",
-          "beforeSteps": [
-            "Manual email sorting (15 min)",
-            "Agent research & categorization (20 min)",
-            "Knowledge base search (30 min)",
-            "Draft & review response (15 min)"
-          ],
-          "afterSteps": [
-            "Smart routing & categorization (1 min)",
-            "AI-generated response (2 min)",
-            "Agent review & send (5 min)"
-          ]
-        }
-      }
-    },
-    "benefits": {
-      "title": "Transform Your Business Operations",
-      "subtitle": "Save 20+ hours weekly with intelligent automation that works while you sleep",
-      "benefit1": {
-        "title": "Save 20+ Hours Weekly",
-        "description": "Automate routine tasks so you can focus on what truly drives growth"
-      },
-      "benefit2": {
-        "title": "Scale Without Headaches",
-        "description": "Handle 10x more customers with the same team size"
-      },
-      "benefit3": {
-        "title": "Zero Human Errors",
-        "description": "Perfect consistency in every process, every single time"
-      },
-      "benefit4": {
-        "title": "24/7 Instant Responses",
-        "description": "Never miss a customer inquiry, even at 3 AM"
-      },
-      "benefit5": {
-        "title": "ROI Within 30 Days",
-        "description": "Start saving money immediately with proven automation systems"
-      },
-      "benefit6": {
-        "title": "Competitive Advantage",
-        "description": "AI insights that help you stay two steps ahead"
-      }
-    },
     "implementation": {
       "tag": "Proven Process",
       "title": "Our Delivery Process",
       "description": "Systematic approach that ensures your automation projects deliver results without disrupting your business",
-      "subtitle": "Systematic approach that ensures your automation projects deliver results without disrupting your business",
       "phase1": {
-        "status": "Phase 1",
         "title": "Discovery & Risk Assessment",
         "description": "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities and assess risks before any implementation begins.",
         "outcome": "Clear roadmap with identified opportunities and protected investments"
       },
       "phase2": {
-        "status": "Phase 2",
         "title": "Strategic Planning & Architecture",
         "description": "Design the technical architecture and implementation strategy based on discovery findings. We create detailed blueprints with fallback plans before any development begins.",
         "outcome": "Technical architecture blueprint with defined success metrics"
       },
       "phase3": {
-        "status": "Phase 3",
         "title": "Controlled Implementation & Testing",
         "description": "Build and deploy automation systems in a controlled environment with comprehensive testing. We implement with continuous monitoring and rollback capabilities to ensure zero business disruption.",
         "outcome": "Fully functional automation systems validated through testing"
       },
       "phase4": {
-        "status": "Phase 4",
         "title": "Launch & Team Training",
         "description": "Full system deployment with comprehensive team training and knowledge transfer. Your team becomes autonomous with the new automation systems through hands-on training and documentation.",
         "outcome": "Fully operational automation system with confident, trained team"
+      },
+      "faq": {
+        "question1": "How long does automation implementation take?",
+        "answer1": "Our implementation process takes 1-4 weeks depending on complexity. Phase 1 (Discovery) takes 3-5 days, Phase 2 (Planning) 5-7 days, Phase 3 (Implementation) 1-2 weeks, Phase 4 (Training) 2-3 days.",
+        "question2": "Can automation disrupt our current business processes?",
+        "answer2": "No, our approach ensures zero business disruption. We implement with controlled environments, continuous monitoring, and rollback capabilities. Your current processes remain active during implementation.",
+        "question3": "What are typical time savings with automation?",
+        "answer3": "Our clients typically save 15+ hours weekly per team. Lead generation automation can save 20+ hours weekly, sales processes 10-15 hours, financial processes 8-12 hours weekly.",
+        "question4": "Do we need technical knowledge to manage automations?",
+        "answer4": "No, we design user-friendly systems. In Phase 4, we provide comprehensive team training and documentation. Your team becomes autonomous with the new automation systems.",
+        "question5": "What technologies do you use for automation?",
+        "answer5": "We use n8n (leading automation platform), OpenAI GPT-4, Claude 3, API integrations, and specialized tools like HubSpot, Salesforce, LinkedIn API, and other business applications.",
+        "question6": "Do you provide post-implementation support?",
+        "answer6": "Yes, we offer various support levels: from email support to dedicated SLAs and quarterly strategy reviews. We also include performance monitoring and optimization sprints."
       },
       "labels": {
         "phase1": "Phase 1",
@@ -202,7 +64,6 @@
     "collaboration": {
       "title": "Connect Your Business Tools & Automate Workflows",
       "description": "Connect your favorite business tools and create powerful automations that save 20+ hours per week. We handle all the technical complexity for you.",
-      "buttonText": "See How It Works",
       "features": {
         "feature1": {
           "title": "Connect 1000+ Business Apps",
@@ -413,6 +274,12 @@
           "2": "Personalized outreach campaign orchestration",
           "3": "Contact enrichment with engagement signals",
           "4": "Automated contact sequencing workflows"
+        },
+        "applications": {
+          "0": "B2B prospecting",
+          "1": "Lead qualification",
+          "2": "Sales outreach",
+          "3": "CRM integration"
         }
       },
       "salesAutomation": {
@@ -427,6 +294,12 @@
           "2": "Automated follow-up orchestration workflows",
           "3": "Sales asset generation and optimization",
           "4": "Seamless CRM integration and synchronization"
+        },
+        "applications": {
+          "0": "Proposal automation",
+          "1": "Pipeline management",
+          "2": "CRM workflows",
+          "3": "Sales analytics"
         }
       },
       "recruitment": {
@@ -441,6 +314,12 @@
           "2": "Multi-platform job posting automation (LinkedIn, Indeed, etc.)",
           "3": "Interview scheduling and calendar coordination workflows",
           "4": "Automated candidate communication and follow-up sequences"
+        },
+        "applications": {
+          "0": "CV processing automation",
+          "1": "Candidate scoring systems",
+          "2": "Interview scheduling",
+          "3": "Multi-platform recruitment"
         }
       },
       "customerSupport": {
@@ -457,6 +336,12 @@
           "4": "Appointment scheduling and calendar automation",
           "5": "Real-time CRM updates based on customer conversations",
           "6": "Automated routing to appropriate team members"
+        },
+        "applications": {
+          "0": "24/7 Customer support",
+          "1": "Multi-channel service",
+          "2": "Call routing",
+          "3": "Support automation"
         }
       },
       "marketingAutomation": {
@@ -474,6 +359,12 @@
           "5": "SEO optimization and keyword integration",
           "6": "Multi-channel distribution and publishing automation",
           "7": "Campaign report generation and optimization insights"
+        },
+        "applications": {
+          "0": "Content creation",
+          "1": "Campaign management",
+          "2": "Social automation",
+          "3": "Market research"
         }
       },
       "executiveAssistant": {
@@ -490,6 +381,12 @@
           "4": "Daily, weekly, and monthly productivity reports with insights",
           "5": "Multi-channel communication management (email, Slack, Teams)",
           "6": "On-demand data retrieval and actions across your tech stack"
+        },
+        "applications": {
+          "0": "Personal productivity",
+          "1": "Schedule management",
+          "2": "Communication coordination",
+          "3": "Task automation"
         }
       },
       "automationDashboard": {

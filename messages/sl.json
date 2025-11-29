@@ -15,180 +15,43 @@
       "getStarted": "Začnite",
       "bookACall": "Rezervirajte Klic"
     },
-    "solutions": {
-      "title": "Avtomatizacijske Rešitve po Meri",
-      "subtitle": "Prilagojene avtomatizacijske zmožnosti, ki jih bomo razvili za vaše podjetje",
-      "approach": {
-        "efficiency": "Dokazani Rezultati",
-        "integration": "Ekspertna Izvedba", 
-        "results": "Osredotočenost na Posvetovanje"
-      },
-      "capabilities": "Temeljne Zmožnosti",
-      "cta": "Razpravljajte o Vaših Potrebah po Avtomatizaciji",
-      "viewProcess": "Oglejte si Primer Procesa",
-      "capability1": {
-        "id": "customer-service",
-        "title": "Avtomatizacija Podpore Strankam",
-        "subtitle": "Odličnost Podpore",
-        "description": "Spremenite interakcije s strankami z inteligentnim usmerjanjem in avtomatiziranimi odgovori",
-        "icon": "Headphones",
-        "benefits": [
-          "Dostopnost 24/7",
-          "Takojšnji odzivni časi",
-          "Dosledna kakovost storitev",
-          "Zmanjšana obremenitev agentov"
-        ],
-        "consultationFocus": "rešitve za avtomatizacijo podpore strankam"
-      },
-      "capability2": {
-        "id": "sales-process",
-        "title": "Avtomatizacija Prodajnega Procesa",
-        "subtitle": "Rast Prihodkov",
-        "description": "Poenostavite upravljanje vodilnih kupcev in pospešite prodajne cikle s pametno avtomatizacijo",
-        "icon": "TrendingUp",
-        "benefits": [
-          "Kvalificiranje vodilnih kupcev",
-          "Avtomatizirani nadaljnji stiki",
-          "Preglednost prodajnega kanala",
-          "Višje stopnje konverzije"
-        ],
-        "consultationFocus": "rešitve za avtomatizacijo prodaje"
-      },
-      "capability3": {
-        "id": "data-integration",
-        "title": "Integracija in Sinhronizacija Podatkov",
-        "subtitle": "Poenoteno Delovanje",
-        "description": "Povežite različne sisteme za pretok podatkov v realnem času in poenoteno poročanje",
-        "icon": "Database",
-        "benefits": [
-          "Sinhronizacija v realnem času",
-          "Poenotene nadzorne plošče",
-          "Zmanjšanje napak",
-          "Avtomatizirano poročanje"
-        ],
-        "consultationFocus": "rešitve za integracijo podatkov"
-      },
-      "capability4": {
-        "id": "marketing-automation",
-        "title": "Avtomatizacija Marketinških Kampanj",
-        "subtitle": "Odličnost Kampanj",
-        "description": "Organizirajte večkanalne marketinške kampanje z personaliziranimi potmi kupcev",
-        "icon": "Target",
-        "benefits": [
-          "Večkanalno koordiniranje",
-          "Personalizirane poti",
-          "Sledenje uspešnosti",
-          "Optimizacija ROI"
-        ],
-        "consultationFocus": "rešitve za avtomatizacijo marketinga"
-      },
-      "capability5": {
-        "id": "financial-processes",
-        "title": "Avtomatizacija Finančnih Procesov",
-        "subtitle": "Natančnost in Hitrost",
-        "description": "Poenostavite izdajanje računov, plačila in finančno poročanje s precizno avtomatizacijo",
-        "icon": "Calculator",
-        "benefits": [
-          "Avtomatizirano izdajanje računov",
-          "Obdelava plačil",
-          "Finančno poročanje",
-          "Sledenje skladnosti"
-        ],
-        "consultationFocus": "rešitve za finančno avtomatizacijo"
-      },
-      "capability6": {
-        "id": "hr-admin",
-        "title": "Avtomatizacija HR in Administracije",
-        "subtitle": "Operativna Učinkovitost",
-        "description": "Optimizirajte uvajanje zaposlenih, upravljanje dokumentov in administrativne procese",
-        "icon": "Users",
-        "benefits": [
-          "Uvajanje zaposlenih",
-          "Poteki dela z dokumenti",
-          "Avtomatizacija skladnosti",
-          "Sledenje uspešnosti"
-        ],
-        "consultationFocus": "rešitve za avtomatizacijo HR in administracije"
-      },
-      "processExamples": {
-        "title": "Oglejte si Avtomatizacijo v Akciji",
-        "subtitle": "Pravi primeri, kako spreminjamo ročne procese v učinkovite avtomatizirane poteke dela",
-        "example1": {
-          "title": "Primer Avtomatizacije Podpore Strankam",
-          "beforeTitle": "Ročni Proces",
-          "afterTitle": "Avtomatizirani Proces",
-          "beforeTime": "80 minut",
-          "afterTime": "8 minut",
-          "improvement": "90% hitreje",
-          "beforeSteps": [
-            "Ročno razvrščanje e-pošte (15 min)",
-            "Raziskave in kategorizacija agentov (20 min)",
-            "Iskanje po bazi znanja (30 min)",
-            "Osnutek in pregled odgovora (15 min)"
-          ],
-          "afterSteps": [
-            "Pametno usmerjanje in kategorizacija (1 min)",
-            "AI-generiran odgovor (2 min)",
-            "Pregled agenta in pošiljanje (5 min)"
-          ]
-        }
-      }
-    },
-    "benefits": {
-      "title": "Preobrazite Svoje Poslovne Operacije",
-      "subtitle": "Prihranite 20+ ur tedensko z inteligentno avtomatizacijo, ki dela medtem ko spite",
-      "benefit1": {
-        "title": "Prihranite 20+ Ur Tedensko",
-        "description": "Avtomatizirajte rutinska opravila, da se lahko osredotočite na tisto, kar res poganja rast"
-      },
-      "benefit2": {
-        "title": "Rast Brez Glavobolov",
-        "description": "Obdelajte 10x več strank z enako ekipo"
-      },
-      "benefit3": {
-        "title": "Nič Človeških Napak",
-        "description": "Popolna doslednost v vsakem procesu, vsakič znova"
-      },
-      "benefit4": {
-        "title": "24/7 Takojšnji Odgovori",
-        "description": "Nikoli ne zamudite povpraševanja stranke, niti ob 3. uri zjutraj"
-      },
-      "benefit5": {
-        "title": "ROI V 30 Dneh",
-        "description": "Začnite takoj varčevati denar z dokazanimi avtomatizacijskimi sistemi"
-      },
-      "benefit6": {
-        "title": "Konkurenčna Prednost",
-        "description": "AI vpogledi, ki vam pomagajo ostati dva koraka pred konkurenco"
-      }
-    },
     "implementation": {
       "tag": "Preverjen Pristop",
       "title": "Kako Poteka Naše Delo",
       "description": "Sistematičen pristop, ki zagotavlja, da vaši avtomatizacijski projekti dosegajo rezultate brez motenja vašega poslovanja",
       "phase1": {
-        "status": "Faza 1",
         "title": "Odkrivanje in Ocena Tveganj",
         "description": "Celovita analiza vaših trenutnih sistemov in delovnih tokov brez obveznosti. Identificiramo priložnosti za avtomatizacijo in ocenimo tveganja, preden se začne kakršna koli implementacija.",
         "outcome": "Jasen načrt z identificiranimi priložnostmi in zaščitenimi naložbami"
       },
       "phase2": {
-        "status": "Faza 2",
         "title": "Strateško Načrtovanje in Arhitektura",
         "description": "Oblikujemo tehnično arhitekturo in implementacijsko strategijo na podlagi ugotovitev iz odkrivanja. Ustvarimo podrobne načrte z rezervnimi rešitvami, preden se začne kakršen koli razvoj.",
         "outcome": "Načrt tehnične arhitekture z definiranimi merili uspeha"
       },
       "phase3": {
-        "status": "Faza 3",
         "title": "Nadzorovana Implementacija in Testiranje",
         "description": "Gradimo in vzpostavimo avtomatizacijske sisteme v nadzorovanem okolju s celovitim testiranjem. Implementiramo s stalnim nadzorom in zmožnostmi vrnitve za zagotovitev ničelnih motenj poslovanja.",
         "outcome": "Popolnoma funkcionalni avtomatizacijski sistemi, preverjeni s testiranjem"
       },
       "phase4": {
-        "status": "Faza 4",
         "title": "Zagon in Usposabljanje Ekipe",
         "description": "Popolna uvedba sistema s celovitim usposabljanjem ekipe in prenosom znanja. Vaša ekipa postane samostojna pri upravljanju novih avtomatizacijskih sistemov z praktičnim usposabljanjem in dokumentacijo.",
         "outcome": "Popolnoma operativen avtomatizacijski sistem s samozavestno, usposobljeno ekipo"
+      },
+      "faq": {
+        "question1": "Kako dolgo traja implementacija avtomatizacije?",
+        "answer1": "Naš postopek implementacije traja 1-4 tedne, odvisno od kompleksnosti. Faza 1 (odkrivanje) traja 3-5 dni, Faza 2 (načrtovanje) 5-7 dni, Faza 3 (implementacija) 1-2 tedna, Faza 4 (usposabljanje) 2-3 dni.",
+        "question2": "Ali lahko avtomatizacija moti naše trenutne poslovne procese?",
+        "answer2": "Ne, naš pristop zagotavlja ničelno motenje poslovanja. Implementiramo z nadzorovanim okoljem, kontinuirnim spremljanjem in zmožnostmi vračanja. Vaši trenutni procesi ostajajo aktivni med implementacijo.",
+        "question3": "Kakšni so tipični prihranki časa z avtomatizacijo?",
+        "answer3": "Naše stranke v povprečju prihranijo 15+ ur tedensko na tim. Vodilne avtomatizacije lahko prihranijo do 20+ ur tedensko, prodajni procesi 10-15 ur, finančni procesi 8-12 ur tedensko.",
+        "question4": "Ali potrebujemo tehnično znanje za upravljanje avtomatizacij?",
+        "answer4": "Ne, projektiramo uporabniku prijazne sisteme. V fazi 4 zagotavljamo celovito usposabljanje ekipe in dokumentacijo. Vaša ekipa postane avtonomna z novimi avtomatizacijskimi sistemi.",
+        "question5": "Katere tehnologije uporabljate za avtomatizacijo?",
+        "answer5": "Uporabljamo n8n (vodilno platformo za avtomatizacijo), OpenAI GPT-4, Claude 3, API integracije, ter specializirane orodja kot so HubSpot, Salesforce, LinkedIn API in druge poslovne aplikacije.",
+        "question6": "Ali nudite podporo po implementaciji?",
+        "answer6": "Da, nudimo različne nivoje podpore: od e-poštne podpore do namenskih SLA in četrtletnih strateških pregledov. Vključujemo tudi spremljanje uspešnosti in optimizacijske sprinte."
       },
       "labels": {
         "phase1": "Faza 1",
@@ -201,7 +64,6 @@
     "collaboration": {
       "title": "Povežite Vaša Poslovna Orodja in Avtomatizirajte Delovne Tokove",
       "description": "Povežite vaše najljubše poslovne aplikacije in ustvarite zmogljive avtomatizacije, ki prihranijo več kot 20 ur tedensko. Vso tehnično zahtevnost uredimo mi.",
-      "buttonText": "Poglejte, kako deluje",
       "features": {
         "feature1": {
           "title": "Povezava več kot 1000 poslovnih aplikacij",
@@ -412,6 +274,12 @@
           "2": "Upravljanje prilagojenih kampanj za stik",
           "3": "Dodatne informacije o odzivu kontaktov",
           "4": "Avtomatski postopki za stike s strankami"
+        },
+        "applications": {
+          "0": "B2B iskanje strank",
+          "1": "Kvalifikacija strank",
+          "2": "Prodajni stiki",
+          "3": "CRM integracija"
         }
       },
       "salesAutomation": {
@@ -426,6 +294,12 @@
           "2": "Avtomatsko spremljanje in opominjanje za nadaljnje korake",
           "3": "Ustvarjanje in optimizacija prodajnih gradiv",
           "4": "Povezava z vašo CRM rešitvijo za sprotno sinhronizacijo"
+        },
+        "applications": {
+          "0": "Avtomatizacija ponudb",
+          "1": "Upravljanje prodajnega lijaka",
+          "2": "CRM procesi",
+          "3": "Prodajna analitika"
         }
       },
       "recruitment": {
@@ -440,6 +314,12 @@
           "2": "Večplatformska avtomatizacija objavljanja delovnih mest (LinkedIn, Indeed, itd.)",
           "3": "Razporejanje intervjujev in usklajevanje koledarja",
           "4": "Avtomatska komunikacija s kandidati in opominjanje"
+        },
+        "applications": {
+          "0": "Obdelava življenjepisov",
+          "1": "Sistemi za ocenjevanje kandidatov",
+          "2": "Razporejanje intervjujev",
+          "3": "Večplatformsko zaposlovanje"
         }
       },
       "customerSupport": {
@@ -456,6 +336,12 @@
           "4": "Avtomatska rezervacija terminov in upravljanje koledarja",
           "5": "Sprotne posodobitve CRM na podlagi pogovorov s strankami",
           "6": "Avtomatsko usmerjanje na ustrezne člane ekipe"
+        },
+        "applications": {
+          "0": "24/7 podpora strankam",
+          "1": "Večkanalna storitev",
+          "2": "Usmerjanje klicev",
+          "3": "Avtomatizacija podpore"
         }
       },
       "marketingAutomation": {
@@ -473,6 +359,12 @@
           "5": "SEO optimizacija in integracija ključnih besed",
           "6": "Večkanalno objavljanje in distribucija vsebin",
           "7": "Ustvarjanje poročil o kampanjah in vpogledi za optimizacijo"
+        },
+        "applications": {
+          "0": "Ustvarjanje vsebin",
+          "1": "Upravljanje kampanj",
+          "2": "Avtomatizacija družbenih omrežij",
+          "3": "Tržne raziskave"
         }
       },
       "executiveAssistant": {
@@ -489,6 +381,12 @@
           "4": "Dnevna, tedenska in mesečna poročila o produktivnosti z vpogledi",
           "5": "Upravljanje komunikacij prek več kanalov (e-pošta, Slack, Teams)",
           "6": "Pridobivanje podatkov in izvajanje dejanj v vaših orodjih na zahtevo"
+        },
+        "applications": {
+          "0": "Osebna produktivnost",
+          "1": "Upravljanje urnika",
+          "2": "Usklajevanje komunikacij",
+          "3": "Avtomatizacija nalog"
         }
       },
       "automationDashboard": {

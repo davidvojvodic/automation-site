@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Section from "./Section";
 import Heading from "./Heading";
-import Button from "./Button";
+
 import {
   Workflow,
   Bot,
@@ -72,10 +72,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("leadGeneration.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "HubSpot"],
       applications: [
-        "B2B prospecting",
-        "Lead qualification",
-        "Sales outreach",
-        "CRM integration",
+        t("leadGeneration.applications.0"),
+        t("leadGeneration.applications.1"),
+        t("leadGeneration.applications.2"),
+        t("leadGeneration.applications.3"),
       ],
       popular: true,
     },
@@ -98,10 +98,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("executiveAssistant.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "Calendar APIs", "Email Integration"],
       applications: [
-        "Personal productivity",
-        "Schedule management",
-        "Communication coordination",
-        "Task automation",
+        t("executiveAssistant.applications.0"),
+        t("executiveAssistant.applications.1"),
+        t("executiveAssistant.applications.2"),
+        t("executiveAssistant.applications.3"),
       ],
       popular: true,
     },
@@ -122,10 +122,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("salesAutomation.badge"),
       techStack: ["n8n", "Claude 3", "Salesforce API", "DocuSign"],
       applications: [
-        "Proposal automation",
-        "Pipeline management",
-        "CRM workflows",
-        "Sales analytics",
+        t("salesAutomation.applications.0"),
+        t("salesAutomation.applications.1"),
+        t("salesAutomation.applications.2"),
+        t("salesAutomation.applications.3"),
       ],
       popular: false,
     },
@@ -146,10 +146,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("recruitment.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "LinkedIn API", "ATS Integration"],
       applications: [
-        "CV processing automation",
-        "Candidate scoring systems",
-        "Interview scheduling",
-        "Multi-platform recruitment",
+        t("recruitment.applications.0"),
+        t("recruitment.applications.1"),
+        t("recruitment.applications.2"),
+        t("recruitment.applications.3"),
       ],
       popular: false,
     },
@@ -172,10 +172,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("customerSupport.badge"),
       techStack: ["n8n", "Voice AI APIs", "Multi-channel Integration", "CRM"],
       applications: [
-        "24/7 Customer support",
-        "Multi-channel service",
-        "Call routing",
-        "Support automation",
+        t("customerSupport.applications.0"),
+        t("customerSupport.applications.1"),
+        t("customerSupport.applications.2"),
+        t("customerSupport.applications.3"),
       ],
       popular: false,
     },
@@ -199,10 +199,10 @@ const AIServices = ({ className }: AIServicesProps) => {
       badge: t("marketingAutomation.badge"),
       techStack: ["n8n", "OpenAI GPT-4", "Social Media APIs", "Analytics"],
       applications: [
-        "Content creation",
-        "Campaign management",
-        "Social automation",
-        "Market research",
+        t("marketingAutomation.applications.0"),
+        t("marketingAutomation.applications.1"),
+        t("marketingAutomation.applications.2"),
+        t("marketingAutomation.applications.3"),
       ],
       popular: false,
     },
@@ -219,45 +219,52 @@ const AIServices = ({ className }: AIServicesProps) => {
       provider: {
         "@type": "Organization",
         name: "Flowko",
-        url: "https://flowko.io"
+        url: "https://flowko.io",
       },
-      serviceType: locale === "sl" ? "Avtomatizacija poslovnih procesov" : "Business Process Automation",
+      serviceType:
+        locale === "sl"
+          ? "Avtomatizacija poslovnih procesov"
+          : "Business Process Automation",
       category: system.badge,
       keywords: system.techStack.join(", "),
       areaServed: [
         {
           "@type": "Country",
-          name: locale === "sl" ? "Slovenija" : "Slovenia"
+          name: locale === "sl" ? "Slovenija" : "Slovenia",
         },
         {
           "@type": "Country",
-          name: locale === "sl" ? "Avstrija" : "Austria"
+          name: locale === "sl" ? "Avstrija" : "Austria",
         },
         {
           "@type": "Country",
-          name: locale === "sl" ? "Hrvaška" : "Croatia"
-        }
+          name: locale === "sl" ? "Hrvaška" : "Croatia",
+        },
       ],
       offers: {
         "@type": "Offer",
         description: system.subtitle,
-        category: "AI Business Automation"
-      }
+        category: "AI Business Automation",
+      },
     }));
 
     return {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: locale === "sl" ? "AI Avtomatizacijski sistemi" : "AI Automation Systems",
-      description: locale === "sl"
-        ? "Celovite rešitve za avtomatizacijo poslovnih procesov z AI tehnologijo"
-        : "Comprehensive AI-powered business process automation solutions",
+      name:
+        locale === "sl"
+          ? "AI Avtomatizacijski sistemi"
+          : "AI Automation Systems",
+      description:
+        locale === "sl"
+          ? "Celovite rešitve za avtomatizacijo poslovnih procesov z AI tehnologijo"
+          : "Comprehensive AI-powered business process automation solutions",
       numberOfItems: services.length,
       itemListElement: services.map((service, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        item: service
-      }))
+        item: service,
+      })),
     };
   };
 
@@ -267,21 +274,21 @@ const AIServices = ({ className }: AIServicesProps) => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(generateServiceStructuredData())
+          __html: JSON.stringify(generateServiceStructuredData()),
         }}
       />
       <div className="container relative z-2">
         {/* Header */}
         <div className="animate-bundle-heading">
-          <Heading
-            title={t("title")}
-            text={t("subtitle")}
-          />
+          <Heading title={t("title")} text={t("subtitle")} />
         </div>
 
         {/* Value Proposition Pills */}
         <div className="-mx-5 md:-mx-10 lg:-mx-[3.75rem]">
-          <div className="px-5 md:px-10 lg:px-[3.75rem] mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits" style={{ animationDelay: "300ms" }}>
+          <div
+            className="px-5 md:px-10 lg:px-[3.75rem] mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits"
+            style={{ animationDelay: "300ms" }}
+          >
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-4 lg:gap-6">
               {[
                 { icon: Workflow, text: t("valueProps.visualWorkflow") },
@@ -348,7 +355,9 @@ const AIServices = ({ className }: AIServicesProps) => {
                       <div
                         className={cn(
                           "px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                          system.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
+                          system.popular
+                            ? "bg-color-1 text-n-8"
+                            : "bg-n-6 text-n-2"
                         )}
                       >
                         {system.badge}
@@ -371,13 +380,24 @@ const AIServices = ({ className }: AIServicesProps) => {
                   {/* Click Hint */}
                   <div className="mt-auto">
                     <div className="flex items-center justify-center gap-2 text-xs text-n-4 group-hover:text-n-2 transition-colors duration-300">
-                      <span className="font-medium">{t("labels.clickToExplore")}</span>
-                      <svg className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <span className="font-medium">
+                        {t("labels.clickToExplore")}
+                      </span>
+                      <svg
+                        className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </div>
                   </div>
-
                 </div>
 
                 {/* Background Decoration */}
@@ -393,7 +413,10 @@ const AIServices = ({ className }: AIServicesProps) => {
           const IconComponent = iconMap[system.icon];
 
           return (
-            <div key={system.id} className="mt-6 sm:mt-12 lg:mt-16 max-w-7xl mx-auto">
+            <div
+              key={system.id}
+              className="mt-6 sm:mt-12 lg:mt-16 max-w-7xl mx-auto"
+            >
               <div
                 className={cn(
                   "relative p-6 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl overflow-hidden",
@@ -478,130 +501,132 @@ const AIServices = ({ className }: AIServicesProps) => {
           direction="right"
         >
           <DrawerContent className="bg-n-8 border-l border-n-6 flex flex-col">
-            {drawerContent && (() => {
-              const selectedSystem = automationSystems.find(s => s.id === drawerContent);
-              if (!selectedSystem) return null;
+            {drawerContent &&
+              (() => {
+                const selectedSystem = automationSystems.find(
+                  (s) => s.id === drawerContent
+                );
+                if (!selectedSystem) return null;
 
-              const IconComponent = iconMap[selectedSystem.icon];
+                const IconComponent = iconMap[selectedSystem.icon];
 
-              return (
-                <>
-                  {/* Close Button - Fixed position */}
-                  <DrawerClose className="absolute top-4 right-4 z-10 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
-                    <X className="h-4 w-4 text-n-3" />
-                    <span className="sr-only">Close</span>
-                  </DrawerClose>
+                return (
+                  <>
+                    {/* Close Button - Fixed position */}
+                    <DrawerClose className="absolute top-4 right-4 z-10 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
+                      <X className="h-4 w-4 text-n-3" />
+                      <span className="sr-only">Close</span>
+                    </DrawerClose>
 
-                  {/* Scrollable content wrapper with webkit touch scrolling for iOS */}
-                  <div className="flex-1 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
-                    <DrawerHeader className="relative border-b border-n-6/50 pb-4">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div
-                          className={cn(
-                            "w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0",
-                            "bg-color-1/10"
-                          )}
-                        >
-                          <IconComponent
-                            className={cn(
-                              "w-7 h-7",
-                              "text-color-1"
-                            )}
-                          />
-                        </div>
-                        <div className="flex-1">
+                    {/* Scrollable content wrapper with webkit touch scrolling for iOS */}
+                    <div
+                      className="flex-1 overflow-y-auto overflow-x-hidden"
+                      style={{ WebkitOverflowScrolling: "touch" }}
+                    >
+                      <DrawerHeader className="relative border-b border-n-6/50 pb-4">
+                        <div className="flex items-start gap-4 mb-4">
                           <div
                             className={cn(
-                              "inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2",
-                              selectedSystem.popular ? "bg-color-1 text-n-8" : "bg-n-6 text-n-2"
+                              "w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0",
+                              "bg-color-1/10"
                             )}
                           >
-                            {selectedSystem.badge}
+                            <IconComponent
+                              className={cn("w-7 h-7", "text-color-1")}
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <DrawerTitle className="text-2xl font-bold text-n-1">
-                        {selectedSystem.title}
-                      </DrawerTitle>
-                      <DrawerDescription className="text-base text-color-1 font-medium mt-2">
-                        {selectedSystem.subtitle}
-                      </DrawerDescription>
-                      <p className="text-sm text-n-4 mt-3 leading-relaxed">
-                        {selectedSystem.description}
-                      </p>
-                    </DrawerHeader>
-
-                    <div className="space-y-6 py-6 px-4">
-                      {/* Capabilities */}
-                      <div>
-                      <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider flex items-center gap-2 mb-4">
-                        <Workflow className="w-4 h-4 text-color-1" />
-                        {t("labels.keyCapabilities")}
-                      </h4>
-                      <div className="space-y-3">
-                        {selectedSystem.capabilities.map((capability: string, index: number) => (
-                          <div key={index} className="flex items-start gap-3">
+                          <div className="flex-1">
                             <div
                               className={cn(
-                                "w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2",
-                                "bg-color-1"
+                                "inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2",
+                                selectedSystem.popular
+                                  ? "bg-color-1 text-n-8"
+                                  : "bg-n-6 text-n-2"
                               )}
-                            />
-                            <span className="text-sm text-n-2 leading-relaxed">
-                              {capability}
-                            </span>
+                            >
+                              {selectedSystem.badge}
+                            </div>
                           </div>
-                        ))}
-                      </div>
-                    </div>
+                        </div>
+                        <DrawerTitle className="text-2xl font-bold text-n-1">
+                          {selectedSystem.title}
+                        </DrawerTitle>
+                        <DrawerDescription className="text-base text-color-1 font-medium mt-2">
+                          {selectedSystem.subtitle}
+                        </DrawerDescription>
+                        <p className="text-sm text-n-4 mt-3 leading-relaxed">
+                          {selectedSystem.description}
+                        </p>
+                      </DrawerHeader>
 
-                    {/* Typical Results */}
-                    <div className="border-t border-n-6/50 pt-6">
-                      <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3">
-                        {t("labels.systemOutcome")}
-                      </h4>
-                      <p
-                        className={cn(
-                          "text-base font-semibold leading-relaxed",
-                          "text-color-1"
-                        )}
-                      >
-                        {selectedSystem.outcome}
-                      </p>
-                    </div>
+                      <div className="space-y-6 py-6 px-4">
+                        {/* Capabilities */}
+                        <div>
+                          <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider flex items-center gap-2 mb-4">
+                            <Workflow className="w-4 h-4 text-color-1" />
+                            {t("labels.keyCapabilities")}
+                          </h4>
+                          <div className="space-y-3">
+                            {selectedSystem.capabilities.map(
+                              (capability: string, index: number) => (
+                                <div
+                                  key={index}
+                                  className="flex items-start gap-3"
+                                >
+                                  <div
+                                    className={cn(
+                                      "w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2",
+                                      "bg-color-1"
+                                    )}
+                                  />
+                                  <span className="text-sm text-n-2 leading-relaxed">
+                                    {capability}
+                                  </span>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </div>
 
-                    {/* Applications */}
-                    <div className="border-t border-n-6/50 pt-6">
-                      <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3">
-                        {t("labels.useCases")}
-                      </h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {selectedSystem.applications.map((app: string, index: number) => (
-                          <div
-                            key={index}
-                            className="flex items-center gap-2 text-sm text-n-2"
+                        {/* Typical Results */}
+                        <div className="border-t border-n-6/50 pt-6">
+                          <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3">
+                            {t("labels.systemOutcome")}
+                          </h4>
+                          <p
+                            className={cn(
+                              "text-base font-semibold leading-relaxed",
+                              "text-color-1"
+                            )}
                           >
-                            <div className="w-1 h-1 bg-color-1 rounded-full flex-shrink-0" />
-                            {app}
+                            {selectedSystem.outcome}
+                          </p>
+                        </div>
+
+                        {/* Applications */}
+                        <div className="border-t border-n-6/50 pt-6">
+                          <h4 className="text-sm font-bold text-n-1 uppercase tracking-wider mb-3">
+                            {t("labels.useCases")}
+                          </h4>
+                          <div className="grid grid-cols-2 gap-2">
+                            {selectedSystem.applications.map(
+                              (app: string, index: number) => (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-2 text-sm text-n-2"
+                                >
+                                  <div className="w-1 h-1 bg-color-1 rounded-full flex-shrink-0" />
+                                  {app}
+                                </div>
+                              )
+                            )}
                           </div>
-                        ))}
+                        </div>
                       </div>
                     </div>
-
-                    {/* CTA */}
-                    <div className="border-t border-n-6/50 pt-6 flex justify-center">
-                      <Button
-                        href="#contact"
-                        onClick={() => setOpenDrawer(null)}
-                      >
-                        {t("bottomCta.button")}
-                      </Button>
-                    </div>
-                    </div>
-                  </div>
-                </>
-              );
-            })()}
+                  </>
+                );
+              })()}
           </DrawerContent>
         </Drawer>
       </div>
