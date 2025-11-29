@@ -84,20 +84,38 @@ export async function POST(req: NextRequest) {
     console.log('First 5 values:', queryEmbedding.slice(0, 5));
 
     // 4. Search Supabase for similar chunks
+    // Detect if question is about pricing/services/website content to boost website source
+    const websiteKeywords = [
+      // English
+      'price', 'pricing', 'cost', 'how much', 'consulting', 'partner', 'bundle',
+      'services', 'offer', 'implementation', 'process', 'phase', 'faq', 'flowko',
+      'automation', 'website', 'package', 'tier', 'plan',
+      // Slovenian
+      'cena', 'cenik', 'koliko', 'storitve', 'paket', 'svetovanje', 'ponudba'
+    ];
+    const isWebsiteQuery = websiteKeywords.some(kw => question.toLowerCase().includes(kw));
+
     // Pass the array directly as per Supabase documentation
-    const { data: results, error } = await supabase.rpc('match_embeddings', {
-      query_embedding: queryEmbedding,  // Pass array directly
-      match_threshold: 0.6,
-      match_count: 5,
+    // Use boost_source parameter to prioritize website content for relevant queries
+    const { data: sortedResults, error } = await supabase.rpc('match_embeddings', {
+      query_embedding: queryEmbedding,
+      match_threshold: 0.5,
+      match_count: 8,
       filter_language: language || null,
-      filter_category: category || null
+      filter_category: category || null,
+      boost_source: isWebsiteQuery ? 'website' : null,
+      boost_amount: 0.15
     });
 
-    console.log('Supabase RPC error:', error);
-    console.log('Supabase RPC results count:', results?.length || 0);
+    if (isWebsiteQuery) {
+      console.log('Website query detected, boosting website source in database');
+    }
 
-    if (results && results.length > 0) {
-      console.log('Top result similarity:', results[0].similarity);
+    console.log('Supabase RPC error:', error);
+    console.log('Supabase RPC results count:', sortedResults?.length || 0);
+
+    if (sortedResults && sortedResults.length > 0) {
+      console.log('Top result:', sortedResults[0].doc_title, 'source:', sortedResults[0].doc_source, 'similarity:', sortedResults[0].similarity);
     }
 
     if (error) {
@@ -110,7 +128,7 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    if (!results || results.length === 0) {
+    if (!sortedResults || sortedResults.length === 0) {
       return NextResponse.json({
         answer: "I couldn't find relevant information in the Flowko knowledge base for that question. Try rephrasing or asking about our services, pricing, or business processes.",
         sources: [],
@@ -120,11 +138,11 @@ export async function POST(req: NextRequest) {
     }
 
     // 5. Calculate confidence
-    const topScore = results[0].similarity;
+    const topScore = sortedResults[0].similarity;
     const confidence = topScore > 0.8 ? 'high' : topScore > 0.6 ? 'medium' : 'low';
 
-    // 6. Build context from results
-    const context = results.map((r: {
+    // 6. Build context from results (use sortedResults)
+    const context = sortedResults.map((r: {
       doc_title: string;
       doc_source: string;
       doc_language: string;
@@ -171,7 +189,7 @@ Confidence Level: ${confidence}`;
     const responseTime = Date.now() - startTime;
 
     // 8. Save messages to database
-    const sources = results.map((r: {
+    const sources = sortedResults.map((r: {
       doc_title: string;
       doc_source: string;
       doc_language: string;
