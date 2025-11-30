@@ -12,7 +12,7 @@ function Heading({ className, title, text, tag }: HeadingProps) {
   return (
     <div
       className={cn(
-        "max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center",
+        "max-w-[50rem] mx-auto mb-12 md:mb-16 lg:mb-20 md:text-center",
         className
       )}
     >

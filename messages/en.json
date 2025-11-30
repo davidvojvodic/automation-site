@@ -256,18 +256,24 @@
     },
     "aiServices": {
       "title": "AI Automation Systems",
-      "subtitle": "Multi-platform automation architectures using open-source orchestration, AI language models, and voice synthesis technologies for workflow optimization",
+      "subtitle": "Transform your business operations with intelligent automation. We build systems that work 24/7, so you can focus on growth.",
       "valueProps": {
         "visualWorkflow": "Visual Workflow Design",
         "multiSystem": "Multi-System Integration",
         "enterpriseScale": "Enterprise Scalability"
       },
       "leadGeneration": {
-        "title": "Lead Generation Systems",
-        "subtitle": "Multi-Source Data + AI-Powered Prospecting",
-        "description": "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows. Advanced targeting algorithms combined with intelligent contact sequencing for consistent business development.",
+        "title": "Lead Generation AI",
+        "subtitle": "Automated prospecting and qualification",
+        "description": "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows.",
         "outcome": "Consistent qualified prospects",
+        "outcomeShort": "New opportunities daily, zero manual work",
         "badge": "Lead Gen",
+        "benefits": {
+          "0": "Finds contacts matching your criteria 24/7",
+          "1": "Scores and ranks by purchase likelihood",
+          "2": "Adds to CRM and prepares for your call"
+        },
         "capabilities": {
           "0": "Multi-platform data aggregation and enrichment",
           "1": "AI-powered prospect qualification scoring",
@@ -283,11 +289,17 @@
         }
       },
       "salesAutomation": {
-        "title": "Sales Process Automation",
-        "subtitle": "AI Proposals + CRM Integration",
-        "description": "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows. Our system creates dynamic proposals and manages your entire sales pipeline automatically.",
+        "title": "Sales Automation",
+        "subtitle": "AI proposals and automated follow-ups",
+        "description": "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows.",
         "outcome": "Streamlined sales pipeline",
+        "outcomeShort": "Close deals faster, less admin work",
         "badge": "Sales AI",
+        "benefits": {
+          "0": "Generates proposals from your templates in minutes",
+          "1": "Sends reminders to clients and you at the right time",
+          "2": "Logs all interactions and updates your CRM"
+        },
         "capabilities": {
           "0": "Intelligent proposal generation with dynamic pricing",
           "1": "Advanced lead scoring models with automation",
@@ -303,17 +315,23 @@
         }
       },
       "recruitment": {
-        "title": "Recruitment Automation",
-        "subtitle": "AI-Powered Candidate Processing + ATS Integration",
-        "description": "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms. Streamline your entire recruitment pipeline from application to hire with intelligent automation.",
-        "outcome": "Streamlined recruitment pipeline with reduced time-to-hire",
-        "badge": "Recruitment",
+        "title": "Recruitment AI",
+        "subtitle": "AI screening and interview scheduling",
+        "description": "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms.",
+        "outcome": "Streamlined recruitment pipeline",
+        "outcomeShort": "Faster hiring, better candidates",
+        "badge": "HR Tech",
+        "benefits": {
+          "0": "Parses CVs and scores candidate fit",
+          "1": "Posts to multiple job platforms at once",
+          "2": "Coordinates interview times with your calendar"
+        },
         "capabilities": {
           "0": "AI-powered CV parsing and candidate data extraction",
           "1": "Automated candidate scoring and ranking algorithms",
-          "2": "Multi-platform job posting automation (LinkedIn, Indeed, etc.)",
-          "3": "Interview scheduling and calendar coordination workflows",
-          "4": "Automated candidate communication and follow-up sequences"
+          "2": "Multi-platform job posting automation",
+          "3": "Interview scheduling and calendar coordination",
+          "4": "Automated candidate communication sequences"
         },
         "applications": {
           "0": "CV processing automation",
@@ -323,18 +341,24 @@
         }
       },
       "customerSupport": {
-        "title": "Customer Support Automation",
-        "subtitle": "AI-Powered + 24/7 Multilingual Support",
-        "description": "Transform customer service with intelligent multi-channel support automation. Handle inquiries via voice, chat, email, and SMS with 31+ language support while maintaining conversation context and seamless escalation to human agents when needed.",
+        "title": "Support AI",
+        "subtitle": "24/7 AI support in 31+ languages",
+        "description": "Intelligent multi-channel support automation handling inquiries via voice, chat, email, and SMS.",
         "outcome": "24/7 intelligent customer support",
-        "badge": "Support AI",
+        "outcomeShort": "Instant responses, happy customers",
+        "badge": "Support",
+        "benefits": {
+          "0": "Answers questions 24/7 across all channels",
+          "1": "Resolves common issues without human help",
+          "2": "Escalates complex cases with full context"
+        },
         "capabilities": {
-          "0": "Categorize customer conversations, preferences, and interaction history",
+          "0": "Categorize customer conversations and preferences",
           "1": "Handle multi-channel inquiries (voice, chat, email, SMS)",
-          "2": "Natural conversation processing with 31+ language support",
-          "3": "Intelligent escalation and live call transfer when needed",
+          "2": "Natural conversation processing with 31+ languages",
+          "3": "Intelligent escalation and live call transfer",
           "4": "Appointment scheduling and calendar automation",
-          "5": "Real-time CRM updates based on customer conversations",
+          "5": "Real-time CRM updates",
           "6": "Automated routing to appropriate team members"
         },
         "applications": {
@@ -345,20 +369,26 @@
         }
       },
       "marketingAutomation": {
-        "title": "Marketing Automation",
-        "subtitle": "AI-Powered Content + Campaign Management",
-        "description": "Complete marketing automation from content creation to campaign management. Generate brand-consistent content across all channels, automate social media engagement, track campaign performance, and conduct 24/7 competitive research to stay ahead.",
+        "title": "Marketing AI",
+        "subtitle": "AI content and multi-channel distribution",
+        "description": "Complete marketing automation from content creation to campaign management and performance tracking.",
         "outcome": "Brand-consistent marketing at scale",
-        "badge": "Marketing AI",
+        "outcomeShort": "More content, less writing",
+        "badge": "Marketing",
+        "benefits": {
+          "0": "Writes content in your tone and style",
+          "1": "Publishes to all channels on schedule",
+          "2": "Tracks performance and suggests improvements"
+        },
         "capabilities": {
-          "0": "AI-driven content creation with brand consistency algorithms",
+          "0": "AI-driven content creation with brand consistency",
           "1": "24/7 industry and competitor research automation",
-          "2": "Multi-channel campaign performance tracking and reporting",
-          "3": "Social media DM automation and instant engagement",
-          "4": "Automated content calendar management and scheduling",
+          "2": "Multi-channel campaign performance tracking",
+          "3": "Social media DM automation and engagement",
+          "4": "Automated content calendar management",
           "5": "SEO optimization and keyword integration",
-          "6": "Multi-channel distribution and publishing automation",
-          "7": "Campaign report generation and optimization insights"
+          "6": "Multi-channel distribution automation",
+          "7": "Campaign report generation"
         },
         "applications": {
           "0": "Content creation",
@@ -369,18 +399,24 @@
       },
       "executiveAssistant": {
         "title": "Executive Assistant AI",
-        "subtitle": "AI-Powered Personal Productivity + Executive Support",
-        "description": "Your intelligent executive assistant that manages your daily operations, coordinates schedules, prioritizes communications, and keeps you focused on strategic work. Automates routine tasks and provides actionable insights into your productivity patterns.",
-        "outcome": "Reclaim 15+ hours per week for strategic work",
+        "subtitle": "Calendar, email, and task management",
+        "description": "Your intelligent executive assistant that manages daily operations, coordinates schedules, and keeps you focused on strategic work.",
+        "outcome": "Reclaim 15+ hours per week",
+        "outcomeShort": "More time for strategic work",
         "badge": "Personal AI",
+        "benefits": {
+          "0": "Coordinates meetings and resolves calendar conflicts",
+          "1": "Prioritizes emails and drafts responses",
+          "2": "Creates daily summaries and reminds you of deadlines"
+        },
         "capabilities": {
-          "0": "Customized daily agenda with tasks, deadlines, and meetings",
+          "0": "Customized daily agenda with tasks and deadlines",
           "1": "Intelligent inbox management and email prioritization",
           "2": "Meeting coordination with internal and external contacts",
-          "3": "Post-meeting task automation and follow-up scheduling",
-          "4": "Daily, weekly, and monthly productivity reports with insights",
-          "5": "Multi-channel communication management (email, Slack, Teams)",
-          "6": "On-demand data retrieval and actions across your tech stack"
+          "3": "Post-meeting task automation and follow-ups",
+          "4": "Daily, weekly, and monthly productivity reports",
+          "5": "Multi-channel communication management",
+          "6": "On-demand data retrieval across your tech stack"
         },
         "applications": {
           "0": "Personal productivity",
@@ -392,15 +428,15 @@
       "automationDashboard": {
         "title": "Automation Intelligence Platform",
         "subtitle": "Custom Dashboard + Complete Workflow Control",
-        "description": "Custom-built web dashboard that centralizes all your business automations in one control center. Real-time monitoring, performance analytics, and complete control over all automated workflows with custom business intelligence reporting.",
+        "description": "Custom-built web dashboard that centralizes all your business automations in one control center.",
         "outcome": "Complete automation visibility and control",
         "badge": "Enterprise",
         "capabilities": {
           "0": "Custom dashboard development with real-time monitoring",
-          "1": "Centralized control panel for all n8n automations",
+          "1": "Centralized control panel for all automations",
           "2": "Business performance analytics and KPI tracking",
           "3": "Automated workflow status and health monitoring",
-          "4": "Custom reporting and business intelligence integration"
+          "4": "Custom reporting and business intelligence"
         }
       },
       "labels": {
@@ -411,10 +447,13 @@
         "collapseCapabilities": "Collapse capabilities",
         "clickToExplore": "Click to explore service",
         "viewEnterpriseCapabilities": "View Full Enterprise Capabilities",
-        "useCases": "Use Cases"
+        "useCases": "Use Cases",
+        "popular": "Popular",
+        "getStarted": "Get Started",
+        "learnMore": "Learn more"
       },
       "bottomCta": {
-        "description": "Explore automation architecture implementations and workflow orchestration methodologies. Technical consultation available for custom integration requirements.",
+        "description": "Ready to automate your business operations? Let's discuss your specific requirements and build a custom solution.",
         "button": "Get Started"
       }
     },

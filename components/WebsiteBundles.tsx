@@ -4,7 +4,7 @@ import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import { Zap, Globe, Workflow, ShoppingCart, Code, Database } from "lucide-react";
+import { Zap, Globe, Workflow, ShoppingCart, Code, Database, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
@@ -142,12 +142,13 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         </div>
 
         {/* Solution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 xl:gap-8 max-w-7xl mx-auto">
           {solutions.map((solution, index) => (
             <div
               key={solution.id}
               className={cn(
-                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
+                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col",
+                "w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1.375rem)]",
                 "hover:-translate-y-1",
                 "transition-all duration-500 ease-out group",
                 "animate-bundle-card",
@@ -232,9 +233,11 @@ const WebsiteBundles = ({ className }: BundleProps) => {
                       (capability: string, capIndex: number) => (
                         <div
                           key={capIndex}
-                          className="flex items-start gap-2 text-xs text-n-3"
+                          className="flex items-start gap-3 text-sm text-n-3"
                         >
-                          <div className="w-1.5 h-1.5 bg-gradient-to-r from-color-1 to-color-2 rounded-full flex-shrink-0 mt-1.5"></div>
+                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center mt-0.5">
+                            <Check className="w-3 h-3 text-color-1" />
+                          </div>
                           <span>{capability}</span>
                         </div>
                       )

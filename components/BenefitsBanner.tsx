@@ -34,21 +34,21 @@ function BenefitsBanner({ className }: BenefitsBannerProps) {
   return (
     <Section
       crosses
-      customPaddings="py-6 lg:py-12 xl:py-16"
+      customPaddings="py-6 md:py-8 lg:py-12 xl:py-16"
       className={cn(className)}
     >
       <div className="container">
         <div className="relative z-1">
           <div className="-mx-5 sm:mx-0">
-            <div className="bg-n-8/90 backdrop-blur rounded-none sm:rounded-2xl lg:rounded-[2rem] px-5 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 lg:py-6">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            <div className="bg-n-8/90 backdrop-blur rounded-none sm:rounded-2xl lg:rounded-[2rem] px-5 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-5 md:py-6">
+              <div className="grid grid-cols-2 items-center justify-center gap-4 sm:gap-6 2xl:grid-cols-4 2xl:gap-8">
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-2 sm:gap-3 group"
+                    className="flex items-center justify-center gap-2 sm:gap-3 group"
                   >
                     <benefit.icon className="w-5 h-5 sm:w-6 sm:h-6 text-color-1 group-hover:scale-110 transition-transform duration-300" />
-                    <span className="text-sm sm:text-base lg:text-lg font-medium text-n-1 whitespace-nowrap">
+                    <span className="text-sm sm:text-base 2xl:text-lg font-medium text-n-1 2xl:whitespace-nowrap">
                       {benefit.text}
                     </span>
                   </div>

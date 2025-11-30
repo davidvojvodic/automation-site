@@ -30,7 +30,7 @@ export function Collaboration({ className }: CollaborationProps) {
 
   return (
     <Section className={cn(className)}>
-      <div className={cn("container lg:flex")}>
+      <div className={cn("container md:flex md:flex-col lg:flex-row md:items-center lg:items-start")}>
         <div className="max-w-[45rem]">
           <h2 className="font-bold text-[1.5rem] leading-[2.25rem] md:text-[1.75rem] md:leading-[2.25rem] lg:text-[2rem] lg:leading-[3rem] xl:text-[2.5rem] xl:leading-tight mb-4 sm:mb-6 md:mb-8">
             {t("title")}
@@ -58,8 +58,8 @@ export function Collaboration({ className }: CollaborationProps) {
           </ul>
         </div>
 
-        <div className="lg:ml-auto xl:w-[38rem] mt-8 sm:mt-6 lg:mt-4">
-          <p className="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto leading-relaxed">
+        <div className="lg:ml-auto xl:w-[38rem] mt-8 sm:mt-10 md:mt-12 lg:mt-4">
+          <p className="text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 md:mb-10 lg:mb-32 text-n-4 md:text-center lg:text-left lg:w-[22rem] lg:mx-auto leading-relaxed">
             {t("description")}
           </p>
 

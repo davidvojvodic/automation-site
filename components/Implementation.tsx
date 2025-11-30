@@ -121,7 +121,7 @@ function Implementation({ className }: ImplementationProps) {
                 )}
                 style={{ animationDelay: `${300 + index * 150}ms` }}
               >
-                <AccordionTrigger className="px-6 py-6 hover:no-underline group">
+                <AccordionTrigger className="px-4 sm:px-6 md:px-8 py-5 sm:py-6 hover:no-underline group">
                   <div className="flex items-center gap-4 text-left w-full">
                     {/* Phase Icon and Number */}
                     <div className="flex items-center gap-4">
@@ -154,7 +154,7 @@ function Implementation({ className }: ImplementationProps) {
                   </div>
                 </AccordionTrigger>
 
-                <AccordionContent className="px-6 pb-6">
+                <AccordionContent className="px-4 sm:px-6 md:px-8 pb-5 sm:pb-6">
                   <div className="space-y-4">
                     {/* Description */}
                     <p className="text-n-3 text-left leading-relaxed">

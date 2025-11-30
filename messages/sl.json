@@ -255,19 +255,25 @@
       }
     },
     "aiServices": {
-      "title": "AI Avtomatizacijski Sistemi",
-      "subtitle": "Večplatformske avtomatizacijske arhitekture z odprtokodno orkestracijo, AI jezikovnimi modeli in tehnologijami sinteze govora za optimizacijo delovnih tokov",
+      "title": "AI Avtomatizacija",
+      "subtitle": "Pametni sistemi, ki delajo namesto vas",
       "valueProps": {
         "visualWorkflow": "Vizualno Oblikovanje Procesov",
         "multiSystem": "Povezovanje Sistemov",
         "enterpriseScale": "Skalabilnost za Podjetja"
       },
       "leadGeneration": {
-        "title": "Sistemi za Pridobivanje Potencialnih Strank",
-        "subtitle": "Podatki iz različnih virov + AI pomoč pri iskanju strank",
-        "description": "Avtomatski sistemi za iskanje in ovrednotenje potencialnih strank z zbiranjem podatkov iz različnih virov in AI pomočjo pri vzpostavljanju stika. Iskanje pravih strank s premišljenimi stiki za rast vašega podjetja.",
+        "title": "Iskanje Strank",
+        "subtitle": "Avtomatsko iskanje in kvalifikacija",
+        "description": "AI najde in oceni potencialne stranke namesto vas. Vi se osredotočite na prodajo.",
         "outcome": "Kvalificirane potencialne stranke",
+        "outcomeShort": "Nove priložnosti vsak dan, brez ročnega dela",
         "badge": "Stranke",
+        "benefits": {
+          "0": "Išče kontakte po vaših kriterijih 24/7",
+          "1": "Oceni in razvrsti po verjetnosti nakupa",
+          "2": "Vnese v CRM in pripravi za vaš klic"
+        },
         "capabilities": {
           "0": "Zbiranje in dopolnjevanje podatkov z več platform",
           "1": "AI-podprto ocenjevanje kvalifikacije potencialnih strank",
@@ -283,11 +289,17 @@
         }
       },
       "salesAutomation": {
-        "title": "Avtomatizacija Prodaje",
-        "subtitle": "AI Ponudbe + CRM Integracija",
-        "description": "Sistemi, ki avtomatizirajo prodajni proces z AI pomočjo pri ustvarjanju ponudb, spremljanju strank in povezovanju z vašo CRM rešitvijo. Sistem ustvarja ponudbe in vas obvešča o uspešnih priložnostih.",
+        "title": "Prodaja",
+        "subtitle": "AI ponudbe in avtomatsko spremljanje",
+        "description": "AI ustvarja ponudbe in spremlja stranke. Nikoli več pozabljenih priložnosti.",
         "outcome": "Urejen prodajni proces",
+        "outcomeShort": "Hitrejše zaključevanje poslov, manj administrativnega dela",
         "badge": "Prodaja",
+        "benefits": {
+          "0": "Generira ponudbe po vaši predlogi v minutah",
+          "1": "Pošilja opomnike strankam in vam ob pravem času",
+          "2": "Beleži vse interakcije in posodablja CRM"
+        },
         "capabilities": {
           "0": "AI pomoč pri ustvarjanju ponudb s prilagojenim cenikom",
           "1": "Ocenjevanje potencialnih strank po verjetnosti nakupa",
@@ -303,11 +315,17 @@
         }
       },
       "recruitment": {
-        "title": "Avtomatizacija Zaposlovanja",
-        "subtitle": "AI Obdelava Kandidatov + ATS Integracija",
-        "description": "AI obdelava življenjepisov in ocenjevanje kandidatov z avtomatskim objavljanjem delovnih mest na več platformah. Poenostavite postopek zaposlovanja od prijave do zaposlitve z pametno avtomatizacijo.",
+        "title": "Zaposlovanje",
+        "subtitle": "AI selekcija in usklajevanje razgovorov",
+        "description": "AI prebere in oceni kandidate. Vi se pogovarjate samo z najboljšimi.",
         "outcome": "Urejen postopek zaposlovanja",
-        "badge": "Kadri",
+        "outcomeShort": "Krajši čas zaposlovanja, boljši kandidati",
+        "badge": "HR",
+        "benefits": {
+          "0": "Prebere življenjepise in oceni ustreznost",
+          "1": "Objavi na več platformah hkrati",
+          "2": "Uskladi termine razgovorov z vašim koledarjem"
+        },
         "capabilities": {
           "0": "AI obdelava življenjepisov in zbiranje informacij o kandidatih",
           "1": "Avtomatsko ocenjevanje in razvrščanje kandidatov",
@@ -323,11 +341,17 @@
         }
       },
       "customerSupport": {
-        "title": "Avtomatizacija Podpore Strankam",
-        "subtitle": "AI-Podprto + 24/7 Večjezična Podpora",
-        "description": "Preoblikujte podporo strankam s pametno avtomatizacijo prek več kanalov. Obdelujte povpraševanja prek glasu, klepeta, e-pošte in SMS-ov s podporo 31+ jezikov, ohranjajte kontekst pogovorov in zagotavljajte nemoteno predajo osebju, ko je potrebno.",
+        "title": "Podpora Strankam",
+        "subtitle": "24/7 AI podpora v 31+ jezikih",
+        "description": "AI odgovarja strankam 24/7 v 31+ jezikih. Enostavna vprašanja reši sam, zahtevna preda vam.",
         "outcome": "24/7 inteligentna podpora strankam",
+        "outcomeShort": "Takojšnji odgovori, zadovoljne stranke",
         "badge": "Podpora",
+        "benefits": {
+          "0": "Odgovarja na vprašanja 24/7 na vseh kanalih",
+          "1": "Rešuje pogoste težave brez človeške pomoči",
+          "2": "Preda kompleksne primere z vsem kontekstom"
+        },
         "capabilities": {
           "0": "Kategorizacija pogovorov, preferenc in zgodovine interakcij s strankami",
           "1": "Obdelava povpraševanj prek več kanalov (glas, klepet, e-pošta, SMS)",
@@ -345,11 +369,17 @@
         }
       },
       "marketingAutomation": {
-        "title": "Avtomatizacija Marketinga",
-        "subtitle": "AI Vsebine + Upravljanje Kampanj",
-        "description": "Celostna avtomatizacija marketinga od ustvarjanja vsebin do upravljanja kampanj. Ustvarjajte vsebine skladne z blagovno znamko, avtomatizirajte vključenost v družbenih medijih, spremljajte uspešnost kampanj in izvajajte 24/7 raziskave konkurence.",
+        "title": "Marketing",
+        "subtitle": "AI vsebine in večkanalna distribucija",
+        "description": "AI piše vsebine in vodi kampanje v vašem stilu. Več objav, manj dela.",
         "outcome": "Konsistenten marketing v velikem obsegu",
+        "outcomeShort": "Več vsebin, manj pisanja",
         "badge": "Marketing",
+        "benefits": {
+          "0": "Piše vsebine v vašem tonu in stilu",
+          "1": "Objavlja na vse kanale po urniku",
+          "2": "Spremlja uspešnost in predlaga izboljšave"
+        },
         "capabilities": {
           "0": "AI ustvarjanje vsebin z algoritmi za konsistentnost blagovne znamke",
           "1": "24/7 avtomatizacija raziskav industrije in konkurence",
@@ -368,11 +398,17 @@
         }
       },
       "executiveAssistant": {
-        "title": "Izvršni Asistent AI",
-        "subtitle": "AI-Podprta Produktivnost + Izvršna Podpora",
-        "description": "Vaš inteligentni izvršni asistent, ki upravlja vaše dnevne operacije, usklajuje urnike, razvrsti komunikacije in vas ohranja osredotočene na strateško delo. Avtomatizira rutinske naloge in zagotavlja uporabne vpoglede v vaše vzorce produktivnosti.",
+        "title": "AI Asistent",
+        "subtitle": "Upravljanje koledarja, e-pošte in nalog",
+        "description": "AI upravlja vaš koledar, e-pošto in naloge. Vi se ukvarjate s tem, kar je res pomembno.",
         "outcome": "Pridobite 15+ ur na teden za strateško delo",
-        "badge": "Osebni AI",
+        "outcomeShort": "Več časa za strateško delo",
+        "badge": "Produktivnost",
+        "benefits": {
+          "0": "Usklajuje sestanke in rešuje konflikte v koledarju",
+          "1": "Razvršča e-pošto po prioriteti in pripravlja odgovore",
+          "2": "Ustvarja dnevne povzetke in opominja na roke"
+        },
         "capabilities": {
           "0": "Prilagojen dnevni urnik z nalogami, roki in sestanki",
           "1": "Inteligentno upravljanje nabiralnika in razvrščanje e-pošte",
@@ -411,7 +447,10 @@
         "collapseCapabilities": "Skrij zmožnosti",
         "clickToExplore": "Kliknite za podrobnosti",
         "viewEnterpriseCapabilities": "Oglejte si vse zmožnosti",
-        "useCases": "Primeri uporabe"
+        "useCases": "Primeri uporabe",
+        "popular": "Priljubljeno",
+        "getStarted": "Začnite",
+        "learnMore": "Več o tem"
       },
       "bottomCta": {
         "description": "Odkrijte kako avtomatizacija lahko izboljša vaše poslovanje. Na voljo je tudi svetovanje za prilagojene rešitve za vaše podjetje.",

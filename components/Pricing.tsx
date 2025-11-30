@@ -85,12 +85,13 @@ const Pricing = ({ className }: PricingProps) => {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 xl:gap-8 max-w-7xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <div
               key={tier.id}
               className={cn(
-                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
+                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col",
+                "w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1.375rem)]",
                 "hover:-translate-y-1",
                 "transition-all duration-500 ease-out group",
                 "animate-bundle-card",

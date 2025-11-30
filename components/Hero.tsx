@@ -27,11 +27,11 @@ function Hero(props: HeroProps) {
       )}
       crosses={true}
       crossesOffset="lg:translate-y-[.25rem]"
-      customPaddings="py-6 sm:py-8 lg:py-16 xl:py-20"
+      customPaddings="py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20"
       id="hero"
     >
       <div
-        className="container relative mt-1 sm:mt-8 lg:mt-36"
+        className="container relative mt-1 sm:mt-8 md:mt-20 lg:mt-36"
         ref={parallaxRef}
       >
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-10 sm:mb-16 md:mb-20 lg:mb-[6.25rem]">
@@ -126,7 +126,7 @@ function Hero(props: HeroProps) {
         </div>
 
         <CompanyLogos
-          className="relative z-10 mt-10 md:mt-32 animate-hero-logos"
+          className="relative z-10 mt-10 md:mt-20 lg:mt-32 animate-hero-logos"
           style={{ animationDelay: "400ms" }}
         />
       </div>
