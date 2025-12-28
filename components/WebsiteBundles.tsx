@@ -5,7 +5,7 @@ import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
 import Image from "next/image";
-import { Zap, Globe, Workflow, Database, Check } from "lucide-react";
+import { Globe, Workflow, Database, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { webDevAutomation } from "@/public/assets";
