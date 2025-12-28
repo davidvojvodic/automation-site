@@ -9,7 +9,7 @@
     },
     "navigation": {
       "services": "Services",
-      "packages": "Packages",
+      "packages": "Web Development",
       "howItWorks": "How It Works",
       "contact": "Contact",
       "getStarted": "Get Started",
@@ -85,7 +85,7 @@
     "benefitsBanner": {
       "save20Hours": "Save 20+ Hours Weekly",
       "scaleWithoutHiring": "Scale Without Hiring",
-      "accuracy": "99.9% Accuracy",
+      "accuracy": "Consistent Execution",
       "operation24x7": "24/7 Operation"
     },
     "contact": {
@@ -173,7 +173,7 @@
           "status": "Always Active"
         },
         "analytics": {
-          "title": "Analytics Cookies", 
+          "title": "Analytics Cookies",
           "description": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
           "details": "Google Analytics, performance monitoring"
         },
@@ -195,63 +195,23 @@
     },
     "websiteBundles": {
       "tag": "Web Development + Automation",
-      "title": "Complete Digital Solutions",
-      "subtitle": "Professional web development combined with intelligent automation systems to accelerate business growth and operational efficiency",
+      "title": "Custom Web Architecture",
+      "subtitle": "We don't just build websites. We build intelligent digital ecosystems that automate your business logic.",
       "valueProps": {
         "modernWeb": "Modern Web Development",
         "smartAutomation": "Smart Automation Integration",
         "endToEnd": "End-to-End Solutions"
       },
-      "labels": {
-        "idealFor": "Ideal For",
-        "includedFeatures": "Included Features",
-        "includes": "Includes",
-        "getStarted": "Get Started"
-      },
-      "foundation": {
-        "title": "Foundation Bundle",
-        "subtitle": "Business Website + Core Automations",
-        "description": "Professional web presence with essential automation workflows to streamline customer interactions and lead management for service-based businesses.",
-        "idealFor": "Service businesses, consultants, agencies, professional services",
-        "badge": "Essential",
-        "capabilities": {
-          "0": "Professional responsive website (5-8 pages)",
-          "1": "Contact form automation with instant notifications",
-          "2": "Lead capture workflows and email sequences",
-          "3": "Google Analytics and tracking setup",
-          "4": "Basic CRM integration for lead management"
-        }
-      },
-      "growth": {
-        "title": "Growth Bundle",
-        "subtitle": "E-commerce + Marketing Automation",
-        "description": "Complete online store with intelligent automation systems for inventory, orders, and customer lifecycle management to maximize sales and retention.",
-        "idealFor": "Product businesses, online retailers, physical stores going digital",
-        "badge": "Popular",
-        "capabilities": {
-          "0": "Full e-commerce store with payment processing",
-          "1": "Automated inventory management and low-stock alerts",
-          "2": "Order processing workflows and fulfillment automation",
-          "3": "Customer email campaigns and abandoned cart recovery",
-          "4": "Product recommendation and upselling automation"
-        }
-      },
-      "dominator": {
-        "title": "Dominator Bundle",
-        "subtitle": "Custom Web App + Advanced Automation",
-        "description": "Enterprise-grade web application development with custom automation architecture. Every project is uniquely scoped based on your technical requirements and business objectives through detailed consultation.",
-        "idealFor": "SaaS startups, tech companies, businesses with complex operations",
-        "badge": "Premium",
-        "capabilities": {
-          "0": "Custom web application development tailored to your requirements",
-          "1": "Scalable user authentication, roles, and permission systems",
-          "2": "Multi-system workflow orchestration and API integrations",
-          "3": "Enterprise-grade analytics dashboards with real-time data"
-        }
-      },
-      "bottomCta": {
-        "description": "Ready to transform your business with professional web development and intelligent automation? Let's discuss your project requirements and technical objectives.",
-        "button": "Start Your Project"
+      "singleCard": {
+        "title": "Custom Web Development + AI Automation",
+        "description": "We engineer bespoke, high-performance web applications that serve as the intelligent core of your business. From complex e-commerce logic to automated client portals, we deliver the custom infrastructure you need to scale without limitations.",
+        "features": [
+          "Modern Next.js & React Architecture",
+          "Deep AI & Workflow Integration",
+          "Scalable Cloud Infrastructure",
+          "Custom Business Logic Implementation"
+        ],
+        "cta": "Start Your Project"
       }
     },
     "aiServices": {
@@ -342,7 +302,7 @@
       },
       "customerSupport": {
         "title": "Support AI",
-        "subtitle": "24/7 AI support in 31+ languages",
+        "subtitle": "24/7 Multilingual AI Support",
         "description": "Intelligent multi-channel support automation handling inquiries via voice, chat, email, and SMS.",
         "outcome": "24/7 intelligent customer support",
         "outcomeShort": "Instant responses, happy customers",
@@ -355,7 +315,7 @@
         "capabilities": {
           "0": "Categorize customer conversations and preferences",
           "1": "Handle multi-channel inquiries (voice, chat, email, SMS)",
-          "2": "Natural conversation processing with 31+ languages",
+          "2": "Natural conversation processing with multilingual support",
           "3": "Intelligent escalation and live call transfer",
           "4": "Appointment scheduling and calendar automation",
           "5": "Real-time CRM updates",
@@ -518,7 +478,7 @@
       },
       "legal": {
         "privacy": "Privacy Policy",
-        "terms": "Terms of Service", 
+        "terms": "Terms of Service",
         "cookies": "Cookie Policy",
         "legal": "Legal Notice",
         "cookieSettings": "Cookie Settings"

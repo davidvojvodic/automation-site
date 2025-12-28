@@ -4,9 +4,11 @@ import React from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
-import { Zap, Globe, Workflow, ShoppingCart, Code, Database, Check } from "lucide-react";
+import Image from "next/image";
+import { Zap, Globe, Workflow, Database, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import { webDevAutomation } from "@/public/assets";
 
 interface BundleProps {
   className?: string;
@@ -14,91 +16,6 @@ interface BundleProps {
 
 const WebsiteBundles = ({ className }: BundleProps) => {
   const t = useTranslations("HomePage.websiteBundles");
-
-  const solutions = [
-    {
-      id: "foundation",
-      icon: Zap,
-      title: t("foundation.title"),
-      subtitle: t("foundation.subtitle"),
-      description: t("foundation.description"),
-      idealFor: t("foundation.idealFor"),
-      capabilities: [
-        t("foundation.capabilities.0"),
-        t("foundation.capabilities.1"),
-        t("foundation.capabilities.2"),
-        t("foundation.capabilities.3"),
-        t("foundation.capabilities.4"),
-      ],
-      badge: t("foundation.badge"),
-      popular: false,
-      timeline: "3-4 weeks",
-      pricing: "Custom quote based on requirements",
-      techStack: ["Next.js", "React", "Tailwind CSS", "n8n", "Vercel"],
-      deliverables: [
-        "Fully responsive website",
-        "Content management system",
-        "Automated workflows",
-        "Analytics dashboard",
-        "1 month support included"
-      ]
-    },
-    {
-      id: "growth",
-      icon: ShoppingCart,
-      title: t("growth.title"),
-      subtitle: t("growth.subtitle"),
-      description: t("growth.description"),
-      idealFor: t("growth.idealFor"),
-      capabilities: [
-        t("growth.capabilities.0"),
-        t("growth.capabilities.1"),
-        t("growth.capabilities.2"),
-        t("growth.capabilities.3"),
-        t("growth.capabilities.4"),
-      ],
-      badge: t("growth.badge"),
-      popular: true,
-      timeline: "5-7 weeks",
-      pricing: "Custom quote based on requirements",
-      techStack: ["Next.js", "Stripe", "n8n", "PostgreSQL", "Vercel"],
-      deliverables: [
-        "E-commerce platform",
-        "Payment processing setup",
-        "Inventory management system",
-        "Marketing automation workflows",
-        "3 months support included"
-      ]
-    },
-    {
-      id: "dominator",
-      icon: Code,
-      title: t("dominator.title"),
-      subtitle: t("dominator.subtitle"),
-      description: t("dominator.description"),
-      idealFor: t("dominator.idealFor"),
-      capabilities: [
-        t("dominator.capabilities.0"),
-        t("dominator.capabilities.1"),
-        t("dominator.capabilities.2"),
-        t("dominator.capabilities.3"),
-      ],
-      badge: t("dominator.badge"),
-      popular: false,
-      isPremium: true,
-      timeline: "8-12 weeks",
-      pricing: "Enterprise pricing - Contact for custom quote",
-      techStack: ["Custom tech stack based on requirements", "Cloud infrastructure", "Advanced integrations"],
-      deliverables: [
-        "Custom web application",
-        "Complete technical architecture",
-        "Multi-system integrations",
-        "Enterprise dashboards",
-        "6 months support included",
-        "Dedicated technical consultant"
-      ]
-    },
-  ];
 
   return (
     <Section crosses className={cn("", className)} id="bundles">
@@ -115,11 +32,11 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         {/* Value Proposition Pills */}
         <div className="-mx-5 md:-mx-10 lg:-mx-[3.75rem]">
           <div
-            className="flex sm:justify-center mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits px-5 md:px-10 lg:px-[3.75rem]"
+            className="flex sm:justify-center mb-12 sm:mb-16 lg:mb-20 animate-bundle-benefits px-5 md:px-10 lg:px-[3.75rem]"
             style={{ animationDelay: "300ms" }}
           >
             <div className="relative w-full sm:max-w-4xl text-center">
-              <div className="flex flex-col sm:flex-row flex-wrap sm:justify-center gap-3 sm:gap-4 lg:gap-6 mb-8">
+              <div className="flex flex-col sm:flex-row flex-wrap sm:justify-center gap-3 sm:gap-4 lg:gap-6">
               {[
                 { icon: Globe, text: t("valueProps.modernWeb") },
                 { icon: Database, text: t("valueProps.smartAutomation") },
@@ -141,126 +58,65 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         </div>
         </div>
 
-        {/* Solution Cards */}
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 xl:gap-8 max-w-7xl mx-auto">
-          {solutions.map((solution, index) => (
-            <div
-              key={solution.id}
-              className={cn(
-                "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden flex flex-col",
-                "w-full md:w-[calc(50%-0.75rem)] xl:w-[calc(33.333%-1.375rem)]",
-                "hover:-translate-y-1",
-                "transition-all duration-500 ease-out group",
-                "animate-bundle-card",
-                // Default shadows for depth
-                !solution.isPremium && "shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
-                solution.isPremium && "shadow-xl shadow-color-2/10 hover:shadow-2xl hover:shadow-color-2/20",
-                // Popular card styling
-                solution.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/60",
-                // Premium card styling
-                solution.isPremium &&
-                  "border-color-2/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-2/60",
-                // Foundation card hover
-                !solution.popular && !solution.isPremium &&
-                  "bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/40"
-              )}
-              style={{ animationDelay: `${700 + index * 150}ms` }}
-            >
-              <div className="relative z-10 flex flex-col h-full">
-                {/* Header with Icon, Badge, and Title */}
-                <div className="mb-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={cn(
-                          "w-14 sm:w-16 h-14 sm:h-16 rounded-xl flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                          "bg-gradient-to-br from-color-1/20 to-color-2/20"
-                        )}
-                      >
-                        {React.createElement(solution.icon, {
-                          className: cn(
-                            "w-7 sm:w-8 h-7 sm:h-8 text-color-1"
-                          ),
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Badge */}
-                    <div
-                      className={cn(
-                        "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                        solution.popular && "bg-gradient-to-r from-color-1 to-color-2 text-n-8",
-                        solution.isPremium && "bg-gradient-to-r from-color-1 to-color-2 text-n-8",
-                        !solution.popular &&
-                          !solution.isPremium &&
-                          "bg-n-6 text-n-3"
-                      )}
-                    >
-                      {solution.badge}
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-n-1 mb-2">
-                      {solution.title}
-                    </h3>
-                    <p className="text-sm sm:text-base bg-gradient-to-r from-color-1 to-color-2 bg-clip-text text-transparent font-medium">
-                      {solution.subtitle}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Target Audience */}
-                <div className="mb-4">
-                  <div className="text-xs text-n-4 uppercase tracking-wider mb-2">
-                    {t("labels.idealFor")}
-                  </div>
-                  <p className="text-sm text-n-2">
-                    {solution.idealFor}
-                  </p>
-                </div>
-
-                {/* All Features */}
-                <div className="flex-1 mb-6">
-                  <div className="mb-3">
-                    <h4 className="text-xs font-bold bg-gradient-to-r from-color-1 to-color-2 bg-clip-text text-transparent uppercase tracking-wider">
-                      {t("labels.includes")}
-                    </h4>
-                  </div>
-                  <div className="grid grid-cols-1 gap-2">
-                    {solution.capabilities.map(
-                      (capability: string, capIndex: number) => (
-                        <div
-                          key={capIndex}
-                          className="flex items-start gap-3 text-sm text-n-3"
-                        >
-                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center mt-0.5">
-                            <Check className="w-3 h-3 text-color-1" />
-                          </div>
-                          <span>{capability}</span>
+        {/* Single Powerhouse Card */}
+        <div className="relative max-w-7xl mx-auto mt-4">
+             {/* Gradient Border Wrapper */}
+             <div className="relative p-[1px] bg-gradient-to-br from-color-1 via-color-2 to-color-1 rounded-[2.5rem] animate-bundle-card shadow-2xl shadow-color-1/10">
+                <div className="relative bg-n-8 rounded-[2.5rem] overflow-hidden">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+                        
+                        {/* Left Content */}
+                        <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative z-20">
+                             <h3 className="h3 mb-6 bg-gradient-to-r from-n-1 to-n-3 bg-clip-text text-transparent">
+                                {t("singleCard.title")}
+                             </h3>
+                             <p className="body-1 text-n-3 mb-8 leading-relaxed">
+                                {t("singleCard.description")}
+                             </p>
+                             
+                             <ul className="space-y-5 mb-10">
+                                {[0, 1, 2, 3].map((index) => (
+                                    <li key={index} className="flex items-start gap-4 group">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                            <Check className="w-5 h-5 text-color-1" />
+                                        </div>
+                                        <span className="text-lg text-n-1 group-hover:text-color-1 transition-colors duration-300">
+                                            {t(`singleCard.features.${index}`)}
+                                        </span>
+                                    </li>
+                                ))}
+                             </ul>
+                             
+                             <div className="mt-auto pt-4">
+                                <Button href="#contact" className="w-full sm:w-auto px-12">
+                                    {t("singleCard.cta")}
+                                </Button>
+                             </div>
                         </div>
-                      )
-                    )}
-                  </div>
+
+                        {/* Right Image */}
+                        <div className="relative h-[400px] lg:h-auto overflow-hidden">
+                            {/* Desktop Overlay Gradient for smooth text overlay protection */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-n-8 via-n-8/50 to-transparent z-10 hidden lg:block translate-x-[-1px]"></div>
+                            
+                            {/* Mobile Overlay Gradient */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-n-8 via-transparent to-transparent z-10 lg:hidden"></div>
+
+                            <Image 
+                                src={webDevAutomation} 
+                                alt="Web Development and Automation" 
+                                fill
+                                className="object-cover object-center lg:object-left scale-105 hover:scale-100 transition-transform duration-[20s] ease-out"
+                                priority
+                            />
+                        </div>
+                    </div>
                 </div>
 
-                {/* CTA Button */}
-                <div className="mt-auto">
-                  <Button
-                    className="w-full"
-                    href="#contact"
-                  >
-                    {t("labels.getStarted")}
-                  </Button>
-                </div>
-              </div>
-
-              {/* Background Decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-color-1/15 via-color-2/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 group-hover:from-color-1/25 group-hover:via-color-2/20 transition-all duration-500"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-color-2/10 to-transparent rounded-full translate-y-12 -translate-x-12 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"></div>
-            </div>
-          ))}
+                {/* Ambient Glows */}
+                <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-color-1/20 rounded-full blur-[120px] pointer-events-none opacity-50 mix-blend-screen"></div>
+                <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-color-2/20 rounded-full blur-[120px] pointer-events-none opacity-50 mix-blend-screen"></div>
+             </div>
         </div>
 
       </div>

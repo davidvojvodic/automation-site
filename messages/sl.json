@@ -9,7 +9,7 @@
     },
     "navigation": {
       "services": "Storitve",
-      "packages": "Paketi",
+      "packages": "Spletni Razvoj",
       "howItWorks": "Kako deluje",
       "contact": "Kontakt",
       "getStarted": "Začnite",
@@ -85,7 +85,7 @@
     "benefitsBanner": {
       "save20Hours": "Prihranite 20+ Ur Tedensko",
       "scaleWithoutHiring": "Rastite brez dodatnega zaposlovanja",
-      "accuracy": "99,9% Natančnost",
+      "accuracy": "Dosledna Izvedba",
       "operation24x7": "24/7 Delovanje"
     },
     "contact": {
@@ -173,7 +173,7 @@
           "status": "Vedno aktivni"
         },
         "analytics": {
-          "title": "Analitični piškotki", 
+          "title": "Analitični piškotki",
           "description": "Ti piškotki nam pomagajo razumeti, kako obiskovalci uporabljajo našo spletno stran, z zbiranjem in poročanjem informacij anonimno.",
           "details": "Google Analytics, spremljanje uspešnosti"
         },
@@ -195,59 +195,23 @@
     },
     "websiteBundles": {
       "tag": "Spletni Razvoj + Avtomatizacija",
-      "title": "Celovite Digitalne Rešitve",
-      "subtitle": "Profesionalni spletni razvoj v kombinaciji s pametnimi avtomatizacijami za hitrejšo rast in boljšo učinkovitost poslovanja",
+      "title": "Spletna Arhitektura po Meri",
+      "subtitle": "Ne gradimo le spletnih strani. Gradimo inteligentne digitalne ekosisteme, ki avtomatizirajo vašo poslovno logiko.",
       "valueProps": {
         "modernWeb": "Moderni Spletni Razvoj",
         "smartAutomation": "Pametne Avtomatizacije",
         "endToEnd": "Celovite Rešitve"
       },
-      "labels": {
-        "idealFor": "Idealno Za",
-        "includedFeatures": "Vključene Funkcije",
-        "includes": "Vključuje",
-        "getStarted": "Začnite"
-      },
-      "foundation": {
-        "title": "Temeljni Paket",
-        "subtitle": "Poslovna Spletna Stran + Osnovna Avtomatizacija",
-        "description": "Profesionalna spletna prisotnost z osnovnimi avtomatizacijami za lažje delo s strankami in pridobivanje novih strank v storitvenih podjetjih.",
-        "idealFor": "Storitvena podjetja, svetovalci, agencije, profesionalne storitve",
-        "badge": "Osnovno",
-        "capabilities": {
-          "0": "Profesionalna odzivna spletna stran (5-8 strani)",
-          "1": "Avtomatizacija kontaktnih obrazcev z takojšnjimi obvestili",
-          "2": "Sistem za zbiranje potencialnih strank in e-poštna zaporedja",
-          "3": "Nastavitev Google Analytics in spremljanja",
-          "4": "Osnovna CRM integracija za upravljanje potencialnih strank"
-        }
-      },
-      "growth": {
-        "title": "Rastni Paket",
-        "subtitle": "E-trgovina + Trženjska Avtomatizacija",
-        "description": "Popolna spletna trgovina s pametnimi avtomatizacijami za zaloge, naročila in upravljanje strank za boljšo prodajo in zadržanje kupcev.",
-        "idealFor": "Produktna podjetja, spletni trgovci, fizične trgovine v digitalizaciji",
-        "badge": "Premium",
-        "capabilities": {
-          "0": "Spletna trgovina s plačilnim sistemom",
-          "1": "Avtomatizirano upravljanje zalog in opozorila o nizkih zalogah",
-          "2": "Avtomatsko izpolnjevanje naročil",
-          "3": "E-poštne kampanje za stranke in obnovitev zapuščenih košaric",
-          "4": "Priporočila izdelkov in avtomatsko povečanje prodaje"
-        }
-      },
-      "dominator": {
-        "title": "Dominator Paket",
-        "subtitle": "Prilagojena Spletna Aplikacija + Napredna Avtomatizacija",
-        "description": "Napredni razvoj spletnih aplikacij s prilagojenimi avtomatizacijami. Vsak projekt je narejen po meri glede na vaše potrebe in poslovne cilje z podrobnim svetovanjem.",
-        "idealFor": "SaaS startup-i, tehnološka podjetja, podjetja s kompleksnimi operacijami",
-        "badge": "Premium",
-        "capabilities": {
-          "0": "Prilagojeni razvoj spletnih aplikacij po vaših zahtevah",
-          "1": "Skalabilni sistemi preverjanja pristnosti uporabnikov, vlog in dovoljenj",
-          "2": "Orkestracija delovnih tokov več sistemov in API integracije",
-          "3": "Analitične plošče poslovne ravni s podatki v realnem času"
-        }
+      "singleCard": {
+        "title": "Spletni Razvoj po Meri + AI Avtomatizacija",
+        "description": "Načrtujemo visoko zmogljive spletne aplikacije po meri, ki služijo kot inteligentno jedro vašega posla. Od kompleksne e-trgovine do avtomatiziranih portalov za stranke – zagotavljamo infrastrukturo po meri, ki jo potrebujete za rast brez omejitev.",
+        "features": [
+          "Moderna Next.js & React Arhitektura",
+          "Globoka Integracija AI & Delovnih Tokov",
+          "Skalabilna Infrastruktura v Oblaku",
+          "Implementacija Poslovne Logike po Meri"
+        ],
+        "cta": "Začnite Svoj Projekt"
       },
       "bottomCta": {
         "description": "Pripravljeni izboljšati svoje podjetje s profesionalno spletno stranjo in pametnimi avtomatizacijami? Pogovorimo se o vaših potrebah in ciljih.",
@@ -342,8 +306,8 @@
       },
       "customerSupport": {
         "title": "Podpora Strankam",
-        "subtitle": "24/7 AI podpora v 31+ jezikih",
-        "description": "AI odgovarja strankam 24/7 v 31+ jezikih. Enostavna vprašanja reši sam, zahtevna preda vam.",
+        "subtitle": "24/7 Večjezična AI Podpora",
+        "description": "AI odgovarja strankam 24/7 v katerem koli jeziku. Enostavna vprašanja reši sam, zahtevna preda vam.",
         "outcome": "24/7 inteligentna podpora strankam",
         "outcomeShort": "Takojšnji odgovori, zadovoljne stranke",
         "badge": "Podpora",
@@ -355,7 +319,7 @@
         "capabilities": {
           "0": "Kategorizacija pogovorov, preferenc in zgodovine interakcij s strankami",
           "1": "Obdelava povpraševanj prek več kanalov (glas, klepet, e-pošta, SMS)",
-          "2": "Obdelava naravnega pogovora s podporo 31+ jezikov",
+          "2": "Obdelava naravnega pogovora z večjezično podporo",
           "3": "Pametna eskalacija in prenos klicev na osebje ko je potrebno",
           "4": "Avtomatska rezervacija terminov in upravljanje koledarja",
           "5": "Sprotne posodobitve CRM na podlagi pogovorov s strankami",
