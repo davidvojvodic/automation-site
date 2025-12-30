@@ -32,7 +32,7 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         {/* Value Proposition Pills */}
         <div className="-mx-5 md:-mx-10 lg:-mx-[3.75rem]">
           <div
-            className="flex sm:justify-center mb-12 sm:mb-16 lg:mb-20 animate-bundle-benefits px-5 md:px-10 lg:px-[3.75rem]"
+            className="flex sm:justify-center mb-6 sm:mb-8 lg:mb-10 animate-bundle-benefits px-5 md:px-10 lg:px-[3.75rem]"
             style={{ animationDelay: "300ms" }}
           >
             <div className="relative w-full sm:max-w-4xl text-center">
@@ -59,43 +59,43 @@ const WebsiteBundles = ({ className }: BundleProps) => {
         </div>
 
         {/* Single Powerhouse Card */}
-        <div className="relative max-w-7xl mx-auto mt-4">
+        <div className="relative max-w-7xl mx-auto">
              {/* Gradient Border Wrapper */}
              <div className="relative p-[1px] bg-gradient-to-br from-color-1 via-color-2 to-color-1 rounded-[2.5rem] animate-bundle-card shadow-2xl shadow-color-1/10">
                 <div className="relative bg-n-8 rounded-[2.5rem] overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
                         
                         {/* Left Content */}
-                        <div className="p-8 sm:p-12 lg:p-16 flex flex-col justify-center relative z-20">
-                             <h3 className="h3 mb-6 bg-gradient-to-r from-n-1 to-n-3 bg-clip-text text-transparent">
+                        <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-center relative z-20">
+                             <h3 className="h3 mb-4 sm:mb-6 bg-gradient-to-r from-n-1 to-n-3 bg-clip-text text-transparent">
                                 {t("singleCard.title")}
                              </h3>
-                             <p className="body-1 text-n-3 mb-8 leading-relaxed">
+                             <p className="body-1 text-n-3 mb-5 sm:mb-6 leading-relaxed">
                                 {t("singleCard.description")}
                              </p>
                              
-                             <ul className="space-y-5 mb-10">
+                             <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                                 {[0, 1, 2, 3].map((index) => (
-                                    <li key={index} className="flex items-start gap-4 group">
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                            <Check className="w-5 h-5 text-color-1" />
+                                    <li key={index} className="flex items-start gap-3 sm:gap-4 group">
+                                        <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                            <Check className="w-4 h-4 sm:w-5 sm:h-5 text-color-1" />
                                         </div>
-                                        <span className="text-lg text-n-1 group-hover:text-color-1 transition-colors duration-300">
+                                        <span className="text-base sm:text-lg text-n-1 group-hover:text-color-1 transition-colors duration-300">
                                             {t(`singleCard.features.${index}`)}
                                         </span>
                                     </li>
                                 ))}
                              </ul>
                              
-                             <div className="mt-auto pt-4">
-                                <Button href="#contact" className="w-full sm:w-auto px-12">
+                             <div className="mt-auto pt-2 sm:pt-4">
+                                <Button href="#contact" className="w-full sm:w-auto px-8 sm:px-12">
                                     {t("singleCard.cta")}
                                 </Button>
                              </div>
                         </div>
 
                         {/* Right Image */}
-                        <div className="relative h-[400px] lg:h-auto overflow-hidden">
+                        <div className="relative h-[280px] sm:h-[350px] lg:h-auto overflow-hidden">
                             {/* Desktop Overlay Gradient for smooth text overlay protection */}
                             <div className="absolute inset-0 bg-gradient-to-r from-n-8 via-n-8/50 to-transparent z-10 hidden lg:block translate-x-[-1px]"></div>
                             
