@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -251,7 +252,11 @@
             margin: 20px 0;
         }
 
-        #favicon-16, #favicon-32, #favicon-48, #favicon-192, #favicon-512 {
+        #favicon-16,
+        #favicon-32,
+        #favicon-48,
+        #favicon-192,
+        #favicon-512 {
             background: #0a0a0a;
             display: flex;
             align-items: center;
@@ -259,11 +264,30 @@
             border-radius: 20%;
         }
 
-        #favicon-16 { width: 16px; height: 16px; }
-        #favicon-32 { width: 32px; height: 32px; }
-        #favicon-48 { width: 48px; height: 48px; }
-        #favicon-192 { width: 192px; height: 192px; }
-        #favicon-512 { width: 512px; height: 512px; }
+        #favicon-16 {
+            width: 16px;
+            height: 16px;
+        }
+
+        #favicon-32 {
+            width: 32px;
+            height: 32px;
+        }
+
+        #favicon-48 {
+            width: 48px;
+            height: 48px;
+        }
+
+        #favicon-192 {
+            width: 192px;
+            height: 192px;
+        }
+
+        #favicon-512 {
+            width: 512px;
+            height: 512px;
+        }
 
         .favicon-icon {
             width: 70%;
@@ -288,6 +312,7 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <h1 style="color: #AC6AFF; margin-bottom: 30px;">Flowko - Image Generation Tool</h1>
@@ -301,7 +326,9 @@
                 2. Save it as <code>og-image.jpg</code> in <code>/public/assets/</code><br>
                 3. Alternative: Use browser developer tools (F12) → Screenshot node
             </div>
-            <button id="download-og" style="background: #AC6AFF; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 20px;">Download OG Image</button>
+            <button id="download-og"
+                style="background: #AC6AFF; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 20px;">Download
+                OG Image</button>
             <div id="og-image">
                 <!-- Geometric background shapes -->
                 <div class="geometric-shape shape-1"></div>
@@ -311,11 +338,13 @@
                 <div class="content">
                     <!-- Compact Header: Logo + Brand Name -->
                     <div class="header">
-                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2" width="163" height="285.2">
-                            <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                            <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2" width="163"
+                            height="285.2">
+                            <polygon fill="#AC6AFF"
+                                points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                            <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                         </svg>
-                        <h2 class="brand-name">Flowko</h2>
+                        <h2 class="brand-name">Flowko.</h2>
                     </div>
 
                     <!-- Main Content -->
@@ -329,7 +358,9 @@
                                         <stop offset="100%" style="stop-color:#E0B3FF;stop-opacity:1" />
                                     </linearGradient>
                                 </defs>
-                                <text x="0" y="60" font-size="64" font-weight="700" fill="url(#textGradient)" font-family="'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" letter-spacing="-0.03em">AI Business Automation</text>
+                                <text x="0" y="60" font-size="64" font-weight="700" fill="url(#textGradient)"
+                                    font-family="'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+                                    letter-spacing="-0.03em">AI Business Automation</text>
                             </svg>
                         </h1>
 
@@ -368,8 +399,9 @@
                     <div class="favicon-preview">
                         <div id="favicon-16" data-filename="favicon-16x16.png">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -381,8 +413,9 @@
                     <div class="favicon-preview">
                         <div id="favicon-32" data-filename="favicon-32x32.png">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -394,8 +427,9 @@
                     <div class="favicon-preview">
                         <div id="favicon-48" data-filename="favicon-48x48.png">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -407,8 +441,9 @@
                     <div class="favicon-preview">
                         <div id="favicon-192" data-filename="favicon-192x192.png">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -418,10 +453,12 @@
 
                 <div class="favicon-item">
                     <div class="favicon-preview">
-                        <div id="favicon-180" data-filename="apple-touch-icon.png" style="width: 180px; height: 180px; background: #0a0a0a; display: flex; align-items: center; justify-content: center; border-radius: 20%;">
+                        <div id="favicon-180" data-filename="apple-touch-icon.png"
+                            style="width: 180px; height: 180px; background: #0a0a0a; display: flex; align-items: center; justify-content: center; border-radius: 20%;">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -433,8 +470,9 @@
                     <div class="favicon-preview">
                         <div id="favicon-512" data-filename="favicon-512x512.png">
                             <svg class="favicon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163 285.2">
-                                <polygon fill="#AC6AFF" points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5"/>
-                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0"/>
+                                <polygon fill="#AC6AFF"
+                                    points="0,192.3 0,247.1 0,248.3 0.9,247.7 59.1,285.2 59.1,213.8 163,153.1 163,85.3 0,180.5" />
+                                <polygon fill="#AC6AFF" points="0,95.1 0,163 163,67.8 163,0" />
                             </svg>
                         </div>
                     </div>
@@ -474,7 +512,7 @@ icons: {
 
     <script>
         // Download OG Image functionality
-        document.getElementById('download-og').addEventListener('click', function() {
+        document.getElementById('download-og').addEventListener('click', function () {
             const ogImage = document.getElementById('og-image');
 
             // Temporarily remove the border for clean export
@@ -492,7 +530,7 @@ icons: {
                 ogImage.style.border = originalBorder;
 
                 // Convert to JPEG and download
-                canvas.toBlob(function(blob) {
+                canvas.toBlob(function (blob) {
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
@@ -516,7 +554,7 @@ icons: {
                 backgroundColor: null,
                 logging: false
             }).then(canvas => {
-                canvas.toBlob(function(blob) {
+                canvas.toBlob(function (blob) {
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
@@ -530,10 +568,10 @@ icons: {
         }
 
         // Add event listeners to download buttons
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const downloadButtons = document.querySelectorAll('.download-btn');
             downloadButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const size = this.getAttribute('data-size');
                     const faviconElement = document.getElementById(`favicon-${size}`);
                     const filename = faviconElement.getAttribute('data-filename');
@@ -542,7 +580,7 @@ icons: {
             });
 
             // Download all favicons
-            document.getElementById('download-all-favicons').addEventListener('click', function() {
+            document.getElementById('download-all-favicons').addEventListener('click', function () {
                 const sizes = [16, 32, 48, 180, 192, 512];
                 const filenames = [
                     'favicon-16x16.png',
@@ -562,4 +600,5 @@ icons: {
         });
     </script>
 </body>
+
 </html>

@@ -18,6 +18,8 @@ import {
   searchMd,
   slack,
   twitter,
+  facebook,
+  instagram,
   driveLogo,
   gmailLogo,
   hubspotLogo,
@@ -266,10 +268,22 @@ export const benefits = [
 ];
 
 export const socials = [
+  // {
+  //   id: "0",
+  //   title: "X",
+  //   iconUrl: twitter,
+  //   url: "https://x.com/flowko_io",
+  // },
   {
-    id: "0",
-    title: "X",
-    iconUrl: twitter,
-    url: "https://x.com/flowko_io",
+    id: "1",
+    title: "Facebook",
+    iconUrl: facebook,
+    url: "https://www.facebook.com/profile.php?id=61586148998419",
+  },
+  {
+    id: "2",
+    title: "Instagram",
+    iconUrl: instagram,
+    url: "https://www.instagram.com/flowko.io/",
   },
 ];
