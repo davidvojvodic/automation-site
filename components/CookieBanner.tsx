@@ -105,14 +105,14 @@ const CookieBanner = () => {
       // @ts-ignore
       window.gtag('js', new Date());
       // @ts-ignore
-      window.gtag('config', 'G-BWJ831Y1NN');
+      window.gtag('config', 'G-R4Z56K3J16');
 
       console.log("Analytics config pushed. Loading script...");
 
       // 3. Load script asynchronously
       const script = document.createElement('script');
       script.id = 'ga-script';
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4Z56K3J16';
       script.async = true;
       document.head.appendChild(script);
       
