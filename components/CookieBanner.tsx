@@ -93,28 +93,30 @@ const CookieBanner = () => {
 
       console.log("Initializing Analytics tracking...");
 
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.id = 'ga-script';
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN';
-      script.async = true;
-      document.head.appendChild(script);
-
-      // Initialize dataLayer and window.gtag
+      // 1. Initialize dataLayer and window.gtag FIRST
       window.dataLayer = window.dataLayer || [];
       
-      // Define gtag on window so it's globally available
       // @ts-ignore
       window.gtag = function(...args: any[]) {
         window.dataLayer.push(args);
       };
 
+      // 2. Configure GA immediately
       // @ts-ignore
       window.gtag('js', new Date());
       // @ts-ignore
       window.gtag('config', 'G-BWJ831Y1NN');
+
+      console.log("Analytics config pushed. Loading script...");
+
+      // 3. Load script asynchronously
+      const script = document.createElement('script');
+      script.id = 'ga-script';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN';
+      script.async = true;
+      document.head.appendChild(script);
       
-      console.log("Analytics tracking initialized and config pushed to dataLayer");
+      console.log("Analytics script injection complete.");
     }
 
     // Initialize marketing tracking if marketing cookies are accepted
