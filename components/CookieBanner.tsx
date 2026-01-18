@@ -114,14 +114,6 @@ const CookieBanner = () => {
       script.id = 'ga-script';
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4Z56K3J16';
       script.async = true;
-      
-      // Add onload handler to debug successful load
-      script.onload = () => {
-        console.log("GA Script loaded. Sending explicit page_view just in case.");
-        // @ts-ignore
-        window.gtag('event', 'page_view');
-      };
-
       document.head.appendChild(script);
       
       console.log("Analytics script injection complete.");
