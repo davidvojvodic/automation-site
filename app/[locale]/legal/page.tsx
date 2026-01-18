@@ -49,10 +49,12 @@ const getContent = (locale: string) => {
         business: {
           title: "Poslovne informacije",
           items: [
-            { label: "Ime podjetja", value: "Flowko" },
+            { label: "Ime podjetja", value: "David Vojvodić s.p., Flowko" },
             { label: "Vrsta podjetja", value: "Storitve avtomatizacije in spletnega razvoja" },
-            { label: "Lokacija", value: "Murska Sobota, Slovenija" },
-            { label: "Država", value: "Republika Slovenija" }
+            { label: "Naslov", value: "Ulica Daneta Šumenjaka 2A, 9000 Murska Sobota" },
+            { label: "Matična številka", value: "7417853000" },
+            { label: "Davčna številka", value: "48392391" },
+            { label: "Register", value: "Vpis v Poslovni register Slovenije, AJPES, izpostava Murska Sobota" }
           ]
         },
         contact: {
@@ -62,10 +64,7 @@ const getContent = (locale: string) => {
           support: { label: "Podpora", value: "support@flowko.io" },
           legal: { label: "Pravne zadeve", value: "info@flowko.io" },
           website: { label: "Spletna stran", value: "flowko.io" },
-          altDomains: {
-            label: "Alternativne domene",
-            values: ["flowkoautomation.com", "flowkosolutions.com"]
-          }
+
         },
         representative: {
           title: "Pooblaščeni predstavnik",
@@ -110,11 +109,11 @@ const getContent = (locale: string) => {
             },
             {
               title: "Registracija podjetja",
-              description: "Registrirana poslovni subjekt v Republiki Sloveniji z vsemi potrebnimi dovoljenji za digitalne storitve."
+              description: "Registriran samostojni podjetnik (s.p.) v Republiki Sloveniji."
             },
             {
-              title: "Skladnost z davki",
-              description: "Za DDV registriran subjekt, ki zagotavlja storitve v EU. Vsa fakturiranja so v skladu z davčnimi predpisi EU."
+              title: "Davčni status",
+              description: "Nisem zavezanec za DDV (DDV se ne obračunava na podlagi 1. odstavka 94. člena ZDDV-1)."
             }
           ]
         },
@@ -231,10 +230,12 @@ const getContent = (locale: string) => {
         business: {
           title: "Business Information",
           items: [
-            { label: "Company Name", value: "Flowko" },
+            { label: "Company Name", value: "David Vojvodić s.p., Flowko" },
             { label: "Business Type", value: "Automation & Web Development Services" },
-            { label: "Location", value: "Murska Sobota, Slovenia" },
-            { label: "Country", value: "Republic of Slovenia" }
+            { label: "Address", value: "Ulica Daneta Šumenjaka 2A, 9000 Murska Sobota" },
+            { label: "Registration Number", value: "7417853000" },
+            { label: "Tax Number", value: "48392391" },
+            { label: "Register", value: "Entry in Business Register of Slovenia, AJPES, Murska Sobota branch" }
           ]
         },
         contact: {
@@ -244,10 +245,7 @@ const getContent = (locale: string) => {
           support: { label: "Support", value: "support@flowko.io" },
           legal: { label: "Legal Inquiries", value: "info@flowko.io" },
           website: { label: "Website", value: "flowko.io" },
-          altDomains: {
-            label: "Alternative Domains",
-            values: ["flowkoautomation.com", "flowkosolutions.com"]
-          }
+
         },
         representative: {
           title: "Authorized Representative",
@@ -292,11 +290,11 @@ const getContent = (locale: string) => {
             },
             {
               title: "Business Registration",
-              description: "Registered business entity in the Republic of Slovenia with all required permits for digital services."
+              description: "Registered sole trader (s.p.) in the Republic of Slovenia."
             },
             {
               title: "Tax Compliance",
-              description: "VAT registered entity providing services within the EU. All invoicing complies with EU tax regulations."
+              description: "Not VAT registered (Small business exemption)."
             }
           ]
         },
@@ -395,18 +393,6 @@ export default async function LegalNotice({ params }: LegalNoticeProps) {
                           {content.sections.contact.website.value}
                         </a>
                       </p>
-                    </div>
-                    <div>
-                      <p className="body-2 text-n-4 mb-1">{content.sections.contact.altDomains.label}</p>
-                      <div className="space-y-1">
-                        {content.sections.contact.altDomains.values.map((domain, index) => (
-                          <p key={index} className="body-1">
-                            <a href={`https://${domain}`} className="text-color-1 hover:underline">
-                              {domain}
-                            </a>
-                          </p>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>

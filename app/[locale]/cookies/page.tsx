@@ -45,6 +45,13 @@ const getContent = (locale: string) => {
     return {
       title: "Pravilnik o piškotkih",
       lastUpdated: "Zadnjič posodobljeno:",
+      headerInfo: {
+        serviceProviderLabel: "Ponudnik storitev:",
+        name: "David Vojvodić s.p., Flowko",
+        address: "Ulica Daneta Šumenjaka 2A, 9000 Murska Sobota",
+        email: "E-pošta: info@flowko.io",
+        taxId: "Davčna št.: 48392391"
+      },
       sections: {
         intro: {
           title: "1. Kaj so piškotki",
@@ -347,6 +354,13 @@ const getContent = (locale: string) => {
     return {
       title: "Cookie Policy",
       lastUpdated: "Last updated:",
+      headerInfo: {
+        serviceProviderLabel: "Service Provider:",
+        name: "David Vojvodić s.p., Flowko",
+        address: "Ulica Daneta Šumenjaka 2A, 9000 Murska Sobota",
+        email: "Email: info@flowko.io",
+        taxId: "Tax ID: 48392391"
+      },
       sections: {
         intro: {
           title: "1. What Are Cookies",
@@ -510,7 +524,15 @@ export default async function CookiePolicy({ params }: CookiePolicyProps) {
         <Section className="pt-[8rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]">
       <div className="container">
         <div className="max-w-4xl mx-auto">
+
           <h1 className="h1 mb-6">{content.title}</h1>
+          <div className="mb-6 p-4 bg-n-7 rounded-lg border border-n-6">
+            <p className="mb-1 text-sm text-n-3">{content.headerInfo.serviceProviderLabel}</p>
+            <p className="font-semibold">{content.headerInfo.name}</p>
+            <p>{content.headerInfo.address}</p>
+            <p>{content.headerInfo.email}</p>
+            <p>{content.headerInfo.taxId}</p>
+          </div>
           <p className="body-2 text-n-4 mb-8">{content.lastUpdated} {new Date().toLocaleDateString()}</p>
           
           <div className="space-y-8">

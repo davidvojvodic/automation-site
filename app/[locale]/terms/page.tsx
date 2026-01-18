@@ -45,6 +45,13 @@ const getContent = (locale: string) => {
     return {
       title: "Pogoji uporabe",
       lastUpdated: "Zadnjič posodobljeno:",
+      headerInfo: {
+        name: "David Vojvodić s.p., Flowko",
+        address: "Ulica Daneta Šumenjaka 2A",
+        city: "9000 Murska Sobota",
+        country: "Slovenija",
+        email: "E-pošta: info@flowko.io"
+      },
       sections: {
         acceptance: {
           title: "1. Sprejem pogojev",
@@ -381,6 +388,13 @@ const getContent = (locale: string) => {
     return {
       title: "Terms of Service",
       lastUpdated: "Last updated:",
+      headerInfo: {
+        name: "David Vojvodić s.p., Flowko",
+        address: "Ulica Daneta Šumenjaka 2A",
+        city: "9000 Murska Sobota",
+        country: "Slovenia",
+        email: "Email: info@flowko.io"
+      },
       sections: {
         acceptance: {
           title: "1. Acceptance of Terms",
@@ -562,6 +576,11 @@ export default async function TermsOfService({ params }: TermsOfServiceProps) {
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <h1 className="h1 mb-6">{content.title}</h1>
+          <p className="mb-2">{content.headerInfo.name}</p>
+          <p className="mb-2">{content.headerInfo.address}</p>
+          <p className="mb-2">{content.headerInfo.city}</p>
+          <p className="mb-2">{content.headerInfo.country}</p>
+          <p className="mb-2">{content.headerInfo.email}</p>
           <p className="body-2 text-n-4 mb-8">{content.lastUpdated} {new Date().toLocaleDateString()}</p>
           
           <div className="space-y-8">

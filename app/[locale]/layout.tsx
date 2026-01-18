@@ -182,6 +182,7 @@ export default async function LocaleLayout({
         : "Automate Your Business with AI",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Ulica Daneta Šumenjaka 2A",
       addressLocality: "Murska Sobota",
       addressRegion: "Pomurska",
       postalCode: "9000",
@@ -195,7 +196,7 @@ export default async function LocaleLayout({
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+386-XX-XXX-XXX",
+        email: "info@flowko.io",
         contactType: "customer service",
         areaServed: ["SI", "AT", "HR"],
         availableLanguage: ["en", "sl", "de", "hr"],
@@ -296,22 +297,7 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <head>
         {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="gtag-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BWJ831Y1NN');
-            `,
-          }}
-        />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

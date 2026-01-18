@@ -14,6 +14,12 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 interface CookiePreferences {
   essential: boolean;
   analytics: boolean;
@@ -79,9 +85,36 @@ const CookieBanner = () => {
   const initializeTracking = (prefs: CookiePreferences) => {
     // Initialize Google Analytics if analytics cookies are accepted
     if (prefs.analytics && typeof window !== "undefined") {
-      // Google Analytics initialization would go here
-      // gtag('config', 'GA_MEASUREMENT_ID');
-      console.log("Analytics tracking initialized");
+      // Check if script is already added to avoid duplicates
+      if (document.getElementById('ga-script')) {
+        console.log("Analytics script already loaded");
+        return;
+      }
+
+      console.log("Initializing Analytics tracking...");
+
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.id = 'ga-script';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BWJ831Y1NN';
+      script.async = true;
+      document.head.appendChild(script);
+
+      // Initialize dataLayer and window.gtag
+      window.dataLayer = window.dataLayer || [];
+      
+      // Define gtag on window so it's globally available
+      // @ts-ignore
+      window.gtag = function(...args: any[]) {
+        window.dataLayer.push(args);
+      };
+
+      // @ts-ignore
+      window.gtag('js', new Date());
+      // @ts-ignore
+      window.gtag('config', 'G-BWJ831Y1NN');
+      
+      console.log("Analytics tracking initialized and config pushed to dataLayer");
     }
 
     // Initialize marketing tracking if marketing cookies are accepted
