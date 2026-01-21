@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Button } from "./ui/button";
 import { Switch } from "./ui/switch";
 import { useTranslations } from "next-intl";
@@ -14,11 +15,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
+
 
 interface CookiePreferences {
   essential: boolean;
@@ -84,36 +81,9 @@ const CookieBanner = () => {
 
   const initializeTracking = (prefs: CookiePreferences) => {
     // Initialize Google Analytics if analytics cookies are accepted
-    if (prefs.analytics && typeof window !== "undefined") {
-      // Check if script is already added to avoid duplicates
-      if (document.getElementById('ga-script')) {
-        console.log("Analytics script already loaded");
-        return;
-      }
-
-      console.log("Initializing Analytics tracking... (Fail-Safe Mode)");
-
-      // 1. Initialize DataLayer & gtag Function FIRST (Before Script)
-      window.dataLayer = window.dataLayer || [];
-      // @ts-ignore
-      window.gtag = function(...args: any[]) {
-        window.dataLayer.push(args);
-      };
-
-      // 2. Configure GA immediately
-      // @ts-ignore
-      window.gtag('js', new Date());
-      // @ts-ignore
-      window.gtag('config', 'G-R4Z56K3J16', { 'debug_mode': true }); // Using debug_mode to force visibility
-
-      // 3. Inject Script LAST (It will pick up the queue above upon loading)
-      const script = document.createElement('script');
-      script.id = 'ga-script';
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4Z56K3J16';
-      script.async = true;
-      document.head.appendChild(script);
-      
-      console.log("Analytics initialized in fail-safe order. Script injected.");
+    if (prefs.analytics) {
+      console.log("Analytics consent granted. Mounting GoogleAnalytics component...");
+      // Component will be mounted via JSX below
     }
 
     // Initialize marketing tracking if marketing cookies are accepted
@@ -174,6 +144,11 @@ const CookieBanner = () => {
 
   return (
     <>
+      {/* Conditionally Render Google Analytics Component */}
+      {preferences.analytics && (
+        <GoogleAnalytics gaId="G-R4Z56K3J16" />
+      )}
+
       {/* Cookie Banner */}
       {showBanner && (
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-n-8 border-t border-n-6 p-6 shadow-lg">
