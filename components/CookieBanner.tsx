@@ -91,11 +91,10 @@ const CookieBanner = () => {
         return;
       }
 
-      console.log("Initializing Analytics tracking...");
+      console.log("Initializing Analytics tracking... (Fail-Safe Mode)");
 
-      // 1. Initialize dataLayer and window.gtag FIRST
+      // 1. Initialize DataLayer & gtag Function FIRST (Before Script)
       window.dataLayer = window.dataLayer || [];
-      
       // @ts-ignore
       window.gtag = function(...args: any[]) {
         window.dataLayer.push(args);
@@ -105,18 +104,16 @@ const CookieBanner = () => {
       // @ts-ignore
       window.gtag('js', new Date());
       // @ts-ignore
-      window.gtag('config', 'G-R4Z56K3J16');
+      window.gtag('config', 'G-R4Z56K3J16', { 'debug_mode': true }); // Using debug_mode to force visibility
 
-      console.log("Analytics config pushed. Loading script...");
-
-      // 3. Load script asynchronously
+      // 3. Inject Script LAST (It will pick up the queue above upon loading)
       const script = document.createElement('script');
       script.id = 'ga-script';
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4Z56K3J16';
       script.async = true;
       document.head.appendChild(script);
       
-      console.log("Analytics script injection complete.");
+      console.log("Analytics initialized in fail-safe order. Script injected.");
     }
 
     // Initialize marketing tracking if marketing cookies are accepted
