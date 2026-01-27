@@ -4,14 +4,7 @@ import { cn } from "@/lib/utils";
 import Section from "./Section";
 import Heading from "./Heading";
 import { useTranslations } from "next-intl";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
-import { Search, Target, Settings, TrendingUp, CheckCircle } from "lucide-react";
+import { Search, Settings, TrendingUp } from "lucide-react";
 
 interface ImplementationProps {
   className?: string;
@@ -22,8 +15,8 @@ interface Step {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   status: string;
-  description: string;
-  outcome: string;
+  subtitle: string;
+  points: string[];
 }
 
 function Implementation({ className }: ImplementationProps) {
@@ -35,32 +28,36 @@ function Implementation({ className }: ImplementationProps) {
       icon: Search,
       title: t("phase1.title"),
       status: t("labels.phase1"),
-      description: t("phase1.description"),
-      outcome: t("phase1.outcome")
+      subtitle: t("phase1.subtitle"),
+      points: [
+        t("phase1.points.0"),
+        t("phase1.points.1"),
+        t("phase1.points.2")
+      ]
     },
     {
       id: 2,
-      icon: Target,
+      icon: Settings,
       title: t("phase2.title"),
       status: t("labels.phase2"),
-      description: t("phase2.description"),
-      outcome: t("phase2.outcome")
+      subtitle: t("phase2.subtitle"),
+      points: [
+        t("phase2.points.0"),
+        t("phase2.points.1"),
+        t("phase2.points.2")
+      ]
     },
     {
       id: 3,
-      icon: Settings,
+      icon: TrendingUp,
       title: t("phase3.title"),
       status: t("labels.phase3"),
-      description: t("phase3.description"),
-      outcome: t("phase3.outcome")
-    },
-    {
-      id: 4,
-      icon: TrendingUp,
-      title: t("phase4.title"),
-      status: t("labels.phase4"),
-      description: t("phase4.description"),
-      outcome: t("phase4.outcome")
+      subtitle: t("phase3.subtitle"),
+      points: [
+        t("phase3.points.0"),
+        t("phase3.points.1"),
+        t("phase3.points.2")
+      ]
     },
   ];
 
@@ -99,7 +96,7 @@ function Implementation({ className }: ImplementationProps) {
         }}
       />
       <div className="container">
-        <div className="animate-process-heading">
+        <div className="animate-process-heading mb-10 md:mb-16">
           <Heading
             tag={t("tag")}
             title={t("title")}
@@ -107,79 +104,55 @@ function Implementation({ className }: ImplementationProps) {
           />
         </div>
 
-        {/* Implementation Process Accordion */}
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="w-full space-y-4">
-            {steps.map((step, index) => (
-              <AccordionItem
-                key={step.id}
-                value={`phase-${step.id}`}
-                className={cn(
-                  "border border-n-6 bg-n-8 rounded-2xl overflow-hidden",
-                  "hover:border-color-1/30 transition-all duration-300",
-                  "animate-process-step"
-                )}
-                style={{ animationDelay: `${300 + index * 150}ms` }}
-              >
-                <AccordionTrigger className="px-4 sm:px-6 md:px-8 py-5 sm:py-6 hover:no-underline group">
-                  <div className="flex items-center gap-4 text-left w-full">
-                    {/* Phase Icon and Number */}
-                    <div className="flex items-center gap-4">
-                      <div className="relative">
-                        <div className="w-12 h-12 bg-gradient-to-br from-color-1 to-color-2 rounded-full flex items-center justify-center">
-                          <span className="text-white font-bold text-lg">
-                            {step.id}
-                          </span>
-                        </div>
-                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-n-8 rounded-full flex items-center justify-center border-2 border-color-1">
-                          <step.icon className="w-3 h-3 text-color-1" />
-                        </div>
-                      </div>
-                    </div>
+        {/* Implementation Process Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+          {steps.map((step, index) => (
+            <div
+              key={step.id}
+              className={cn(
+                "group relative border border-n-6 bg-n-8 rounded-[2rem] p-8 flex flex-col h-full",
+                "transition-all duration-300 hover:border-color-1/30 hover:shadow-2xl hover:shadow-color-1/10", 
+                "animate-process-step"
+              )}
+              style={{ animationDelay: `${300 + index * 150}ms` }}
+            >
+              {/* Header: Icon & Number */}
+              <div className="flex items-start justify-between mb-8">
+                {/* Icon Circle */}
+                <div className="w-14 h-14 rounded-full border border-color-1 text-color-1 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-color-1 group-hover:text-n-8 group-hover:shadow-[0_0_20px_-5px_#AC6AFF]">
+                  <step.icon className="w-6 h-6" />
+                </div>
+                
+                {/* Number Badge */}
+                <span className="text-xs font-bold text-color-1 bg-color-1/10 px-3 py-1 rounded-full border border-color-1/20">
+                  {step.status}
+                </span>
+              </div>
 
-                    {/* Phase Title and Status */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-1">
-                        <Badge
-                          variant="secondary"
-                          className="bg-color-1/20 text-color-1 border-color-1/30 text-xs"
-                        >
-                          {step.status}
-                        </Badge>
-                      </div>
-                      <h3 className="text-xl font-bold text-n-1 group-hover:text-color-1 transition-colors">
-                        {step.title}
-                      </h3>
-                    </div>
-                  </div>
-                </AccordionTrigger>
+              {/* Title & Subtitle */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-n-1 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-color-1 font-medium text-sm">
+                  {step.subtitle}
+                </p>
+              </div>
 
-                <AccordionContent className="px-4 sm:px-6 md:px-8 pb-5 sm:pb-6">
-                  <div className="space-y-4">
-                    {/* Description */}
-                    <p className="text-n-3 text-left leading-relaxed">
-                      {step.description}
+              {/* Bullet Points */}
+              <ul className="space-y-4">
+                {step.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-n-4 mt-2 shrink-0 group-hover:bg-color-1 transition-colors duration-300" />
+                    <p className="text-n-3 text-sm leading-relaxed">
+                      {point}
                     </p>
-
-                    {/* Phase Outcome */}
-                    <div className="bg-n-7 rounded-lg p-4 border-l-4 border-color-1">
-                      <div className="flex items-start gap-2 mb-2">
-                        <CheckCircle className="w-4 h-4 text-color-1 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm font-semibold text-color-1 uppercase tracking-wide">
-                          {t("labels.phaseOutcome")}
-                        </span>
-                      </div>
-                      <p className="text-base font-medium text-n-1 leading-relaxed">
-                        {step.outcome}
-                      </p>
-                    </div>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
-
       </div>
     </Section>
   );

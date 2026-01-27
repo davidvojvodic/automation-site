@@ -16,49 +16,54 @@
       "bookACall": "Book a Call"
     },
     "implementation": {
-      "tag": "Proven Process",
-      "title": "Our Delivery Process",
-      "description": "Systematic approach that ensures your automation projects deliver results without disrupting your business",
+      "tag": "How We Work",
+      "title": "A methodical, low-risk approach",
+      "description": "A methodical, low-risk approach that starts with understanding your business - not jumping straight into tools.",
       "phase1": {
-        "title": "Discovery & Risk Assessment",
-        "description": "Comprehensive analysis of your current systems and workflows with no commitment required. We identify automation opportunities and assess risks before any implementation begins.",
-        "outcome": "Clear roadmap with identified opportunities and protected investments"
+        "title": "Discover & Diagnose",
+        "subtitle": "Understand first, automate second.",
+        "points": {
+          "0": "We learn how your business actually works: goals, constraints, handoffs, and what a 'win' looks like.",
+          "1": "We map your tech stack and where data lives: CRMs, inboxes, spreadsheets, internal tools.",
+          "2": "We audit processes to find real bottlenecks and decide what should and shouldn't be automated."
+        }
       },
       "phase2": {
-        "title": "Strategic Planning & Architecture",
-        "description": "Design the technical architecture and implementation strategy based on discovery findings. We create detailed blueprints with fallback plans before any development begins.",
-        "outcome": "Technical architecture blueprint with defined success metrics"
+        "title": "Design, Build & Validate",
+        "subtitle": "Custom solutions, tested before launch.",
+        "points": {
+          "0": "We prioritize high-impact opportunities and decide where AI helps, and where it doesn't.",
+          "1": "We design and build custom workflows, test different approaches on real data, and explain our choices in plain language.",
+          "2": "We run evaluations in a real-world environment before full rollout."
+        }
       },
       "phase3": {
-        "title": "Controlled Implementation & Testing",
-        "description": "Build and deploy automation systems in a controlled environment with comprehensive testing. We implement with continuous monitoring and rollback capabilities to ensure zero business disruption.",
-        "outcome": "Fully functional automation systems validated through testing"
-      },
-      "phase4": {
-        "title": "Launch & Team Training",
-        "description": "Full system deployment with comprehensive team training and knowledge transfer. Your team becomes autonomous with the new automation systems through hands-on training and documentation.",
-        "outcome": "Fully operational automation system with confident, trained team"
+        "title": "Launch, Monitor & Optimize",
+        "subtitle": "Continuous improvement, not a one-off project.",
+        "points": {
+          "0": "We execute a controlled rollout to ensure immediate stability and zero disruption.",
+          "1": "We monitor performance, collect feedback from your team and customers, and fix issues quickly.",
+          "2": "We continuously refine prompts, logic, and models so the system improves as your business evolves."
+        }
       },
       "faq": {
         "question1": "How long does automation implementation take?",
-        "answer1": "Our implementation process takes 1-4 weeks depending on complexity. Phase 1 (Discovery) takes 3-5 days, Phase 2 (Planning) 5-7 days, Phase 3 (Implementation) 1-2 weeks, Phase 4 (Training) 2-3 days.",
+        "answer1": "Our implementation process takes 1-4 weeks depending on complexity. Phase 1 (Discovery) takes 3-5 days, Phase 2 (Build & Validate) 1-2 weeks, and Phase 3 (Launch & Optimize) ensures a smooth rollout.",
         "question2": "Can automation disrupt our current business processes?",
         "answer2": "No, our approach ensures zero business disruption. We implement with controlled environments, continuous monitoring, and rollback capabilities. Your current processes remain active during implementation.",
         "question3": "What are typical time savings with automation?",
         "answer3": "Our clients typically save 15+ hours weekly per team. Lead generation automation can save 20+ hours weekly, sales processes 10-15 hours, financial processes 8-12 hours weekly.",
         "question4": "Do we need technical knowledge to manage automations?",
-        "answer4": "No, we design user-friendly systems. In Phase 4, we provide comprehensive team training and documentation. Your team becomes autonomous with the new automation systems.",
+        "answer4": "No, we design user-friendly systems. In Phase 3, we provide comprehensive team training and documentation. Your team becomes autonomous with the new automation systems.",
         "question5": "What technologies do you use for automation?",
         "answer5": "We use n8n (leading automation platform), OpenAI GPT-4, Claude 3, API integrations, and specialized tools like HubSpot, Salesforce, LinkedIn API, and other business applications.",
         "question6": "Do you provide post-implementation support?",
         "answer6": "Yes, we offer various support levels: from email support to dedicated SLAs and quarterly strategy reviews. We also include performance monitoring and optimization sprints."
       },
       "labels": {
-        "phase1": "Phase 1",
-        "phase2": "Phase 2",
-        "phase3": "Phase 3",
-        "phase4": "Phase 4",
-        "phaseOutcome": "Phase Outcome"
+        "phase1": "01",
+        "phase2": "02",
+        "phase3": "03"
       }
     },
     "collaboration": {

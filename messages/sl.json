@@ -16,28 +16,35 @@
       "bookACall": "Rezervirajte Klic"
     },
     "implementation": {
-      "tag": "Preverjen Pristop",
-      "title": "Kako Poteka Naše Delo",
-      "description": "Sistematičen pristop, ki zagotavlja, da vaši avtomatizacijski projekti dosegajo rezultate brez motenja vašega poslovanja",
+      "tag": "Naš Pristop",
+      "title": "Metodičen proces z nizkim tveganjem",
+      "description": "Premišljen in varen pristop, ki temelji na razumevanju vašega poslovanja, ne zgolj na implementaciji orodij.",
       "phase1": {
-        "title": "Odkrivanje in Ocena Tveganj",
-        "description": "Celovita analiza vaših trenutnih sistemov in delovnih tokov brez obveznosti. Identificiramo priložnosti za avtomatizacijo in ocenimo tveganja, preden se začne kakršna koli implementacija.",
-        "outcome": "Jasen načrt z identificiranimi priložnostmi in zaščitenimi naložbami"
+        "title": "Analiza in Diagnoza Stanja",
+        "subtitle": "Najprej razumevanje, nato avtomatizacija.",
+        "points": {
+          "0": "Preučimo dejanske delovne procese vašega podjetja: cilje, omejitve, pretok informacij in ključne kazalnike uspeha.",
+          "1": "Evidentiramo vašo informacijsko infrastrukturo in podatkovne vire: CRM, e-poštne sisteme, preglednice in interna orodja.",
+          "2": "Izvedemo revizijo procesov, identificiramo neučinkovitosti ter določimo, kateri postopki so primerni za avtomatizacijo."
+        }
       },
       "phase2": {
-        "title": "Strateško Načrtovanje in Arhitektura",
-        "description": "Oblikujemo tehnično arhitekturo in implementacijsko strategijo na podlagi ugotovitev iz odkrivanja. Ustvarimo podrobne načrte z rezervnimi rešitvami, preden se začne kakršen koli razvoj.",
-        "outcome": "Načrt tehnične arhitekture z definiranimi merili uspeha"
+        "title": "Načrtovanje, Razvoj in Validacija",
+        "subtitle": "Rešitve po meri, preizkušene pred zagonom.",
+        "points": {
+          "0": "Določimo prioritete z največjim poslovnim učinkom in jasno razmejimo področja, kjer AI prinaša dodano vrednost.",
+          "1": "Načrtujemo in razvijemo prilagojene delovne tokove, testiramo rešitve na realnih podatkih in utemeljimo naše pristope v razumljivem jeziku.",
+          "2": "Pred končno implementacijo izvajamo obsežna testiranja v simuliranem realnem okolju."
+        }
       },
       "phase3": {
-        "title": "Nadzorovana Implementacija in Testiranje",
-        "description": "Gradimo in vzpostavimo avtomatizacijske sisteme v nadzorovanem okolju s celovitim testiranjem. Implementiramo s stalnim nadzorom in zmožnostmi vrnitve za zagotovitev ničelnih motenj poslovanja.",
-        "outcome": "Popolnoma funkcionalni avtomatizacijski sistemi, preverjeni s testiranjem"
-      },
-      "phase4": {
-        "title": "Zagon in Usposabljanje Ekipe",
-        "description": "Popolna uvedba sistema s celovitim usposabljanjem ekipe in prenosom znanja. Vaša ekipa postane samostojna pri upravljanju novih avtomatizacijskih sistemov z praktičnim usposabljanjem in dokumentacijo.",
-        "outcome": "Popolnoma operativen avtomatizacijski sistem s samozavestno, usposobljeno ekipo"
+        "title": "Zagon, Spremljanje in Optimizacija",
+        "subtitle": "Stalne izboljšave, ne le enkraten projekt.",
+        "points": {
+          "0": "Izvedemo nadzorovan zagon, ki zagotavlja takojšnjo stabilnost in nemoteno delovanje.",
+          "1": "Izvajamo nadzor delovanja, zbiramo povratne informacije uporabnikov in strank ter proaktivno rešujemo morebitne izzive.",
+          "2": "Kontinuirano izboljšujemo navodila (prompte), logiko in modele, da sistem raste skladno z razvojem vašega poslovanja."
+        }
       },
       "faq": {
         "question1": "Kako dolgo traja implementacija avtomatizacije?",
@@ -54,11 +61,9 @@
         "answer6": "Da, nudimo različne nivoje podpore: od e-poštne podpore do namenskih SLA in četrtletnih strateških pregledov. Vključujemo tudi spremljanje uspešnosti in optimizacijske sprinte."
       },
       "labels": {
-        "phase1": "Faza 1",
-        "phase2": "Faza 2",
-        "phase3": "Faza 3",
-        "phase4": "Faza 4",
-        "phaseOutcome": "Izid Faze"
+        "phase1": "01",
+        "phase2": "02",
+        "phase3": "03"
       }
     },
     "collaboration": {
