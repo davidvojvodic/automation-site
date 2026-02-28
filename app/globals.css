@@ -6,6 +6,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -23,6 +24,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -34,6 +36,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -47,6 +50,7 @@
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -58,6 +62,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -69,6 +74,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -76,29 +82,29 @@
 }
 
 .animate-hero-title {
-  animation: hero-title 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: hero-title 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 .animate-hero-subtitle {
-  animation: hero-subtitle 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: hero-subtitle 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 /* .animate-hero-curve no longer needed - HeroCurve component handles its own animation */
 
 .animate-hero-description {
-  animation: hero-description 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: hero-description 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 .animate-hero-cta {
-  animation: hero-cta 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: hero-cta 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
 .animate-hero-logos {
-  animation: hero-logos 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: hero-logos 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
@@ -108,6 +114,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -119,6 +126,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -130,6 +138,7 @@
     opacity: 0;
     transform: translateY(15px) scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -141,6 +150,7 @@
     opacity: 0;
     transform: translateY(40px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -152,6 +162,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -191,6 +202,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -202,6 +214,7 @@
     opacity: 0;
     transform: scaleX(0);
   }
+
   to {
     opacity: 1;
     transform: scaleX(1);
@@ -213,6 +226,7 @@
     opacity: 0;
     transform: translateY(40px) scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -224,6 +238,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -257,6 +272,7 @@
     height: 0;
     opacity: 0;
   }
+
   to {
     height: var(--radix-accordion-content-height);
     opacity: 1;
@@ -268,6 +284,7 @@
     height: var(--radix-accordion-content-height);
     opacity: 1;
   }
+
   to {
     height: 0;
     opacity: 0;
@@ -288,6 +305,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -299,6 +317,7 @@
     opacity: 0;
     transform: translateY(40px) scale(0.98);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -310,6 +329,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -321,6 +341,7 @@
     opacity: 0;
     transform: translateY(30px) scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -332,6 +353,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -369,6 +391,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -379,12 +402,78 @@
   animation: fade-in 0.3s ease-out forwards;
 }
 
+/* Hero Terminal Intro Animation */
+@keyframes hero-terminal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-hero-terminal {
+  animation: hero-terminal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hero Terminal Equalizer Animation */
+@keyframes equalizer {
+
+  0%,
+  100% {
+    height: 30%;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+/* Tab sliding animations */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
 /* Collapsible animations for service cards */
 @keyframes slideDown {
   from {
     height: 0;
     opacity: 0;
   }
+
   to {
     height: var(--radix-collapsible-content-height);
     opacity: 1;
@@ -396,6 +485,7 @@
     height: var(--radix-collapsible-content-height);
     opacity: 1;
   }
+
   to {
     height: 0;
     opacity: 0;
@@ -412,6 +502,7 @@
 
 /* Reduced Motion Support - Respect user preferences */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -580,6 +671,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-sans bg-n-8 text-n-1 text-base;
   }
@@ -653,51 +745,51 @@
   .container {
     @apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-[3.75rem] xl:max-w-[87.5rem];
   }
-  
+
   .h1 {
     @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem];
   }
-  
+
   .h2 {
     @apply font-bold text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
   }
-  
+
   .h3 {
     @apply text-[2rem] leading-normal md:text-[2.5rem];
   }
-  
+
   .h4 {
     @apply text-[2rem] leading-normal;
   }
-  
+
   .h5 {
     @apply text-2xl leading-normal;
   }
-  
+
   .h6 {
     @apply font-semibold text-lg leading-8;
   }
-  
+
   .body-1 {
     @apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8;
   }
-  
+
   .body-2 {
     @apply font-light text-[0.875rem] leading-6 md:text-base;
   }
-  
+
   .caption {
     @apply text-sm;
   }
-  
+
   .tagline {
     @apply font-grotesk font-light text-xs tracking-[.15em] uppercase;
   }
-  
+
   .quote {
     @apply font-code text-lg leading-normal;
   }
-  
+
   .button {
     @apply font-code text-xs font-bold uppercase tracking-wider;
   }

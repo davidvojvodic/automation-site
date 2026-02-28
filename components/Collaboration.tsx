@@ -23,13 +23,14 @@ export interface CollabAppItem {
 
 export interface CollaborationProps {
   className?: string;
+  crosses?: boolean;
 }
 
-export function Collaboration({ className }: CollaborationProps) {
+export function Collaboration({ className, crosses }: CollaborationProps) {
   const t = useTranslations("HomePage.collaboration");
 
   return (
-    <Section className={cn(className)}>
+    <Section className={cn(className)} crosses={crosses}>
       <div className={cn("container md:flex md:flex-col lg:flex-row md:items-center lg:items-start")}>
         <div className="max-w-[45rem]">
           <h2 className="font-bold text-[1.5rem] leading-[2.25rem] md:text-[1.75rem] md:leading-[2.25rem] lg:text-[2rem] lg:leading-[3rem] xl:text-[2.5rem] xl:leading-tight mb-4 sm:mb-6 md:mb-8">

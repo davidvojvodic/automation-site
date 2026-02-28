@@ -21,7 +21,7 @@ export default async function Home({
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header locale={locale} />
         <Hero />
-        <Collaboration />
+        <Collaboration crosses />
         <AIServices />
         <WebsiteBundles />
         <Pricing />

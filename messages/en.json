@@ -1,11 +1,43 @@
 {
   "HomePage": {
     "hero": {
-      "title": "Automate Your Business",
-      "subtitle": "with Intelligent AI Systems",
+      "title": "Your AI partner",
+      "subtitle": "for the next decade",
       "description": "While your competitors drown in busywork, you'll dominate with intelligent AI systems. We build intelligent business ecosystems that outthink, outwork, and outperform manual operations.",
       "cta": "Get Your Free Automation Audit",
       "generating": "Building automated workflow..."
+    },
+    "terminal": {
+      "phase1": {
+        "title": "Agent Reasoning in Progress",
+        "step0": "Context propagation complete",
+        "step1": "Inter-agent communication established",
+        "step2": "Parallel LLM tool calls complete",
+        "step3": "Retrieval-augmented reasoning initiated",
+        "step4": "Constraint checks passed",
+        "step5": "Verifying policy alignment",
+        "progress": "Automation Progress",
+        "statusVerified": "Policy alignment verified",
+        "statusExpanding": "Reasoning depth: expanding"
+      },
+      "phase2": {
+        "title": "Human-in-the-Loop Review",
+        "step0": "AI recommendations generated",
+        "step1": "Compiling decision trace",
+        "step2": "Attaching explainability report",
+        "confidence": "Confidence Threshold",
+        "statusExceeds": "Exceeds deployment criteria",
+        "statusEvaluating": "Evaluating certainty..."
+      },
+      "phase3": {
+        "title": "Autonomous Execution Complete",
+        "step0": "Actions executed across systems",
+        "step1": "Feedback loop established",
+        "step2": "Enabling continuous optimization",
+        "queued": "Actions Queued",
+        "status": "Status",
+        "statusLive": "AI Live"
+      }
     },
     "navigation": {
       "services": "Services",
@@ -227,56 +259,105 @@
         "multiSystem": "Multi-System Integration",
         "enterpriseScale": "Enterprise Scalability"
       },
-      "leadGeneration": {
-        "title": "Lead Generation AI",
-        "subtitle": "Automated prospecting and qualification",
-        "description": "Automated prospect identification and qualification systems using multi-source data enrichment and AI-powered outreach workflows.",
-        "outcome": "Consistent qualified prospects",
-        "outcomeShort": "New opportunities daily, zero manual work",
-        "badge": "Lead Gen",
+      "disclaimer": "Results based on client engagements. Individual outcomes may vary based on scope and implementation.",
+      "salesAutomation": {
+        "title": "Sales acceleration",
+        "subtitle": "Close deals faster with AI",
+        "description": "Accelerate deal cycles with AI-powered lead scoring, automated outreach, and intelligent forecasting that helps your team focus on the opportunities that matter most.",
+        "outcome": "Streamlined sales pipeline",
+        "outcomeShort": "Close deals faster",
+        "badge": "Sales",
         "benefits": {
-          "0": "Finds contacts matching your criteria 24/7",
-          "1": "Scores and ranks by purchase likelihood",
-          "2": "Adds to CRM and prepares for your call"
+          "0": "Lead scoring & prioritization",
+          "1": "Automated outreach sequences",
+          "2": "Pipeline forecasting",
+          "3": "Conversation intelligence"
         },
-        "capabilities": {
-          "0": "Multi-platform data aggregation and enrichment",
-          "1": "AI-powered prospect qualification scoring",
-          "2": "Personalized outreach campaign orchestration",
-          "3": "Contact enrichment with engagement signals",
-          "4": "Automated contact sequencing workflows"
-        },
-        "applications": {
-          "0": "B2B prospecting",
-          "1": "Lead qualification",
-          "2": "Sales outreach",
-          "3": "CRM integration"
+        "metrics": {
+          "value1": "35%",
+          "label1": "increase in qualified leads",
+          "value2": "28%",
+          "label2": "faster deal cycles"
         }
       },
-      "salesAutomation": {
-        "title": "Sales Automation",
-        "subtitle": "AI proposals and automated follow-ups",
-        "description": "Complete sales process automation with AI-powered proposal generation, lead scoring, and CRM workflows.",
-        "outcome": "Streamlined sales pipeline",
-        "outcomeShort": "Close deals faster, less admin work",
-        "badge": "Sales AI",
+      "marketingAutomation": {
+        "title": "Marketing intelligence",
+        "subtitle": "Personalize campaigns at scale",
+        "description": "Create personalized campaigns at scale with AI that understands your audience, optimizes content performance, and turns data into actionable insights.",
+        "outcome": "Brand-consistent marketing at scale",
+        "outcomeShort": "More content, less writing",
+        "badge": "Marketing",
         "benefits": {
-          "0": "Generates proposals from your templates in minutes",
-          "1": "Sends reminders to clients and you at the right time",
-          "2": "Logs all interactions and updates your CRM"
+          "0": "Content personalization",
+          "1": "Campaign optimization",
+          "2": "Audience segmentation",
+          "3": "Performance analytics"
         },
-        "capabilities": {
-          "0": "Intelligent proposal generation with dynamic pricing",
-          "1": "Advanced lead scoring models with automation",
-          "2": "Automated follow-up orchestration workflows",
-          "3": "Sales asset generation and optimization",
-          "4": "Seamless CRM integration and synchronization"
+        "metrics": {
+          "value1": "3x",
+          "label1": "content output",
+          "value2": "45%",
+          "label2": "improvement in engagement"
+        }
+      },
+      "customerSupport": {
+        "title": "Customer support",
+        "subtitle": "Resolve issues faster",
+        "description": "Resolve issues faster with intelligent routing, automated responses for common queries, and AI assistants that empower your support team to deliver exceptional service.",
+        "outcome": "24/7 intelligent customer support",
+        "outcomeShort": "Instant responses, happy customers",
+        "badge": "Support",
+        "benefits": {
+          "0": "Intelligent ticket routing",
+          "1": "Automated response handling",
+          "2": "Knowledge base AI",
+          "3": "Sentiment analysis"
         },
-        "applications": {
-          "0": "Proposal automation",
-          "1": "Pipeline management",
-          "2": "CRM workflows",
-          "3": "Sales analytics"
+        "metrics": {
+          "value1": "60%",
+          "label1": "reduction in response time",
+          "value2": "40%",
+          "label2": "increase in CSAT scores"
+        }
+      },
+      "operations": {
+        "title": "Operations optimization",
+        "subtitle": "Streamline every workflow",
+        "description": "Streamline workflows and eliminate bottlenecks with process automation, intelligent document handling, and systems that adapt to your business needs.",
+        "outcome": "Streamlined daily operations",
+        "outcomeShort": "Do more with less",
+        "badge": "Operations",
+        "benefits": {
+          "0": "Process automation",
+          "1": "Document processing",
+          "2": "Workflow orchestration",
+          "3": "Resource optimization"
+        },
+        "metrics": {
+          "value1": "70%",
+          "label1": "reduction in manual tasks",
+          "value2": "50%",
+          "label2": "faster processing times"
+        }
+      },
+      "finance": {
+        "title": "Finance automation",
+        "subtitle": "Close faster, forecast better",
+        "description": "Automate reconciliation, detect anomalies, and generate insights that help finance teams close faster and make better strategic decisions.",
+        "outcome": "Accurate, real-time financials",
+        "outcomeShort": "Close books faster",
+        "badge": "Finance",
+        "benefits": {
+          "0": "Automated reconciliation",
+          "1": "Anomaly detection",
+          "2": "Forecasting & planning",
+          "3": "Compliance monitoring"
+        },
+        "metrics": {
+          "value1": "80%",
+          "label1": "faster month-end close",
+          "value2": "95%",
+          "label2": "accuracy in forecasting"
         }
       },
       "recruitment": {
@@ -285,109 +366,18 @@
         "description": "AI-powered CV parsing and candidate scoring with automated job posting across multiple platforms.",
         "outcome": "Streamlined recruitment pipeline",
         "outcomeShort": "Faster hiring, better candidates",
-        "badge": "HR Tech",
+        "badge": "HR",
         "benefits": {
           "0": "Parses CVs and scores candidate fit",
           "1": "Posts to multiple job platforms at once",
-          "2": "Coordinates interview times with your calendar"
+          "2": "Coordinates interview times with your calendar",
+          "3": "Automated candidate communications"
         },
-        "capabilities": {
-          "0": "AI-powered CV parsing and candidate data extraction",
-          "1": "Automated candidate scoring and ranking algorithms",
-          "2": "Multi-platform job posting automation",
-          "3": "Interview scheduling and calendar coordination",
-          "4": "Automated candidate communication sequences"
-        },
-        "applications": {
-          "0": "CV processing automation",
-          "1": "Candidate scoring systems",
-          "2": "Interview scheduling",
-          "3": "Multi-platform recruitment"
-        }
-      },
-      "customerSupport": {
-        "title": "Support AI",
-        "subtitle": "24/7 Multilingual AI Support",
-        "description": "Intelligent multi-channel support automation handling inquiries via voice, chat, email, and SMS.",
-        "outcome": "24/7 intelligent customer support",
-        "outcomeShort": "Instant responses, happy customers",
-        "badge": "Support",
-        "benefits": {
-          "0": "Answers questions 24/7 across all channels",
-          "1": "Resolves common issues without human help",
-          "2": "Escalates complex cases with full context"
-        },
-        "capabilities": {
-          "0": "Categorize customer conversations and preferences",
-          "1": "Handle multi-channel inquiries (voice, chat, email, SMS)",
-          "2": "Natural conversation processing with multilingual support",
-          "3": "Intelligent escalation and live call transfer",
-          "4": "Appointment scheduling and calendar automation",
-          "5": "Real-time CRM updates",
-          "6": "Automated routing to appropriate team members"
-        },
-        "applications": {
-          "0": "24/7 Customer support",
-          "1": "Multi-channel service",
-          "2": "Call routing",
-          "3": "Support automation"
-        }
-      },
-      "marketingAutomation": {
-        "title": "Marketing AI",
-        "subtitle": "AI content and multi-channel distribution",
-        "description": "Complete marketing automation from content creation to campaign management and performance tracking.",
-        "outcome": "Brand-consistent marketing at scale",
-        "outcomeShort": "More content, less writing",
-        "badge": "Marketing",
-        "benefits": {
-          "0": "Writes content in your tone and style",
-          "1": "Publishes to all channels on schedule",
-          "2": "Tracks performance and suggests improvements"
-        },
-        "capabilities": {
-          "0": "AI-driven content creation with brand consistency",
-          "1": "24/7 industry and competitor research automation",
-          "2": "Multi-channel campaign performance tracking",
-          "3": "Social media DM automation and engagement",
-          "4": "Automated content calendar management",
-          "5": "SEO optimization and keyword integration",
-          "6": "Multi-channel distribution automation",
-          "7": "Campaign report generation"
-        },
-        "applications": {
-          "0": "Content creation",
-          "1": "Campaign management",
-          "2": "Social automation",
-          "3": "Market research"
-        }
-      },
-      "executiveAssistant": {
-        "title": "Executive Assistant AI",
-        "subtitle": "Calendar, email, and task management",
-        "description": "Your intelligent executive assistant that manages daily operations, coordinates schedules, and keeps you focused on strategic work.",
-        "outcome": "Reclaim 15+ hours per week",
-        "outcomeShort": "More time for strategic work",
-        "badge": "Personal AI",
-        "benefits": {
-          "0": "Coordinates meetings and resolves calendar conflicts",
-          "1": "Prioritizes emails and drafts responses",
-          "2": "Creates daily summaries and reminds you of deadlines"
-        },
-        "capabilities": {
-          "0": "Customized daily agenda with tasks and deadlines",
-          "1": "Intelligent inbox management and email prioritization",
-          "2": "Meeting coordination with internal and external contacts",
-          "3": "Post-meeting task automation and follow-ups",
-          "4": "Daily, weekly, and monthly productivity reports",
-          "5": "Multi-channel communication management",
-          "6": "On-demand data retrieval across your tech stack"
-        },
-        "applications": {
-          "0": "Personal productivity",
-          "1": "Schedule management",
-          "2": "Communication coordination",
-          "3": "Task automation"
+        "metrics": {
+          "value1": "60%",
+          "label1": "less time spent screening CVs",
+          "value2": "3x",
+          "label2": "faster time-to-hire"
         }
       },
       "automationDashboard": {
