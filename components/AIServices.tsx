@@ -155,8 +155,44 @@ const AIServices = ({ className }: AIServicesProps) => {
   const [activeTabId, setActiveTabId] = useState(services[0].id);
   const currentIndex = services.findIndex((s) => s.id === activeTabId);
 
-  const handleTabClick = (id: string, index: number) => {
+  // Swipe gesture states
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentIndex < services.length - 1) {
+      handleNext();
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      handlePrev();
+    }
+  };
+
+  const handleTabClick = (id: string, index: number, event: React.MouseEvent<HTMLButtonElement>) => {
     setActiveTabId(id);
+
+    // Smoothly scroll the clicked tab into the center of the scrollable container
+    const target = event.currentTarget;
+    const container = target.parentElement?.parentElement;
+    if (container) {
+      const scrollLeft = target.offsetLeft - container.clientWidth / 2 + target.clientWidth / 2;
+      container.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    }
   };
 
   const handleNext = () => {
@@ -198,7 +234,7 @@ const AIServices = ({ className }: AIServicesProps) => {
     return {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: locale === "sl" ? "AI Avtomatizacijski sistemi" : "AI Automation Systems",
+      name: locale === "sl" ? "AI Sistemi" : "AI Systems",
       description: locale === "sl"
         ? "Celovite rešitve za avtomatizacijo poslovnih procesov z AI tehnologijo"
         : "Comprehensive AI-powered business process automation solutions",
@@ -267,7 +303,7 @@ const AIServices = ({ className }: AIServicesProps) => {
                   return (
                     <button
                       key={service.id}
-                      onClick={() => handleTabClick(service.id, index)}
+                      onClick={(e) => handleTabClick(service.id, index, e)}
                       className={cn(
                         "relative pb-4 px-2 sm:px-4 text-sm sm:text-base font-medium transition-colors whitespace-nowrap outline-none",
                         isActive
@@ -318,7 +354,12 @@ const AIServices = ({ className }: AIServicesProps) => {
           </div>
 
           {/* 2-Column Content Carousel (Inspired by True Horizon) */}
-          <div className="bg-n-8 border border-n-6 rounded-none relative overflow-hidden group">
+          <div
+            className="bg-n-8 border border-n-6 rounded-none relative overflow-hidden group"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
 
             {/* Dark Mode Glow effects - Static Background */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-color-1/10 via-color-2/5 to-transparent opacity-50 blur-3xl rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none z-0" />
