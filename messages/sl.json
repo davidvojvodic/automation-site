@@ -40,9 +40,9 @@
       }
     },
     "navigation": {
-      "services": "Storitve",
+      "services": "Rešitve",
       "packages": "Spletni Razvoj",
-      "howItWorks": "Kako deluje",
+      "howItWorks": "Kako delamo",
       "contact": "Kontakt",
       "getStarted": "Začnite",
       "bookACall": "Rezervirajte Klic"
@@ -455,7 +455,7 @@
       },
       "partner": {
         "title": "Partner za Avtomatizacijo",
-        "price": "€4,000/mesec",
+        "price": "€4,500/mesec",
         "priceSubtext": "Brez dolgoročnih obveznosti",
         "description": "Vaša predana ekipa za razvoj avtomatizacij. Nenehna optimizacija procesov, prednostna podpora in stalne izboljšave. Partnerstvo od meseca do meseca, ki se prilagaja vašim potrebam.",
         "badge": "Najboljša Vrednost",

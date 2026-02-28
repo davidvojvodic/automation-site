@@ -40,9 +40,9 @@
       }
     },
     "navigation": {
-      "services": "Services",
+      "services": "Solutions",
       "packages": "Web Development",
-      "howItWorks": "How It Works",
+      "howItWorks": "How We Work",
       "contact": "Contact",
       "getStarted": "Get Started",
       "bookACall": "Book a Call"
@@ -451,7 +451,7 @@
       },
       "partner": {
         "title": "Automation Partner",
-        "price": "€4,000/month",
+        "price": "€4,500/month",
         "priceSubtext": "No long-term commitment required",
         "description": "Your dedicated automation development team. Continuous workflow optimization, priority support, and ongoing improvements. Month-to-month partnership that scales with your needs.",
         "badge": "Best Value",
