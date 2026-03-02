@@ -413,14 +413,14 @@
       }
     },
     "pricing": {
-      "tag": "Transparent Pricing",
+      "tag": "Engagement Models",
       "title": "Flexible automation services for every stage of growth",
       "subtitle": "Choose consulting, project-based delivery, or ongoing partnership - all with transparent pricing",
       "labels": {
         "whatsIncluded": "What's included"
       },
       "consulting": {
-        "title": "Automation Consulting",
+        "title": "Strategy & Advisory",
         "price": "€120/hour",
         "priceSubtext": "Bulk packages available",
         "description": "Expert guidance for your automation strategy. Perfect for one-off consultations, troubleshooting existing workflows, or getting professional advice on your automation roadmap.",
@@ -435,12 +435,12 @@
         }
       },
       "customProject": {
-        "title": "Custom Automation Project",
+        "title": "Custom Implementation",
         "price": "Get Quote",
         "priceSubtext": "Tailored to your project scope",
         "description": "Complete automation project delivery from scoping to deployment. We handle everything - planning, development, integration, testing, and launch of your custom automation systems.",
         "badge": "Most Popular",
-        "cta": "Get Custom Quote",
+        "cta": "Discuss Project",
         "features": {
           "0": "Full project scoping and planning",
           "1": "Custom workflow development and integration",
@@ -450,9 +450,9 @@
         }
       },
       "partner": {
-        "title": "Automation Partner",
-        "price": "€4,500/month",
-        "priceSubtext": "No long-term commitment required",
+        "title": "Growth Partner",
+        "price": "€4,500/mo",
+        "priceSubtext": "Starting price • No long-term commitment required",
         "description": "Your dedicated automation development team. Continuous workflow optimization, priority support, and ongoing improvements. Month-to-month partnership that scales with your needs.",
         "badge": "Best Value",
         "cta": "Become a Partner",
