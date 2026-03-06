@@ -37,8 +37,15 @@ function Hero(props: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-10 sm:mb-16 md:mb-20 lg:mb-[6.25rem]">
           {/* Left Column: Text & CTA */}
           <div className="relative z-1 text-left">
-            {/* SEO-optimized Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium mb-4 sm:mb-6 animate-hero-title leading-tight">
+            {/* SEO-optimized Main Title (Visually Hidden) */}
+            <h1 className="sr-only">
+              {locale === "sl"
+                ? "Enterprise AI Avtomatizacija in Spletni Razvoj"
+                : "Enterprise AI Automation & Web Development Services"}
+            </h1>
+
+            {/* Visual Title */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-medium mb-4 sm:mb-6 animate-hero-title leading-tight">
               <span className="inline-block" style={{ animationDelay: "0ms" }}>
                 {t("title")}
                 {locale === "sl" && (
@@ -59,7 +66,7 @@ function Hero(props: HeroProps) {
                   delay={200}
                 />
               </span>
-            </h1>
+            </h2>
 
             {/* Animated Description */}
             <p
