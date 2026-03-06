@@ -300,6 +300,26 @@ export default async function LocaleLayout({
         },
       },
       {
+        "@type": "Organization",
+        "@id": "https://flowko.io/#organization",
+        name: "Flowko",
+        url: "https://flowko.io",
+        logo: "https://flowko.io/favicon-512x512.png",
+        sameAs: [
+          "https://linkedin.com/company/flowko",
+          "https://twitter.com/flowko_io",
+        ],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: "info@flowko.io",
+            contactType: "customer service",
+            areaServed: ["SI", "AT", "HR"],
+            availableLanguage: ["en", "sl", "de", "hr"],
+          },
+        ],
+      },
+      {
         "@type": "Service",
         name: locale === "sl" ? "Strategija & Svetovanje" : "Strategy & Advisory",
         description: locale === "sl" ? "Strokovno vodenje za vašo strategijo avtomatizacije." : "Expert guidance for your automation strategy.",
