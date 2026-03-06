@@ -2,10 +2,10 @@
   "HomePage": {
     "hero": {
       "title": "Vaš AI partner",
-      "subtitle": "za naslednje desetletje",
-      "description": "Medtem ko se vaša konkurenca utaplja v rutinskih opravilih, boste vi dominirali z inteligentnimi AI sistemi. Gradimo pametne poslovne ekosisteme, ki premišljeno delujejo, presegajo in prekašajo ročne operacije.",
-      "cta": "Pridobite Brezplačno Oceno Avtomatizacije",
-      "generating": "Ustvarjanje avtomatiziranega delovnega toka..."
+      "subtitle": "poganja vaš jutri",
+      "description": "Dokler konkurenca izgublja čas z rutino, vi dominirate. Gradimo AI ekosisteme, ki premislijo, prehitijo in prekašajo vsako ročno delo.",
+      "cta": "Brezplačen AI pregled",
+      "generating": "Avtomatizacija v teku..."
     },
     "terminal": {
       "phase1": {
