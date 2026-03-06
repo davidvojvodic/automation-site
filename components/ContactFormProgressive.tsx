@@ -31,7 +31,11 @@ import {
 import { toast } from "sonner";
 import { useMultiStepForm } from "@/hooks/useMultiStepForm";
 import { CheckmarkAnimation } from "./CheckmarkAnimation";
-import Cal from "@calcom/embed-react";
+import dynamic from "next/dynamic";
+
+const Cal = dynamic(() => import("@calcom/embed-react"), {
+  ssr: false,
+});
 
 // Create validation schema with translations
 const createContactFormSchema = (t: (key: string) => string) =>

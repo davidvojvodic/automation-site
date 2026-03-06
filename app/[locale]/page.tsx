@@ -9,6 +9,7 @@ import WebsiteBundles from "@/components/WebsiteBundles";
 import Pricing from "@/components/Pricing";
 import Implementation from "@/components/Implementation";
 import ButtonGradient from "@/public/assets/svg/ButtonGradient";
+import { setRequestLocale } from "next-intl/server";
 
 export default async function Home({
   params,
@@ -16,6 +17,8 @@ export default async function Home({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
