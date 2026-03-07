@@ -98,7 +98,7 @@ import businessIcon from "./bundles/business-icon.svg";
 import serviceIcon from "./bundles/service-icon.svg";
 import portfolioIcon from "./bundles/portfolio-icon.svg";
 
-import webDevAutomation from "./bundles/web-dev-automation.png";
+import webDevAutomation from "./contextual_mockup_1.png";
 
 export {
   flowko,
