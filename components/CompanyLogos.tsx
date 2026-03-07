@@ -13,8 +13,8 @@ function CompanyLogos({ className, ...props }: CompanyLogosProps) {
   const t = useTranslations("HomePage.companyLogos");
 
   return (
-    <div className={cn("", className)} {...props}>
-      <h5 className="tagline mb-6 text-center text-n-1/50">{t("tagline")}</h5>
+    <aside className={cn("py-8 border-y border-n-6/30 bg-n-8/40", className)} aria-label="Trusted companies" {...props}>
+      <h3 className="tagline mb-6 text-center text-n-1/50 uppercase tracking-widest text-sm font-semibold">{t("tagline") || "Trusted By"}</h3>
       <Marquee
         speed={30}
         gradient={true}
@@ -37,7 +37,7 @@ function CompanyLogos({ className, ...props }: CompanyLogosProps) {
           </div>
         ))}
       </Marquee>
-    </div>
+    </aside>
   );
 }
 

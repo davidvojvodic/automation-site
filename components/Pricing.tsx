@@ -99,10 +99,10 @@ const Pricing = ({ className }: PricingProps) => {
                 !tier.popular && "shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
                 // Popular card styling
                 tier.popular &&
-                  "border-color-1/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/60 shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
+                "border-color-1/50 bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/60 shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
                 // Default card hover
                 !tier.popular &&
-                  "bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/40"
+                "bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10 hover:border-color-1/40"
               )}
               style={{ animationDelay: `${300 + index * 150}ms` }}
             >
@@ -151,7 +151,7 @@ const Pricing = ({ className }: PricingProps) => {
                     {tier.price}
                   </div>
                   {tier.priceSubtext && (
-                    <p className="text-sm text-n-4">
+                    <p className="text-sm font-semibold text-n-3">
                       {tier.priceSubtext}
                     </p>
                   )}

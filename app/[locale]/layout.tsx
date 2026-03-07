@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import CookieBanner from "@/components/CookieBanner";
@@ -141,6 +141,10 @@ export async function generateMetadata({
   };
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params,
@@ -149,148 +153,197 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  // Ensure that the incoming locale is valid
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
-  // Generate LocalBusiness structured data
+  // Generate structured data
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://flowko.io",
-    name: "Flowko",
-    alternateName:
-      locale === "sl" ? "Flowko - AI Avtomatizacija" : "Flowko - AI Automation",
-    url: "https://flowko.io",
-    logo: "https://flowko.io/favicon-512x512.png",
-    image: "https://flowko.io/assets/og-image.jpg",
-    description:
-      locale === "sl"
-        ? "Strokovni partner za AI avtomatizacijo ki povečuje prihodke in produktivnost. Dosežite hitrejši ROI z našimi n8n rešitvami."
-        : "Expert AI automation partner that increases revenue and productivity. Achieve faster ROI with our n8n solutions.",
-    foundingDate: "2025",
-    keywords:
-      locale === "sl"
-        ? "povečanje prihodkov, AI avtomatizacija, ROI avtomatizacija, prodajna produktivnost, n8n"
-        : "increase revenue, AI automation, automation ROI, sales productivity, n8n",
-    slogan:
-      locale === "sl"
-        ? "Avtomatizirajte svoje poslovanje z AI"
-        : "Automate Your Business with AI",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Ulica Daneta Šumenjaka 2A",
-      addressLocality: "Murska Sobota",
-      addressRegion: "Pomurska",
-      postalCode: "9000",
-      addressCountry: "SI",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 46.6611,
-      longitude: 16.1697,
-    },
-    contactPoint: [
+    "@graph": [
       {
-        "@type": "ContactPoint",
-        email: "info@flowko.io",
-        contactType: "customer service",
-        areaServed: ["SI", "AT", "HR"],
-        availableLanguage: ["en", "sl", "de", "hr"],
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          opens: "09:00",
-          closes: "17:00",
+        "@type": "LocalBusiness",
+        "@id": "https://flowko.io",
+        name: "Flowko",
+        alternateName:
+          locale === "sl" ? "Flowko - AI Avtomatizacija" : "Flowko - AI Automation",
+        url: "https://flowko.io",
+        logo: "https://flowko.io/favicon-512x512.png",
+        image: "https://flowko.io/assets/og-image.jpg",
+        description:
+          locale === "sl"
+            ? "Enterprise AI avtomatizacija in spletni razvoj za povečanje prihodkov. Inteligentni sistemi namesto ročnega dela."
+            : "Enterprise AI automation and web development to increase revenue. Intelligent systems instead of manual work.",
+        foundingDate: "2026",
+        keywords:
+          locale === "sl"
+            ? "povečanje prihodkov, AI avtomatizacija, ROI avtomatizacija, prodajna produktivnost, n8n"
+            : "increase revenue, AI automation, automation ROI, sales productivity, n8n",
+        slogan:
+          locale === "sl"
+            ? "Vaš partner za novo dobo"
+            : "Your partner for the next era",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Ulica Daneta Šumenjaka 2A",
+          addressLocality: "Murska Sobota",
+          addressRegion: "Pomurska",
+          postalCode: "9000",
+          addressCountry: "SI",
         },
-      },
-    ],
-    sameAs: [
-      "https://linkedin.com/company/flowko",
-      "https://twitter.com/flowko_io",
-    ],
-    areaServed: [
-      {
-        "@type": "Country",
-        name: "Slovenia",
-        alternateName: "SI",
-      },
-      {
-        "@type": "Country",
-        name: "Austria",
-        alternateName: "AT",
-      },
-      {
-        "@type": "Country",
-        name: "Croatia",
-        alternateName: "HR",
-      },
-    ],
-    serviceType:
-      locale === "sl"
-        ? "Avtomatizacija poslovnih procesov"
-        : "Business Process Automation",
-    priceRange: "€€€",
-    currenciesAccepted: "EUR",
-    paymentAccepted: ["Credit Card", "Bank Transfer", "PayPal"],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name:
-        locale === "sl"
-          ? "AI Avtomatizacijske storitve"
-          : "AI Automation Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name:
-              locale === "sl"
-                ? "Generiranje vodilnih strank"
-                : "Lead Generation Automation",
-            description:
-              locale === "sl"
-                ? "Avtomatizirana identifikacija in kvalifikacija perspektiv"
-                : "Automated prospect identification and qualification",
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 46.6611,
+          longitude: 16.1697,
+        },
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: "info@flowko.io",
+            contactType: "customer service",
+            areaServed: ["SI", "AT", "HR"],
+            availableLanguage: ["en", "sl", "de", "hr"],
+            hoursAvailable: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "09:00",
+              closes: "17:00",
+            },
           },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name:
-              locale === "sl"
-                ? "Avtomatizacija prodajnih procesov"
-                : "Sales Process Automation",
-            description:
-              locale === "sl"
-                ? "Popolna avtomatizacija prodajnih procesov z AI"
-                : "Complete sales process automation with AI",
+        ],
+        sameAs: [
+          "https://linkedin.com/company/flowko",
+          "https://twitter.com/flowko_io",
+        ],
+        areaServed: [
+          {
+            "@type": "Country",
+            name: "Slovenia",
+            alternateName: "SI",
           },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: locale === "sl" ? "Glasovni AI agenti" : "Voice AI Agents",
-            description:
-              locale === "sl"
-                ? "24/7 AI glasovni agenti z večjezično podporo"
-                : "24/7 AI voice agents with multilingual support",
+          {
+            "@type": "Country",
+            name: "Austria",
+            alternateName: "AT",
           },
+          {
+            "@type": "Country",
+            name: "Croatia",
+            alternateName: "HR",
+          },
+        ],
+        serviceType:
+          locale === "sl"
+            ? "Avtomatizacija poslovnih procesov"
+            : "Business Process Automation",
+        priceRange: "€€€",
+        currenciesAccepted: "EUR",
+        paymentAccepted: ["Credit Card", "Bank Transfer", "PayPal"],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name:
+            locale === "sl"
+              ? "AI Avtomatizacijske storitve"
+              : "AI Automation Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name:
+                  locale === "sl"
+                    ? "Generiranje vodilnih strank"
+                    : "Lead Generation Automation",
+                description:
+                  locale === "sl"
+                    ? "Avtomatizirana identifikacija in kvalifikacija perspektiv"
+                    : "Automated prospect identification and qualification",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name:
+                  locale === "sl"
+                    ? "Avtomatizacija prodajnih procesov"
+                    : "Sales Process Automation",
+                description:
+                  locale === "sl"
+                    ? "Popolna avtomatizacija prodajnih procesov z AI"
+                    : "Complete sales process automation with AI",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: locale === "sl" ? "Glasovni AI agenti" : "Voice AI Agents",
+                description:
+                  locale === "sl"
+                    ? "24/7 AI glasovni agenti z večjezično podporo"
+                    : "24/7 AI voice agents with multilingual support",
+              },
+            },
+          ],
         },
-      ],
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
-      bestRating: "5",
-      worstRating: "1",
-    },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9",
+          reviewCount: "47",
+          bestRating: "5",
+          worstRating: "1",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://flowko.io/#organization",
+        name: "Flowko",
+        url: "https://flowko.io",
+        logo: "https://flowko.io/favicon-512x512.png",
+        sameAs: [
+          "https://linkedin.com/company/flowko",
+          "https://twitter.com/flowko_io",
+        ],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            email: "info@flowko.io",
+            contactType: "customer service",
+            areaServed: ["SI", "AT", "HR"],
+            availableLanguage: ["en", "sl", "de", "hr"],
+          },
+        ],
+      },
+      {
+        "@type": "Service",
+        name: locale === "sl" ? "Strategija & Svetovanje" : "Strategy & Advisory",
+        description: locale === "sl" ? "Strokovno vodenje za vašo strategijo avtomatizacije." : "Expert guidance for your automation strategy.",
+        provider: {
+          "@id": "https://flowko.io"
+        }
+      },
+      {
+        "@type": "Service",
+        name: locale === "sl" ? "Implementacija Avtomatizacije po Meri" : "Custom Implementation",
+        description: locale === "sl" ? "Celovita izvedba projekta avtomatizacije od načrtovanja do po-testiranja." : "Complete automation project delivery from scoping to deployment.",
+        provider: {
+          "@id": "https://flowko.io"
+        }
+      },
+      {
+        "@type": "Service",
+        name: locale === "sl" ? "Partner za Rast" : "Growth Partner",
+        description: locale === "sl" ? "Vaša predana razvojna ekipa za avtomatizacijo z mesečnim plačilom." : "Your dedicated automation development team with a monthly retainer.",
+        provider: {
+          "@id": "https://flowko.io"
+        }
+      }
+    ]
   };
 
   return (

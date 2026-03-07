@@ -1,132 +1,211 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Section from "./Section";
 import Heading from "./Heading";
 import Button from "./Button";
 
 import {
-  Workflow,
   TrendingUp,
-  Network,
-  Users,
-  GitBranch,
-  Check,
-  CalendarClock,
-  UserSearch,
+  Target,
   Headphones,
-  Megaphone,
+  Workflow,
+  Coins,
+  UserSearch,
+  Check,
+  GitBranch,
+  Network,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations, useLocale } from "next-intl";
+
+// We use exact icons for the services 
+const iconMap = {
+  TrendingUp,
+  Target,
+  Headphones,
+  Workflow,
+  Coins,
+  UserSearch,
+} as const;
+
+type IconName = keyof typeof iconMap;
 
 interface AIServicesProps {
   className?: string;
 }
 
-// Icon mapping - each service gets a UNIQUE icon
-const iconMap = {
-  Users,           // Lead Generation - finding people
-  CalendarClock,   // Executive Assistant - time/scheduling
-  TrendingUp,      // Sales Automation - growth
-  UserSearch,      // Recruitment - finding candidates
-  Headphones,      // Customer Support - support/service
-  Megaphone,       // Marketing - campaigns/outreach
-} as const;
-
-type IconName = keyof typeof iconMap;
-
 const AIServices = ({ className }: AIServicesProps) => {
   const t = useTranslations("HomePage.aiServices");
   const locale = useLocale();
 
-  // All 6 services in unified grid
   const services = [
     {
-      id: "lead-generation",
-      icon: "Users" as IconName,
-      title: t("leadGeneration.title"),
-      subtitle: t("leadGeneration.subtitle"),
-      outcome: t("leadGeneration.outcomeShort"),
-      benefits: [
-        t("leadGeneration.benefits.0"),
-        t("leadGeneration.benefits.1"),
-        t("leadGeneration.benefits.2"),
-      ],
-      badge: t("leadGeneration.badge"),
-      popular: true,
-    },
-    {
-      id: "executive-assistant",
-      icon: "CalendarClock" as IconName,
-      title: t("executiveAssistant.title"),
-      subtitle: t("executiveAssistant.subtitle"),
-      outcome: t("executiveAssistant.outcomeShort"),
-      benefits: [
-        t("executiveAssistant.benefits.0"),
-        t("executiveAssistant.benefits.1"),
-        t("executiveAssistant.benefits.2"),
-      ],
-      badge: t("executiveAssistant.badge"),
-      popular: true,
-    },
-    {
-      id: "sales-automation",
+      id: "salesAutomation",
       icon: "TrendingUp" as IconName,
       title: t("salesAutomation.title"),
+      badge: t("salesAutomation.badge"),
       subtitle: t("salesAutomation.subtitle"),
-      outcome: t("salesAutomation.outcomeShort"),
+      description: t("salesAutomation.description"),
       benefits: [
         t("salesAutomation.benefits.0"),
         t("salesAutomation.benefits.1"),
         t("salesAutomation.benefits.2"),
+        t("salesAutomation.benefits.3"),
       ],
-      badge: t("salesAutomation.badge"),
-      popular: false,
+      metrics: [
+        { value: t("salesAutomation.metrics.value1"), label: t("salesAutomation.metrics.label1") },
+        { value: t("salesAutomation.metrics.value2"), label: t("salesAutomation.metrics.label2") }
+      ]
     },
     {
-      id: "recruitment-automation",
-      icon: "UserSearch" as IconName,
-      title: t("recruitment.title"),
-      subtitle: t("recruitment.subtitle"),
-      outcome: t("recruitment.outcomeShort"),
-      benefits: [
-        t("recruitment.benefits.0"),
-        t("recruitment.benefits.1"),
-        t("recruitment.benefits.2"),
-      ],
-      badge: t("recruitment.badge"),
-      popular: false,
-    },
-    {
-      id: "customer-support",
-      icon: "Headphones" as IconName,
-      title: t("customerSupport.title"),
-      subtitle: t("customerSupport.subtitle"),
-      outcome: t("customerSupport.outcomeShort"),
-      benefits: [
-        t("customerSupport.benefits.0"),
-        t("customerSupport.benefits.1"),
-        t("customerSupport.benefits.2"),
-      ],
-      badge: t("customerSupport.badge"),
-      popular: false,
-    },
-    {
-      id: "marketing-automation",
-      icon: "Megaphone" as IconName,
+      id: "marketingAutomation",
+      icon: "Target" as IconName,
       title: t("marketingAutomation.title"),
+      badge: t("marketingAutomation.badge"),
       subtitle: t("marketingAutomation.subtitle"),
-      outcome: t("marketingAutomation.outcomeShort"),
+      description: t("marketingAutomation.description"),
       benefits: [
         t("marketingAutomation.benefits.0"),
         t("marketingAutomation.benefits.1"),
         t("marketingAutomation.benefits.2"),
+        t("marketingAutomation.benefits.3"),
       ],
-      badge: t("marketingAutomation.badge"),
-      popular: false,
+      metrics: [
+        { value: t("marketingAutomation.metrics.value1"), label: t("marketingAutomation.metrics.label1") },
+        { value: t("marketingAutomation.metrics.value2"), label: t("marketingAutomation.metrics.label2") }
+      ]
+    },
+    {
+      id: "customerSupport",
+      icon: "Headphones" as IconName,
+      title: t("customerSupport.title"),
+      badge: t("customerSupport.badge"),
+      subtitle: t("customerSupport.subtitle"),
+      description: t("customerSupport.description"),
+      benefits: [
+        t("customerSupport.benefits.0"),
+        t("customerSupport.benefits.1"),
+        t("customerSupport.benefits.2"),
+        t("customerSupport.benefits.3"),
+      ],
+      metrics: [
+        { value: t("customerSupport.metrics.value1"), label: t("customerSupport.metrics.label1") },
+        { value: t("customerSupport.metrics.value2"), label: t("customerSupport.metrics.label2") }
+      ]
+    },
+    {
+      id: "operations",
+      icon: "Workflow" as IconName,
+      title: t("operations.title"),
+      badge: t("operations.badge"),
+      subtitle: t("operations.subtitle"),
+      description: t("operations.description"),
+      benefits: [
+        t("operations.benefits.0"),
+        t("operations.benefits.1"),
+        t("operations.benefits.2"),
+        t("operations.benefits.3"),
+      ],
+      metrics: [
+        { value: t("operations.metrics.value1"), label: t("operations.metrics.label1") },
+        { value: t("operations.metrics.value2"), label: t("operations.metrics.label2") }
+      ]
+    },
+    {
+      id: "finance",
+      icon: "Coins" as IconName,
+      title: t("finance.title"),
+      badge: t("finance.badge"),
+      subtitle: t("finance.subtitle"),
+      description: t("finance.description"),
+      benefits: [
+        t("finance.benefits.0"),
+        t("finance.benefits.1"),
+        t("finance.benefits.2"),
+        t("finance.benefits.3"),
+      ],
+      metrics: [
+        { value: t("finance.metrics.value1"), label: t("finance.metrics.label1") },
+        { value: t("finance.metrics.value2"), label: t("finance.metrics.label2") }
+      ]
+    },
+    {
+      id: "recruitment",
+      icon: "UserSearch" as IconName,
+      title: t("recruitment.title"),
+      badge: t("recruitment.badge"),
+      subtitle: t("recruitment.subtitle"),
+      description: t("recruitment.description"),
+      benefits: [
+        t("recruitment.benefits.0"),
+        t("recruitment.benefits.1"),
+        t("recruitment.benefits.2"),
+        t("recruitment.benefits.3"),
+      ],
+      metrics: [
+        { value: t("recruitment.metrics.value1"), label: t("recruitment.metrics.label1") },
+        { value: t("recruitment.metrics.value2"), label: t("recruitment.metrics.label2") }
+      ]
     },
   ];
+
+  const [activeTabId, setActiveTabId] = useState(services[0].id);
+  const currentIndex = services.findIndex((s) => s.id === activeTabId);
+
+  // Swipe gesture states
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentIndex < services.length - 1) {
+      handleNext();
+    }
+    if (isRightSwipe && currentIndex > 0) {
+      handlePrev();
+    }
+  };
+
+  const handleTabClick = (id: string, index: number, event: React.MouseEvent<HTMLButtonElement>) => {
+    setActiveTabId(id);
+
+    // Smoothly scroll the clicked tab into the center of the scrollable container
+    const target = event.currentTarget;
+    const container = target.parentElement?.parentElement;
+    if (container) {
+      const scrollLeft = target.offsetLeft - container.clientWidth / 2 + target.clientWidth / 2;
+      container.scrollTo({ left: scrollLeft, behavior: "smooth" });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < services.length - 1) {
+      setActiveTabId(services[currentIndex + 1].id);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setActiveTabId(services[currentIndex - 1].id);
+    }
+  };
 
   // Generate structured data for services
   const generateServiceStructuredData = () => {
@@ -134,7 +213,7 @@ const AIServices = ({ className }: AIServicesProps) => {
       "@type": "Service",
       "@id": `https://flowko.io/${locale}#${system.id}`,
       name: system.title,
-      description: system.outcome,
+      description: system.description,
       provider: {
         "@type": "Organization",
         name: "Flowko",
@@ -155,7 +234,7 @@ const AIServices = ({ className }: AIServicesProps) => {
     return {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: locale === "sl" ? "AI Avtomatizacijski sistemi" : "AI Automation Systems",
+      name: locale === "sl" ? "AI Sistemi" : "AI Systems",
       description: locale === "sl"
         ? "Celovite rešitve za avtomatizacijo poslovnih procesov z AI tehnologijo"
         : "Comprehensive AI-powered business process automation solutions",
@@ -169,7 +248,7 @@ const AIServices = ({ className }: AIServicesProps) => {
   };
 
   return (
-    <Section crosses className={cn("", className)} id="ai-services">
+    <Section crosses className={cn(className)} id="ai-services">
       {/* Service Structured Data */}
       <script
         type="application/ld+json"
@@ -186,7 +265,7 @@ const AIServices = ({ className }: AIServicesProps) => {
         {/* Value Proposition Pills */}
         <div className="-mx-5 md:-mx-10 lg:-mx-[3.75rem]">
           <div
-            className="px-5 md:px-10 lg:px-[3.75rem] mb-8 sm:mb-12 lg:mb-16 animate-bundle-benefits"
+            className="px-5 md:px-10 lg:px-[3.75rem] mb-12 sm:mb-16 lg:mb-20 animate-bundle-benefits"
             style={{ animationDelay: "300ms" }}
           >
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-4 lg:gap-6">
@@ -210,107 +289,165 @@ const AIServices = ({ className }: AIServicesProps) => {
           </div>
         </div>
 
-        {/* Services Grid - 3x2 Unified Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-8 items-stretch max-w-7xl mx-auto">
-          {services.map((service, index) => {
-            const IconComponent = iconMap[service.icon];
+        {/* Tabbed UI Container */}
+        <div className="max-w-[1200px] mx-auto animate-bundle-card" style={{ animationDelay: "600ms" }}>
 
-            return (
-              <div
-                key={service.id}
-                className={cn(
-                  "relative p-6 sm:p-8 bg-n-8 border border-n-6 rounded-2xl sm:rounded-3xl overflow-hidden h-full flex flex-col",
-                  "hover:-translate-y-1",
-                  "transition-all duration-500 ease-out group",
-                  "animate-bundle-card",
-                  // Default styling with subtle gradient
-                  "bg-gradient-to-br from-color-1/5 to-color-2/5 hover:from-color-1/10 hover:to-color-2/10",
-                  // Shadow
-                  "shadow-xl shadow-color-1/10 hover:shadow-2xl hover:shadow-color-1/20",
-                  // Popular cards get highlighted border
-                  service.popular
-                    ? "border-color-1/50 hover:border-color-1/60"
-                    : "hover:border-color-1/40"
-                )}
-                style={{ animationDelay: `${300 + index * 150}ms` }}
-              >
-                <div className="relative z-10 flex flex-col h-full">
-                  {/* Header with Icon and Badge */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div
-                      className={cn(
-                        "w-14 sm:w-16 h-14 sm:h-16 rounded-xl flex items-center justify-center group-hover:rotate-3 transition-all duration-300",
-                        "bg-gradient-to-br from-color-1/20 to-color-2/20"
-                      )}
-                    >
-                      <IconComponent className="w-7 sm:w-8 h-7 sm:h-8 text-color-1" />
-                    </div>
+          {/* Tab Navigation */}
+          <div className="flex items-end justify-between border-b border-n-6 mb-8 lg:mb-12">
 
-                    {/* Badge */}
-                    <div
+            {/* Tabs (Scrollable on Mobile) */}
+            <div className="flex overflow-x-auto hide-scrollbar pb-0">
+              <div className="flex space-x-2 sm:space-x-8 px-2 w-max mx-auto sm:mx-0">
+                {services.map((service, index) => {
+                  const isActive = activeTabId === service.id;
+                  return (
+                    <button
+                      key={service.id}
+                      onClick={(e) => handleTabClick(service.id, index, e)}
                       className={cn(
-                        "px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider",
-                        service.popular
-                          ? "bg-gradient-to-r from-color-1 to-color-2 text-n-8"
-                          : "bg-n-6 text-n-3"
+                        "relative pb-4 px-2 sm:px-4 text-sm sm:text-base font-medium transition-colors whitespace-nowrap outline-none",
+                        isActive
+                          ? "text-n-1"
+                          : "text-n-4 hover:text-n-2"
                       )}
                     >
                       {service.badge}
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl sm:text-2xl font-bold text-n-1 mb-1">
-                    {service.title}
-                  </h3>
-
-                  {/* Subtitle - Technical Context */}
-                  <p className="text-sm text-n-4 mb-3">
-                    {service.subtitle}
-                  </p>
-
-                  {/* Outcome Headline - Value Proposition */}
-                  <p className="text-base sm:text-lg font-semibold text-color-1 mb-4">
-                    {service.outcome}
-                  </p>
-
-                  {/* Benefits List */}
-                  <div className="flex-1">
-                    <div className="space-y-3">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <div
-                          key={benefitIndex}
-                          className="flex items-start gap-3"
-                        >
-                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-color-1/20 to-color-2/20 flex items-center justify-center mt-0.5">
-                            <Check className="w-3 h-3 text-color-1" />
-                          </div>
-                          <span className="text-sm text-n-3">
-                            {benefit}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Background Decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-color-1/15 via-color-2/10 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 group-hover:from-color-1/25 group-hover:via-color-2/20 transition-all duration-500" />
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-color-2/10 to-transparent rounded-full translate-y-12 -translate-x-12 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500" />
+                      {/* Active Indicator Underline */}
+                      {isActive && (
+                        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-color-1 to-color-2 animate-fade-in" />
+                      )}
+                    </button>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
+            </div>
 
-        {/* Bottom CTA */}
-        <div
-          className="mt-12 sm:mt-16 text-center animate-bundle-card"
-          style={{ animationDelay: "1200ms" }}
-        >
-          <p className="text-n-3 mb-6 max-w-2xl mx-auto">
-            {t("bottomCta.description")}
-          </p>
-          <Button href="#contact">{t("bottomCta.button")}</Button>
+            {/* Desktop Navigation Arrows (True Horizon Style) */}
+            <div className="hidden lg:flex items-center gap-2 pb-3 pr-2">
+              <button
+                onClick={handlePrev}
+                disabled={currentIndex === 0}
+                className={cn(
+                  "p-1.5 rounded border transition-colors",
+                  currentIndex === 0
+                    ? "border-n-6/50 text-n-6 cursor-not-allowed bg-transparent"
+                    : "border-n-6 text-n-4 hover:text-n-1 hover:border-n-4 bg-n-8"
+                )}
+                aria-label="Previous service"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleNext}
+                disabled={currentIndex === services.length - 1}
+                className={cn(
+                  "p-1.5 rounded border transition-colors",
+                  currentIndex === services.length - 1
+                    ? "border-n-6/50 text-n-6 cursor-not-allowed bg-transparent"
+                    : "border-n-6 text-n-4 hover:text-n-1 hover:border-n-4 bg-n-8"
+                )}
+                aria-label="Next service"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {/* 2-Column Content Carousel (Inspired by True Horizon) */}
+          <div
+            className="bg-n-8 border border-n-6 rounded-none relative overflow-hidden group"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
+
+            {/* Dark Mode Glow effects - Static Background */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-color-1/10 via-color-2/5 to-transparent opacity-50 blur-3xl rounded-full -translate-y-1/2 translate-x-1/3 pointer-events-none z-0" />
+
+            {/* Carousel Inner Track */}
+            <div
+              className="flex transition-transform duration-1000 ease-in-out relative z-10"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {services.map((service) => {
+                const IconComponent = iconMap[service.icon];
+                return (
+                  <div key={service.id} className="min-w-full grid grid-cols-1 lg:grid-cols-2">
+                    {/* Left Column: The Pitch */}
+                    <div className="p-8 lg:p-12 xl:p-16 flex flex-col justify-between">
+                      <div className="max-w-xl">
+                        {/* Icon & Label */}
+                        <div className="flex items-center gap-4 mb-8">
+                          <div className="flex items-center justify-center w-12 h-12 bg-color-1/10 text-color-1 rounded-none border border-color-1/20">
+                            <IconComponent className="w-6 h-6" />
+                          </div>
+                          <span className="text-color-1 font-mono text-sm uppercase tracking-widest">{service.badge}</span>
+                        </div>
+
+                        {/* Headline & Description */}
+                        <h3 className="text-3xl lg:text-4xl font-sans font-bold text-n-1 mb-4 leading-tight">
+                          {service.title}
+                        </h3>
+                        <p className="text-lg text-n-3 mb-10 leading-relaxed font-light">
+                          {service.description}
+                        </p>
+
+                        {/* Benefits List (Square Bullets like True Horizon) */}
+                        <ul className="space-y-4 mb-12">
+                          {service.benefits.map((benefit, idx) => (
+                            <li key={idx} className="flex items-start gap-4">
+                              <div className="mt-1.5 flex-shrink-0 w-2.5 h-2.5 bg-color-1 rounded-sm shadow-[0_0_10px_rgba(172,106,255,0.4)]" />
+                              <span className="text-n-2 text-base">{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Left Column Action */}
+                      <div>
+                        <Button href="#contact" className="rounded-none font-bold uppercase tracking-wider text-sm px-8 py-4 w-full sm:w-auto">
+                          {locale === "sl" ? "Pogovorite se s strokovnjakom" : "Discuss your needs"}
+                        </Button>
+                      </div>
+                    </div>
+
+                    {/* Right Column: The ROI Box */}
+                    <div className="bg-n-7/50 border-t lg:border-t-0 lg:border-l border-n-6 p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
+
+                      <div className="mb-10">
+                        <h4 className="text-n-4 font-mono text-sm uppercase tracking-widest mb-2">
+                          {locale === "sl" ? "Tipični Rezultati" : "Typical Outcomes"}
+                        </h4>
+                        <div className="h-[1px] w-12 bg-color-1/50" />
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-12">
+                        {service.metrics.map((metric, idx) => (
+                          <div key={idx}>
+                            <div className="text-5xl lg:text-7xl font-sans font-bold text-n-1 mb-2 bg-clip-text text-transparent bg-gradient-to-r from-color-1 to-color-2 pb-1">
+                              {metric.value}
+                            </div>
+                            <div className="text-lg lg:text-xl text-n-3 max-w-xs font-light">
+                              {metric.label}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Trust/Disclaimer Footer */}
+                      <div className="mt-16 pt-8 border-t border-n-6/50 flex items-center gap-3">
+                        <Check className="w-5 h-5 text-color-4" />
+                        <p className="text-sm text-n-4">
+                          {t("disclaimer")}
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Section>

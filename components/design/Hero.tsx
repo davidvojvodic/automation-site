@@ -53,7 +53,7 @@ function BackgroundCircles({
   return (
     <div
       className={cn(
-        "absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[32rem]",
+        "absolute -top-[14.375rem] left-1/2 w-[78rem] aspect-square border border-n-2/5 rounded-full -translate-x-1/2 md:-top-[10.5rem] xl:-top-[2rem]",
         className
       )}
       {...props}
@@ -64,7 +64,7 @@ function BackgroundCircles({
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[46deg]">
           <div
             className={cn(
-              "w-2 h-2 -ml-1 -mt-36 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              "w-2 h-2 -ml-1 -mt-16 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           />
@@ -73,7 +73,7 @@ function BackgroundCircles({
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[56deg]">
           <div
             className={cn(
-              "w-4 h-4 -ml-1 -mt-32 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              "w-4 h-4 -ml-1 -mt-20 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           />
@@ -82,7 +82,7 @@ function BackgroundCircles({
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[54deg]">
           <div
             className={cn(
-              "hidden w-4 h-4 -ml-1 mt-[12.9rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transit transition-transform duration-500 ease-out",
+              "hidden w-4 h-4 -ml-1 mt-[6rem] bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full xl:block transit transition-transform duration-500 ease-out",
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           />
@@ -91,7 +91,7 @@ function BackgroundCircles({
         <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[65deg]">
           <div
             className={cn(
-              "w-3 h-3 -ml-1.5 mt-52 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              "w-3 h-3 -ml-1.5 mt-24 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           />
@@ -110,6 +110,90 @@ function BackgroundCircles({
           <div
             className={cn(
               "w-6 h-6 -ml-3 -mt-3 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        {/* NEW CIRCLES (Centered) */}
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[15deg]">
+          <div
+            className={cn(
+              "w-5 h-5 -ml-2.5 -mt-12 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[25deg]">
+          <div
+            className={cn(
+              "w-3 h-3 -ml-1.5 mt-8 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[110deg]">
+          <div
+            className={cn(
+              "w-4 h-4 -ml-2 mt-40 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full xl:block transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom -rotate-[100deg]">
+          <div
+            className={cn(
+              "w-5 h-5 -ml-2.5 mt-48 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        {/* EXTRA RIGHT-SIDE CIRCLES */}
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[10deg]">
+          <div
+            className={cn(
+              "w-4 h-4 -ml-2 mt-20 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[40deg]">
+          <div
+            className={cn(
+              "w-5 h-5 -ml-2.5 -mt-4 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[80deg]">
+          <div
+            className={cn(
+              "w-3 h-3 -ml-1.5 mt-28 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[130deg]">
+          <div
+            className={cn(
+              "w-6 h-6 -ml-3 mt-12 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
+              mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            )}
+          />
+        </div>
+
+        {/* MIRRORED BOTTOM-RIGHT CIRCLE */}
+        <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[100deg]">
+          <div
+            className={cn(
+              "w-5 h-5 -ml-2.5 mt-48 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out",
               mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}
           />
